@@ -1,0 +1,14 @@
+---
+import CartView from '../../views/CartView.astro';
+import { LOCALES, type Locale } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.filter(l => l !== 'en').map(lang => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<CartView lang={lang as Locale} />

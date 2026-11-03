@@ -1,0 +1,2706 @@
+{
+  "trash-panda-build-kit": {
+    "en": {
+      "name": "Trash Panda Build Kit",
+      "short_description": "<p>The Trash Panda is a 5.56/300BLK 3D printed lever action rifle</p>"
+    },
+    "de": {
+      "name": "Trash Panda Bausatz",
+      "short_description": "<p>Das Trash Panda ist ein 3D-gedruckter Unterhebelrepetierer-Bausatz im Kaliber 5.56/300BLK.</p>"
+    },
+    "nl": {
+      "name": "Trash Panda Bouwpakket",
+      "short_description": "<p>De Trash Panda is een 3D-geprinte hefboomgeweerbouwset in kaliber 5.56/300BLK.</p>"
+    },
+    "fr": {
+      "name": "Kit d'assemblage Trash Panda",
+      "short_description": "<p>Le Trash Panda est un kit de carabine à levier de sous-garde imprimée en 3D calibre 5.56/300BLK.</p>"
+    },
+    "es": {
+      "name": "Kit de montaje Trash Panda",
+      "short_description": "<p>El Trash Panda es un kit de rifle de palanca impreso en 3D en calibre 5.56/300BLK.</p>"
+    },
+    "it": {
+      "name": "Kit di montaggio Trash Panda",
+      "short_description": "<p>Il Trash Panda è un kit per fucile a leva stampato in 3D in calibro 5.56/300BLK.</p>"
+    },
+    "pl": {
+      "name": "Zestaw montażowy Trash Panda",
+      "short_description": "<p>Trash Panda to zestaw do drukowanego w 3D karabinka dźwigniowego w kalibrze 5.56/300BLK.</p>"
+    },
+    "bg": {
+      "name": "Комплект за сглобяване Trash Panda",
+      "short_description": "<p>Trash Panda е 3D принтирана пушка с лостов механизъм в калибър 5.56/300BLK.</p>"
+    }
+  },
+  "g80-hardware-replacement-set": {
+    "en": {
+      "name": "G80 Hardware Replacement Set",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Slide Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    },
+    "de": {
+      "name": "G80 Ersatz-Beschlagsatz",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Schlitten Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    },
+    "nl": {
+      "name": "G80 Vervangende bevestigingsset",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Slede Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    },
+    "fr": {
+      "name": "G80 Kit de quincaillerie de rechange",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Culasse Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    },
+    "es": {
+      "name": "G80 Juego de tornillería de repuesto",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Corredera Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    },
+    "it": {
+      "name": "G80 Set viteria di ricambio",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Carrello Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    },
+    "pl": {
+      "name": "G80 Zestaw wymiennych śrub i pinów",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Zamek Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    },
+    "bg": {
+      "name": "G80 Резервен комплект обков и щифтове",
+      "short_description": "<p>A set of replacement hardware in case you misplace any.</p>\n<p>Comes with:</p>\n<p>1 X Затвор Lock Spring<br />1 X Trigger Pin<br />1 X Trigger Housing Pin<br />2 X Grip Pins</p>"
+    }
+  },
+  "awcy-usb": {
+    "en": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    },
+    "de": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    },
+    "nl": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    },
+    "fr": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    },
+    "es": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    },
+    "it": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    },
+    "pl": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    },
+    "bg": {
+      "name": "AWCY? USB",
+      "short_description": "<p>Are We Cool Yet? Pack USB with STL files</p>"
+    }
+  },
+  "black-lotus-coalition-usb": {
+    "en": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    },
+    "de": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    },
+    "nl": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    },
+    "fr": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    },
+    "es": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    },
+    "it": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    },
+    "pl": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    },
+    "bg": {
+      "name": "Black Lotus Coalition USB",
+      "short_description": "<p>Black Lotus Coalition Pack USB with STL files</p>"
+    }
+  },
+  "g80-build-kit-polymer": {
+    "en": {
+      "name": "G80 Build Kit [Polymer]",
+      "short_description": "<p>The G80 Build Kit brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "de": {
+      "name": "G80 Bausatz [Polymer]",
+      "short_description": "<p>The G80 Bausatz brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "nl": {
+      "name": "G80 Bouwpakket [Polymer]",
+      "short_description": "<p>The G80 Bouwpakket brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "fr": {
+      "name": "G80 Kit d'assemblage [Polymer]",
+      "short_description": "<p>The G80 Kit d'assemblage brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "es": {
+      "name": "G80 Kit de montaje [Polymer]",
+      "short_description": "<p>The G80 Kit de montaje brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "it": {
+      "name": "G80 Kit di montaggio [Polymer]",
+      "short_description": "<p>The G80 Kit di montaggio brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "pl": {
+      "name": "G80 Zestaw do montażu [Polymer]",
+      "short_description": "<p>The G80 Zestaw do montażu brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "bg": {
+      "name": "G80 Комплект за сглобяване [Polymer]",
+      "short_description": "<p>The G80 Комплект за сглобяване brings together everything you need to start your 80% pistol project, no hunting for parts, no compatibility headaches, no guesswork.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    }
+  },
+  "g80-jig-polymer": {
+    "en": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Unfinished Receiver Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    },
+    "de": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Unfertiges Gehäuse Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    },
+    "nl": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Onvoltooide kast Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    },
+    "fr": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Carcasse non finie Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    },
+    "es": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Receptor sin terminar Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    },
+    "it": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Castello non rifinito Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    },
+    "pl": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Niewykończony szkielet Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    },
+    "bg": {
+      "name": "G80 Jig Polymer",
+      "short_description": "<p>This Jig is for use with the G80 Недовършена рама Glock-type Fire Control Unit. * This jig does not work on the Ghost Gunner 3.</p>"
+    }
+  },
+  "harlet-pack-3d-files-usb": {
+    "en": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    },
+    "de": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    },
+    "nl": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    },
+    "fr": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    },
+    "es": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    },
+    "it": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    },
+    "pl": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    },
+    "bg": {
+      "name": "Harlet Pack 3D Files USB",
+      "short_description": "<p>Harlet Pack USB with STL files for 3 printable .22LR pistols: Harlot, Longshot, and Brawler</p>"
+    }
+  },
+  "ar15-lower-parts-kit": {
+    "en": {
+      "name": "AR15 Lower Parts Kit",
+      "short_description": "<p>Premium AR15 Lower Parts Kit 5.56/.223</p>"
+    },
+    "de": {
+      "name": "AR15 Unterteil-Teilesatz",
+      "short_description": "<p>Premium AR15 Unterteil-Teilesatz 5.56/.223</p>"
+    },
+    "nl": {
+      "name": "AR15 Onderdelenset onderkant",
+      "short_description": "<p>Premium AR15 Onderdelenset onderkant 5.56/.223</p>"
+    },
+    "fr": {
+      "name": "AR15 Kit de pièces inférieures",
+      "short_description": "<p>Premium AR15 Kit de pièces inférieures 5.56/.223</p>"
+    },
+    "es": {
+      "name": "AR15 Kit de piezas inferiores",
+      "short_description": "<p>Premium AR15 Kit de piezas inferiores 5.56/.223</p>"
+    },
+    "it": {
+      "name": "AR15 Kit parti inferiori",
+      "short_description": "<p>Premium AR15 Kit parti inferiori 5.56/.223</p>"
+    },
+    "pl": {
+      "name": "AR15 Zestaw części szkieletu",
+      "short_description": "<p>Premium AR15 Zestaw części szkieletu 5.56/.223</p>"
+    },
+    "bg": {
+      "name": "AR15 Комплект долни части",
+      "short_description": "<p>Premium AR15 Комплект долни части 5.56/.223</p>"
+    }
+  },
+  "ar15-magpul-m3-30rd-mag": {
+    "en": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    },
+    "de": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    },
+    "nl": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    },
+    "fr": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    },
+    "es": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    },
+    "it": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    },
+    "pl": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    },
+    "bg": {
+      "name": "AR15 Magpul M3 30rd Mag",
+      "short_description": "<p>Durable &amp; Modern AR15 30rd Mag</p>"
+    }
+  },
+  "drum-mag-50rd-9mm-glock": {
+    "en": {
+      "name": "Drum Mag 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Drum Magazine</p>"
+    },
+    "de": {
+      "name": "Trommelmagazin 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Trommelmagazinazine</p>"
+    },
+    "nl": {
+      "name": "Trommelmagazijn 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Trommelmagazijnazine</p>"
+    },
+    "fr": {
+      "name": "Chargeur tambour 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Chargeur tambourazine</p>"
+    },
+    "es": {
+      "name": "Cargador de tambor 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Cargador de tamborazine</p>"
+    },
+    "it": {
+      "name": "Caricatore a tamburo 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Caricatore a tamburoazine</p>"
+    },
+    "pl": {
+      "name": "Magazynek bębnowy 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Magazynek bębnowyazine</p>"
+    },
+    "bg": {
+      "name": "Барабанен пълнител 50rd 9mm G19/G17",
+      "short_description": "<p>Glock Compatible Барабанен пълнителazine</p>"
+    }
+  },
+  "27rd-extended-glock-mag-9mm": {
+    "en": {
+      "name": "ETS 27rd Extended Glock Mag 9mm",
+      "short_description": "<p>Clear Extended Glock Magazine by ETS</p>"
+    },
+    "de": {
+      "name": "ETS 27rd Verlängertes Glock Magazin 9mm",
+      "short_description": "<p>Clear Verlängertes Glock Magazinazine by ETS</p>"
+    },
+    "nl": {
+      "name": "ETS 27rd Verlengd Glock Magazijn 9mm",
+      "short_description": "<p>Clear Verlengd Glock Magazijnazine by ETS</p>"
+    },
+    "fr": {
+      "name": "ETS 27rd Chargeur Glock étendu 9mm",
+      "short_description": "<p>Clear Chargeur Glock étenduazine by ETS</p>"
+    },
+    "es": {
+      "name": "ETS 27rd Cargador Glock extendido 9mm",
+      "short_description": "<p>Clear Cargador Glock extendidoazine by ETS</p>"
+    },
+    "it": {
+      "name": "ETS 27rd Caricatore Glock esteso 9mm",
+      "short_description": "<p>Clear Caricatore Glock estesoazine by ETS</p>"
+    },
+    "pl": {
+      "name": "ETS 27rd Przedłużony magazynek Glock 9mm",
+      "short_description": "<p>Clear Przedłużony magazynek Glockazine by ETS</p>"
+    },
+    "bg": {
+      "name": "ETS 27rd Удължен пълнител Glock 9mm",
+      "short_description": "<p>Clear Удължен пълнител Glockazine by ETS</p>"
+    }
+  },
+  "fgc9-mk2": {
+    "en": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Build Kit gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    },
+    "de": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Bausatz gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    },
+    "nl": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Bouwpakket gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    },
+    "fr": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Kit d'assemblage gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    },
+    "es": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Kit de montaje gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    },
+    "it": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Kit di montaggio gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    },
+    "pl": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Zestaw do montażu gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    },
+    "bg": {
+      "name": "FGC9 MK2",
+      "short_description": "<p>The FGC9 MK2 Комплект за сглобяване gives you the hardware needed to build the most recognized 3D printed firearm in the world. The FGC9 MK2 is a 9mm pistol caliber carbine that can be built entirely from 3D printed parts and commonly available materials. This kit includes the precision components that are hardest to source: the prefabricated bolt, firing pin, rifled barrel, and all the metric hardware.</p>"
+    }
+  },
+  "g19-15rd-magpul-magazine": {
+    "en": {
+      "name": "G19 15rd Magpul Magazine",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    },
+    "de": {
+      "name": "G19 15rd Magpul Magazin",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    },
+    "nl": {
+      "name": "G19 15rd Magpul Magazijn",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    },
+    "fr": {
+      "name": "G19 15rd Chargeur Magpul",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    },
+    "es": {
+      "name": "G19 15rd Cargador Magpul",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    },
+    "it": {
+      "name": "G19 15rd Caricatore Magpul",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    },
+    "pl": {
+      "name": "G19 15rd Magazynki Magpul",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    },
+    "bg": {
+      "name": "G19 15rd Пълнител Magpul",
+      "short_description": "<p>The industry standard in G19 magazines.</p>"
+    }
+  },
+  "g17-17rd-magpul-magazine": {
+    "en": {
+      "name": "G17 17rd Magpul Magazine",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    },
+    "de": {
+      "name": "G17 17rd Magpul Magazin",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    },
+    "nl": {
+      "name": "G17 17rd Magpul Magazijn",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    },
+    "fr": {
+      "name": "G17 17rd Chargeur Magpul",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    },
+    "es": {
+      "name": "G17 17rd Cargador Magpul",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    },
+    "it": {
+      "name": "G17 17rd Caricatore Magpul",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    },
+    "pl": {
+      "name": "G17 17rd Magazynki Magpul",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    },
+    "bg": {
+      "name": "G17 17rd Пълнител Magpul",
+      "short_description": "<p>The industry standard in G17 magazines.</p>"
+    }
+  },
+  "g17-lower-parts-kit": {
+    "en": {
+      "name": "G17 Lower Parts Kit",
+      "short_description": "<p>Compatible Lower Parts Kit for the G17, DD17, and gen 3 full size frames.</p>"
+    },
+    "de": {
+      "name": "G17 Unterteil-Teilesatz",
+      "short_description": "<p>Compatible Unterteil-Teilesatz for the G17, DD17, and gen 3 full size frames.</p>"
+    },
+    "nl": {
+      "name": "G17 Onderdelenset onderkant",
+      "short_description": "<p>Compatible Onderdelenset onderkant for the G17, DD17, and gen 3 full size frames.</p>"
+    },
+    "fr": {
+      "name": "G17 Kit de pièces inférieures",
+      "short_description": "<p>Compatible Kit de pièces inférieures for the G17, DD17, and gen 3 full size frames.</p>"
+    },
+    "es": {
+      "name": "G17 Kit de piezas inferiores",
+      "short_description": "<p>Compatible Kit de piezas inferiores for the G17, DD17, and gen 3 full size frames.</p>"
+    },
+    "it": {
+      "name": "G17 Kit parti inferiori",
+      "short_description": "<p>Compatible Kit parti inferiori for the G17, DD17, and gen 3 full size frames.</p>"
+    },
+    "pl": {
+      "name": "G17 Zestaw części szkieletu",
+      "short_description": "<p>Compatible Zestaw części szkieletu for the G17, DD17, and gen 3 full size frames.</p>"
+    },
+    "bg": {
+      "name": "G17 Комплект долни части",
+      "short_description": "<p>Compatible Комплект долни части for the G17, DD17, and gen 3 full size frames.</p>"
+    }
+  },
+  "g19-lower-parts-kit": {
+    "en": {
+      "name": "G19 Lower Parts Kit",
+      "short_description": "<p>Compatible Lower Parts Kit for the G19, DD19, Geisler 19x and G80.</p>"
+    },
+    "de": {
+      "name": "G19 Unterteil-Teilesatz",
+      "short_description": "<p>Compatible Unterteil-Teilesatz for the G19, DD19, Geisler 19x and G80.</p>"
+    },
+    "nl": {
+      "name": "G19 Onderdelenset onderkant",
+      "short_description": "<p>Compatible Onderdelenset onderkant for the G19, DD19, Geisler 19x and G80.</p>"
+    },
+    "fr": {
+      "name": "G19 Kit de pièces inférieures",
+      "short_description": "<p>Compatible Kit de pièces inférieures for the G19, DD19, Geisler 19x and G80.</p>"
+    },
+    "es": {
+      "name": "G19 Kit de piezas inferiores",
+      "short_description": "<p>Compatible Kit de piezas inferiores for the G19, DD19, Geisler 19x and G80.</p>"
+    },
+    "it": {
+      "name": "G19 Kit parti inferiori",
+      "short_description": "<p>Compatible Kit parti inferiori for the G19, DD19, Geisler 19x and G80.</p>"
+    },
+    "pl": {
+      "name": "G19 Zestaw części szkieletu",
+      "short_description": "<p>Compatible Zestaw części szkieletu for the G19, DD19, Geisler 19x and G80.</p>"
+    },
+    "bg": {
+      "name": "G19 Комплект долни части",
+      "short_description": "<p>Compatible Комплект долни части for the G19, DD19, Geisler 19x and G80.</p>"
+    }
+  },
+  "3d-printed-g19-build-kit": {
+    "en": {
+      "name": "3D Printed G19 Build Kit",
+      "short_description": "<p>A complete Glock 19 parts kit built for 3D-printed frames. The PBS 17 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your grip module, install the included components, and assemble with your slide.</p>"
+    },
+    "de": {
+      "name": "3D-gedruckter G19 Bausatz",
+      "short_description": "<p>Kompletter Glock 19 Teilesatz für 3D-gedruckte Rahmen. Enthält präzisionsgefräste Metallschienen und Innenteile.</p>"
+    },
+    "nl": {
+      "name": "3D Geprint G19 Bouwpakket",
+      "short_description": "<p>Een complete Glock 19 onderdelenset voor 3D-geprinte frames. Inclusief precisie-gefreesde metalen rails en onderdelen.</p>"
+    },
+    "fr": {
+      "name": "Kit d'assemblage G19 imprimé en 3D",
+      "short_description": "<p>Un kit complet de pièces pour Glock 19 conçu pour les carcasses imprimées en 3D. Comprend rails métalliques et pièces internes.</p>"
+    },
+    "es": {
+      "name": "Kit de montaje G19 impreso en 3D",
+      "short_description": "<p>Un kit completo de piezas para Glock 19 diseñado para armazones impresos en 3D. Incluye rieles metálicos y piezas internas.</p>"
+    },
+    "it": {
+      "name": "Kit di montaggio G19 stampato in 3D",
+      "short_description": "<p>Un kit completo di parti Glock 19 progettato per fusti stampati in 3D. Include guide metalliche di precisione e componenti interni.</p>"
+    },
+    "pl": {
+      "name": "Zestaw montażowy G19 z druku 3D",
+      "short_description": "<p>Kompletny zestaw części do Glocka 19 przeznaczony do szkieletów z druku 3D. Zawiera precyzyjne metalowe szyny i części wewnętrzne.</p>"
+    },
+    "bg": {
+      "name": "3D Принтиран комплект за сглобяване G19",
+      "short_description": "<p>Пълен комплект части за Glock 19 за 3D принтирани рами. Включва прецизни метални релси и вътрешни компоненти.</p>"
+    }
+  },
+  "dd19-2-rail-locking-block-kit": {
+    "en": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    },
+    "de": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    },
+    "nl": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    },
+    "fr": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    },
+    "es": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    },
+    "it": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    },
+    "pl": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    },
+    "bg": {
+      "name": "DD19.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD19.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 19 Gen 3</strong></p>"
+    }
+  },
+  "glock-19-slide": {
+    "en": {
+      "name": "Glock 19 Slide",
+      "short_description": "<p>Precision-machined complete G19 slide kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Build Kit | Geisler 19x | Polymer 80</strong></p>"
+    },
+    "de": {
+      "name": "Glock 19 Schlitten",
+      "short_description": "<p>Precision-machined complete G19 Schlitten kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Bausatz | Geisler 19x | Polymer 80</strong></p>"
+    },
+    "nl": {
+      "name": "Glock 19 Slede",
+      "short_description": "<p>Precision-machined complete G19 Slede kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Bouwpakket | Geisler 19x | Polymer 80</strong></p>"
+    },
+    "fr": {
+      "name": "Glock 19 Culasse",
+      "short_description": "<p>Precision-machined complete G19 Culasse kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Kit d'assemblage | Geisler 19x | Polymer 80</strong></p>"
+    },
+    "es": {
+      "name": "Glock 19 Corredera",
+      "short_description": "<p>Precision-machined complete G19 Corredera kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Kit de montaje | Geisler 19x | Polymer 80</strong></p>"
+    },
+    "it": {
+      "name": "Glock 19 Carrello",
+      "short_description": "<p>Precision-machined complete G19 Carrello kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Kit di montaggio | Geisler 19x | Polymer 80</strong></p>"
+    },
+    "pl": {
+      "name": "Glock 19 Zamek",
+      "short_description": "<p>Precision-machined complete G19 Zamek kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Zestaw do montażu | Geisler 19x | Polymer 80</strong></p>"
+    },
+    "bg": {
+      "name": "Glock 19 Затвор",
+      "short_description": "<p>Precision-machined complete G19 Затвор kit.</p>\n<p>Compatible with <strong>Glock 19 Gen 3 | G80 Комплект за сглобяване | Geisler 19x | Polymer 80</strong></p>"
+    }
+  },
+  "cmmg-ar-10-zeroed-lower-parts-kit-mk3": {
+    "en": {
+      "name": "CMMG AR-10 ZEROED Lower Parts Kit, Mk3",
+      "short_description": "<p>Premium AR10 lower parts kit to complete your AR10/LR-308 lower receiver.</p>"
+    },
+    "de": {
+      "name": "CMMG AR-10 ZEROED Unterteil-Teilesatz, Mk3",
+      "short_description": "<p>Premium AR10 Unterteil-Teilesatz to complete your AR10/LR-308 Untergehäuse.</p>"
+    },
+    "nl": {
+      "name": "CMMG AR-10 ZEROED Onderdelenset onderkant, Mk3",
+      "short_description": "<p>Premium AR10 Onderdelenset onderkant to complete your AR10/LR-308 Onderkast.</p>"
+    },
+    "fr": {
+      "name": "CMMG AR-10 ZEROED Kit de pièces inférieures, Mk3",
+      "short_description": "<p>Premium AR10 Kit de pièces inférieures to complete your AR10/LR-308 Carcasse inférieure.</p>"
+    },
+    "es": {
+      "name": "CMMG AR-10 ZEROED Kit de piezas inferiores, Mk3",
+      "short_description": "<p>Premium AR10 Kit de piezas inferiores to complete your AR10/LR-308 Receptor inferior.</p>"
+    },
+    "it": {
+      "name": "CMMG AR-10 ZEROED Kit parti inferiori, Mk3",
+      "short_description": "<p>Premium AR10 Kit parti inferiori to complete your AR10/LR-308 Castello inferiore.</p>"
+    },
+    "pl": {
+      "name": "CMMG AR-10 ZEROED Zestaw części szkieletu, Mk3",
+      "short_description": "<p>Premium AR10 Zestaw części szkieletu to complete your AR10/LR-308 Komora spustowa.</p>"
+    },
+    "bg": {
+      "name": "CMMG AR-10 ZEROED Комплект долни части, Mk3",
+      "short_description": "<p>Premium AR10 Комплект долни части to complete your AR10/LR-308 Долна рама.</p>"
+    }
+  },
+  "magpul-moe-carbine-stock-mil-spec": {
+    "en": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    },
+    "de": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    },
+    "nl": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    },
+    "fr": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    },
+    "es": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    },
+    "it": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    },
+    "pl": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    },
+    "bg": {
+      "name": "Magpul MOE Carbine Stock – Mil-Spec",
+      "short_description": "<p>Iconic replacement AR15/M16 Stock</p>"
+    }
+  },
+  "fgc-9-mag-catch-aluminum-black-anodized": {
+    "en": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    },
+    "de": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    },
+    "nl": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    },
+    "fr": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    },
+    "es": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    },
+    "it": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    },
+    "pl": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    },
+    "bg": {
+      "name": "FGC-9 Mag Catch &#8211; Aluminum Black Anodized",
+      "short_description": "<p>While the 3D-printed FGC-9 mag catch works well, over time they will almost certainly become warped and prone to breaking. Riptide Rails FCG-9 Mag Catch is machined from 6061 aluminum and is a direct replacement of your 3D-printed FGC-9 mag catch. Mil Spec MIL-A-8625 Type II anodize (black) finish. Compatible with the FGC-9 MKII.</p>"
+    }
+  },
+  "slide-parts-kit-for-g17": {
+    "en": {
+      "name": "G17 Slide Parts Kit",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your slide.</p>"
+    },
+    "de": {
+      "name": "G17 Schlitten-Teilesatz",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your Schlitten.</p>"
+    },
+    "nl": {
+      "name": "G17 Slede onderdelenset",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your Slede.</p>"
+    },
+    "fr": {
+      "name": "G17 Kit de pièces de culasse",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your Culasse.</p>"
+    },
+    "es": {
+      "name": "G17 Kit de piezas de corredera",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your Corredera.</p>"
+    },
+    "it": {
+      "name": "G17 Kit parti carrello",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your Carrello.</p>"
+    },
+    "pl": {
+      "name": "G17 Zestaw części zamka",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your Zamek.</p>"
+    },
+    "bg": {
+      "name": "G17 Комплект части за затвор",
+      "short_description": "<p>Glock 17 Gen 3 upper parts kit for completing your Затвор.</p>"
+    }
+  },
+  "g43-slide-parts-kit": {
+    "en": {
+      "name": "G43 Slide Parts Kit",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your slide.</p>"
+    },
+    "de": {
+      "name": "G43 Schlitten-Teilesatz",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your Schlitten.</p>"
+    },
+    "nl": {
+      "name": "G43 Slede onderdelenset",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your Slede.</p>"
+    },
+    "fr": {
+      "name": "G43 Kit de pièces de culasse",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your Culasse.</p>"
+    },
+    "es": {
+      "name": "G43 Kit de piezas de corredera",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your Corredera.</p>"
+    },
+    "it": {
+      "name": "G43 Kit parti carrello",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your Carrello.</p>"
+    },
+    "pl": {
+      "name": "G43 Zestaw części zamka",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your Zamek.</p>"
+    },
+    "bg": {
+      "name": "G43 Комплект части за затвор",
+      "short_description": "<p>Glock 43 Gen 3 upper parts kit for completing your Затвор.</p>"
+    }
+  },
+  "harlot": {
+    "en": {
+      "name": "Harlot [1.0] Build Kit",
+      "short_description": "<p>The Harlot [1.0] is a compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available.</p>"
+    },
+    "de": {
+      "name": "Harlot [1.0] Bausatz",
+      "short_description": "<p>Beschlag- und Teilesatz für die bekannte einschüssige .22 LR Harlot-Pistole aus dem 3D-Drucker.</p>"
+    },
+    "nl": {
+      "name": "Harlot [1.0] Bouwpakket",
+      "short_description": "<p>Hardware- en onderdelenset voor het iconische enkelschots .22 LR Harlot 3D-printbare vuurwapen.</p>"
+    },
+    "fr": {
+      "name": "Kit d'assemblage Harlot [1.0]",
+      "short_description": "<p>Kit de visserie et pièces pour le pistolet monocoup .22 LR Harlot imprimable en 3D.</p>"
+    },
+    "es": {
+      "name": "Kit de montaje Harlot [1.0]",
+      "short_description": "<p>Kit de tornillería y componentes para la pistola monotiro calibre .22 LR Harlot imprimible en 3D.</p>"
+    },
+    "it": {
+      "name": "Kit di montaggio Harlot [1.0]",
+      "short_description": "<p>Kit di viteria e componenti per la pistola monocolpo .22 LR Harlot stampabile in 3D.</p>"
+    },
+    "pl": {
+      "name": "Zestaw montażowy Harlot [1.0]",
+      "short_description": "<p>Zestaw osprzętu i części do jednostrzałowego pistoletu .22 LR Harlot drukowanego w 3D.</p>"
+    },
+    "bg": {
+      "name": "Комплект за сглобяване Harlot [1.0]",
+      "short_description": "<p>Комплект обков и компоненти за 3D принтирания еднозаряден пистолет .22 LR Harlot.</p>"
+    }
+  },
+  "g80-build-kit": {
+    "en": {
+      "name": "G80 Build Kit",
+      "short_description": "<p>The complete kit G80 Build Kit includes the G80 Unfinished Receiver, G80 Jig, and G80 Grip Module.</p>"
+    },
+    "de": {
+      "name": "G80 Bausatz",
+      "short_description": "<p>The complete kit G80 Bausatz includes the G80 Unfertiges Gehäuse, G80 Jig, and G80 Griffmodul.</p>"
+    },
+    "nl": {
+      "name": "G80 Bouwpakket",
+      "short_description": "<p>The complete kit G80 Bouwpakket includes the G80 Onvoltooide kast, G80 Jig, and G80 Greepmodule.</p>"
+    },
+    "fr": {
+      "name": "G80 Kit d'assemblage",
+      "short_description": "<p>The complete kit G80 Kit d'assemblage includes the G80 Carcasse non finie, G80 Jig, and G80 Module de poignée.</p>"
+    },
+    "es": {
+      "name": "G80 Kit de montaje",
+      "short_description": "<p>The complete kit G80 Kit de montaje includes the G80 Receptor sin terminar, G80 Jig, and G80 Módulo de empuñadura.</p>"
+    },
+    "it": {
+      "name": "G80 Kit di montaggio",
+      "short_description": "<p>The complete kit G80 Kit di montaggio includes the G80 Castello non rifinito, G80 Jig, and G80 Modulo impugnatura.</p>"
+    },
+    "pl": {
+      "name": "G80 Zestaw do montażu",
+      "short_description": "<p>The complete kit G80 Zestaw do montażu includes the G80 Niewykończony szkielet, G80 Jig, and G80 Moduł chwytu.</p>"
+    },
+    "bg": {
+      "name": "G80 Комплект за сглобяване",
+      "short_description": "<p>The complete kit G80 Комплект за сглобяване includes the G80 Недовършена рама, G80 Jig, and G80 Модул за ръкохватка.</p>"
+    }
+  },
+  "g80-jig": {
+    "en": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Unfinished Receiver Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    },
+    "de": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Unfertiges Gehäuse Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    },
+    "nl": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Onvoltooide kast Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    },
+    "fr": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Carcasse non finie Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    },
+    "es": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Receptor sin terminar Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    },
+    "it": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Castello non rifinito Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    },
+    "pl": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Niewykończony szkielet Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    },
+    "bg": {
+      "name": "G80 Jig Aluminum",
+      "short_description": "<p>This Jig/Fixture is for finishing the G80 Недовършена рама Glock-type Fire Control Unit. This jig can be used on the Ghost Gunner 3-S.  GG3-S tooling, manual tools for use with rotary tool/power drill, and hardware is included.</p>"
+    }
+  },
+  "g80-grip-module": {
+    "en": {
+      "name": "Grip Module",
+      "short_description": "<p>Our compact-size grip module for the G80 Unfinished Receiver.</p>"
+    },
+    "de": {
+      "name": "Griffmodul",
+      "short_description": "<p>Our compact-size Griffmodul for the G80 Unfertiges Gehäuse.</p>"
+    },
+    "nl": {
+      "name": "Greepmodule",
+      "short_description": "<p>Our compact-size Greepmodule for the G80 Onvoltooide kast.</p>"
+    },
+    "fr": {
+      "name": "Module de poignée",
+      "short_description": "<p>Our compact-size Module de poignée for the G80 Carcasse non finie.</p>"
+    },
+    "es": {
+      "name": "Módulo de empuñadura",
+      "short_description": "<p>Our compact-size Módulo de empuñadura for the G80 Receptor sin terminar.</p>"
+    },
+    "it": {
+      "name": "Modulo impugnatura",
+      "short_description": "<p>Our compact-size Modulo impugnatura for the G80 Castello non rifinito.</p>"
+    },
+    "pl": {
+      "name": "Moduł chwytu",
+      "short_description": "<p>Our compact-size Moduł chwytu for the G80 Niewykończony szkielet.</p>"
+    },
+    "bg": {
+      "name": "Модул за ръкохватка",
+      "short_description": "<p>Our compact-size Модул за ръкохватка for the G80 Недовършена рама.</p>"
+    }
+  },
+  "g80-unfinished-receiver": {
+    "en": {
+      "name": "G80 Unfinished Receiver",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and slide rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "de": {
+      "name": "G80 Unfertiges Gehäuse",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and Schlitten rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "nl": {
+      "name": "G80 Onvoltooide kast",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and Slede rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "fr": {
+      "name": "G80 Carcasse non finie",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and Culasse rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "es": {
+      "name": "G80 Receptor sin terminar",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and Corredera rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "it": {
+      "name": "G80 Castello non rifinito",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and Carrello rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "pl": {
+      "name": "G80 Niewykończony szkielet",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and Zamek rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    },
+    "bg": {
+      "name": "G80 Недовършена рама",
+      "short_description": "<p>This unfinished FCU seamlessly combines locking block, trigger housing and Затвор rails as a monolithic unit. Compatible with G19 Gen3 parts.</p>\n</p>\n<p><strong>Lead Time as of September 17th, 2026: 14 days</strong></p>"
+    }
+  },
+  "mac-n-cheese-v2-5-build-kit": {
+    "en": {
+      "name": "Mac n Cheese [2.5] Build Kit",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    },
+    "de": {
+      "name": "Mac n Cheese [2.5] Bausatz",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    },
+    "nl": {
+      "name": "Mac n Cheese [2.5] Bouwpakket",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    },
+    "fr": {
+      "name": "Mac n Cheese [2.5] Kit d'assemblage",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    },
+    "es": {
+      "name": "Mac n Cheese [2.5] Kit de montaje",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    },
+    "it": {
+      "name": "Mac n Cheese [2.5] Kit di montaggio",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    },
+    "pl": {
+      "name": "Mac n Cheese [2.5] Zestaw do montażu",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    },
+    "bg": {
+      "name": "Mac n Cheese [2.5] Комплект за сглобяване",
+      "short_description": "<p>3D printable ambidextrous M11 lower engineered with integrated LRBHO (Last Round Bolt Hold Open), the latest Mac n Cheese.</p>"
+    }
+  },
+  "fmda-rails-17-2": {
+    "en": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    },
+    "de": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    },
+    "nl": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    },
+    "fr": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    },
+    "es": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    },
+    "it": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    },
+    "pl": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    },
+    "bg": {
+      "name": "DD17.2 Rail &amp; Locking Block Kit",
+      "short_description": "<p>Precision-cut stainless steel rail kit designed specifically for DD17.2 frames.</p>\n<p>Compatible with 3D Printed <strong>Glock 17 Gen 3</strong></p>"
+    }
+  },
+  "glock-43-slide": {
+    "en": {
+      "name": "Glock 43 Slide",
+      "short_description": "<p>Precision-machined slide crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    },
+    "de": {
+      "name": "Glock 43 Schlitten",
+      "short_description": "<p>Precision-machined Schlitten crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    },
+    "nl": {
+      "name": "Glock 43 Slede",
+      "short_description": "<p>Precision-machined Slede crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    },
+    "fr": {
+      "name": "Glock 43 Culasse",
+      "short_description": "<p>Precision-machined Culasse crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    },
+    "es": {
+      "name": "Glock 43 Corredera",
+      "short_description": "<p>Precision-machined Corredera crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    },
+    "it": {
+      "name": "Glock 43 Carrello",
+      "short_description": "<p>Precision-machined Carrello crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    },
+    "pl": {
+      "name": "Glock 43 Zamek",
+      "short_description": "<p>Precision-machined Zamek crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    },
+    "bg": {
+      "name": "Glock 43 Затвор",
+      "short_description": "<p>Precision-machined Затвор crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 43 and Glock 43X</strong></p>"
+    }
+  },
+  "glock-26-slide": {
+    "en": {
+      "name": "Glock 26 Slide",
+      "short_description": "<p>Precision-machined slide crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    },
+    "de": {
+      "name": "Glock 26 Schlitten",
+      "short_description": "<p>Precision-machined Schlitten crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    },
+    "nl": {
+      "name": "Glock 26 Slede",
+      "short_description": "<p>Precision-machined Slede crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    },
+    "fr": {
+      "name": "Glock 26 Culasse",
+      "short_description": "<p>Precision-machined Culasse crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    },
+    "es": {
+      "name": "Glock 26 Corredera",
+      "short_description": "<p>Precision-machined Corredera crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    },
+    "it": {
+      "name": "Glock 26 Carrello",
+      "short_description": "<p>Precision-machined Carrello crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    },
+    "pl": {
+      "name": "Glock 26 Zamek",
+      "short_description": "<p>Precision-machined Zamek crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    },
+    "bg": {
+      "name": "Glock 26 Затвор",
+      "short_description": "<p>Precision-machined Затвор crafted from a single billet of 17-4 stainless steel, offering tight tolerances for enhanced accuracy and performance. It features a standard rear dovetail and front sight hole, ready for your preferred sight configuration.</p>\n<p>Compatible with <strong>Glock 26 Gen 3 and Gen 4</strong></p>"
+    }
+  },
+  "glock-17-slide": {
+    "en": {
+      "name": "Glock 17 Slide",
+      "short_description": "<p>Precision-machined complete G17 slide kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    },
+    "de": {
+      "name": "Glock 17 Schlitten",
+      "short_description": "<p>Precision-machined complete G17 Schlitten kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    },
+    "nl": {
+      "name": "Glock 17 Slede",
+      "short_description": "<p>Precision-machined complete G17 Slede kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    },
+    "fr": {
+      "name": "Glock 17 Culasse",
+      "short_description": "<p>Precision-machined complete G17 Culasse kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    },
+    "es": {
+      "name": "Glock 17 Corredera",
+      "short_description": "<p>Precision-machined complete G17 Corredera kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    },
+    "it": {
+      "name": "Glock 17 Carrello",
+      "short_description": "<p>Precision-machined complete G17 Carrello kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    },
+    "pl": {
+      "name": "Glock 17 Zamek",
+      "short_description": "<p>Precision-machined complete G17 Zamek kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    },
+    "bg": {
+      "name": "Glock 17 Затвор",
+      "short_description": "<p>Precision-machined complete G17 Затвор kit.</p>\n<p>Compatible with <strong>Glock 17 Gen 3 | Polymer 80</strong></p>"
+    }
+  },
+  "ar15-anodized-lower-receiver-80": {
+    "en": {
+      "name": "AR15 Anodized Lower Receiver [80%]",
+      "short_description": "<p>Black Anodized AR15 80% lower receiver designed for easy finishing and customization.</p>"
+    },
+    "de": {
+      "name": "AR15 Anodized Untergehäuse [80%]",
+      "short_description": "<p>Black Anodized AR15 80% Untergehäuse designed for easy finishing and customization.</p>"
+    },
+    "nl": {
+      "name": "AR15 Anodized Onderkast [80%]",
+      "short_description": "<p>Black Anodized AR15 80% Onderkast designed for easy finishing and customization.</p>"
+    },
+    "fr": {
+      "name": "AR15 Anodized Carcasse inférieure [80%]",
+      "short_description": "<p>Black Anodized AR15 80% Carcasse inférieure designed for easy finishing and customization.</p>"
+    },
+    "es": {
+      "name": "AR15 Anodized Receptor inferior [80%]",
+      "short_description": "<p>Black Anodized AR15 80% Receptor inferior designed for easy finishing and customization.</p>"
+    },
+    "it": {
+      "name": "AR15 Anodized Castello inferiore [80%]",
+      "short_description": "<p>Black Anodized AR15 80% Castello inferiore designed for easy finishing and customization.</p>"
+    },
+    "pl": {
+      "name": "AR15 Anodized Komora spustowa [80%]",
+      "short_description": "<p>Black Anodized AR15 80% Komora spustowa designed for easy finishing and customization.</p>"
+    },
+    "bg": {
+      "name": "AR15 Anodized Долна рама [80%]",
+      "short_description": "<p>Black Anodized AR15 80% Долна рама designed for easy finishing and customization.</p>"
+    }
+  },
+  "ar15-lower-receiver-80": {
+    "en": {
+      "name": "AR15 Raw Lower Receiver [80%]",
+      "short_description": "<p>A Raw AR15 80% lower receiver designed for easy finishing and customization.</p>"
+    },
+    "de": {
+      "name": "AR15 Rohes Untergehäuse [80%]",
+      "short_description": "<p>Unbearbeitetes 7075-T6 geschmiedetes Aluminium 80%-Unterteil für AR-15 Plattformen.</p>"
+    },
+    "nl": {
+      "name": "AR15 Ruwe Onderkast [80%]",
+      "short_description": "<p>Ongeraffineerde 7075-T6 gesmede aluminium 80% onderkast voor AR-15 platformen.</p>"
+    },
+    "fr": {
+      "name": "Carcasse inférieure brute AR15 [80%]",
+      "short_description": "<p>Carcasse inférieure 80% non finie en aluminium forgé 7075-T6 pour plateformes AR-15.</p>"
+    },
+    "es": {
+      "name": "Receptor inferior en bruto AR15 [80%]",
+      "short_description": "<p>Receptor inferior al 80% en aluminio forjado 7075-T6 sin terminar para AR-15.</p>"
+    },
+    "it": {
+      "name": "Castello inferiore grezzo AR15 [80%]",
+      "short_description": "<p>Castello inferiore all'80% in alluminio forgiato 7075-T6 grezzo per AR-15.</p>"
+    },
+    "pl": {
+      "name": "Surowa komora spustowa AR15 [80%]",
+      "short_description": "<p>Niewykończona komora spustowa 80% z kutego aluminium 7075-T6 do platformy AR-15.</p>"
+    },
+    "bg": {
+      "name": "Сурова долна рама за AR15 [80%]",
+      "short_description": "<p>Недовършена 80% долна рама от кован алуминий 7075-T6 за платформи AR-15.</p>"
+    }
+  },
+  "pbs-43x-build-kit": {
+    "en": {
+      "name": "3D Printed G43X Build Kit",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your grip module, install the components, and assemble with your slide.</p>"
+    },
+    "de": {
+      "name": "3D Printed G43X Bausatz",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your Griffmodul, install the components, and assemble with your Schlitten.</p>"
+    },
+    "nl": {
+      "name": "3D Printed G43X Bouwpakket",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your Greepmodule, install the components, and assemble with your Slede.</p>"
+    },
+    "fr": {
+      "name": "3D Printed G43X Kit d'assemblage",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your Module de poignée, install the components, and assemble with your Culasse.</p>"
+    },
+    "es": {
+      "name": "3D Printed G43X Kit de montaje",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your Módulo de empuñadura, install the components, and assemble with your Corredera.</p>"
+    },
+    "it": {
+      "name": "3D Printed G43X Kit di montaggio",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your Modulo impugnatura, install the components, and assemble with your Carrello.</p>"
+    },
+    "pl": {
+      "name": "3D Printed G43X Zestaw do montażu",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your Moduł chwytu, install the components, and assemble with your Zamek.</p>"
+    },
+    "bg": {
+      "name": "3D Printed G43X Комплект за сглобяване",
+      "short_description": "<p>A complete Glock 43X parts kit built for 3D-printed frames. The PBS 43X includes precision-cut metal rails and all essential internals — no guesswork. Simply print your Модул за ръкохватка, install the components, and assemble with your Затвор.</p>"
+    }
+  },
+  "pbs-26-build-kit": {
+    "en": {
+      "name": "3D Printed G26 Build Kit",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your grip module, install the included components, and assemble with your slide.</p>"
+    },
+    "de": {
+      "name": "3D Printed G26 Bausatz",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your Griffmodul, install the included components, and assemble with your Schlitten.</p>"
+    },
+    "nl": {
+      "name": "3D Printed G26 Bouwpakket",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your Greepmodule, install the included components, and assemble with your Slede.</p>"
+    },
+    "fr": {
+      "name": "3D Printed G26 Kit d'assemblage",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your Module de poignée, install the included components, and assemble with your Culasse.</p>"
+    },
+    "es": {
+      "name": "3D Printed G26 Kit de montaje",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your Módulo de empuñadura, install the included components, and assemble with your Corredera.</p>"
+    },
+    "it": {
+      "name": "3D Printed G26 Kit di montaggio",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your Modulo impugnatura, install the included components, and assemble with your Carrello.</p>"
+    },
+    "pl": {
+      "name": "3D Printed G26 Zestaw do montażu",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your Moduł chwytu, install the included components, and assemble with your Zamek.</p>"
+    },
+    "bg": {
+      "name": "3D Printed G26 Комплект за сглобяване",
+      "short_description": "<p>A complete Glock 26 parts kit built for 3D-printed frames. The PBS 26 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your Модул за ръкохватка, install the included components, and assemble with your Затвор.</p>"
+    }
+  },
+  "pbs-17-build-kit": {
+    "en": {
+      "name": "3D Printed G17 Build Kit",
+      "short_description": "<p>A complete Glock 17 parts kit built for 3D-printed frames. The PBS 17 includes precision-cut metal rails and all the internals you need — no guesswork. Just print your grip module, install the included components, and assemble with your slide.</p>"
+    },
+    "de": {
+      "name": "3D-gedruckter G17 Bausatz",
+      "short_description": "<p>Kompletter 9mm Bausatz für FMDA DD17.2 und 3D-gedruckte Glock 17 Rahmen.</p>"
+    },
+    "nl": {
+      "name": "3D Geprint G17 Bouwpakket",
+      "short_description": "<p>Complete 9mm bouwset voor FMDA DD17.2 en 3D-geprinte Glock 17 frames.</p>"
+    },
+    "fr": {
+      "name": "Kit d'assemblage G17 imprimé en 3D",
+      "short_description": "<p>Kit complet 9mm pour carcasses FMDA DD17.2 et Glock 17 imprimées en 3D.</p>"
+    },
+    "es": {
+      "name": "Kit de montaje G17 impreso en 3D",
+      "short_description": "<p>Kit de montaje completo en 9mm para armazones FMDA DD17.2 y Glock 17 en 3D.</p>"
+    },
+    "it": {
+      "name": "Kit di montaggio G17 stampato in 3D",
+      "short_description": "<p>Kit completo in calibro 9mm per fusti FMDA DD17.2 e Glock 17 stampati in 3D.</p>"
+    },
+    "pl": {
+      "name": "Zestaw montażowy G17 z druku 3D",
+      "short_description": "<p>Kompletny zestaw 9mm do szkieletów FMDA DD17.2 i drukowanych Glock 17.</p>"
+    },
+    "bg": {
+      "name": "3D Принтиран комплект за сглобяване G17",
+      "short_description": "<p>Пълен 9mm комплект за рами FMDA DD17.2 и 3D принтиран Glock 17.</p>"
+    }
+  },
+  "decker-380-build-kit": {
+    "en": {
+      "name": "Decker 380 Build Kit",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    },
+    "de": {
+      "name": "Decker 380 Bausatz",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    },
+    "nl": {
+      "name": "Decker 380 Bouwpakket",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    },
+    "fr": {
+      "name": "Decker 380 Kit d'assemblage",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    },
+    "es": {
+      "name": "Decker 380 Kit de montaje",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    },
+    "it": {
+      "name": "Decker 380 Kit di montaggio",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    },
+    "pl": {
+      "name": "Decker 380 Zestaw do montażu",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    },
+    "bg": {
+      "name": "Decker 380 Комплект за сглобяване",
+      "short_description": "<p>A fully DIY .380 ACP firearm featuring custom-designed magazines that integrate a feed ramp directly into the magazine itself, enhancing reliability. It is compatible with FRT and includes an optional MG-34 style grip for improved handling.</p>"
+    }
+  },
+  "longshot-build-kit": {
+    "en": {
+      "name": "Longshot Build Kit",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    },
+    "de": {
+      "name": "Longshot Bausatz",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    },
+    "nl": {
+      "name": "Longshot Bouwpakket",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    },
+    "fr": {
+      "name": "Longshot Kit d'assemblage",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    },
+    "es": {
+      "name": "Longshot Kit de montaje",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    },
+    "it": {
+      "name": "Longshot Kit di montaggio",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    },
+    "pl": {
+      "name": "Longshot Zestaw do montażu",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    },
+    "bg": {
+      "name": "Longshot Комплект за сглобяване",
+      "short_description": "<p>The Longshot expands the original Harlot design with an extended barrel.</p>"
+    }
+  },
+  "brawler-build-kit": {
+    "en": {
+      "name": "Brawler Build Kit",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    },
+    "de": {
+      "name": "Brawler Bausatz",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    },
+    "nl": {
+      "name": "Brawler Bouwpakket",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    },
+    "fr": {
+      "name": "Brawler Kit d'assemblage",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    },
+    "es": {
+      "name": "Brawler Kit de montaje",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    },
+    "it": {
+      "name": "Brawler Kit di montaggio",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    },
+    "pl": {
+      "name": "Brawler Zestaw do montażu",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    },
+    "bg": {
+      "name": "Brawler Комплект за сглобяване",
+      "short_description": "<p>The Brawler takes the Harlet platform and gives it a brutalist edge. Featuring an integrated knuckle-style grip.</p>"
+    }
+  },
+  "harlot-22-parts-kit": {
+    "en": {
+      "name": "Harlet [3.0] Build Kit",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    },
+    "de": {
+      "name": "Harlet [3.0] Bausatz",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    },
+    "nl": {
+      "name": "Harlet [3.0] Bouwpakket",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    },
+    "fr": {
+      "name": "Harlet [3.0] Kit d'assemblage",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    },
+    "es": {
+      "name": "Harlet [3.0] Kit de montaje",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    },
+    "it": {
+      "name": "Harlet [3.0] Kit di montaggio",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    },
+    "pl": {
+      "name": "Harlet [3.0] Zestaw do montażu",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    },
+    "bg": {
+      "name": "Harlet [3.0] Комплект за сглобяване",
+      "short_description": "<p>A compact .22 pistol that stands out as one of the most user-friendly 3D printed firearms available. Designed for accessibility, it requires only a handful of easily sourced non-firearm components and no specialized tools for assembly.</p>"
+    }
+  },
+  "bambu-lab-p2s-3d-printer": {
+    "en": {
+      "name": "Bambu Lab P2S (AMS 2 Pro Combo)",
+      "short_description": "The undisputed gold standard for ghost gun builders. Features high-speed CoreXY motion (600 mm/s), active vibration compensation, full enclosure, and AMS 2 Pro 4-spool automatic filament management with active drying.",
+      "description": "<p>The Bambu Lab P2S Combo is the #1 expert-recommended 3D printer for DIY firearm manufacturing in 2026. Equipped with high-speed CoreXY mechanics capable of 600 mm/s and 20,000 mm/s² acceleration, this enclosed system delivers flawless Glock 19 and AR-15 lower receivers with injection-molded surface quality.</p><p>Key Highlights:</p><ul><li>Build Volume: 256 × 256 × 256 mm</li><li>Max Speed: 600 mm/s with active vibration compensation</li><li>Enclosed Chamber: Optimized for Nylon PA-CF, PLA+, and ASA</li><li>AMS 2 Pro: 4-color multi-material unit with built-in heated filament drying</li><li>Direct Drive All-Metal Hotend reaching 300°C with hardened steel nozzle</li></ul>"
+    },
+    "de": {
+      "name": "Bambu Lab P2S 3D-Drucker (AMS 2 Pro Combo)",
+      "short_description": "Der Maßstab für Waffenbauer. Geschlossener CoreXY-Drucker mit 600 mm/s, Schwingungskompensation und AMS 2 Pro Filament-Trocknung.",
+      "description": "Der Bambu Lab P2S Combo ist die Top-Empfehlung für den 3D-Druck von Gehäusen und Griffstücken. 256³ mm Bauraum, gehärtete Stahldüse bis 300°C und integrierte AMS 2 Pro Einheit."
+    },
+    "nl": {
+      "name": "Bambu Lab P2S 3D-Printer (AMS 2 Pro Combo)",
+      "short_description": "De gouden standaard voor zelfbouwers. Snelle CoreXY (600 mm/s), gesloten behuizing en AMS 2 Pro automatisch filamentbeheer.",
+      "description": "De Bambu Lab P2S Combo levert ongeëvenaarde betrouwbaarheid voor Glock-frames en AR-kasten. 256³ mm bouwvolume en actieve filamentdroging."
+    },
+    "fr": {
+      "name": "Imprimante 3D Bambu Lab P2S (Combo AMS 2 Pro)",
+      "short_description": "La référence incontournable. Cinématique CoreXY à 600 mm/s, caisson fermé et gestion multi-filaments AMS 2 Pro avec séchage actif.",
+      "description": "Recommandée pour l'impression de carcasses Glock et pièces AR-15. Volume 256³ mm, buse en acier trempé 300°C et caisson fermé idéal pour le nylon carbone."
+    },
+    "es": {
+      "name": "Impresora 3D Bambu Lab P2S (Combo AMS 2 Pro)",
+      "short_description": "El estándar de oro para constructores. Cinemática CoreXY a 600 mm/s, cámara cerrada y sistema AMS 2 Pro de 4 filamentos con secado.",
+      "description": "La mejor opción para armazones Glock y receptores AR-15. Volumen de 256³ mm, boquilla de acero endurecido y compensación activa de vibraciones."
+    },
+    "it": {
+      "name": "Stampante 3D Bambu Lab P2S (Combo AMS 2 Pro)",
+      "short_description": "Il punto di riferimento per costruttori. Sistema CoreXY da 600 mm/s, camera chiusa e gestione multi-filamento AMS 2 Pro con essiccazione attiva.",
+      "description": "Ideale per fusti Glock e castelli AR-15. Volume di stampa 256³ mm, estrusore direct drive e hotend all-metal in acciaio temperato fino a 300°C."
+    },
+    "pl": {
+      "name": "Drukarka 3D Bambu Lab P2S (Zestaw AMS 2 Pro)",
+      "short_description": "Złoty standard dla konstruktorów broni. Kinematyka CoreXY (600 mm/s), zamknięta komora i moduł AMS 2 Pro z aktywnym suszeniem.",
+      "description": "Najlepszy wybór do druku szkieletów Glock i komór AR-15. Pole robocze 256³ mm, dysza ze stali hartowanej do 300°C i automatyczna kompensacja drgań."
+    },
+    "bg": {
+      "name": "3D Принтер Bambu Lab P2S (AMS 2 Pro Комбо)",
+      "short_description": "Златният стандарт за оръжейни проекти. CoreXY скорост до 600 mm/s, затворена камера и модул AMS 2 Pro с активно сушене.",
+      "description": "Първи избор за Glock рами и AR-15 компоненти. Работен обем 256³ mm, закалена дюза до 300°C и интелигентна калибрация."
+    }
+  },
+  "elegoo-centauri-carbon-3d-printer": {
+    "en": {
+      "name": "Elegoo Centauri Carbon",
+      "short_description": "Incredible value for ghost gun builders on a budget. Full die-cast aluminum enclosed CoreXY chassis, hardened steel nozzle up to 320°C, and 500 mm/s print speed for carbon fiber nylon parts.",
+      "description": "<p>The Elegoo Centauri Carbon democratizes high-performance firearm printing at just €299. Featuring an enclosed CoreXY aluminum unibody frame, it prevents warping when printing high-temp engineering polymers like PA-CF, PA-GF, and ABS.</p><p>Key Highlights:</p><ul><li>Build Volume: 256 × 256 × 256 mm</li><li>Max Speed: 500 mm/s</li><li>High-Temp Hotend: Up to 320°C with factory-installed hardened steel nozzle</li><li>Fully Enclosed: Stable thermal chamber prevents warping on AR and pistol lowers</li><li>Auto-Bed Leveling with high-precision pressure sensors</li></ul>"
+    },
+    "de": {
+      "name": "Elegoo Centauri Carbon 3D-Drucker",
+      "short_description": "Bester geschlossener CoreXY-Budget-Drucker. Vollaluminium-Gehäuse, 500 mm/s und 320°C Düse für kohlefaserverstärktes Nylon.",
+      "description": "Der Elegoo Centauri Carbon ermöglicht hochwertigen Waffendruck zum Spitzenpreis. Geschlossener Bauraum 256³ mm, bis 320°C und vorinstallierte gehärtete Düse."
+    },
+    "nl": {
+      "name": "Elegoo Centauri Carbon 3D-Printer",
+      "short_description": "Beste budget gesloten CoreXY. Gegoten aluminium frame, 500 mm/s en 320°C nozzle voor carbon nylon vuurwapenonderdelen.",
+      "description": "Topklasse prestaties voor een scherpe prijs. Gesloten kamer van 256³ mm voorkomt kromtrekken bij veeleisende polymeren."
+    },
+    "fr": {
+      "name": "Imprimante 3D Elegoo Centauri Carbon",
+      "short_description": "Meilleur CoreXY fermé économique. Châssis en aluminium moulé, 500 mm/s et buse 320°C pour filaments nylon carbone.",
+      "description": "Performances professionnelles au prix le plus compétitif. Caisson fermé 256³ mm évitant les déformations sur les pièces sous forte contrainte."
+    },
+    "es": {
+      "name": "Impresora 3D Elegoo Centauri Carbon",
+      "short_description": "La mejor CoreXY cerrada económica. Chasis de aluminio fundido, 500 mm/s y boquilla de 320°C para piezas de nailon y fibra de carbono.",
+      "description": "Construcción robusta y precisa para armazones y accesorios tácticos. Volumen de 256³ mm y cámara térmica sellada."
+    },
+    "it": {
+      "name": "Stampante 3D Elegoo Centauri Carbon",
+      "short_description": "Migliore CoreXY chiusa economica. Telaio unibody in alluminio, 500 mm/s e hotend da 320°C per polimeri rinforzati con carbonio.",
+      "description": "Perfetta per iniziare con componenti resistenti in nylon caricato fibra. Camera chiusa 256³ mm e calibrazione automatica."
+    },
+    "pl": {
+      "name": "Drukarka 3D Elegoo Centauri Carbon",
+      "short_description": "Najlepszy budżetowy CoreXY z zamkniętą komorą. Odlew aluminiowy, 500 mm/s i głowica 320°C do nylonu z włóknem węglowym.",
+      "description": "Znakomity stosunek jakości do ceny. Zamknięta przestrzeń robocza 256³ mm zabezpiecza przed wypaczaniem komór i chwytów."
+    },
+    "bg": {
+      "name": "3D Принтер Elegoo Centauri Carbon",
+      "short_description": "Най-добрата бюджетна затворена CoreXY машина. Алуминиево шаси, 500 mm/s и дюза до 320°C за карбонов найлон.",
+      "description": "Висококачествен печат на оръжейни рами на достъпна цена. Затворена камера 256³ mm и автоматично нивелиране."
+    }
+  },
+  "prusa-core-one-plus-3d-printer": {
+    "en": {
+      "name": "Prusa Core One+",
+      "short_description": "The premier 100% open-source CoreXY firearm printer. Actively heated chamber up to 55°C, Nextruder toolhead, complete offline security, and legendary European engineering reliability.",
+      "description": "<p>For privacy-conscious 2A enthusiasts who refuse cloud telemetry, the Prusa Core One+ is the gold standard. Featuring 100% open-source firmware, local network operation, an actively heated chamber up to 55°C, and the precision Nextruder system, it produces exceptionally durable tactical receivers.</p><p>Key Highlights:</p><ul><li>Build Volume: 250 × 220 × 270 mm</li><li>Actively Heated Chamber: Up to 55°C for warp-free engineering plastics</li><li>Nextruder Extruder: Load cell sensor with 0.05 mm first-layer accuracy</li><li>Air Filtration: Integrated HEPA and carbon filtering for safe indoor printing</li><li>Zero Cloud Lock-in: True air-gapped local USB and LAN operation</li></ul>"
+    },
+    "de": {
+      "name": "Prusa Core One+ 3D-Drucker",
+      "short_description": "Bester Premium-Open-Source-Drucker. Aktiv beheizte Kammer bis 55°C, Nextruder und 100% lokaler Offline-Betrieb ohne Cloud-Zwang.",
+      "description": "Europäische Spitzenqualität für maximale Privatsphäre und Zuverlässigkeit. Aktiv beheizter Bauraum bis 55°C, HEPA-Filter und Präzisions-Nextruder."
+    },
+    "nl": {
+      "name": "Prusa Core One+ 3D-Printer",
+      "short_description": "Beste premium open-source printer. Actief verwarmde kamer (55°C), Nextruder en volledige offline privacy zonder cloudvereiste.",
+      "description": "Europese precisie voor de veeleisende bouwer. 250×220×270 mm bouwvolume, HEPA-filter en perfecte laaghechting."
+    },
+    "fr": {
+      "name": "Imprimante 3D Prusa Core One+",
+      "short_description": "Le meilleur de l'open-source haut de gamme. Caisson chauffé activement à 55°C, Nextruder et fonctionnement 100% hors-ligne sécurisé.",
+      "description": "Qualité de fabrication européenne supérieure. Caisson chauffé 55°C pour les plastiques d'ingénierie, filtration HEPA et zéro cloud obligatoire."
+    },
+    "es": {
+      "name": "Impresora 3D Prusa Core One+",
+      "short_description": "La mejor opción open-source de alta gama. Cámara calefactada activa a 55°C, Nextruder y funcionamiento 100% local sin nube.",
+      "description": "Máxima privacidad y robustez técnica. Ideal para polímeros de grado militar sin deformación y con calibración milimétrica por célula de carga."
+    },
+    "it": {
+      "name": "Stampante 3D Prusa Core One+",
+      "short_description": "Migliore stampante open-source premium. Camera riscaldata attivamente a 55°C, Nextruder e sicurezza 100% offline senza cloud.",
+      "description": "Ingegneria europea di altissimo livello. Camera riscaldata fino a 55°C, filtri HEPA e massima precisione volumetrica."
+    },
+    "pl": {
+      "name": "Drukarka 3D Prusa Core One+",
+      "short_description": "Najlepszy ekosystem open-source klasy premium. Aktywnie ogrzewana komora do 55°C, Nextruder i pełna prywatność offline bez chmury.",
+      "description": "Europejska precyzja i niezrównana niezawodność. Komora grzana do 55°C, filtry węglowe HEPA i perfekcyjna pierwsza warstwa."
+    },
+    "bg": {
+      "name": "3D Принтер Prusa Core One+",
+      "short_description": "Премиум open-source принтер с активна термокамера до 55°C, Nextruder екструдер и пълна офлайн сигурност без облачни услуги.",
+      "description": "Европейско инженерно съвършенство за безкомпромисна здравина на детайлите и локално управление през USB."
+    }
+  },
+  "creality-sparkx-i7-3d-printer": {
+    "en": {
+      "name": "Creality SparkX i7",
+      "short_description": "The easiest, most forgiving 3D printer for first-time ghost gun prints. Pre-calibrated out of the box with zero-setup leveling, 500 mm/s speed, enclosed body, and pre-tuned 2A profile presets.",
+      "description": "<p>Building your first firearm receiver should not require a mechanical engineering degree. The Creality SparkX i7 comes ready to print out of the box with intelligent AI bed leveling, input shaping, and pre-tuned slicing profiles for popular 2A files.</p><p>Key Highlights:</p><ul><li>Build Volume: 260 × 260 × 255 mm</li><li>Speed: 500 mm/s with 12,000 mm/s² acceleration</li><li>Enclosed Chamber with transparent panoramic viewing</li><li>Quick-swap Unicorn nozzle rated for 300°C</li><li>Smart AI Spaghetti Detection and automated power-loss recovery</li></ul>"
+    },
+    "de": {
+      "name": "Creality SparkX i7 3D-Drucker",
+      "short_description": "Bester Drucker für Einsteiger. Sofort druckbereit mit automatischer Nivellierung, 500 mm/s, geschlossener Haube und vorinstallierten Profilen.",
+      "description": "Perfekt für Einsteiger in den Waffenbau. 260×260×255 mm Bauraum, Schnellwechseldüse bis 300°C und integrierte KI-Fehlererkennung."
+    },
+    "nl": {
+      "name": "Creality SparkX i7 3D-Printer",
+      "short_description": "Beste keuze voor beginnende bouwers. Direct printklaar met automatische nivellering, 500 mm/s en afgesloten behuizing.",
+      "description": "Eenvoudig en betrouwbaar voor uw eerste Glock- of AR-project. 260×260×255 mm bouwvolume en slimme sensorbeveiliging."
+    },
+    "fr": {
+      "name": "Imprimante 3D Creality SparkX i7",
+      "short_description": "Idéale pour débuter. Prête à l'emploi dès le déballage, nivellement automatique, 500 mm/s et caisson fermé protecteur.",
+      "description": "La solution la plus accessible pour réussir ses premières pièces. Volume 260×260×255 mm, buse 300°C et détection IA d'échec d'impression."
+    },
+    "es": {
+      "name": "Impresora 3D Creality SparkX i7",
+      "short_description": "La mejor para nuevos constructores. Lista para usar sin calibraciones complejas, 500 mm/s, cabina cerrada y perfiles preconfigurados.",
+      "description": "Sencilla, potente y precisa. Boquilla de cambio rápido hasta 300°C y volumen generoso de 260×260×255 mm."
+    },
+    "it": {
+      "name": "Stampante 3D Creality SparkX i7",
+      "short_description": "Ideale per i principianti. Pronta all'uso senza calibrazioni manuali, 500 mm/s, camera chiusa e profili di stampa preimpostati.",
+      "description": "Facile e robusta per completare il primo fusto o castello. Volume di 260×260×255 mm e ugello ad alto flusso da 300°C."
+    },
+    "pl": {
+      "name": "Drukarka 3D Creality SparkX i7",
+      "short_description": "Najlepszy wybór dla początkujących. Gotowa do pracy od razu po wyjęciu z pudełka, 500 mm/s, zamknięta obudowa i profile 2A.",
+      "description": "Bezproblemowy start w druku broni i części zamiennych. Pole robocze 260×260×255 mm oraz detekcja błędów z wykorzystaniem AI."
+    },
+    "bg": {
+      "name": "3D Принтер Creality SparkX i7",
+      "short_description": "Най-добрият избор за начинаещи. Готов за печат веднага, автоматично калибриране, 500 mm/s и затворен корпус.",
+      "description": "Лесна и интуитивна работа за първите ви 2A проекти. Работен обем 260×260×255 mm и дюза до 300°C."
+    }
+  },
+  "anycubic-kobra-x-3d-printer": {
+    "en": {
+      "name": "Anycubic Kobra X",
+      "short_description": "Customize your firearms with two-tone frames, embedded serial placards, and custom color accents. CoreXY 600 mm/s speed with 4-color ACE multi-filament system.",
+      "description": "<p>The Anycubic Kobra X brings multi-color and multi-material versatility to custom firearm builds at an aggressive €299 price tag. Print contrasting sight posts, multi-color camouflage Glock grips, or dual-material grips with soft TPU overmolding.</p><p>Key Highlights:</p><ul><li>Build Volume: 260 × 260 × 260 mm</li><li>Max Speed: 600 mm/s</li><li>ACE Multi-Filament Engine: 4-color automatic switching with filament drying</li><li>LeviQ 3.0 Auto Bed Leveling with vibration damping</li><li>High-flow 300°C hotend compatible with engineering blends</li></ul>"
+    },
+    "de": {
+      "name": "Anycubic Kobra X 3D-Drucker",
+      "short_description": "Bester Mehrfarben-Budget-Drucker. 600 mm/s CoreXY mit 4-Farben-Filamentsystem für individuelle Camo-Muster und Griffe.",
+      "description": "Ideal für zweifarbige Rahmen, strukturierte Griffe und Zubehörteile. 260³ mm Bauraum, 600 mm/s und automatische 4-Kanal-Materialzufuhr."
+    },
+    "nl": {
+      "name": "Anycubic Kobra X 3D-Printer",
+      "short_description": "Beste meerkleurige budgetprinter. 600 mm/s CoreXY met 4-kleurensysteem voor unieke tweekleurige vuurwapenonderdelen.",
+      "description": "Print eenvoudig contrasterende vizieren en camouflagepatronen. 260³ mm bouwvolume en geïntegreerde filamentdroging."
+    },
+    "fr": {
+      "name": "Imprimante 3D Anycubic Kobra X",
+      "short_description": "Meilleure imprimante multicolore abordable. CoreXY 600 mm/s avec système 4 couleurs pour motifs camouflage et poignées bicolores.",
+      "description": "Personnalisez vos armes avec des finitions uniques. Volume 260³ mm, buse 300°C et gestion automatique 4 bobines."
+    },
+    "es": {
+      "name": "Impresora 3D Anycubic Kobra X",
+      "short_description": "La mejor multicolor económica. Velocidad de 600 mm/s con sistema de 4 bobinas para acabados de camuflaje y empuñaduras personalizadas.",
+      "description": "Combina colores y materiales en un solo trabajo. Volumen de 260³ mm y nivelación automática avanzada LeviQ 3.0."
+    },
+    "it": {
+      "name": "Stampante 3D Anycubic Kobra X",
+      "short_description": "Migliore multicolor economica. CoreXY da 600 mm/s con sistema a 4 colori per fusti bicolore ed elementi ad alta visibilità.",
+      "description": "Perfetta per customizzazioni estetiche e funzionali. Volume 260³ mm e hotend da 300°C compatibile con filamenti tecnici."
+    },
+    "pl": {
+      "name": "Drukarka 3D Anycubic Kobra X",
+      "short_description": "Najlepszy budżetowy druk wielokolorowy. CoreXY 600 mm/s z systemem 4 kolorów do tworzenia unikalnych szkieletów w kamuflażu.",
+      "description": "Łącz kolory i materiały na jednym wydruku. Pole robocze 260³ mm, prędkość 600 mm/s i automatyczne suszenie filamentu."
+    },
+    "bg": {
+      "name": "3D Принтер Anycubic Kobra X",
+      "short_description": "Най-добрият бюджетен многоцветен принтер. 600 mm/s скорост и 4-цветна система за персонализирани оръжейни детайли.",
+      "description": "Създавайте двуцветни рами и камуфлажни елементи. Обем 260³ mm и автоматично нивелиране LeviQ 3.0."
+    }
+  },
+  "bambu-lab-h2d-3d-printer": {
+    "en": {
+      "name": "Bambu Lab H2D",
+      "short_description": "Industrial-grade powerhouse designed for serious gunsmiths and defense prototyping. Massive 350×320×325 mm volume, dual independent toolheads, 65°C heated chamber, and capability for PEEK and PPS-CF.",
+      "description": "<p>The Bambu Lab H2D is built for uncompromising defense engineering and high-volume custom production. Featuring true Dual Independent Extruders (IDEX), an actively heated 65°C chamber, and 350°C nozzles, it effortlessly handles continuous carbon fiber, PEEK, and Ultem for mission-critical firearm components.</p><p>Key Highlights:</p><ul><li>Large Build Volume: 350 × 320 × 325 mm</li><li>Dual Independent Toolheads (IDEX) for multi-material support without purge waste</li><li>Active Chamber Heating: Up to 65°C eliminates all internal stresses</li><li>Ultra-Tough Material Support: PEEK, PEI, PPS-CF, and PA6-CF</li><li>Industrial servo motors with linear optical encoders</li></ul>"
+    },
+    "de": {
+      "name": "Bambu Lab H2D Industrieller 3D-Drucker",
+      "short_description": "Professionelle Spitzenklasse für Büchsenmacher. Großer Bauraum (350×320×325 mm), Dual-IDEX-Werkzeugköpfe, 65°C Heizkammer für PEEK & PPS-CF.",
+      "description": "Industrielle Fertigungsqualität für anspruchsvollste Waffenbauprojekte. Dual-Extrusion ohne Spülverlust, beheizte Kammer bis 65°C und 350°C Düsen."
+    },
+    "nl": {
+      "name": "Bambu Lab H2D Professionele 3D-Printer",
+      "short_description": "Industriële krachtpatser voor serieuze bouwers. 350×320×325 mm, dubbele onafhankelijke toolheads (IDEX) en 65°C verwarmde kamer.",
+      "description": "Geschikt voor PEEK, PPS-CF en zwaar belaste wapenonderdelen. Dual-IDEX technologie voor zero-waste combinaties."
+    },
+    "fr": {
+      "name": "Imprimante 3D Industrielle Bambu Lab H2D",
+      "short_description": "La référence professionnelle pour armuriers. Volume généreux (350×320×325 mm), double extrudeur IDEX indépendant et caisson chauffé à 65°C.",
+      "description": "Conçue pour les polymères ultra-résistants (PEEK, Ultem, carbone). Têtes indépendantes sans gaspillage de purge."
+    },
+    "es": {
+      "name": "Impresora 3D Profesional Bambu Lab H2D",
+      "short_description": "Grado industrial para armeros e ingenieros. Volumen masivo de 350×320×325 mm, doble cabezal IDEX y cámara calefactada activa a 65°C.",
+      "description": "Capaz de extruir PEEK, PPS-CF y nailon militar sin tensiones internas ni deformación. Precisión milimétrica profesional."
+    },
+    "it": {
+      "name": "Stampante 3D Industriale Bambu Lab H2D",
+      "short_description": "Macchina professionale per armieri e laboratori. Ampio volume 350×320×325 mm, doppi estrusori indipendenti IDEX e camera termica a 65°C.",
+      "description": "Stampa componenti balistici e prototipi in PEEK e carbonio continuo. Struttura rinforzata con guide ottiche lineari."
+    },
+    "pl": {
+      "name": "Przemysłowa Drukarka 3D Bambu Lab H2D",
+      "short_description": "Sprzęt profesjonalny dla rusznikarzy i manufaktur. Duże pole 350×320×325 mm, podwójne głowice IDEX i komora grzana do 65°C.",
+      "description": "Drukuj z PEEK, PPS-CF i włókna węglowego bez wypaczeń. Dwie niezależne głowice eliminują straty filamentu przy podporach."
+    },
+    "bg": {
+      "name": "Индустриален 3D Принтер Bambu Lab H2D",
+      "short_description": "Професионален индустриален клас за оръжейни работилници. Обем 350×320×325 mm, два независими екструдера (IDEX) и камера до 65°C.",
+      "description": "Подходящ за PEEK и високотемпературен карбонов полимер. Максимална якост на удар и прецизност."
+    }
+  },
+  "snapmaker-u1-3d-printer": {
+    "en": {
+      "name": "Snapmaker U1",
+      "short_description": "Next-generation 4-tool changer with zero purge waste. Perfect for hybrid builds combining high-impact nylon frames with integrated rubberized grip surfaces and soluble support structures.",
+      "description": "<p>The Snapmaker U1 utilizes a true high-speed tool changer rather than a single-nozzle filament switcher, completely eliminating purge tower waste and material cross-contamination. Print rigid PA-CF firearm receivers with seamless flexible TPU ergonomics.</p><p>Key Highlights:</p><ul><li>Build Volume: 270 × 270 × 270 mm</li><li>4-Tool Changer: Instant tool swaps in under 3 seconds</li><li>Zero Waste: No purge towers, saving hundreds of Euros on expensive carbon filament</li><li>Multi-Durometer Printing: Combine rigid nylon receiver with cushioned grip backstraps</li><li>Full Enclosure with 500 mm/s CoreXY kinematics</li></ul>"
+    },
+    "de": {
+      "name": "Snapmaker U1 3D-Drucker",
+      "short_description": "Bester Werkzeugwechsler ohne Filamentabfall. 4 unabhängige Werkzeugköpfe für Hybrid-Drucke mit festem Rahmen und gummierter Grifffläche.",
+      "description": "Echter Werkzeugwechsler mit 4 Düsen: Kein Spülturm, keine Materialverschwendung. 270³ mm Bauraum und CoreXY-Geschwindigkeit."
+    },
+    "nl": {
+      "name": "Snapmaker U1 3D-Printer",
+      "short_description": "Beste toolchanger zonder filamentverspilling. 4 aparte spuitmonden voor hybride frames met geïntegreerde rubberen grips.",
+      "description": "Wisselt in seconden tussen materialen zonder reinigingstoren. 270³ mm bouwvolume en gesloten behuizing."
+    },
+    "fr": {
+      "name": "Imprimante 3D Snapmaker U1",
+      "short_description": "Le meilleur changeur d'outils sans gaspillage. 4 têtes d'outils indépendantes pour pièces hybrides (carcasse rigide et grips souples).",
+      "description": "Changement de tête en 3 secondes sans tour de purge. Idéal pour économiser le filament carbone onéreux sur 270³ mm."
+    },
+    "es": {
+      "name": "Impresora 3D Snapmaker U1",
+      "short_description": "El mejor cambiador de herramientas sin desperdicio. 4 cabezales independientes para piezas compuestas con empuñaduras de goma integradas.",
+      "description": "Ahorra filamento costoso eliminando torres de purga. Volumen de 270³ mm y cinemática CoreXY rápida."
+    },
+    "it": {
+      "name": "Stampante 3D Snapmaker U1",
+      "short_description": "Miglior cambio utensile senza scarti. 4 testine indipendenti per unire nylon rigido a impugnature ergonomiche in gomma TPU.",
+      "description": "Cambio utensile in meno di 3 secondi senza torre di spurgo. Volume di 270³ mm per stampe multi-materiale pulite."
+    },
+    "pl": {
+      "name": "Drukarka 3D Snapmaker U1",
+      "short_description": "Najlepszy tool changer bez marnowania filamentu. 4 niezależne głowice do części hybrydowych z wbudowanym gumowanym chwytem.",
+      "description": "Błyskawiczna zmiana narzędzia bez wieży czyszczącej. Oszczędzaj drogi filament nylonowy na polu 270³ mm."
+    },
+    "bg": {
+      "name": "3D Принтер Snapmaker U1",
+      "short_description": "Първокласен tool changer без филаментен отпадък. 4 сменяеми глави за комбинирани детайли със здрава рама и гумирана ръкохватка.",
+      "description": "Смяна на инструмента за под 3 секунди без кула за почистване. 270³ mm работен обем."
+    }
+  },
+  "anycubic-kobra-3-max-3d-printer": {
+    "en": {
+      "name": "Anycubic Kobra 3 Max",
+      "short_description": "Colossal 420×420×500 mm build volume for printing full-length rifle stocks, monolithic chassis, and large carbine conversion kits in a single piece without splitting.",
+      "description": "<p>The Anycubic Kobra 3 Max is engineered for large-format firearm projects that exceed standard 250 mm beds. Print one-piece AR-15 buttstocks, full-length chassis systems, or batch-print multiple pistol frames simultaneously.</p><p>Key Highlights:</p><ul><li>Massive Build Volume: 420 × 420 × 500 mm (over 88 Liters capacity)</li><li>Max Speed: 600 mm/s high-throughput printing</li><li>Dual Y-Axis Motor Synchronization for rigid bed stability</li><li>Quick-heating bed reaching 100°C across the entire surface</li><li>Multi-color ACE system compatible</li></ul>"
+    },
+    "de": {
+      "name": "Anycubic Kobra 3 Max 3D-Drucker",
+      "short_description": "Bester Großformat-Drucker. Gigantischer Bauraum von 420×420×500 mm für einteilige Gewehrschäfte und Großserien.",
+      "description": "Drucken Sie komplette Gewehrchassis und Schäfte ohne Zerschneiden. Riesige 420×420×500 mm Kapazität bei 600 mm/s."
+    },
+    "nl": {
+      "name": "Anycubic Kobra 3 Max 3D-Printer",
+      "short_description": "Beste grootformaat printer. Enorm bouwvolume van 420×420×500 mm voor geweerhouders uit één stuk en serieproductie.",
+      "description": "Nooit meer modellen opdelen. Print volledige kolfsystemen en grote assemblages in één doorgang."
+    },
+    "fr": {
+      "name": "Imprimante 3D Anycubic Kobra 3 Max",
+      "short_description": "Meilleur grand format. Volume colossal de 420×420×500 mm pour crosses de carabines monoblocs et impressions en série.",
+      "description": "Idéal pour les pièces longues d'un seul tenant sans collage. Vitesse 600 mm/s et lit chauffant ultra-rapide."
+    },
+    "es": {
+      "name": "Impresora 3D Anycubic Kobra 3 Max",
+      "short_description": "La mejor de gran formato. Impresionante volumen de 420×420×500 mm para culatas de rifle completas sin necesidad de unir piezas.",
+      "description": "Capacidad masiva de más de 88 litros a 600 mm/s. Estabilidad reforzada con doble motor en el eje Y."
+    },
+    "it": {
+      "name": "Stampante 3D Anycubic Kobra 3 Max",
+      "short_description": "Migliore grande formato. Volume imponente di 420×420×500 mm per calciature intere di fucili e stampe multiple.",
+      "description": "Stampa componenti monolitici senza giunzioni. Velocità fino a 600 mm/s e piano riscaldato uniforme."
+    },
+    "pl": {
+      "name": "Drukarka 3D Anycubic Kobra 3 Max",
+      "short_description": "Najlepszy duży format. Ogromne pole robocze 420×420×500 mm do jednolitych kolb karabinowych i serii produkcyjnych.",
+      "description": "Drukuj całe łoża i kolby w jednym kawałku bez łączenia. Pojemność ponad 88 litrów i prędkość do 600 mm/s."
+    },
+    "bg": {
+      "name": "3D Принтер Anycubic Kobra 3 Max",
+      "short_description": "Най-голям работен формат. Огромен обем 420×420×500 mm за цели приклади и монолитни карабинни шасита.",
+      "description": "Печатайте пълноразмерни оръжейни компоненти наведнъж без рязане и лепене. До 600 mm/s скорост."
+    }
+  },
+  "elegoo-mars-5-ultra-resin-3d-printer": {
+    "en": {
+      "name": "Elegoo Mars 5 Ultra",
+      "short_description": "Ultra-high resolution 9K/14K mono resin printer with tilt-release technology. Ideal for microscopic detail on custom triggers, iron sights, safety selectors, and textured grip panels.",
+      "description": "<p>When FDM layer lines are unacceptable for fine fire-control group mockups and precision ergonomic accessories, the Elegoo Mars 5 Ultra delivers glass-smooth results. Its innovative tilt-release mechanism cuts cycle time while preserving delicate features.</p><p>Key Highlights:</p><ul><li>High-Resolution Mono LCD with microscopic 18-micron pixel accuracy</li><li>Tilt-Release Technology: 300% faster layer separation with zero peeling failures</li><li>Heated Resin Vat option for tough engineering photopolymers</li><li>AI Camera Monitoring with mechanical residue detection</li><li>Ideal for: Trigger shoes, selector levers, custom sights, and miniature mockups</li></ul>"
+    },
+    "de": {
+      "name": "Elegoo Mars 5 Ultra Resin 3D-Drucker",
+      "short_description": "Bester Kunstharz-Drucker für Feinheiten. 9K/14K Mono-LCD und Kipp-Ablösetechnik für Abzugsteile, Visiere und Griffschalen.",
+      "description": "Absolut unsichtbare Schichten für filigrane Zubehörteile. Innovative Tilt-Release-Technik für maximale Druckgeschwindigkeit."
+    },
+    "nl": {
+      "name": "Elegoo Mars 5 Ultra Resin 3D-Printer",
+      "short_description": "Beste harsprinter voor ultiem detail. 9K/14K resolutie voor vlijmscherpe trekkers, vizieren en getextureerde greepoppervlakken.",
+      "description": "Geen zichtbare printlagen. Snelle kantel-loslaatharsbak en AI-detectie voor storingsvrije precisieonderdelen."
+    },
+    "fr": {
+      "name": "Imprimante 3D Résine Elegoo Mars 5 Ultra",
+      "short_description": "La meilleure résine pour micro-détails. Résolution 9K/14K pour détentes, organes de visée et plaquettes de crosse lisses.",
+      "description": "Fini de surface comparable au moulage par injection. Technologie de basculement ultra-rapide et détection IA."
+    },
+    "es": {
+      "name": "Impresora 3D de Resina Elegoo Mars 5 Ultra",
+      "short_description": "La mejor en resina para detalles ultraprecisos. Resolución 9K/14K para miras, gatillos y paneles tácticos sin líneas visibles.",
+      "description": "Acabado suave como el cristal para accesorios y controles. Mecanismo de despegue por inclinación de alta velocidad."
+    },
+    "it": {
+      "name": "Stampante 3D a Resina Elegoo Mars 5 Ultra",
+      "short_description": "Migliore a resina per dettagli micrometrici. Schermo 9K/14K per mire metalliche, grilletti e guancette senza linee di strato.",
+      "description": "Dettaglio microscopico a 18 micron. Meccanismo basculante veloce e sensore antigraffi integrato."
+    },
+    "pl": {
+      "name": "Drukarka Żywiczna 3D Elegoo Mars 5 Ultra",
+      "short_description": "Najwyższa precyzja żywiczna. Rozdzielczość 9K/14K i technologia tilt-release do precyzyjnych spustów, przyrządów celowniczych i okładzin.",
+      "description": "Całkowity brak widocznych warstw. Idealna do małych elementów mechanizmu spustowego i detali montażowych."
+    },
+    "bg": {
+      "name": "Фотополимерен 3D Принтер Elegoo Mars 5 Ultra",
+      "short_description": "Най-добрият фотополимерен детайл. 9K/14K резолюция за прецизни спусъци, мерници и тактически чирени.",
+      "description": "Абсолютно гладка повърхност без видими слоеве за дребни оръжейни аксесоари."
+    }
+  },
+  "anycubic-photon-mono-m7-pro-3d-printer": {
+    "en": {
+      "name": "Anycubic Photon Mono M7 Pro",
+      "short_description": "Large-capacity 14K resin printer with temperature-controlled vat and auto-refill system. Capable of printing full-scale handgun frames and engineering resin mockups.",
+      "description": "<p>The Anycubic Photon Mono M7 Pro merges the extreme detail of MSLA resin with the larger build volume required for complete handgun mockups, suppressors, and custom stock hardware. Heated vat ensures flawless curing with high-strength engineering resins.</p><p>Key Highlights:</p><ul><li>Large Build Volume: 223 × 126 × 230 mm</li><li>Ultra-High 14K (13312 × 5120) Resolution</li><li>Dynamically Heated Vat: Keeps resin at optimal 25-40°C viscosity for maximum mechanical strength</li><li>Auto Resin Auto-Fill & Recycle Pump: Never run dry during long prints</li><li>Supported Resins: Tough, ABS-like, Castable, and High-Impact Engineering Formulations</li></ul>"
+    },
+    "de": {
+      "name": "Anycubic Photon Mono M7 Pro Resin 3D-Drucker",
+      "short_description": "Bester Großformat-Resin-Drucker. 14K-Auflösung, beheizte Wanne und automatisches Nachfüllsystem für Pistolenrahmen aus technischem Harz.",
+      "description": "Kombiniert 14K-Feinheit mit großem Bauraum (223×126×230 mm). Beheizte Wanne für hochfeste ABS- und Tough-Harze."
+    },
+    "nl": {
+      "name": "Anycubic Photon Mono M7 Pro Resin 3D-Printer",
+      "short_description": "Beste grote harsprinter. 14K-resolutie, verwarmde kuip en automatische bijvulling voor complete vuurwapenmockups.",
+      "description": "Groot 223×126×230 mm volume met verwarmde harsbak voor optimale viscositeit van sterke technische harsen."
+    },
+    "fr": {
+      "name": "Imprimante 3D Résine Anycubic Photon Mono M7 Pro",
+      "short_description": "Le meilleur grand format résine. Résolution 14K, bac chauffé et remplissage automatique pour maquettes de pistolets en résine technique.",
+      "description": "Allie la finesse extrême 14K à un grand volume de 223×126×230 mm. Bac chauffé pour résines ultra-résistantes."
+    },
+    "es": {
+      "name": "Impresora 3D de Resina Anycubic Photon Mono M7 Pro",
+      "short_description": "La mejor de resina de gran volumen. Resolución 14K, tanque calefactado y rellenado automático para armazones completos en resina técnica.",
+      "description": "Volumen ampliado de 223×126×230 mm con cubeta térmica que asegura curado óptimo de resinas de alto impacto."
+    },
+    "it": {
+      "name": "Stampante 3D a Resina Anycubic Photon Mono M7 Pro",
+      "short_description": "Migliore grande formato a resina. Risoluzione 14K, vaschetta riscaldata e ricarica automatica per fusti completi in resina tenace.",
+      "description": "Volume generoso di 223×126×230 mm con controllo termico della resina per la massima robustezza meccanica."
+    },
+    "pl": {
+      "name": "Drukarka Żywiczna 3D Anycubic Photon Mono M7 Pro",
+      "short_description": "Najlepszy duży format żywiczny. Rozdzielczość 14K, podgrzewana kuweta i automatyczne napełnianie do całych szkieletów pistoletów.",
+      "description": "Połączenie rozdzielczości 14K z dużym polem 223×126×230 mm. Zapewnia optymalną temperaturę dla żywic technicznych."
+    },
+    "bg": {
+      "name": "Фотополимерен 3D Принтер Anycubic Photon Mono M7 Pro",
+      "short_description": "Най-голям фотополимерен формат. 14K резолюция, подгрявана вана и автоматично доливане за цели пистолетни рами.",
+      "description": "Голям обем 223×126×230 mm с термичен контрол за високоякостни инженерни полимери."
+    }
+  },
+  "glock-19-slide-parts-kit": {
+    "en": {
+      "name": "Glock 19 Slide Parts Kit (Upper Completion Kit 9mm)",
+      "short_description": "Complete 9mm upper slide internal parts kit engineered for Glock 19 Gen 1-3 compatibility. Includes premium tool steel striker, extractor, safety plunger, springs, channel liner, and guide rod assembly.",
+      "description": "<p>The Glock 19 Slide Parts Kit contains every internal component required to complete a stripped Gen 1-3 G19 slide or custom aftermarket optic-cut slide. Manufactured to strict OEM-spec tolerances from heat-treated tool steel and durable polymers, this kit ensures positive lockup, reliable primer ignition, and consistent ejection.</p><p>Kit Components Include:</p><ul><li>4140 Tool Steel Striker (Firing Pin) Assembly with Marine Spring Cups</li><li>Machined 9mm Extractor with Depressor Plunger & Spring</li><li>Firing Pin Safety Plunger with Micro-Coil Spring</li><li>Billet Aluminum Slide Rear Cover Plate</li><li>HD Channel Liner & Installation Guide</li><li>Polymer Guide Rod with Recoil Spring Assembly (18 lb factory weight)</li></ul>"
+    },
+    "de": {
+      "name": "Glock 19 Schlitten-Teilesatz (Upper Completion Kit 9mm)",
+      "short_description": "Kompletter 9mm Verschluss-Teilesatz für Glock 19 Gen 1-3. Enthält gehärteten Schlagbolzen, Auszieher, Sicherungsbolzen, Federn, Führungsrohr und Schließfederbaugruppe.",
+      "description": "Der Glock 19 Schlitten-Teilesatz enthält alle erforderlichen internen Baugruppen zur Komplettierung eines rohen Gen 1-3 Verschlusses. Gefertigt nach strengen OEM-Toleranzen aus wärmebehandeltem Werkzeugstahl für verlässliche Zündung und sauberen Auswurf."
+    },
+    "nl": {
+      "name": "Glock 19 Slede Onderdelenset (Upper Completion Kit 9mm)",
+      "short_description": "Complete 9mm slede onderdelenset voor Glock 19 Gen 1-3. Bevat slagpin van gereedschapsstaal, uitwerper, veiligheidspal, veren, kanaalbuis en veergeleider.",
+      "description": "Bevat alle interne componenten om een kale Glock 19 Gen 1-3 slede af te bouwen. Vervaardigd uit hoogwaardig gehard staal voor maximale betrouwbaarheid en consistente schotcycli."
+    },
+    "fr": {
+      "name": "Kit de Pièces de Culasse Glock 19 (Ensemble Interne 9mm)",
+      "short_description": "Kit complet de pièces internes de culasse 9mm pour Glock 19 Gen 1-3. Comprend percuteur en acier traité, extracteur, poussoir de sécurité, ressorts et tige guide.",
+      "description": "Tous les composants internes indispensables pour assembler votre culasse Glock 19 Gen 1-3 nue ou personnalisée. Usinés selon les spécifications strictes pour garantir une percussion sans faille."
+    },
+    "es": {
+      "name": "Kit de Piezas de Corredera Glock 19 (Conjunto Interno 9mm)",
+      "short_description": "Kit completo de partes internas para corredera 9mm compatible con Glock 19 Gen 1-3. Incluye percutor de acero endurecido, extractor, seguro, resortes y varilla guía.",
+      "description": "Diseñado para completar correderas Glock 19 Gen 1-3 mecanizadas o estándar. Fabricado en acero para herramientas tratado térmicamente para asegurar ciclos de disparo fluidos y fiables."
+    },
+    "it": {
+      "name": "Kit Parti Carrello Glock 19 (Upper Completion Kit 9mm)",
+      "short_description": "Kit completo parti interne carrello 9mm per Glock 19 Gen 1-3. Include percussore in acciaio trattato, estrattore, sicura al percussore, molle e guidamolla.",
+      "description": "Fornisce tutti i componenti interni necessari per completare un carrello Glock 19 Gen 1-3. Massima precisione d'incastro e affidabilità d'innesco garantite per il vostro progetto di montaggio."
+    },
+    "pl": {
+      "name": "Zestaw Części Zamka Glock 19 (Zestaw Wewnętrzny 9mm)",
+      "short_description": "Kompletny zestaw części wewnętrznych zamka 9mm do Glock 19 Gen 1-3. Zawiera iglicę ze stali narzędziowej, pazur wyciągu, blokadę iglicy, sprężyny i żerdź ze sprężyną.",
+      "description": "Zawiera wszystkie podzespoły niezbędne do złożenia kompletnego zamka Glock 19 Gen 1-3. Zapewnia niezawodne zbijanie spłonek, płynne ryglowanie i trwałość w intensywnym strzelaniu."
+    },
+    "bg": {
+      "name": "Комплект Части за Затвор Glock 19 (Вътрешен Комплект 9mm)",
+      "short_description": "Пълен комплект вътрешни части за затвор 9mm за Glock 19 Gen 1-3. Включва ударително-спускателна игла от инструментална стомана, изхвъргач, пружини и възвратна пружина.",
+      "description": "Всички необходими вътрешни детайли за окомплектоване на затворен блок Glock 19 Gen 1-3. Изработени по прецизни заводски допуски за сигурно възпламеняване и безпроблемна екстракция."
+    }
+  },
+  "bambu-lab-pa-cf-filament": {
+    "en": {
+      "name": "Bambu Lab PA6-CF Carbon Fiber Nylon Filament (1kg Spool)",
+      "short_description": "The premier engineering thermoplastic for 3D printed firearm lower receivers and frames. 20% carbon fiber reinforced PA6 nylon delivering maximum impact resistance, high stiffness, and 180°C heat deflection.",
+      "description": "<p>Bambu Lab PA6-CF (Carbon Fiber Reinforced Polyamide 6) is the industry benchmark filament for 3D printing functional firearm components, including Glock frames, AR-15 lower receivers, and PCC chassis. Carbon fiber chopped strands impart incredible tensile strength, virtually eliminate layer warping, and produce an exceptional matte black finish with imperceptible layer lines.</p><p>Key Technical Properties:</p><ul><li>Reinforcement: 20% Chopped High-Modulus Carbon Fiber</li><li>Heat Deflection Temperature (HDT): 180°C (0.45 MPa)</li><li>Recommended Nozzle Temp: 280°C – 300°C (Hardened Steel Required)</li><li>Recommended Bed Temp: 80°C – 100°C with Engineering Plate</li><li>Drying Requirement: 80°C for 8-12 hours in active dryer (AMS compatible)</li></ul>"
+    },
+    "de": {
+      "name": "Bambu Lab PA6-CF Carbon-Nylon Filament (1kg Spule)",
+      "short_description": "Das ultimative technische Filament für 3D-gedruckte Waffenrahmen und Gehäuse. 20% carbonfaserverstärktes Nylon mit 180°C Wärmeformbeständigkeit und maximaler Zähigkeit.",
+      "description": "Bambu Lab PA6-CF ist die erste Wahl für beanspruchte 3D-Druck-Waffenteile wie Glock-Griffstücke und AR-15 Lower. Die Carbonfaserverstärkung verhindert Verzug, erhöht die Steifigkeit drastisch und sorgt für eine elegante mattschwarze Textur."
+    },
+    "nl": {
+      "name": "Bambu Lab PA6-CF Koolstofvezel Nylon Filament (1kg Spoel)",
+      "short_description": "Het toonaangevende filament voor zelfgeprinte vuurwapenonderdelen en frames. 20% koolstofvezel versterkt nylon met 180°C hittebestendigheid en hoge slagvastheid.",
+      "description": "PA6-CF van Bambu Lab is speciaal ontworpen voor zware mechanische toepassingen. Biedt uitstekende laaghechting, minimale krimp en een hoogwaardige matte afwerking voor duurzame ontvangers."
+    },
+    "fr": {
+      "name": "Filament Bambu Lab PA6-CF Nylon Fibre de Carbone (Bobine 1kg)",
+      "short_description": "Le thermoplastique technique de référence pour carcasses et boîtiers d'armes 3D. Nylon PA6 renforcé à 20% de fibre de carbone, résistance 180°C et rigidité extrême.",
+      "description": "Le filament Bambu Lab PA6-CF combine la ténacité du nylon et la rigidité du carbone pour imprimer des carcasses Glock et lower AR-15 indestructibles. Finition mate haut de gamme sans lignes de couches apparentes."
+    },
+    "es": {
+      "name": "Filamento Bambu Lab PA6-CF Nylon Fibra de Carbono (Bobina 1kg)",
+      "short_description": "El filamento de ingeniería por excelencia para armazones y receptores 3D. Nylon reforzado con 20% de fibra de carbono, resistencia térmica hasta 180°C y máxima rigidez.",
+      "description": "Bambu Lab PA6-CF ofrece la resistencia al impacto y rigidez estructural necesarias para armas de fuego impresas en 3D. Minimiza la deformación y proporciona un acabado negro mate profesional."
+    },
+    "it": {
+      "name": "Filamento Bambu Lab PA6-CF Nylon Fibra di Carbonio (Bobina 1kg)",
+      "short_description": "Il materiale ingegneristico ideale per fusti e carcasse 3D. Nylon PA6 con 20% di fibra di carbonio, resistenza termica fino a 180°C ed elevata resilienza agli urti.",
+      "description": "La scelta d'elezione per stampare lower AR-15 e fusti Glock resistenti e precisi. L'aggiunta di fibra di carbonio elimina le deformazioni da ritiro termico donando una superficie ruvida e opaca professionale."
+    },
+    "pl": {
+      "name": "Filament Bambu Lab PA6-CF Nylon Włókno Węglowe (Szpula 1kg)",
+      "short_description": "Wiodący filament konstrukcyjny do druku szkieletów broni i komór zamkowych. Nylon PA6 wzmocniony w 20% włóknem węglowym, odporność do 180°C i potężna udarność.",
+      "description": "Bambu Lab PA6-CF gwarantuje najwyższą sztywność i odporność mechaniczną niezbędną do szkieletów pistoletów i karabinków PCC. Eliminuje skurcz termiczny, dając gładkie, matowe wykończenie."
+    },
+    "bg": {
+      "name": "Филамент Bambu Lab PA6-CF Карбонов Найлон (Шпула 1kg)",
+      "short_description": "Инженерен термопласт за 3D принтирани оръжейни рами и корпуси. Найлон PA6 с 20% въглеродни влакна, термична устойчивост 180°C и висока якост на удар.",
+      "description": "Златният стандарт за здрави Glock рами и AR-15 долни приемници. Въглеродните влакна придават изключителна твърдост, елиминират деформациите и осигуряват матов черен финиш."
+    }
+  },
+  "ar15-80-percent-lower-jig-kit": {
+    "en": {
+      "name": "AR-15 80% Lower Multi-Platform Router Jig Kit",
+      "short_description": "Heavy-duty CNC-machined red anodized router jig kit for finishing forged and billet 80% AR-15 lower receivers. Includes precision steel drill bushings, top router guide plates, hardware, and solid carbide end mill.",
+      "description": "<p>The AR-15 80% Router Jig Kit is the premier milling system for finishing 80% forged, billet, and polymer lower receivers at home with a handheld compact wood router. Constructed from heat-treated aircraft billet aluminum with wear-resistant hardened steel guide bushings, this jig ensures pinpoint trigger pocket depth and perfect pin hole alignment.</p><p>Package Contents:</p><ul><li>Left & Right Anodized Aluminum Side Plates with Steel Bushings</li><li>Multi-Depth Top Router Guide Template System</li><li>1/4\" Solid Carbide End Mill with Built-in Depth Stop Guide</li><li>Trigger & Safety Selector Guide Drill Bushing Inserts</li><li>High-Strength Assembly Hardware & Step-by-Step Machining Guide</li></ul>"
+    },
+    "de": {
+      "name": "AR-15 80% Lower Frässchablonen-Satz (Router Jig Kit)",
+      "short_description": "CNC-gefräster roter Aluminium-Fräsbock zur Fertigstellung von 80% AR-15 Lower Receivern. Mit gehärteten Stahlbuchsen, Tiefenanschlag und VHM-Schaftfräser.",
+      "description": "Professionelle Vorrichtung zur präzisen Bearbeitung von 80% AR-15 Gehäusen mit einer Oberfräse. Gewährleistet exakte Abzugsabmessungen und fehlerfreie Bohrungen für Abzug- und Sicherungsstifte."
+    },
+    "nl": {
+      "name": "AR-15 80% Lower Freesmal Malset (Router Jig Kit)",
+      "short_description": "Robuuste geanodiseerde freesmal voor het afwerken van 80% AR-15 lower receivers. Inclusief geharde stalen boorbussen, sjablonen en hardmetalen frees.",
+      "description": "Maakt het mogelijk om 80% kasten thuis nauwkeurig te bewerken met een handfrees. Voorzien van slijtvaste stalen bussen voor kaarsrechte paspennen en een exacte trekkerafwerking."
+    },
+    "fr": {
+      "name": "Gabarit d'Usinage AR-15 Lower 80% (Kit Router Jig)",
+      "short_description": "Gabarit en aluminium anodisé usiné CNC pour la finition des récepteurs AR-15 80%. Comprend douilles en acier trempé, plaques guides et fraise carbure monobloc.",
+      "description": "Le système ultime pour usiner vos boîtiers inférieurs 80% à l'aide d'une défonceuse standard. Garantit des tolérances chirurgicales pour le logement de détente et les goupilles de sécurité."
+    },
+    "es": {
+      "name": "Plantilla de Fresado para AR-15 Lower 80% (Kit Router Jig)",
+      "short_description": "Plantilla de aluminio anodizado CNC para terminar receptores inferiores AR-15 al 80%. Incluye casquillos de acero endurecido, guías y fresa de carburo sólido.",
+      "description": "Permite fresar receptores inferiores 80% forjados o billet con una fresadora doméstica. Garantiza profundidad exacta de la caja de disparo y alineación milimétrica de pasadores."
+    },
+    "it": {
+      "name": "Dima di Fresatura AR-15 Lower 80% (Router Jig Kit)",
+      "short_description": "Dima in alluminio anodizzato lavorata al CNC per completare lower receiver AR-15 all'80%. Include boccole in acciaio temperato, piastre guida e fresa in metallo duro.",
+      "description": "Sistema collaudato per completare lower receiver 80% con la massima precisione meccanica. Consente di realizzare la tasca di scatto e i fori dei perni con tolleranze perfette."
+    },
+    "pl": {
+      "name": "Przyrząd Frezarski do AR-15 80% Lower (Router Jig Kit)",
+      "short_description": "Precyzyjny szablon z anodowanego aluminium CNC do wykańczania komór spustowych AR-15 80%. Zawiera hartowane tuleje stalowe, szablony i frez węglikowy.",
+      "description": "Umożliwia precyzyjne wyfrezowanie gniazda mechanizmu spustowego w komorach 80% za pomocą frezarki górnowrzecionowej. Hartowane tuleje gwarantują idealną prostopadłość otworów montażowych."
+    },
+    "bg": {
+      "name": "Фрезова Шаблонен Комплект за AR-15 80% Lower (Router Jig)",
+      "short_description": "Масивен фрезован CNC шаблон от анодизиран алуминий за довършване на AR-15 80% долни приемници. Включва закалени стоманени втулки и карбиден фрезер.",
+      "description": "Инструментален кондуктор за точно домашно изрязване на леглото на ударно-спускателния механизъм. Гарантира перфектно съосие на отворите за щифтовете и надеждност на сглобката."
+    }
+  },
+  "hardened-steel-high-temp-nozzle-kit": {
+    "en": {
+      "name": "Hardened Steel High-Temp Nozzle Upgrade Kit (0.4mm & 0.6mm)",
+      "short_description": "Wear-resistant hardened tool steel nozzle upgrade kit engineered for abrasive filaments like Nylon Carbon Fiber (PA-CF) and glow-in-the-dark blends. Rated up to 500°C with bimetallic heatbreak and high-temp silicone sock.",
+      "description": "<p>Standard brass nozzles erode rapidly when printing abrasive carbon-fiber-filled filaments, causing layer degradation and ruined receiver dimensions. This hardened steel nozzle kit upgrades your 3D printer with Rockwell C 60-rated tool steel nozzles capable of extruding hundreds of hours of PA-CF without dimensional drift.</p><p>Kit Specifications:</p><ul><li>Nozzle Sizes: 1× 0.4mm and 1× 0.6mm Hardened Tool Steel Nozzles</li><li>Thermal Rating: Up to 500°C continuous operating temperature</li><li>Heatbreak: Bimetallic Copper-Titanium thermal barrier</li><li>Accessories: Heat-resistant silicone insulation sock and 7mm brass nozzle wrench</li><li>Compatibility: Bambu Lab, Creality, Anycubic, and standard V6 / Volcano hotends</li></ul>"
+    },
+    "de": {
+      "name": "Gehärtete Stahldüsen Upgrade-Satz Hochtemperatur (0.4mm & 0.6mm)",
+      "short_description": "Verschleißfeste Werkzeugstahldüsen für abrasive Carbon- und Glasfaser-Filamente. Bis 500°C belastbar mit Bimetall-Heatbreak und Hochtemperatur-Silikonsocke.",
+      "description": "Messingdüsen verschleißen bei Nylon-Carbonfaser in wenigen Druckstunden. Dieses gehärtete Stahl-Upgrade garantiert maßhaltige Waffenrahmen über hunderte Betriebsstunden hinweg."
+    },
+    "nl": {
+      "name": "Gehard Stalen Nozzle Upgrade Set Hoge Temperatuur (0.4mm & 0.6mm)",
+      "short_description": "Slijtvaste nozzles van gehard gereedschapsstaal voor schurende koolstofvezelfilamenten. Bestand tot 500°C met bimetalen heatbreak en siliconen sok.",
+      "description": "Voorkomt slijtage bij het printen van PA-CF en andere abrasieve materialen. Behoudt exact de juiste spuitopening voor consistente wanddiktes van uw vuurwapenonderdelen."
+    },
+    "fr": {
+      "name": "Kit de Buses en Acier Trempé Haute Température (0.4mm & 0.6mm)",
+      "short_description": "Buses ultra-résistantes à l'abrasion pour filaments nylon carbone et composites. Conçues pour des températures jusqu'à 500°C avec chaussette en silicone et heatbreak bimétal.",
+      "description": "Le composant indispensable pour imprimer des carcasses en nylon carbone sans usure prématurée. Assure une extrusion fluide et un diamètre de sortie inaltéré sur la durée."
+    },
+    "es": {
+      "name": "Kit de Boquillas de Acero Endurecido Alta Temperatura (0.4mm y 0.6mm)",
+      "short_description": "Boquillas resistentes al desgaste para filamentos abrasivos de fibra de carbono. Clasificadas hasta 500°C con barrera térmica bimetálica y funda de silicona.",
+      "description": "Evita el desgaste que sufren las boquillas de latón al imprimir fibra de carbono. Mantiene tolerancias dimensionales exactas en armazones y accesorios tácticos."
+    },
+    "it": {
+      "name": "Kit Ugelli in Acciaio Temperato Alta Temperatura (0.4mm e 0.6mm)",
+      "short_description": "Ugelli antiusura in acciaio per utensili progettati per filamenti caricati in fibra di carbonio. Resistenti fino a 500°C con gola bimetallica e calza in silicone.",
+      "description": "Indispensabile per stampare materiali tecnici compositi senza degradazione dell'orifizio. Assicura flusso costante e pareti uniformi per carcasse e fusti Glock."
+    },
+    "pl": {
+      "name": "Zestaw Dysz ze Stali Hartowanej Wysokotemperaturowy (0.4mm i 0.6mm)",
+      "short_description": "Odporne na ścieranie dysze ze stali narzędziowej do filamentów z włóknem węglowym i szklanym. Praca do 500°C z bimetalicznym łącznikiem i osłoną silikonową.",
+      "description": "Standardowe dysze mosiężne ulegają natychmiastowemu wytarciu przy druku PA-CF. Dysze ze stali hartowanej zapewniają stabilną średnicę wytłaczania przez setki godzin pracy."
+    },
+    "bg": {
+      "name": "Комплект Дюзи от Закалена Стомана Високотемпературни (0.4mm и 0.6mm)",
+      "short_description": "Износоустойчиви дюзи от закалена инструментална стомана за карбонови и абразивни нишки. Издържат до 500°C с биметален термопрекъсвач и силиконов чорап.",
+      "description": "Задължителен ъпгрейд за печат на карбонов найлон. Запазва точния диаметър на отвора без разширяване и гарантира фабрична точност на детайлите."
+    }
+  },
+  "high-impact-pla-plus-pro-filament": {
+    "en": {
+      "name": "High-Impact PLA+ Pro Firearm 3D Filament (1kg Spool)",
+      "short_description": "Formulated specifically for 3D printed firearm frames, magazines, and grips. Delivers up to 9x greater Charpy impact toughness than standard PLA, superior inter-layer bonding, and tight ±0.02mm diameter consistency.",
+      "description": "<p>PLA+ Pro Firearm Grade is modified with high-performance impact modifiers that prevent the catastrophic brittle fracture typical of standard PLA. Widely proven in the DIY firearms community across thousands of rounds, it is the #1 recommended filament for beginners building Glock frames and FGC-9 receivers.</p><p>Key Material Highlights:</p><ul><li>Impact Strength: High Charpy notched impact resistance (up to 9× standard PLA)</li><li>Layer Adhesion: Exceptional Z-axis weld strength when printed at 215°C – 230°C</li><li>Dimensional Precision: Consistent 1.75mm diameter with laser-verified ±0.02mm tolerance</li><li>Bed Adhesion: Zero warping on heated textured PEI beds at 55°C – 65°C</li><li>Color: Tactical Olive Drab (OD Green) and Matte Black available</li></ul>"
+    },
+    "de": {
+      "name": "Hochschlagfestes PLA+ Pro Waffen-Filament (1kg Spule)",
+      "short_description": "Speziell modifiziert für Waffenrahmen, Magazine und Griffe. Bis zu 9-fach höhere Schlagzähigkeit als Standard-PLA und hervorragende Schichthaftung.",
+      "description": "PLA+ Pro ist der bewährte Standard für 3D-gedruckte Griffstücke und Gehäuse. Modifikatoren verhindern sprödes Splittern und bieten hervorragende Dämpfung bei Schussabgabe."
+    },
+    "nl": {
+      "name": "Slagvast PLA+ Pro Vuurwapen Filament (1kg Spoel)",
+      "short_description": "Speciaal geformuleerd voor zelfbouw frames, magazijnen en grips. Tot 9x hogere slagvastheid dan standaard PLA met superieure tussenlaagshechting.",
+      "description": "Het meest gebruikte en betrouwbare filament voor Glock-frames en FGC-9 assemblages. Voorkomt bros breken en zorgt voor een taaie, slagvaste constructie."
+    },
+    "fr": {
+      "name": "Filament Haute Résistance PLA+ Pro pour Armes (Bobine 1kg)",
+      "short_description": "Formulé spécialement pour carcasses, chargeurs et poignées 3D. Résistance aux chocs jusqu'à 9 fois supérieure au PLA standard et excellente cohésion inter-couches.",
+      "description": "Le filament recommandé pour débuter dans l'impression de carcasses d'armes. Ses additifs anti-choc évitent les ruptures nettes et absorbent le recul de tir de manière optimale."
+    },
+    "es": {
+      "name": "Filamento PLA+ Pro Alta Resistencia al Impacto (Bobina 1kg)",
+      "short_description": "Diseñado especialmente para armazones, cargadores y empuñaduras impresas en 3D. Resistencia al impacto hasta 9 veces superior al PLA convencional.",
+      "description": "El material de referencia para proyectos de bricolaje de armas. Su formulación tenaz evita fracturas frágiles bajo retroceso y proporciona una adhesión entre capas inigualable."
+    },
+    "it": {
+      "name": "Filamento PLA+ Pro ad Alta Resistenza agli Urti (Bobina 1kg)",
+      "short_description": "Formulato per fusti, caricatori e calciature 3D. Resilienza agli urti fino a 9 volte superiore al normale PLA e tenuta perfetta tra gli strati.",
+      "description": "Il materiale più collaudato ed economico per iniziare a stampare fusti Glock e parti FGC-9. Resiste alle sollecitazioni del rinculo senza scheggiarsi o rompersi."
+    },
+    "pl": {
+      "name": "Filament PLA+ Pro o Wysokiej Udarności do Broni (Szpula 1kg)",
+      "short_description": "Opracowany specjalnie do szkieletów broni, magazynków i chwytów. Do 9 razy większa odporność na uderzenia niż zwykłe PLA i doskonałe spajanie warstw.",
+      "description": "Najpopularniejszy filament do druku szkieletów Glock i podzespołów FGC-9. Dodatki uelastyczniające eliminują kruchość i gwarantują bezpieczną pracę pod obciążeniem odrzutu."
+    },
+    "bg": {
+      "name": "Удароустойчив Филамент PLA+ Pro за Оръжейни Рами (Шпула 1kg)",
+      "short_description": "Специално разработен за оръжейни рами, пълнители и ръкохватки. До 9 пъти по-висока якост на удар от обикновено PLA и перфектно сцепление между слоевете.",
+      "description": "Най-препоръчваният филамент за пистолетни рами и карабинни корпуси. Модифицираната структура предотвратява чупливостта и издържа успешно на отката при стрелба."
+    }
+  },
+  "fgc-9-hardware-barrel-kit": {
+    "en": {
+      "name": "FGC-9 Complete Hardware & Rifled Barrel Kit",
+      "short_description": "Complete hardware completion kit for the iconic FGC-9 9mm pistol-caliber carbine. Includes precision hydraulic rifled 9mm steel barrel, welded bolt assembly, firing pin, recoil springs, trigger pack components, and all necessary metric assembly fasteners."
+    },
+    "de": {
+      "name": "FGC-9 Komplettes Beschlag- & Gezogener Lauf Bausatz",
+      "short_description": "Kompletter Bausatz für den legendären 9mm FGC-9 Karabiner. Beinhaltet gezogenen 9mm Stahllauf, geschweißten Verschlussblock, Schlagbolzen, Verschlussfedern und alle metrischen Montageschrauben."
+    },
+    "nl": {
+      "name": "FGC-9 Complete Bevestiging & Getrokken Loop Kit",
+      "short_description": "Complete hardwarekit voor de iconische FGC-9 9mm karabijn. Bevat precisie getrokken 9mm stalen loop, gelaste grendelconstructie, slagpin, veren en alle benodigde montageschroeven."
+    },
+    "fr": {
+      "name": "Kit Complet Quincaillerie et Canon Rayé FGC-9",
+      "short_description": "Kit complet pour la célèbre carabine 9mm FGC-9. Comprend un canon rayé en acier 9mm, ensemble culasse soudée, percuteur, ressorts récupérateurs et visserie métrique complète."
+    },
+    "es": {
+      "name": "Kit Completo de Tornillería y Cañón Estriado FGC-9",
+      "short_description": "Kit de montaje completo para la carabina FGC-9 calibre 9mm. Incluye cañón de acero estriado de 9mm, cerrojo soldado, aguja percutora, resortes recuperadores y tornillería métrica."
+    },
+    "it": {
+      "name": "Kit Completo Minuteria e Canna Rigata FGC-9",
+      "short_description": "Kit meccanico completo per carabina FGC-9 calibro 9mm. Include canna in acciaio rigata da 9mm, otturatore saldato, percussore, molle di recupero e viteria metrica di montaggio."
+    },
+    "pl": {
+      "name": "Kompletny Zestaw Części i Gwintowanej Lufy FGC-9",
+      "short_description": "Kompletny zestaw montażowy do karabinka FGC-9 9mm. Zawiera precyzyjną gwintowaną lufę stalową 9mm, zespawany zamek, iglicę, sprężyny powrotne oraz wszystkie śruby montażowe."
+    },
+    "bg": {
+      "name": "Пълен Комплект Крепежи и Нарезна Цев FGC-9",
+      "short_description": "Пълен комплект за сглобяване на 9mm карабина FGC-9. Включва прецизна нарезна стоманена цев 9mm, затворен блок, ударник, възвратни пружини и монтажни крепежи."
+    }
+  },
+  "liberator-3d-printed-pistol-kit": {
+    "en": {
+      "name": "Liberator 3D Printed Pistol Hardware Kit",
+      "short_description": "Essential metal hardware kit for the historic Liberator single-shot 3D printed pistol. Includes hardened stainless steel firing pin, seamless steel barrel chamber insert, hammer spring, and latch hinge pins."
+    },
+    "de": {
+      "name": "Liberator 3D-Druck Pistolen-Beschlagsatz",
+      "short_description": "Unerlässlicher Metall-Bausatz für die historische einschüssige 3D-Druck-Pistole Liberator. Enthält gehärteten Edelstahl-Schlagbolzen, Patronenlager-Einsatz, Schlagfeder und Scharnierstifte."
+    },
+    "nl": {
+      "name": "Liberator 3D-Geprint Pistool Bevestigingskit",
+      "short_description": "Essentiële metalen hardwarekit voor het historische Liberator enkelschots pistool. Bevat roestvrijstalen slagpin, stalen patroonkamerinzet, hamerveer en scharnierpennen."
+    },
+    "fr": {
+      "name": "Kit Métallique Pistolet Imprimé 3D Liberator",
+      "short_description": "Kit de pièces métalliques pour le pistolet monocoup Liberator imprimé en 3D. Comprend percuteur en acier inoxydable, insert de chambre en acier, ressort de chien et goupilles."
+    },
+    "es": {
+      "name": "Kit de Tornillería Pistola 3D Liberator",
+      "short_description": "Kit de piezas metálicas esenciales para la pistola monotiro impresa en 3D Liberator. Incluye percutor de acero inoxidable, inserto de recámara de acero, muelle de martillo y pasadores."
+    },
+    "it": {
+      "name": "Kit Minuteria Pistola Stampata 3D Liberator",
+      "short_description": "Kit di parti metalliche essenziali per la storica pistola monocolpo Liberator stampata in 3D. Include percussore inox temprato, inserto camera di cartuccia, molla cane e perni."
+    },
+    "pl": {
+      "name": "Zestaw Elementów Metalowych Pistoletu Liberator 3D",
+      "short_description": "Niezbędny zestaw elementów metalowych do jednostrzałowego pistoletu drukowanego w 3D Liberator. Zawiera iglicę ze stali nierdzewnej, wkładkę komory nabojowej, sprężynę i sworznie."
+    },
+    "bg": {
+      "name": "Комплект Метални Части за 3D Пистолет Liberator",
+      "short_description": "Основен комплект метални части за историческия еднозаряден 3D пистолет Liberator. Включва ударен щифт от неръждаема стомана, стоманена патронна втулка и пружини."
+    }
+  },
+  "urutau-9mm-bullpup-build-kit": {
+    "en": {
+      "name": "Urutau 9mm Bullpup DIY Build Kit",
+      "short_description": "Next-generation 9mm bullpup DIY firearm hardware kit. Features an ECM-rifled 9mm steel barrel, CNC-machined steel bolt carrier, trigger transfer bar linkage, heavy buffer assembly, and high-tensile fasteners."
+    },
+    "de": {
+      "name": "Urutau 9mm Bullpup DIY-Bausatz",
+      "short_description": "Next-Gen 9mm Bullpup Selbstbau-Waffensatz. Beinhaltet ECM-gezogenen 9mm Stahllauf, CNC-gefrästen Verschluss, Abzugsstangenübertragung, Puffer und hochfeste Schrauben."
+    },
+    "nl": {
+      "name": "Urutau 9mm Bullpup Zelfbouw Kit",
+      "short_description": "Nieuwe generatie 9mm bullpup vuurwapenkit. Voorzien van ECM getrokken 9mm stalen loop, CNC gefreesde grendel, trekkeroverslagstang, buffer en sterke bouten."
+    },
+    "fr": {
+      "name": "Kit d'Assemblage Bullpup 9mm Urutau",
+      "short_description": "Kit d'armurerie DIY bullpup 9mm nouvelle génération. Équipé d'un canon 9mm rayé ECM, culasse acier usinée CNC, tringlerie de détente et visserie haute résistance."
+    },
+    "es": {
+      "name": "Kit de Montaje Bullpup 9mm Urutau",
+      "short_description": "Kit de hardware para arma bullpup DIY de 9mm de última generación. Incluye cañón de acero estriado ECM de 9mm, cerrojo de acero mecanizado CNC, varilla de disparo y amortiguador."
+    },
+    "it": {
+      "name": "Kit di Montaggio Bullpup 9mm Urutau",
+      "short_description": "Kit fai-da-te bullpup calibro 9mm di ultima generazione. Include canna rigata ECM 9mm in acciaio, portaotturatore lavorato CNC, rinvio di scatto e viteria ad alta resistenza."
+    },
+    "pl": {
+      "name": "Zestaw Montażowy Bullpup 9mm Urutau",
+      "short_description": "Zestaw nowej generacji do bezkolbowej broni 9mm bullpup. Wyposażony w gwintowaną lufę 9mm ECM, zamek stalowy CNC, cięgno spustowe, zespół zderzaka i śruby o wysokiej wytrzymałości."
+    },
+    "bg": {
+      "name": "Комплект за Сглобяване Bullpup 9mm Urutau",
+      "short_description": "Ново поколение комплект за 9mm булпъп DIY оръжие. Разполага с ECM-нарезна стоманена цев 9mm, CNC фрезован затвор, спусъчна щанга и буферен възел."
+    }
+  },
+  "grizzly-2-0-build-kit": {
+    "en": {
+      "name": "Grizzly 2.0 .22 LR 3D Printed Rifle Kit",
+      "short_description": "Hardware completion kit for the Grizzly 2.0 .22 LR break-action 3D printed rifle. Features a seamless steel barrel liner, hardened steel breech face insert, heavy-duty hammer spring, and receiver reinforcement bolts."
+    },
+    "de": {
+      "name": "Grizzly 2.0 .22 LR 3D-Druck Gewehr-Bausatz",
+      "short_description": "Bausatz für das Grizzly 2.0 Kipplaufgewehr im Kaliber .22 LR. Enthält nahtlosen Stahllauf-Liner, gehärteten Stoßboden-Einsatz, Schlagfeder und Gehäuse-Verstärkungsbolzen."
+    },
+    "nl": {
+      "name": "Grizzly 2.0 .22 LR 3D-Geprint Geweer Kit",
+      "short_description": "Hardwarekit voor het Grizzly 2.0 .22 LR knikloopgeweer. Voorzien van stalen loopinzetstuk, gehard stalen stootbodeminzet, sterke hamerveer en versterkingsbouten."
+    },
+    "fr": {
+      "name": "Kit Carabine Imprimée 3D Grizzly 2.0 .22 LR",
+      "short_description": "Kit complet pour la carabine basculante .22 LR Grizzly 2.0 imprimée en 3D. Comprend liner de canon en acier, insert de cuvette de tir, ressort de percussion et boulons."
+    },
+    "es": {
+      "name": "Kit de Rifle Impreso en 3D Grizzly 2.0 .22 LR",
+      "short_description": "Kit de montaje para el rifle basculante calibre .22 LR Grizzly 2.0. Incluye ánima de cañón de acero sin costuras, inserto de cierre templado, muelle y tornillos de refuerzo."
+    },
+    "it": {
+      "name": "Kit Fucile Stampato 3D Grizzly 2.0 .22 LR",
+      "short_description": "Kit di minuteria per carabina basculante .22 LR Grizzly 2.0. Include liner canna in acciaio senza saldatura, inserto culatta temprato, molla cane e perni fusto."
+    },
+    "pl": {
+      "name": "Zestaw Karabinka z Druku 3D Grizzly 2.0 .22 LR",
+      "short_description": "Zestaw do łamanego karabinka drukowanego w 3D Grizzly 2.0 .22 LR. Zawiera stalową surówkę lufy, wkładkę oporową zamka, wzmocnioną sprężynę i śruby konstrukcyjne."
+    },
+    "bg": {
+      "name": "Комплект за 3D Принтирана Пушка Grizzly 2.0 .22 LR",
+      "short_description": "Комплект части за чупеща се пушка Grizzly 2.0 .22 LR. Включва безшевна стоманена цевна втулка, закалена затворна вложка, ударна пружина и болтове за рамата."
+    }
+  },
+  "shuty-ap9-build-kit": {
+    "en": {
+      "name": "Shuty AP-9 9mm Semi-Auto DIY Kit",
+      "short_description": "Complete mechanical hardware package for Derwood's legendary Shuty AP-9 9mm semi-automatic pistol. Includes 9mm threaded barrel, weighted bolt carrier, dual recoil guide rods and springs, extractor, and fasteners."
+    },
+    "de": {
+      "name": "Shuty AP-9 9mm Halbautomatik DIY-Bausatz",
+      "short_description": "Komplettes Beschlagset für die legendäre Shuty AP-9 9mm Pistole. Beinhaltet 9mm Gewindelauf, beschwerten Verschluss, doppelte Führungsstangen mit Rückstoßfedern und Auszieher."
+    },
+    "nl": {
+      "name": "Shuty AP-9 9mm Semi-Automatische DIY Kit",
+      "short_description": "Complete mechanische hardware voor het Shuty AP-9 9mm semi-automatische pistool. Bevat 9mm schroefdraadloop, verzwaarde grendel, dubbele geleidestangen met veren en uitwerper."
+    },
+    "fr": {
+      "name": "Kit Pistolet Semi-Auto Shuty AP-9 9mm",
+      "short_description": "Ensemble mécanique pour le pistolet semi-automatique Shuty AP-9 9mm. Comprend canon fileté 9mm, culasse lestée, double tige-guide avec ressorts, extracteur et visserie."
+    },
+    "es": {
+      "name": "Kit Pistola Semiautomática Shuty AP-9 9mm",
+      "short_description": "Paquete completo para la pistola semiautomática Shuty AP-9 de 9mm. Incluye cañón roscado de 9mm, cerrojo con contrapeso, varillas guía dobles con muelles recuperadores y extractor."
+    },
+    "it": {
+      "name": "Kit Pistola Semiautomatica Shuty AP-9 9mm",
+      "short_description": "Pacchetto meccanico completo per pistola semiautomatica 9mm Shuty AP-9. Include canna filettata 9mm, otturatore appesantito, doppie aste guidamolla con molle ed estrattore."
+    },
+    "pl": {
+      "name": "Zestaw Samopowtarzalnego Pistoletu Shuty AP-9 9mm",
+      "short_description": "Kompletny pakiet mechaniczny do pistoletu samopowtarzalnego Shuty AP-9 9mm. Zawiera gwintowaną lufę 9mm, dociążony suwadło-zamek, podwójne żerdzie ze sprężynami i pazur wyciągu."
+    },
+    "bg": {
+      "name": "Комплект за Полуавтоматичен Пистолет Shuty AP-9 9mm",
+      "short_description": "Пълен механичен пакет за полуавтоматичен пистолет Shuty AP-9 9mm. Включва нарезна резбована цев 9mm, утежнен затвор, двойни възвратни направляващи и екстрактор."
+    }
+  },
+  "solid-concepts-1911-build-kit": {
+    "en": {
+      "name": "Solid Concepts 1911 DMLS Metal Build Kit",
+      "short_description": "Premium full-metal completion kit inspired by the world's first 3D printed metal 1911. Includes unfinished 4140/stainless slide, match-grade .45 ACP barrel, barrel bushing, recoil spring assembly, and precision trigger group."
+    },
+    "de": {
+      "name": "Solid Concepts 1911 DMLS Metall-Bausatz",
+      "short_description": "Premium Ganzmetall-Bausatz inspiriert von der ersten metall-3D-gedruckten 1911. Beinhaltet Schlitten aus 4140/Edelstahl, Matchlauf .45 ACP, Laufbuchse, Verschlussfeder und Abzugsgruppe."
+    },
+    "nl": {
+      "name": "Solid Concepts 1911 DMLS Metaal Bouwkit",
+      "short_description": "Premium volmetalen kit geïnspireerd op 's werelds eerste 3D-metaalgeprinte 1911. Bevat onafgewerkte 4140/RVS slede, matchloop .45 ACP, loopbus, veerconstructie en precisietrekkergroep."
+    },
+    "fr": {
+      "name": "Kit Métallique 1911 DMLS Solid Concepts",
+      "short_description": "Kit haut de gamme tout métal inspiré du premier 1911 imprimé en 3D métal. Comprend culasse 4140/inox, canon match .45 ACP, bague de canon, ensemble ressort et bloc détente."
+    },
+    "es": {
+      "name": "Kit de Metal 1911 DMLS Solid Concepts",
+      "short_description": "Kit premium totalmente metálico inspirado en la primera 1911 metálica impresa en 3D. Incluye corredera en acero 4140/inoxidable, cañón match .45 ACP, buje, guía de muelle y grupo de disparo."
+    },
+    "it": {
+      "name": "Kit Interamente in Metallo 1911 DMLS Solid Concepts",
+      "short_description": "Kit premium in metallo ispirato alla prima 1911 stampata in metallo 3D. Include carrello 4140/inox, canna match .45 ACP, boccola, asta guidamolla e gruppo scatto di precisione."
+    },
+    "pl": {
+      "name": "W Pełni Metalowy Zestaw 1911 DMLS Solid Concepts",
+      "short_description": "Zestaw inspirowany pierwszym metalowym pistoletem 1911 z druku 3D. Zawiera zamek ze stali 4140/nierdzewnej, lufę match .45 ACP, łożysko lufy, zespół sprężyny powrotnej i mechanizm spustowy."
+    },
+    "bg": {
+      "name": "Изцяло Метален Комплект 1911 DMLS Solid Concepts",
+      "short_description": "Премиум комплект, вдъхновен от първия метален 3D принтиран 1911. Включва затвор от стомана 4140/неръждаема, мачова цев .45 ACP, втулка, възвратна пружина и прецизен спусък."
+    }
+  },
+  "songbird-22-build-kit": {
+    "en": {
+      "name": "Songbird .22 LR DIY Pistol Hardware Kit",
+      "short_description": "Ultra-compact single-shot DIY pistol hardware kit. Includes precision .22 LR steel barrel liner with chamber, high-carbon steel firing pin, trigger spring, hinge pivot pin, and mounting screws."
+    },
+    "de": {
+      "name": "Songbird .22 LR DIY Pistolen-Bausatz",
+      "short_description": "Ultrakompakter einschüssiger DIY-Pistolenbausatz. Enthält präzisen .22 LR Stahllauf-Liner mit Patronenlager, Kohlenstoffstahl-Schlagbolzen, Abzugsfeder, Scharnierstift und Montageschrauben."
+    },
+    "nl": {
+      "name": "Songbird .22 LR DIY Pistool Hardware Kit",
+      "short_description": "Ultracompacte enkelschots doe-het-zelf pistoolkit. Bevat .22 LR stalen loopliner met kamer, koolstofstalen slagpin, trekkerveer, scharnierpen en bevestigingsschroeven."
+    },
+    "fr": {
+      "name": "Kit Pistolet DIY Songbird .22 LR",
+      "short_description": "Kit ultra-compact de pistolet monocoup à fabriquer soi-même. Comprend liner de canon .22 LR en acier chambré, percuteur en acier à haute teneur en carbone, ressort et goupilles."
+    },
+    "es": {
+      "name": "Kit Pistola DIY Songbird .22 LR",
+      "short_description": "Kit de pistola monotiro DIY ultracompacta. Incluye ánima de cañón de acero .22 LR recamarada, percutor de acero al carbono, muelle de disparador, pasador de bisagra y tornillos."
+    },
+    "it": {
+      "name": "Kit Pistola Fai-Da-Te Songbird .22 LR",
+      "short_description": "Kit pistola monocolpo ultracompatta fai-da-te. Include liner canna in acciaio .22 LR con camera di cartuccia, percussore in acciaio al carbonio, molla grilletto e perno cerniera."
+    },
+    "pl": {
+      "name": "Zestaw Pistoletu DIY Songbird .22 LR",
+      "short_description": "Ultrakompaktowy zestaw jednostrzałowego pistoletu DIY. Zawiera stalową surówkę lufy .22 LR z komorą, iglicę ze stali wysokowęglowej, sprężynę spustową, oś zawiasu i śruby."
+    },
+    "bg": {
+      "name": "Комплект за DIY Пистолет Songbird .22 LR",
+      "short_description": "Ултракомпактен комплект за еднозаряден DIY пистолет. Включва стоманена цевна втулка .22 LR с патронник, ударник от високовъглеродна стомана, спусъчна пружина и болтове."
+    }
+  },
+  "plastikov-akm-build-kit": {
+    "en": {
+      "name": "Plastikov 3D Printed AKM Receiver Hardware Kit",
+      "short_description": "Ivan The Troll's Plastikov AKM hardware kit for 7.62x39mm 3D printed receivers. Includes CNC-cut steel front and rear trunnion reinforcement plates, high-grade cross bolts, hardened steel guide rails, and trigger guard."
+    },
+    "de": {
+      "name": "Plastikov 3D-Druck AKM Gehäuse-Beschlagsatz",
+      "short_description": "Ivan The Trolls Plastikov AKM Bausatz für 7.62x39mm 3D-gedruckte Gehäuse. Beinhaltet CNC-gefertigte Stahl-Verstärkungsplatten für vordere und hintere Trunnions, Schrauben, Schienen und Abzugsbügel."
+    },
+    "nl": {
+      "name": "Plastikov 3D-Geprint AKM Ontvanger Kit",
+      "short_description": "Plastikov AKM hardwarekit voor 7.62x39mm 3D-geprinte ontvangers. Bevat CNC-gesneden stalen versterkingsplaten voor trunnions, sterke dwarsbouten, gehard stalen rails en trekkerbeugel."
+    },
+    "fr": {
+      "name": "Kit Boîtier AKM Imprimé 3D Plastikov",
+      "short_description": "Kit Plastikov pour boîtier AKM 7.62x39mm imprimé en 3D. Comprend plaques de renfort de tourillon avant et arrière en acier CNC, boulons haute résistance, rails de guidage et pontet."
+    },
+    "es": {
+      "name": "Kit Receptor AKM Impreso en 3D Plastikov",
+      "short_description": "Kit Plastikov AKM para receptores impresos en 3D en 7.62x39mm. Incluye placas de refuerzo de trunnion delantero y trasero en acero CNC, pernos pasantes, rieles templados y guardamonte."
+    },
+    "it": {
+      "name": "Kit Ricevitore AKM Stampato 3D Plastikov",
+      "short_description": "Kit Plastikov AKM per receiver stampati in 3D in calibro 7.62x39mm. Include piastre di rinforzo trunnion anteriore e posteriore in acciaio CNC, bulloni passanti, guide temprate e ponticello."
+    },
+    "pl": {
+      "name": "Zestaw Komory AKM z Druku 3D Plastikov",
+      "short_description": "Zestaw do komory AKM 7.62x39mm drukowanej w 3D projektu Ivana. Zawiera stalowe płyty wzmacniające obsady lufy i kolby CNC, śruby poprzeczne, hartowane szyny prowadzące i kabłąk."
+    },
+    "bg": {
+      "name": "Комплект за 3D Принтирана Рама AKM Plastikov",
+      "short_description": "Комплект Plastikov за 7.62x39mm 3D принтирани AKM рами. Включва стоманени укрепващи планки за преден и заден блок, високоякостни болтове, закалени направляващи и спусъкова скоба."
+    }
+  },
+  "ez22-semi-auto-build-kit": {
+    "en": {
+      "name": "EZ22 .22 LR Semi-Auto 3D Printed Carbine Kit",
+      "short_description": "Dedicated hardware kit for the EZ22 semi-automatic 3D printed .22 LR rifle. Includes pre-chambered barrel liner, recoil spring, guide rod, heavy firing pin, extractor wire, and assembly hardware."
+    },
+    "de": {
+      "name": "EZ22 .22 LR Halbautomatischer 3D-Druck Karabiner Bausatz",
+      "short_description": "Spezifischer Beschlagsatz für den halbautomatischen EZ22 .22 LR 3D-Druck-Karabiner. Enthält fertig gekammerten Lauf-Liner, Verschlussfeder, Führungsstange, Schlagbolzen und Auszieher."
+    },
+    "nl": {
+      "name": "EZ22 .22 LR Semi-Automatische 3D-Geprinte Karabijn Kit",
+      "short_description": "Specifieke hardwarekit voor de EZ22 semi-automatische .22 LR karabijn. Bevat gekamerde loopliner, sluitveer, geleidestang, zware slagpin, patroontrekker en bevestigingsmateriaal."
+    },
+    "fr": {
+      "name": "Kit Carabine Semi-Auto .22 LR Imprimée 3D EZ22",
+      "short_description": "Kit mécanique pour la carabine semi-automatique EZ22 .22 LR imprimée en 3D. Comprend liner de canon chambré, ressort de rappel, tige-guide, percuteur lourd, extracteur et visserie."
+    },
+    "es": {
+      "name": "Kit Carabina Semiautomática 3D EZ22 .22 LR",
+      "short_description": "Kit de hardware para la carabina semiautomática .22 LR impresa en 3D EZ22. Incluye ánima de cañón recamarada, muelle de retroceso, varilla guía, percutor reforzado, extractor y tornillería."
+    },
+    "it": {
+      "name": "Kit Carabina Semiautomatica 3D EZ22 .22 LR",
+      "short_description": "Kit meccanico per la carabina semiautomatica .22 LR stampata in 3D EZ22. Include liner canna con camera di scoppio, molla di recupero, asta guida, percussore pesante, estrattore e viti."
+    },
+    "pl": {
+      "name": "Zestaw Samopowtarzalnego Karabinka 3D EZ22 .22 LR",
+      "short_description": "Zestaw montażowy do samopowtarzalnego karabinka .22 LR drukowanego w 3D EZ22. Zawiera lufę z komorą nabojową, sprężynę powrotną, żerdź, masywną iglicę, pazur wyciągu i śruby."
+    },
+    "bg": {
+      "name": "Комплект за Полуавтоматична 3D Карабина EZ22 .22 LR",
+      "short_description": "Специализиран комплект за полуавтоматична 3D пушка EZ22 .22 LR. Включва нарезна цевна втулка с патронник, възвратна пружина, направляваща, масивен ударник и екстрактор."
+    }
+  },
+  "hd22-carbine-build-kit": {
+    "en": {
+      "name": "HD22 Heavy Duty .22 LR Semi-Auto Build Kit",
+      "short_description": "Heavy-duty upgrade package for the HD22 semi-auto platform. Includes 16-inch seamless rifled barrel liner, weighted bolt hardware, enhanced buffer springs, charging handle hardware, and reinforced pins."
+    },
+    "de": {
+      "name": "HD22 Heavy Duty .22 LR Halbautomatik Bausatz",
+      "short_description": "Verstärkter Bausatz für die HD22 Halbautomatik-Plattform. Beinhaltet 16-Zoll gezogenen Lauf-Liner, beschwerte Verschlussbauteile, Pufferfeder, Ladehebel und hochfeste Stifte."
+    },
+    "nl": {
+      "name": "HD22 Heavy Duty .22 LR Semi-Auto Bouwkit",
+      "short_description": "Zwaar uitgevoerde bouwset voor het HD22 semi-automatische platform. Bevat 16-inch getrokken stalen loopliner, verzwaarde grendelhardware, bufferveren en spanhendelonderdelen."
+    },
+    "fr": {
+      "name": "Kit Renforcé Carabine Semi-Auto HD22 .22 LR",
+      "short_description": "Version renforcée pour la plateforme semi-automatique HD22. Comprend canon liner rayé 16 pouces, visserie de culasse lestée, ressorts tampons et levier d'armement."
+    },
+    "es": {
+      "name": "Kit Reforzado Carabina Semiautomática HD22 .22 LR",
+      "short_description": "Kit de alta resistencia para la carabina semiautomática HD22. Incluye ánima de cañón estriada de 16 pulgadas, cerrojo reforzado contrapesado, muelles de buffer y palanca de carga."
+    },
+    "it": {
+      "name": "Kit Rinforzato Carabina Semiautomatica HD22 .22 LR",
+      "short_description": "Pacchetto potenziato per la piattaforma semiautomatica HD22. Include liner canna rigata da 16 pollici, componenti otturatore appesantito, molla tampone e manetta di armamento."
+    },
+    "pl": {
+      "name": "Wzmocniony Zestaw Karabinka Samopowtarzalnego HD22 .22 LR",
+      "short_description": "Pakiet Heavy Duty do platformy HD22 .22 LR. Zawiera 16-calową gwintowaną lufę, dociążenie zamka, wzmocnione sprężyny bufora, rękojeść przeładowania i utwardzane piny."
+    },
+    "bg": {
+      "name": "Усилен Комплект за Полуавтоматична Карабина HD22 .22 LR",
+      "short_description": "Тежкотоварен пакет за полуавтоматична платформа HD22. Включва 16-инчова нарезна цев, утежнен затворен блок, усилени буферни пружини и лост за зареждане."
+    }
+  },
+  "menendez-mag-fed-magazine-pack": {
+    "en": {
+      "name": "Menendez Mag-Fed 3D Printed Magazine Spring & Follower 5-Pack",
+      "short_description": "5-pack of tempered high-tensile 17-7 stainless steel magazine springs and anti-tilt followers designed specifically for 3D printed Menendez Glock 17, Glock 19, and FGC-9 magazines."
+    },
+    "de": {
+      "name": "Menendez Mag-Fed 3D-Druck Magazinfedern & Zubringer 5er-Pack",
+      "short_description": "5er-Pack vergütete 17-7 Edelstahl-Magazinfedern und kippsichere Zubringer, speziell entwickelt für 3D-gedruckte Menendez Glock 17, Glock 19 und FGC-9 Magazine."
+    },
+    "nl": {
+      "name": "Menendez Mag-Fed 3D-Geprinte Magazijnveren & Volgers 5-Pack",
+      "short_description": "5-pack van geharde 17-7 roestvrijstalen magazijnveren en kantelbestendige volgers, ontworpen voor 3D-geprinte Menendez Glock 17, 19 en FGC-9 magazijnen."
+    },
+    "fr": {
+      "name": "Pack de 5 Ressorts et Élévateurs pour Chargeurs 3D Menendez",
+      "short_description": "Lot de 5 ressorts de chargeur en acier inoxydable 17-7 trempé et élévateurs anti-basculement spécialement conçus pour chargeurs imprimés 3D Menendez Glock 17/19 et FGC-9."
+    },
+    "es": {
+      "name": "Pack de 5 Muelles y Elevadores para Cargadores 3D Menendez",
+      "short_description": "Pack de 5 muelles de cargador en acero inoxidable 17-7 y tejas elevadoras antibasculantes diseñados específicamente para cargadores 3D Menendez Glock 17/19 y FGC-9."
+    },
+    "it": {
+      "name": "Confezione da 5 Molle ed Elevatori per Caricatori 3D Menendez",
+      "short_description": "Confezione da 5 molle per caricatori in acciaio inox 17-7 ed elevatori antiribaltamento progettati specificamente per caricatori stampati 3D Menendez Glock 17/19 e FGC-9."
+    },
+    "pl": {
+      "name": "Zestaw 5 Sprężyn i Podajników do Magazynków 3D Menendez",
+      "short_description": "Zestaw 5 sprężyn ze stali nierdzewnej 17-7 i zapobiegających przekoszeniu podajników zaprojektowanych do drukowanych w 3D magazynków Menendez Glock 17, 19 i FGC-9."
+    },
+    "bg": {
+      "name": "Пакет 5 Броя Пружини и Подавачи за 3D Пълнители Menendez",
+      "short_description": "Пакет от 5 пружини от неръждаема стомана 17-7 и антикосови подавачи, проектирани специално за 3D принтирани пълнители Menendez за Glock 17/19 и FGC-9."
+    }
+  },
+  "scarpup-bullpup-build-kit": {
+    "en": {
+      "name": "ScARpup Bullpup Conversion Chassis & Hardware Kit",
+      "short_description": "Bullpup conversion hardware kit for standard AR-15 and 3D printed receivers. Includes precision trigger linkage rod, front handguard hardware, cheek rest brackets, and ambidextrous charging handle components."
+    },
+    "de": {
+      "name": "ScARpup Bullpup Umbau-Chassis & Beschlagsatz",
+      "short_description": "Bullpup Umbausatz für Standard-AR-15 und 3D-Druck-Gehäuse. Beinhaltet Abzugsstange, Handschutz-Beschläge, Wangenauflage-Halterungen und beidseitigen Ladehebel."
+    },
+    "nl": {
+      "name": "ScARpup Bullpup Conversiechassis & Hardware Kit",
+      "short_description": "Bullpup ombouwkit voor standaard AR-15 en 3D-geprinte ontvangers. Bevat precisie trekkerstang, handguard-bevestiging, wangsteunbeugels en tweezijdige spanhendel."
+    },
+    "fr": {
+      "name": "Kit Châssis de Conversion Bullpup ScARpup",
+      "short_description": "Kit de conversion bullpup pour boîtiers AR-15 standard et imprimés en 3D. Comprend tringlerie de détente de précision, fixation de garde-main, appui-joue et levier d'armement ambidextre."
+    },
+    "es": {
+      "name": "Kit de Chasis de Conversión Bullpup ScARpup",
+      "short_description": "Kit de conversión bullpup para receptores AR-15 estándar e impresos en 3D. Incluye varilla de conexión de disparador, fijaciones de guardamanos, carrillera y palanca ambidiestra."
+    },
+    "it": {
+      "name": "Kit Chassis di Conversione Bullpup ScARpup",
+      "short_description": "Kit di conversione bullpup per lower AR-15 standard e stampati in 3D. Include asta di rinvio scatto, minuteria astina, supporto poggiaguancia e manetta d'armamento ambidestra."
+    },
+    "pl": {
+      "name": "Zestaw Konwersji Bezkolbowej Bullpup ScARpup",
+      "short_description": "Zestaw konwersji bullpup do standardowych komór AR-15 i odbiorników z druku 3D. Zawiera precyzyjne cięgno spustowe, okucia łoża, wsporniki baki policzkowej i obustronną dźwignię."
+    },
+    "bg": {
+      "name": "Комплект за Булпъп Конверсия ScARpup за AR-15",
+      "short_description": "Шаси и монтажен комплект за булпъп преобразуване на стандартни и 3D принтирани AR-15 рами. Включва прецизна спусъчна тяга, крепежи за ложа, набузник и двустранен лост."
+    }
+  },
+  "yc9-yeet-cannon-build-kit": {
+    "en": {
+      "name": "YC-9 'Yeet Cannon' 9mm DIY Build Kit",
+      "short_description": "Complete mechanical hardware package for the YC-9 9mm DIY pistol platform. Includes slide internals, 9mm barrel, recoil spring assembly, slide rails, and lower trigger mechanism parts."
+    },
+    "de": {
+      "name": "YC-9 'Yeet Cannon' 9mm DIY-Bausatz",
+      "short_description": "Komplettes mechanisches Beschlagsset für die YC-9 9mm DIY-Pistole. Beinhaltet Schlitteninnenteile, 9mm Lauf, Verschlussfeder, Führungsschienen und Abzugsgruppe."
+    },
+    "nl": {
+      "name": "YC-9 'Yeet Cannon' 9mm DIY Bouwkit",
+      "short_description": "Complete mechanische hardware voor het YC-9 9mm zelfbouwpistool. Bevat slede-onderdelen, 9mm loop, sluitveereenheid, geleiderails en trekkergroeponderdelen."
+    },
+    "fr": {
+      "name": "Kit d'Assemblage Pistolet 9mm YC-9 'Yeet Cannon'",
+      "short_description": "Kit complet pour le pistolet 9mm YC-9 'Yeet Cannon'. Comprend pièces internes de culasse, canon 9mm, ensemble ressort récupérateur, rails de glissière et groupe détente."
+    },
+    "es": {
+      "name": "Kit de Montaje Pistola 9mm YC-9 'Yeet Cannon'",
+      "short_description": "Paquete mecánico completo para la pistola DIY de 9mm YC-9. Incluye componentes internos de corredera, cañón de 9mm, muelle recuperador, rieles de deslizamiento y piezas de disparador."
+    },
+    "it": {
+      "name": "Kit Pistola 9mm YC-9 'Yeet Cannon'",
+      "short_description": "Kit meccanico completo per la pistola fai-da-te 9mm YC-9. Include minuteria carrello, canna 9mm, gruppo molla di recupero, guide carrello e componenti scatto."
+    },
+    "pl": {
+      "name": "Zestaw Pistoletu 9mm YC-9 'Yeet Cannon'",
+      "short_description": "Kompletny pakiet podzespołów do pistoletu 9mm YC-9. Zawiera wnętrzności zamka, lufę 9mm, zespół sprężyny powrotnej, szyny prowadzące i mechanizm spustowy."
+    },
+    "bg": {
+      "name": "Комплект за 9mm Пистолет YC-9 'Yeet Cannon'",
+      "short_description": "Пълен механичен комплект за 9mm DIY пистолет YC-9. Включва вътрешни части за затвора, 9mm цев, възвратна пружина, релси за затвора и спусъков механизъм."
+    }
+  },
+  "stingray-22-build-kit": {
+    "en": {
+      "name": "Stingray .22 LR Semi-Auto Tactical Pistol Kit",
+      "short_description": "Tactical hardware completion kit for the Stingray .22 LR semi-auto pistol. Features a threaded .22 LR barrel liner, lightweight bolt assembly, dual recoil springs, ejector, and assembly pins."
+    },
+    "de": {
+      "name": "Stingray .22 LR Taktischer Halbautomatik-Bausatz",
+      "short_description": "Taktischer Bausatz für die halbautomatische Stingray .22 LR Pistole. Beinhaltet .22 LR Gewindelauf-Liner, Leichtbau-Verschluss, doppelte Rückstoßfedern und Montagestifte."
+    },
+    "nl": {
+      "name": "Stingray .22 LR Tactisch Semi-Auto Pistool Kit",
+      "short_description": "Tactische kit voor het Stingray .22 LR semi-automatische pistool. Voorzien van .22 LR schroefdraadloop, lichte grendel, dubbele veren, uitwerper en pennen."
+    },
+    "fr": {
+      "name": "Kit Pistolet Tactique Semi-Auto Stingray .22 LR",
+      "short_description": "Kit tactique pour le pistolet semi-automatique Stingray .22 LR. Comprend canon liner fileté .22 LR, culasse allégée, double ressort récupérateur et goupilles."
+    },
+    "es": {
+      "name": "Kit Pistola Táctica Semiautomática Stingray .22 LR",
+      "short_description": "Kit táctico para la pistola semiautomática Stingray .22 LR. Incluye ánima de cañón roscada .22 LR, cerrojo aligerado, muelles de retroceso dobles, expulsor y pasadores."
+    },
+    "it": {
+      "name": "Kit Pistola Tattica Semiautomatica Stingray .22 LR",
+      "short_description": "Kit tattico per pistola semiautomatica Stingray .22 LR. Include liner canna filettata .22 LR, otturatore alleggerito, doppie molle di recupero, espulsore e perni."
+    },
+    "pl": {
+      "name": "Taktyczny Zestaw Pistoletu Samopowtarzalnego Stingray .22 LR",
+      "short_description": "Zestaw do taktycznego pistoletu samopowtarzalnego Stingray .22 LR. Zawiera gwintowaną lufę .22 LR, lekki zamek, podwójne sprężyny powrotne, wyrzutnik i piny."
+    },
+    "bg": {
+      "name": "Тактически Комплект за Пистолет Stingray .22 LR",
+      "short_description": "Тактически комплект за полуавтоматичен пистолет Stingray .22 LR. Включва резбована цевна втулка .22 LR, олекотен затвор, двойни пружини и монтажни щифтове."
+    }
+  },
+  "vz61-skorpion-3d-build-kit": {
+    "en": {
+      "name": "VZ. 61 Skorpion 3D Printed Receiver Hardware Kit",
+      "short_description": "Reinforcement hardware kit for 3D printed VZ. 61 Skorpion submachine gun receivers. Compatible with .32 ACP and .22 LR conversion uppers, including steel mounting brackets, pins, and stock hinge block."
+    },
+    "de": {
+      "name": "VZ. 61 Skorpion 3D-Druck Gehäuse-Verstärkungssatz",
+      "short_description": "Verstärkungs-Bausatz für 3D-gedruckte VZ. 61 Skorpion Gehäuse. Kompatibel mit .32 ACP und .22 LR Wechselsystemen, inklusive Stahlhalterungen und Schaftscharnierblock."
+    },
+    "nl": {
+      "name": "VZ. 61 Skorpion 3D-Geprinte Ontvanger Hardware Kit",
+      "short_description": "Versterkingshardware voor 3D-geprinte VZ. 61 Skorpion ontvangers. Geschikt voor .32 ACP en .22 LR uppers, inclusief stalen montagebeugels, pennen en kolfscharnier."
+    },
+    "fr": {
+      "name": "Kit Quincaillerie Boîtier Imprimé 3D VZ. 61 Skorpion",
+      "short_description": "Kit de renfort pour boîtier de pistolet-mitrailleur VZ. 61 Skorpion imprimé en 3D. Compatible avec hauts de culasse .32 ACP et .22 LR, inclut platines acier et charnière de crosse."
+    },
+    "es": {
+      "name": "Kit de Refuerzo para Receptor 3D VZ. 61 Skorpion",
+      "short_description": "Kit de refuerzo para receptores impresos en 3D de subfusil VZ. 61 Skorpion. Compatible con calibres .32 ACP y .22 LR, incluye soportes de acero, pasadores y bloque de culata."
+    },
+    "it": {
+      "name": "Kit Rinforzo Ricevitore Stampato 3D VZ. 61 Skorpion",
+      "short_description": "Kit di rinforzo per lower receiver stampato in 3D di pistola mitragliatrice VZ. 61 Skorpion. Compatibile con conversioni .32 ACP e .22 LR, include staffe in acciaio e perni."
+    },
+    "pl": {
+      "name": "Zestaw Wzmocnienia Komory 3D VZ. 61 Skorpion",
+      "short_description": "Zestaw okuć wzmacniających do drukowanej w 3D komory pistoletu maszynowego VZ. 61 Skorpion. Kompatybilny z konwersjami .32 ACP i .22 LR, zawiera stalowe płytki i zawias kolby."
+    },
+    "bg": {
+      "name": "Укрепващ Комплект за 3D Рама VZ. 61 Skorpion",
+      "short_description": "Комплект крепежи за 3D принтирана рама на картечен пистолет VZ. 61 Skorpion. Съвместим с калибри .32 ACP и .22 LR, включва стоманени планки и шарнир за приклад."
+    }
+  },
+  "glock-pattern-master-rail-kit": {
+    "en": {
+      "name": "Glock-Pattern Master Rail & Locking Block Kit (DD17.2/DD19.2/DD26.2)",
+      "short_description": "Universal CNC-machined stainless steel front rail block and rear rail module kit for FMDA DD17.2, DD19.2, and DD26.2 3D printed frames. Engineered to 0.01mm tolerances for flawless slide cycling."
+    },
+    "de": {
+      "name": "Glock-Muster Führungsschienen & Verriegelungsblock Mastersatz",
+      "short_description": "Universeller CNC-gefräster Edelstahl-Vorderschienenblock und Hinterschienenmodul für FMDA DD17.2, DD19.2 und DD26.2 3D-Druck-Gehäuse für perfekte Schlittenführung."
+    },
+    "nl": {
+      "name": "Glock-Model Geleiderails & Vergrendelingsblok Masterkit",
+      "short_description": "Universele CNC-gefreesde roestvrijstalen voor- en achterrails voor FMDA DD17.2, DD19.2 en DD26.2 3D-geprinte frames voor soepele sledebeweging."
+    },
+    "fr": {
+      "name": "Kit Maître Rails et Bloc de Verrouillage Type Glock",
+      "short_description": "Kit universel de rails avant et arrière usinés CNC en acier inoxydable pour carcasses 3D FMDA DD17.2, DD19.2 et DD26.2. Tolérances de 0.01mm pour un cycle parfait."
+    },
+    "es": {
+      "name": "Kit Maestro de Rieles y Bloque de Bloqueo Patrón Glock",
+      "short_description": "Kit universal de bloque de riel delantero y trasero en acero inoxidable mecanizado CNC para armazones 3D FMDA DD17.2, DD19.2 y DD26.2. Ajuste perfecto para corredera."
+    },
+    "it": {
+      "name": "Kit Master Guide e Blocco di Chiusura Stile Glock",
+      "short_description": "Kit universale di guide anteriori e modulo posteriore in acciaio inox lavorato a CNC per fusti stampati 3D FMDA DD17.2, DD19.2 e DD26.2. Massima precisione di scorrimento."
+    },
+    "pl": {
+      "name": "Zestaw Szyn Prowadzących i Bloku Ryglowego Wzór Glock",
+      "short_description": "Uniwersalny zestaw przedniego bloku ryglowego i tylnych szyn ze stali nierdzewnej CNC do szkieletów 3D FMDA DD17.2, DD19.2 i DD26.2. Idealna płynność ruchu zamka."
+    },
+    "bg": {
+      "name": "Мастър Комплект Релси и Заключващ Блок за Glock",
+      "short_description": "Универсален комплект предни и задни релси от неръждаема стомана, обработени с CNC за 3D рами FMDA DD17.2, DD19.2 и DD26.2 за безупречно движение на затвора."
+    }
+  },
+  "hoffman-tactical-ar15-reinforcement-kit": {
+    "en": {
+      "name": "Hoffman Tactical AR-15 Super Lower Reinforcement Hardware Kit",
+      "short_description": "Official brass heat-set insert and steel reinforcement rib hardware kit for the Hoffman Tactical AR-15 Super Lower V3. Prevents buffer tower snapping and delivers over 5,000 rounds of durability."
+    },
+    "de": {
+      "name": "Hoffman Tactical AR-15 Super Lower Verstärkungssatz",
+      "short_description": "Beschlagsatz mit Messing-Gewindeeinsätzen und Stahlrippen für den Hoffman Tactical AR-15 Super Lower V3. Verhindert Bruch des Pufferturms und sichert über 5.000 Schuss Haltbarkeit."
+    },
+    "nl": {
+      "name": "Hoffman Tactical AR-15 Super Lower Versterkingskit",
+      "short_description": "Hardwarekit met messing schroefdraadinzetstukken en stalen ribben voor de Hoffman Tactical AR-15 Super Lower V3. Voorkomt breuk van de buffertoren voor 5.000+ schoten."
+    },
+    "fr": {
+      "name": "Kit de Renfort Hoffman Tactical AR-15 Super Lower",
+      "short_description": "Kit d'inserts laiton thermofixables et nervures de renfort en acier pour le boîtier Hoffman Tactical AR-15 Super Lower V3. Empêche la rupture du tube de crosse pour 5 000+ tirs."
+    },
+    "es": {
+      "name": "Kit de Refuerzo Hoffman Tactical AR-15 Super Lower",
+      "short_description": "Kit de insertos roscados de latón y nervaduras de refuerzo de acero para el Hoffman Tactical AR-15 Super Lower V3. Evita la rotura de la torre del amortiguador por más de 5.000 disparos."
+    },
+    "it": {
+      "name": "Kit Rinforzo Hoffman Tactical AR-15 Super Lower",
+      "short_description": "Kit con inserti in ottone a caldo e nervature in acciaio per lower receiver Hoffman Tactical AR-15 Super Lower V3. Previene la rottura dell'attacco tubo per oltre 5.000 colpi."
+    },
+    "pl": {
+      "name": "Zestaw Wzmocnienia Hoffman Tactical AR-15 Super Lower",
+      "short_description": "Zestaw mosiężnych wkładek gwintowanych i stalowych żeber wzmacniających do Hoffman Tactical AR-15 Super Lower V3. Chroni gniazdo bufora przed pęknięciem na ponad 5000 strzałów."
+    },
+    "bg": {
+      "name": "Укрепващ Комплект за Hoffman Tactical AR-15 Super Lower",
+      "short_description": "Комплект месингови резбови втулки и стоманени ребра за Hoffman Tactical AR-15 Super Lower V3. Предотвратява счупване на буферната тръба за над 5000 изстрела."
+    }
+  },
+  "ruger-1022-printed-receiver-kit": {
+    "en": {
+      "name": "Ruger 10/22 3D Printed Receiver Hardware & V-Block Kit",
+      "short_description": "Hardened steel V-block, takedown screw, cross pins, and buffer hardware for 3D printed Ruger 10/22 rifle receivers. Compatible with standard factory and aftermarket 10/22 barrels and bolts."
+    },
+    "de": {
+      "name": "Ruger 10/22 3D-Druck Gehäuse V-Block & Beschlagsatz",
+      "short_description": "Gehärteter V-Block aus Stahl, Systemschraube, Querstifte und Puffer für 3D-gedruckte Ruger 10/22 Gewehrgehäuse. Kompatibel mit allen Standard- und Tuning-Läufen."
+    },
+    "nl": {
+      "name": "Ruger 10/22 3D-Geprinte Ontvanger V-Blok & Hardware Kit",
+      "short_description": "Gehard stalen V-blok, bevestigingsbout, dwarspennen en bufferhardware voor 3D-geprinte Ruger 10/22 ontvangers. Geschikt voor standaard en aftermarket lopen en grendels."
+    },
+    "fr": {
+      "name": "Kit Quincaillerie et V-Block pour Boîtier Ruger 10/22 3D",
+      "short_description": "V-block en acier trempé, vis d'assemblage, goupilles traversantes et amortisseur pour boîtiers Ruger 10/22 imprimés en 3D. Compatible avec canons et culasses standard."
+    },
+    "es": {
+      "name": "Kit de Tornillería y V-Block para Receptor Ruger 10/22 3D",
+      "short_description": "V-block de acero templado, tornillo de desarme, pasadores transversales y amortiguador para receptores 3D de Ruger 10/22. Compatible con cañones y cerrojos estándar."
+    },
+    "it": {
+      "name": "Kit Minuteria e V-Block per Lower Ruger 10/22 Stampato 3D",
+      "short_description": "V-block in acciaio temprato, vite di fissaggio, perni trasversali e tampone per carcasse Ruger 10/22 stampate in 3D. Compatibile con canne e otturatori standard e tuning."
+    },
+    "pl": {
+      "name": "Zestaw V-Block i Śrub do Komory Ruger 10/22 z Druku 3D",
+      "short_description": "Hartowany stalowy V-block, śruba mocująca, kołki poprzeczne i bufor do komory karabinka Ruger 10/22 drukowanej w 3D. Kompatybilny ze standardowymi lufami i zamkami."
+    },
+    "bg": {
+      "name": "Комплект V-Block и Крепежи за 3D Рама Ruger 10/22",
+      "short_description": "Закален стоманен V-блок, крепежен винт, напречни щифтове и буфер за 3D принтирани рами на Ruger 10/22. Съвместим със стандартни фабрични и тунинг цеви."
+    }
+  }
+}

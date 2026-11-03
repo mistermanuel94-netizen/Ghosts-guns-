@@ -1,0 +1,29 @@
+---
+import CategoryView from '../../../components/CategoryView.astro';
+import { LOCALES, type Locale } from '../../../utils/i18n';
+
+export function getStaticPaths() {
+  const nonDefaultLocales = LOCALES.filter(l => l !== 'en');
+  const subs = ['jigs'];
+  const paths: any[] = [];
+
+  for (const lang of nonDefaultLocales) {
+    for (const sub of subs) {
+      paths.push({
+        params: { lang, sub },
+        props: { slug: sub }
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { lang } = Astro.params;
+const { slug } = Astro.props;
+---
+
+<CategoryView
+  categorySlug={slug}
+  lang={lang as Locale}
+/>

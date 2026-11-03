@@ -1,0 +1,495 @@
+---
+import { getLangFromUrl, getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang } = Astro.props;
+const currentLang = lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+---
+
+<div class="hero-slider relative overflow-hidden border-l border-r border-b border-[#e5e5e5] bg-black text-white" data-autoplay="6000">
+  <div class="hero-slides relative w-full min-h-[560px] sm:min-h-[620px] md:min-h-[660px] lg:min-h-[700px] flex">
+    
+    <!-- Slide 1: PRINT. BUILD. SHOOT. PRIVATE DIY FIREARMS -->
+    <div class="hero-slide active absolute inset-0 transition-opacity duration-700 opacity-100 z-10 flex flex-col justify-center" data-slide="0">
+      <div class="absolute inset-0 bg-black"></div>
+      <img
+        width="3696"
+        height="1632"
+        src="/assets/images/hero-pbs.webp"
+        alt="3D Printed Ghost Guns - Print Build Shoot"
+        class="absolute inset-0 w-full h-full object-cover opacity-40 filter contrast-125 brightness-90 pointer-events-none"
+        fetchpriority="high"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 pointer-events-none"></div>
+
+      <div class="relative z-20 px-4 sm:px-6 md:px-12 py-10 sm:py-14 md:py-20 max-w-5xl mx-auto text-center flex flex-col items-center">
+        <!-- Kicker Tag -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#9f0712]/20 border border-[#9f0712]/50 text-[#9f0712] text-[10px] sm:text-xs font-mono uppercase tracking-widest font-bold mb-3 sm:mb-4">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full animate-pulse"></span>
+          <span>{t('hero.slide1Tag')}</span>
+        </div>
+
+        <!-- Master Title / Headline -->
+        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase text-center font-heading leading-tight sm:leading-none tracking-tight mb-3 sm:mb-4">
+          <span class="block">{t('hero.slide1Line1')}</span>
+          <span class="block sm:ml-4 md:ml-8 text-[#9f0712]">{t('hero.slide1Line2')}</span>
+          <span class="block sm:ml-8 md:ml-16">{t('hero.slide1Line3')}</span>
+        </h1>
+
+        <!-- Rich SEO Keyword Subtitle -->
+        <p class="text-xs sm:text-sm md:text-base lg:text-lg text-neutral-200 font-sans leading-relaxed max-w-3xl mx-auto mb-4 sm:mb-6">
+          {t('hero.slide1Subtitle')}
+        </p>
+
+        <!-- 4 Keyword / Feature Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide1Pill1')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide1Pill2')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide1Pill3')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-[#9f0712]/30 border border-[#9f0712]/60 text-white font-mono text-[10px] sm:text-xs uppercase font-bold">
+            {t('hero.slide1Pill4')}
+          </span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
+          <a
+            href={getLocalizedPath('/build-kit/', currentLang)}
+            class="bg-[#9f0712] hover:bg-[#B90A0E] border border-[#9f0712] text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center gap-2"
+          >
+            <span>{t('hero.slide1Buy')}</span>
+            <span>&rarr;</span>
+          </a>
+          <a
+            href={getLocalizedPath('/shop/', currentLang)}
+            class="bg-white/10 hover:bg-white/20 border border-white text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center"
+          >
+            {t('hero.slide1Shop')}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: YOUR FIRST. NOT YOUR LAST. (DIY BUILD KITS) -->
+    <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col justify-center" data-slide="1">
+      <div class="absolute inset-0 bg-[#0c0c0c]"></div>
+      <img
+        width="1376"
+        height="768"
+        src="/assets/images/hero-bg.webp"
+        alt="DIY Gun Build Kits - Glock 19 and AR-15"
+        class="absolute inset-0 w-full h-full object-cover opacity-35 filter contrast-125 brightness-90 pointer-events-none"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/35 pointer-events-none"></div>
+
+      <div class="relative z-20 px-4 sm:px-6 md:px-12 py-10 sm:py-14 md:py-20 max-w-5xl mx-auto text-center flex flex-col items-center">
+        <!-- Kicker Tag -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#9f0712]/20 border border-[#9f0712]/50 text-[#9f0712] text-[10px] sm:text-xs font-mono uppercase tracking-widest font-bold mb-3 sm:mb-4">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full animate-pulse"></span>
+          <span>{t('hero.slide2Tag')}</span>
+        </div>
+
+        <!-- Master Title / Headline -->
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase text-center font-heading leading-tight tracking-tight mb-3 sm:mb-4">
+          {t('hero.slide2Title')}
+        </h2>
+
+        <!-- Rich SEO Keyword Subtitle -->
+        <p class="text-xs sm:text-sm md:text-base lg:text-lg text-neutral-200 font-sans leading-relaxed max-w-3xl mx-auto mb-4 sm:mb-6">
+          {t('hero.slide2Subtitle')}
+        </p>
+
+        <!-- 4 Keyword / Feature Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide2Pill1')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide2Pill2')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide2Pill3')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-[#9f0712]/30 border border-[#9f0712]/60 text-white font-mono text-[10px] sm:text-xs uppercase font-bold">
+            {t('hero.slide2Pill4')}
+          </span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
+          <a
+            href={getLocalizedPath('/product/harlot-22-parts-kit/', currentLang)}
+            class="bg-[#9f0712] hover:bg-[#B90A0E] border border-[#9f0712] text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center gap-2"
+          >
+            <span>{t('hero.slide2Buy')}</span>
+            <span>&rarr;</span>
+          </a>
+          <a
+            href={getLocalizedPath('/build-kit/', currentLang)}
+            class="bg-white/10 hover:bg-white/20 border border-white text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center"
+          >
+            {t('hero.slide2Shop')}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: COREXY 3D PRINTERS & FIREARM FILAMENTS -->
+    <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col justify-center" data-slide="2">
+      <div class="absolute inset-0 bg-[#0d0d0d]"></div>
+      <img
+        width="1376"
+        height="768"
+        src="/assets/images/hero-bg.webp"
+        alt="CoreXY 3D Printers for Firearms and PA-CF Carbon Nylon"
+        class="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-luminosity filter contrast-125 brightness-95 pointer-events-none"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40 pointer-events-none"></div>
+
+      <div class="relative z-20 px-4 sm:px-6 md:px-12 py-10 sm:py-14 md:py-20 max-w-5xl mx-auto text-center flex flex-col items-center">
+        <!-- Kicker Tag -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#9f0712]/20 border border-[#9f0712]/50 text-[#9f0712] text-[10px] sm:text-xs font-mono uppercase tracking-widest font-bold mb-3 sm:mb-4">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full animate-pulse"></span>
+          <span>{t('hero.slide3Tag')}</span>
+        </div>
+
+        <!-- Master Title / Headline -->
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase text-center font-heading leading-tight tracking-tight mb-3 sm:mb-4">
+          {t('hero.slide3Title')}
+        </h2>
+
+        <!-- Rich SEO Keyword Subtitle -->
+        <p class="text-xs sm:text-sm md:text-base lg:text-lg text-neutral-200 font-sans leading-relaxed max-w-3xl mx-auto mb-4 sm:mb-6">
+          {t('hero.slide3Subtitle')}
+        </p>
+
+        <!-- 4 Keyword / Feature Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide3Pill1')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide3Pill2')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide3Pill3')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-[#9f0712]/30 border border-[#9f0712]/60 text-white font-mono text-[10px] sm:text-xs uppercase font-bold">
+            {t('hero.slide3Pill4')}
+          </span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
+          <a
+            href={getLocalizedPath('/3d-printers/', currentLang)}
+            class="bg-[#9f0712] hover:bg-[#B90A0E] border border-[#9f0712] text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center gap-2"
+          >
+            <span>{t('hero.slide3Buy')}</span>
+            <span>&rarr;</span>
+          </a>
+          <a
+            href={getLocalizedPath('/3d-printing/', currentLang)}
+            class="bg-white/10 hover:bg-white/20 border border-white text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center"
+          >
+            {t('hero.slide3Shop')}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: 80% LOWERS, ROUTER JIGS & SLIDES -->
+    <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col justify-center" data-slide="3">
+      <div class="absolute inset-0 bg-[#121212]"></div>
+      <img
+        width="3696"
+        height="1632"
+        src="/assets/images/hero-pbs.webp"
+        alt="80 Percent Lowers and Router Jigs for AR-15"
+        class="absolute inset-0 w-full h-full object-cover opacity-35 filter contrast-125 brightness-90 pointer-events-none"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40 pointer-events-none"></div>
+
+      <div class="relative z-20 px-4 sm:px-6 md:px-12 py-10 sm:py-14 md:py-20 max-w-5xl mx-auto text-center flex flex-col items-center">
+        <!-- Kicker Tag -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#9f0712]/20 border border-[#9f0712]/50 text-[#9f0712] text-[10px] sm:text-xs font-mono uppercase tracking-widest font-bold mb-3 sm:mb-4">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full animate-pulse"></span>
+          <span>{t('hero.slide4Tag')}</span>
+        </div>
+
+        <!-- Master Title / Headline -->
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase text-center font-heading leading-tight tracking-tight mb-3 sm:mb-4">
+          {t('hero.slide4Title')}
+        </h2>
+
+        <!-- Rich SEO Keyword Subtitle -->
+        <p class="text-xs sm:text-sm md:text-base lg:text-lg text-neutral-200 font-sans leading-relaxed max-w-3xl mx-auto mb-4 sm:mb-6">
+          {t('hero.slide4Subtitle')}
+        </p>
+
+        <!-- 4 Keyword / Feature Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide4Pill1')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide4Pill2')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-black/70 border border-white/20 text-neutral-300 font-mono text-[10px] sm:text-xs uppercase font-medium">
+            {t('hero.slide4Pill3')}
+          </span>
+          <span class="px-2.5 sm:px-3 py-1 bg-[#9f0712]/30 border border-[#9f0712]/60 text-white font-mono text-[10px] sm:text-xs uppercase font-bold">
+            {t('hero.slide4Pill4')}
+          </span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
+          <a
+            href={getLocalizedPath('/80-firearm/', currentLang)}
+            class="bg-[#9f0712] hover:bg-[#B90A0E] border border-[#9f0712] text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center gap-2"
+          >
+            <span>{t('hero.slide4Buy')}</span>
+            <span>&rarr;</span>
+          </a>
+          <a
+            href={getLocalizedPath('/component/', currentLang)}
+            class="bg-white/10 hover:bg-white/20 border border-white text-white uppercase font-bold px-7 py-3 text-xs sm:text-sm tracking-wider transition-colors inline-flex items-center justify-center"
+          >
+            {t('hero.slide4Shop')}
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button class="hero-arrow hero-arrow-prev absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-3 text-white bg-black/60 hover:bg-[#9f0712] transition-colors border border-white/20 cursor-pointer" aria-label="Previous slide">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+  <button class="hero-arrow hero-arrow-next absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-3 text-white bg-black/60 hover:bg-[#9f0712] transition-colors border border-white/20 cursor-pointer" aria-label="Next slide">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+
+  <!-- Interactive Slide Selector Tabs (Desktop) -->
+  <div class="hidden md:grid grid-cols-4 border-t border-neutral-800 bg-neutral-950/90 relative z-30">
+    <button class="hero-tab py-3.5 px-4 text-left border-r border-neutral-800 transition-colors flex items-center justify-between group cursor-pointer bg-neutral-900 border-t-2 border-t-[#9f0712]" data-tab="0">
+      <div>
+        <span class="block text-[10px] font-mono text-[#9f0712] font-bold tracking-wider">01 // SLIDE</span>
+        <span class="block text-xs font-mono uppercase text-white font-bold tracking-tight">{t('hero.slide1Tab')}</span>
+      </div>
+      <div class="w-2 h-2 rounded-full bg-[#9f0712]"></div>
+    </button>
+    <button class="hero-tab py-3.5 px-4 text-left border-r border-neutral-800 transition-colors flex items-center justify-between group cursor-pointer hover:bg-neutral-900/50" data-tab="1">
+      <div>
+        <span class="block text-[10px] font-mono text-neutral-500 font-bold tracking-wider">02 // SLIDE</span>
+        <span class="block text-xs font-mono uppercase text-neutral-400 group-hover:text-white font-bold tracking-tight">{t('hero.slide2Tab')}</span>
+      </div>
+      <div class="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-white"></div>
+    </button>
+    <button class="hero-tab py-3.5 px-4 text-left border-r border-neutral-800 transition-colors flex items-center justify-between group cursor-pointer hover:bg-neutral-900/50" data-tab="2">
+      <div>
+        <span class="block text-[10px] font-mono text-neutral-500 font-bold tracking-wider">03 // SLIDE</span>
+        <span class="block text-xs font-mono uppercase text-neutral-400 group-hover:text-white font-bold tracking-tight">{t('hero.slide3Tab')}</span>
+      </div>
+      <div class="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-white"></div>
+    </button>
+    <button class="hero-tab py-3.5 px-4 text-left transition-colors flex items-center justify-between group cursor-pointer hover:bg-neutral-900/50" data-tab="3">
+      <div>
+        <span class="block text-[10px] font-mono text-neutral-500 font-bold tracking-wider">04 // SLIDE</span>
+        <span class="block text-xs font-mono uppercase text-neutral-400 group-hover:text-white font-bold tracking-tight">{t('hero.slide4Tab')}</span>
+      </div>
+      <div class="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-white"></div>
+    </button>
+  </div>
+
+  <!-- Mobile Dot Indicators (Mobile Only) -->
+  <div class="md:hidden flex justify-center gap-2 py-3 bg-neutral-950/90 border-t border-neutral-800">
+    <button class="hero-dot w-2.5 h-2.5 rounded-full bg-[#9f0712] transition-opacity border-0 cursor-pointer" data-slide="0" aria-label="Go to slide 1"></button>
+    <button class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-opacity border-0 cursor-pointer" data-slide="1" aria-label="Go to slide 2"></button>
+    <button class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-opacity border-0 cursor-pointer" data-slide="2" aria-label="Go to slide 3"></button>
+    <button class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-opacity border-0 cursor-pointer" data-slide="3" aria-label="Go to slide 4"></button>
+  </div>
+
+  <!-- Hero Tactical Value Pillars Strip (4 Key Value Props) -->
+  <div class="border-t border-neutral-800 bg-black text-white px-3 sm:px-6 py-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-6xl mx-auto">
+      <div class="p-2 sm:p-3 bg-neutral-900/60 border border-neutral-800/80 flex flex-col justify-center">
+        <div class="flex items-center gap-1.5 mb-1">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full"></span>
+          <span class="text-[11px] sm:text-xs font-mono uppercase font-bold text-white tracking-tight">{t('hero.pillar1Title')}</span>
+        </div>
+        <p class="text-[10px] sm:text-[11px] font-sans text-neutral-400 m-0 leading-tight">{t('hero.pillar1Desc')}</p>
+      </div>
+
+      <div class="p-2 sm:p-3 bg-neutral-900/60 border border-neutral-800/80 flex flex-col justify-center">
+        <div class="flex items-center gap-1.5 mb-1">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full"></span>
+          <span class="text-[11px] sm:text-xs font-mono uppercase font-bold text-white tracking-tight">{t('hero.pillar2Title')}</span>
+        </div>
+        <p class="text-[10px] sm:text-[11px] font-sans text-neutral-400 m-0 leading-tight">{t('hero.pillar2Desc')}</p>
+      </div>
+
+      <div class="p-2 sm:p-3 bg-neutral-900/60 border border-neutral-800/80 flex flex-col justify-center">
+        <div class="flex items-center gap-1.5 mb-1">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full"></span>
+          <span class="text-[11px] sm:text-xs font-mono uppercase font-bold text-white tracking-tight">{t('hero.pillar3Title')}</span>
+        </div>
+        <p class="text-[10px] sm:text-[11px] font-sans text-neutral-400 m-0 leading-tight">{t('hero.pillar3Desc')}</p>
+      </div>
+
+      <div class="p-2 sm:p-3 bg-neutral-900/60 border border-neutral-800/80 flex flex-col justify-center">
+        <div class="flex items-center gap-1.5 mb-1">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full"></span>
+          <span class="text-[11px] sm:text-xs font-mono uppercase font-bold text-white tracking-tight">{t('hero.pillar4Title')}</span>
+        </div>
+        <p class="text-[10px] sm:text-[11px] font-sans text-neutral-400 m-0 leading-tight">{t('hero.pillar4Desc')}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initHeroSlider() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const tabs = document.querySelectorAll('.hero-tab');
+    const totalSlides = slides.length;
+    let autoplayTimer: any = null;
+
+    if (!totalSlides) return;
+
+    function showSlide(index: number) {
+      currentSlide = (index + totalSlides) % totalSlides;
+      
+      // Update Slide Elements
+      slides.forEach((slide, i) => {
+        if (i === currentSlide) {
+          slide.classList.remove('opacity-0', 'z-0');
+          slide.classList.add('opacity-100', 'z-10');
+        } else {
+          slide.classList.remove('opacity-100', 'z-10');
+          slide.classList.add('opacity-0', 'z-0');
+        }
+      });
+
+      // Update Mobile Dots
+      dots.forEach((dot, i) => {
+        if (i === currentSlide) {
+          dot.classList.remove('bg-white/40');
+          dot.classList.add('bg-[#9f0712]');
+        } else {
+          dot.classList.remove('bg-[#9f0712]');
+          dot.classList.add('bg-white/40');
+        }
+      });
+
+      // Update Desktop Tabs
+      tabs.forEach((tab, i) => {
+        const titleSpan = tab.querySelector('span:nth-child(2)');
+        const dotIndicator = tab.querySelector('div:last-child');
+        const kikerSpan = tab.querySelector('span:first-child');
+        
+        if (i === currentSlide) {
+          tab.classList.add('bg-neutral-900', 'border-t-2', 'border-t-[#9f0712]');
+          if (titleSpan) {
+            titleSpan.classList.remove('text-neutral-400');
+            titleSpan.classList.add('text-white');
+          }
+          if (kikerSpan) {
+            kikerSpan.classList.remove('text-neutral-500');
+            kikerSpan.classList.add('text-[#9f0712]');
+          }
+          if (dotIndicator) {
+            dotIndicator.classList.remove('bg-neutral-700');
+            dotIndicator.classList.add('bg-[#9f0712]');
+          }
+        } else {
+          tab.classList.remove('bg-neutral-900', 'border-t-2', 'border-t-[#9f0712]');
+          if (titleSpan) {
+            titleSpan.classList.remove('text-white');
+            titleSpan.classList.add('text-neutral-400');
+          }
+          if (kikerSpan) {
+            kikerSpan.classList.remove('text-[#9f0712]');
+            kikerSpan.classList.add('text-neutral-500');
+          }
+          if (dotIndicator) {
+            dotIndicator.classList.remove('bg-[#9f0712]');
+            dotIndicator.classList.add('bg-neutral-700');
+          }
+        }
+      });
+    }
+
+    const prevBtn = document.querySelector('.hero-arrow-prev');
+    const nextBtn = document.querySelector('.hero-arrow-next');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+        resetAutoplay();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+        resetAutoplay();
+      });
+    }
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        showSlide(idx);
+        resetAutoplay();
+      });
+    });
+
+    tabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        showSlide(idx);
+        resetAutoplay();
+      });
+    });
+
+    function resetAutoplay() {
+      if (autoplayTimer) clearInterval(autoplayTimer);
+      autoplayTimer = setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, 6500);
+    }
+
+    resetAutoplay();
+
+    // Pause autoplay on mouse hover over hero container
+    const sliderContainer = document.querySelector('.hero-slider');
+    if (sliderContainer) {
+      sliderContainer.addEventListener('mouseenter', () => {
+        if (autoplayTimer) clearInterval(autoplayTimer);
+      });
+      sliderContainer.addEventListener('mouseleave', () => {
+        resetAutoplay();
+      });
+    }
+  }
+
+  initHeroSlider();
+  document.addEventListener('astro:page-load', initHeroSlider);
+</script>

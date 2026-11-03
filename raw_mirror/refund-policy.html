@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+    <script type="text/rocketlazyloadscript">
+        // Disable existing IntersectionObserver on `.s-observer`
+        window.IntersectionObserver = class {
+            constructor() {}
+            observe() {}
+            unobserve() {}
+            disconnect() {}
+        };
+    </script>
+
+    
+    <!-- Standard SEO Meta -->
+    <meta name="title" content="Ghost Guns">
+    <meta name="description" content="Ghost Guns specializes in private defense builds you can do yourself.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ghost Guns">
+    <meta property="og:description" content="Ghost Guns specializes in private defense builds you can do yourself.">
+    <meta property="og:image" content="https://ghostguns.com/wp-content/themes/ghost-guns/images/og.png">
+    <meta property="og:url" content="https://ghostguns.com">
+    <meta property="og:site_name" content="Ghost Guns">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ghost Guns">
+    <meta name="twitter:description" content="Ghost Guns specializes in private defense builds you can do yourself.">
+    <meta name="twitter:image" content="https://ghostguns.com/wp-content/themes/ghost-guns/images/og.png">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload hero background images -->
+    <link rel="preload" as="image" href="https://ghostguns.com/wp-content/themes/ghost-guns/images/hero-bg.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="https://ghostguns.com/wp-content/themes/ghost-guns/images/hero-overlay.webp" type="image/webp">
+
+    <link rel="icon" type="image/svg+xml"
+        href="https://ghostguns.com/wp-content/themes/ghost-guns/images/favicon.svg?v=1788789551">
+
+    <!-- Google Fonts - Inter for body, League Spartan for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+
+    <script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" async data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/l46xrj94.js?ver=1788788737"></script>
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Refund Policy | Ghost Guns</title>
+<link data-rocket-preload as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&#038;family=League+Spartan:wght@400;700;900&#038;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&#038;family=League+Spartan:wght@400;700;900&#038;display=swap" media="print" onload="this.media=&#039;all&#039;" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&#038;family=League+Spartan:wght@400;700;900&#038;display=swap"></noscript>
+	<meta name="description" content="Ghost Guns refund policy. Learn about returns, exchanges, and refund processing for ghostguns.com orders. Email support for RMA authorization." />
+	<link rel="canonical" href="https://ghostguns.com/refund-policy/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Refund Policy | Ghost Guns" />
+	<meta property="og:description" content="Ghost Guns refund policy. Learn about returns, exchanges, and refund processing for ghostguns.com orders. Email support for RMA authorization." />
+	<meta property="og:url" content="https://ghostguns.com/refund-policy/" />
+	<meta property="og:site_name" content="Ghost Guns" />
+	<meta property="article:modified_time" content="2025-06-28T10:21:00+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/ghostguns.com\/refund-policy\/","url":"https:\/\/ghostguns.com\/refund-policy\/","name":"Refund Policy | Ghost Guns","isPartOf":{"@id":"https:\/\/ghostguns.com\/#website"},"datePublished":"2025-05-22T15:19:34+00:00","dateModified":"2025-06-28T10:21:00+00:00","description":"Ghost Guns refund policy. Learn about returns, exchanges, and refund processing for ghostguns.com orders. Email support for RMA authorization.","breadcrumb":{"@id":"https:\/\/ghostguns.com\/refund-policy\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/ghostguns.com\/refund-policy\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/ghostguns.com\/refund-policy\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/ghostguns.com\/"},{"@type":"ListItem","position":2,"name":"Refund Policy"}]},{"@type":"WebSite","@id":"https:\/\/ghostguns.com\/#website","url":"https:\/\/ghostguns.com\/","name":"Ghost Guns","description":"3D Printed &amp; 80 Percent Ghost Gun Kits","publisher":{"@id":"https:\/\/ghostguns.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/ghostguns.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/ghostguns.com\/#organization","name":"Ghost Guns","url":"https:\/\/ghostguns.com\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/ghostguns.com\/#\/schema\/logo\/image\/","url":"https:\/\/ghostgunsdotcom.s3.us-east-2.amazonaws.com\/wp-content\/uploads\/2025\/09\/Ghost-Guns-B.png","contentUrl":"https:\/\/ghostgunsdotcom.s3.us-east-2.amazonaws.com\/wp-content\/uploads\/2025\/09\/Ghost-Guns-B.png","width":219,"height":300,"caption":"Ghost Guns"},"image":{"@id":"https:\/\/ghostguns.com\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.instagram.com\/dd.ghostguns"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//static.klaviyo.com' />
+<link rel='dns-prefetch' href='//challenges.cloudflare.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Ghost Guns &raquo; Feed" href="https://ghostguns.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ghost Guns &raquo; Comments Feed" href="https://ghostguns.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://ghostguns.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fghostguns.com%2Frefund-policy%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://ghostguns.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fghostguns.com%2Frefund-policy%2F&#038;format=xml" />
+<style type="text/css">
+@keyframes cgkit-loading { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+body ul.products li.product.cgkit-swatch-loading .woocommerce-image__wrapper,
+body ul.products li.product.cgkit-swatch-loading .woocommerce-card__header > * { color: transparent !important; background: linear-gradient(100deg, #ececec 30%, #f5f5f5 50%, #ececec 70%); border-radius: 5px; background-size: 400%; animation: cgkit-loading 1.2s ease-in-out infinite; }
+body ul.products li.product.cgkit-swatch-loading .woocommerce-image__wrapper > *,
+body ul.products li.product.cgkit-swatch-loading .woocommerce-card__header > * > * { visibility: hidden; }
+ul.products li.product.cgkit-swatch-loading .woocommerce-card__header .product__categories,
+ul.products li.product.cgkit-swatch-loading .woocommerce-card__header .woocommerce-loop-product__title,
+ul.products li.product.cgkit-swatch-loading .woocommerce-card__header .price { display: table; width: auto;  }
+ul.products li.product.cgkit-swatch-loading .woocommerce-card__header .star-rating:before { visibility: hidden; }
+</style>
+	<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='wc-authorize-net-cim-credit-card-checkout-block-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-gateway-authorize-net-cim/assets/css/blocks/wc-authorize-net-cim-checkout-block.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='wc-authorize-net-cim-echeck-checkout-block-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-gateway-authorize-net-cim/assets/css/blocks/wc-authorize-net-cim-checkout-block.css?ver=1788788737' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://ghostguns.com/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.368), 1.2rem);--wp--preset--font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.92), 1.5rem);--wp--preset--font-size--large: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 0.92), 2rem);--wp--preset--font-size--x-large: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 1.379), 2.25rem);--wp--preset--font-size--x-small: 0.85rem;--wp--preset--font-size--base: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.46), 1.25rem);--wp--preset--font-size--xx-large: clamp(2rem, 2rem + ((1vw - 0.2rem) * 1.839), 3rem);--wp--preset--font-size--xxx-large: clamp(2.25rem, 2.25rem + ((1vw - 0.2rem) * 3.218), 4rem);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--small: clamp(.25rem, 2.5vw, 0.75rem);--wp--preset--spacing--medium: clamp(1rem, 4vw, 2rem);--wp--preset--spacing--large: clamp(1.25rem, 6vw, 3rem);--wp--preset--spacing--x-large: clamp(3rem, 7vw, 5rem);--wp--preset--spacing--xx-large: clamp(4rem, 9vw, 7rem);--wp--preset--spacing--xxx-large: clamp(5rem, 12vw, 9rem);--wp--preset--spacing--xxxx-large: clamp(6rem, 14vw, 13rem);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);--wp--custom--line-height--none: 1;--wp--custom--line-height--tight: 1.1;--wp--custom--line-height--snug: 1.2;--wp--custom--line-height--normal: 1.5;--wp--custom--line-height--relaxed: 1.625;--wp--custom--line-height--loose: 2;--wp--custom--line-height--body: 1.618;}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 900px;--wp--style--global--wide-size: 1190px; }:where(body) { margin: 0; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) { padding-right: 0; padding-left: 0; }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull { margin-left: 0; margin-right: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: var(--wp--preset--spacing--medium); margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: var(--wp--preset--spacing--medium); }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: var(--wp--preset--spacing--medium);margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: var(--wp--preset--spacing--medium);margin-block-end: 0;}:root :where(.is-layout-flex){gap: var(--wp--preset--spacing--medium);}:root :where(.is-layout-grid){gap: var(--wp--preset--spacing--medium);}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{font-family: var(--wp--preset--font-family--primary);--wp--style--root--padding-top: 0;--wp--style--root--padding-right: var(--wp--preset--spacing--medium);--wp--style--root--padding-bottom: 0;--wp--style--root--padding-left: var(--wp--preset--spacing--medium);}a:where(:not(.wp-element-button)){text-decoration: false;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-x-small-font-size{font-size: var(--wp--preset--font-size--x-small) !important;}.has-base-font-size{font-size: var(--wp--preset--font-size--base) !important;}.has-xx-large-font-size{font-size: var(--wp--preset--font-size--xx-large) !important;}.has-xxx-large-font-size{font-size: var(--wp--preset--font-size--xxx-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link data-minify="1" rel='stylesheet' id='commercekit-ajax-search-css-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/commercegurus-commercekit/assets/css/ajax-search.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='commercekit-as-tooltip-css-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/commercegurus-commercekit/assets/css/commercegurus-as-tooltip.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='seamlesschex-tooltip-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/seamlesschex-echeck-payments/css/tooltip.css?ver=1788788737' media='all' />
+<link rel='stylesheet' id='seamlesschex-datepicker-css' href='https://ghostguns.com/wp-content/plugins/seamlesschex-echeck-payments/css/datepicker.min.css?ver=1.4.4' media='all' />
+<style id="woocommerce-inline-inline-css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='payment-styles-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/bulletproof-checkout-lite/assets/css/style.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='metorik-css-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/metorik-helper/assets/css/metorik.css?ver=1788788737' media='all' />
+<link rel='stylesheet' id='shoptimizer-blocks-min-css' href='https://ghostguns.com/wp-content/themes/shoptimizer/assets/css/main/blocks.min.css?ver=2.9.1' media='all' />
+<link data-minify="1" rel='stylesheet' id='shoptimizer-reduced-motion-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/themes/shoptimizer/assets/css/components/accessibility/reduced-motion.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='wc-pb-checkout-blocks-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-product-bundles/assets/css/frontend/checkout-blocks.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='ghost-guns-style-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/themes/ghost-guns/dist/style.min.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='ghost-guns-theme-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/themes/ghost-guns/style.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='shoptimizer-child-style-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/themes/ghost-guns/style.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='shoptimizer-wc-bundles-style-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/themes/shoptimizer/inc/compatibility/woocommerce-product-bundles/woocommerce-product-bundles.css?ver=1788788737' media='all' />
+<link data-minify="1" rel='stylesheet' id='wc-bundle-style-css' href='https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-product-bundles/assets/css/frontend/woocommerce.css?ver=1788788737' media='all' />
+<script type="text/template" id="tmpl-variation-template">
+	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+</script>
+<script type="text/template" id="tmpl-unavailable-variation-template">
+	<p role="alert">Sorry, this product is unavailable. Please choose a different combination.</p>
+</script>
+<script type="text/rocketlazyloadscript" id="plausible-analytics-js" defer data-cfasync='false' data-no-minify="true" data-no-optimize="1" data-noptimize="1" data-rocket-src="https://ghostguns.com/wp-content/uploads/9fb8e7979b/pa-k0qfEmah8DJrmxuWrak0v.js"></script>
+<script id="plausible-analytics-js-after">
+window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+plausible.init({"endpoint":"https:\/\/ghostguns.com\/wp-json\/496021\/v1\/a8e9\/1e6a4672"});
+//# sourceURL=plausible-analytics-js-after
+</script>
+<script type="text/rocketlazyloadscript" id="jquery-core-js" data-rocket-src="https://ghostguns.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script type="text/rocketlazyloadscript" id="jquery-migrate-js" data-rocket-src="https://ghostguns.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script type="text/rocketlazyloadscript" id="underscore-js" data-rocket-src="https://ghostguns.com/wp-includes/js/underscore.min.js?ver=1.13.8" data-rocket-defer defer></script>
+<script id="wp-util-js-extra">
+var _wpUtilSettings = {"ajax":{"url":"/wp-admin/admin-ajax.php"}};
+//# sourceURL=wp-util-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="wp-util-js" data-rocket-src="https://ghostguns.com/wp-includes/js/wp-util.min.js?ver=7.1" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-wp-strategy="defer" id="wc-jquery-blockui-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.1.0" data-rocket-defer defer></script>
+<script id="wc-add-to-cart-js-extra">
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https://ghostguns.com/cart/","is_cart":"","cart_redirect_after_add":"no"};
+//# sourceURL=wc-add-to-cart-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-wp-strategy="defer" defer id="wc-add-to-cart-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=11.1.0"></script>
+<script type="text/rocketlazyloadscript" data-wp-strategy="defer" defer id="wc-js-cookie-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.1.0"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
+//# sourceURL=woocommerce-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-wp-strategy="defer" defer id="woocommerce-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.1.0"></script>
+<link rel="https://api.w.org/" href="https://ghostguns.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://ghostguns.com/wp-json/wp/v2/pages/44" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ghostguns.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1" />
+<meta name="generator" content="WooCommerce 11.1.0" />
+<link rel='shortlink' href='https://ghostguns.com/?p=44' />
+	<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript"> var commercekit_ajs = {"ajax_url":"\/?commercekit-ajax","ajax_search":1,"char_count":3,"action":"commercekit_ajax_search","loader_icon":"https:\/\/ghostguns.com\/wp-content\/plugins\/commercegurus-commercekit\/assets\/images\/loader2.gif","no_results_text":"No product results","placeholder_text":"Search...","other_result_text":"Other results","view_all_text":"View all product results","no_other_text":"No other results","other_all_text":"View all other results","ajax_url_product":"https:\/\/ghostguns.com\/?cgkit_ajax_search_product=1","ajax_url_post":"https:\/\/ghostguns.com\/?cgkit_ajax_search_post=1","fast_ajax_search":0,"ajs_other_results":1,"layout":"product","ajax_nonce":0}; var commercekit_pdp = []; var commercekit_as = {"as_activate_atc":0,"cgkit_attr_gal":0,"as_swatch_link":1,"as_enable_tooltips":1,"swatches_ajax":0}; </script>
+	<meta name="og:url" content="https://ghostguns.com/refund-policy/" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style id="wp-custom-css">
+.bundled_product.bundled_product_summary.product > div.details > h4 > span.bundled_product_title_inner > span.item_title {
+	font-size: 14px;
+}
+.bundled_product.bundled_product_summary.product > div.details > div.bundled_product_excerpt.product_excerpt {
+
+}
+.bundled_product.bundled_product_summary.product > div.bundled_product_images.images > figure {
+	max-width: 120px;
+}
+ .bundled_product.bundled_product_summary.product > div.details > div.cart > div {
+	display: none;
+}
+.bundled_product_summary .bundled_product_title a.bundled_product_permalink:before {
+    content: "";
+    font-family: "FontAwesomePB";
+    position: absolute;
+	
+    font-size: .4em !important;
+    top: 55% !important;
+    left: 0;
+    -ms-transform: translateY(-46%);
+    transform: translateY(-46%);
+}
+</style>
+<style id="kirki-inline-styles">.site-header .custom-logo-link img{height:38px;}.is_stuck .logo-mark{width:60px;}.price ins, .summary .yith-wcwl-add-to-wishlist a:before, .site .commercekit-wishlist a i:before, .commercekit-wishlist-table .price, .commercekit-wishlist-table .price ins, .commercekit-ajs-product-price, .commercekit-ajs-product-price ins, .widget-area .widget.widget_categories a:hover, #secondary .widget ul li a:hover, #secondary.widget-area .widget li.chosen a, .widget-area .widget a:hover, #secondary .widget_recent_comments ul li a:hover, .woocommerce-pagination .page-numbers li .page-numbers.current, div.product p.price, body:not(.mobile-toggled) .main-navigation ul.menu li.full-width.menu-item-has-children ul li.highlight > a, body:not(.mobile-toggled) .main-navigation ul.menu li.full-width.menu-item-has-children ul li.highlight > a:hover, #secondary .widget ins span.amount, #secondary .widget ins span.amount span, .search-results article h2 a:hover{color:#000000;}.spinner > div, .widget_price_filter .ui-slider .ui-slider-range, .widget_price_filter .ui-slider .ui-slider-handle, #page .woocommerce-tabs ul.tabs li span, #secondary.widget-area .widget .tagcloud a:hover, .widget-area .widget.widget_product_tag_cloud a:hover, footer .mc4wp-form input[type="submit"], #payment .payment_methods li.woocommerce-PaymentMethod > input[type=radio]:first-child:checked + label:before, #payment .payment_methods li.wc_payment_method > input[type=radio]:first-child:checked + label:before, #shipping_method > li > input[type=radio]:first-child:checked + label:before, ul#shipping_method li:only-child label:before, .image-border .elementor-image:after, ul.products li.product .yith-wcwl-wishlistexistsbrowse a:before, ul.products li.product .yith-wcwl-wishlistaddedbrowse a:before, ul.products li.product .yith-wcwl-add-button a:before, .summary .yith-wcwl-add-to-wishlist a:before, li.product .commercekit-wishlist a em.cg-wishlist-t:before, li.product .commercekit-wishlist a em.cg-wishlist:before, .site .commercekit-wishlist a i:before, .summary .commercekit-wishlist a i.cg-wishlist-t:before, .woocommerce-tabs ul.tabs li a span, .commercekit-atc-tab-links li a span, .main-navigation ul li a span strong, .widget_layered_nav ul.woocommerce-widget-layered-nav-list li.chosen:before{background-color:#000000;}.woocommerce-tabs .tabs li a::after, .commercekit-atc-tab-links li a:after{border-color:#000000;}a{color:#000000;}a:hover{color:#111;}body{background-color:#fff;}.col-full.topbar-wrapper{background-color:#fff;border-bottom-color:#eee;}.top-bar, .top-bar a{color:#323232;}body:not(.header-4) .site-header, .header-4-container{background-color:#fff;}.header-widget-region{background-color:#dc9814;font-size:14px;}.header-widget-region, .header-widget-region a{color:#fff;}.button, .button:hover, .message-inner a.button, .wc-proceed-to-checkout a.button, .wc-proceed-to-checkout .checkout-button.button:hover, .commercekit-wishlist-table button, input[type=submit], ul.products li.product .button, ul.products li.product .added_to_cart, ul.wc-block-grid__products .wp-block-button__link, ul.wc-block-grid__products .wp-block-button__link:hover, .site .widget_shopping_cart a.button.checkout, .woocommerce #respond input#submit.alt, .main-navigation ul.menu ul li a.button, .main-navigation ul.menu ul li a.button:hover, body .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li a.button:hover, .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li:hover a.added_to_cart, .site div.wpforms-container-full .wpforms-form button[type=submit], .product .cart .single_add_to_cart_button, .woocommerce-cart p.return-to-shop a, .elementor-row .feature p a, .image-feature figcaption span, .wp-element-button.wc-block-cart__submit-button, .wp-element-button.wc-block-components-button.wc-block-components-checkout-place-order-button{color:#000000;}.single-product div.product form.cart .button.added::before, #payment .place-order .button:before, .cart-collaterals .checkout-button:before, .widget_shopping_cart .buttons .checkout:before{background-color:#000000;}.button, input[type=submit], ul.products li.product .button, .commercekit-wishlist-table button, .woocommerce #respond input#submit.alt, .product .cart .single_add_to_cart_button, .widget_shopping_cart a.button.checkout, .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li a.added_to_cart, .site div.wpforms-container-full .wpforms-form button[type=submit], ul.products li.product .added_to_cart, ul.wc-block-grid__products .wp-block-button__link, .woocommerce-cart p.return-to-shop a, .elementor-row .feature a, .image-feature figcaption span, .wp-element-button.wc-block-cart__submit-button, .wp-element-button.wc-block-components-button.wc-block-components-checkout-place-order-button{background-color:#ffffff;}.widget_shopping_cart a.button.checkout{border-color:#ffffff;}.button:hover, [type="submit"]:hover, .commercekit-wishlist-table button:hover, ul.products li.product .button:hover, #place_order[type="submit"]:hover, body .woocommerce #respond input#submit.alt:hover, .product .cart .single_add_to_cart_button:hover, .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li a.added_to_cart:hover, .site div.wpforms-container-full .wpforms-form button[type=submit]:hover, .site div.wpforms-container-full .wpforms-form button[type=submit]:focus, ul.products li.product .added_to_cart:hover, ul.wc-block-grid__products .wp-block-button__link:hover, .widget_shopping_cart a.button.checkout:hover, .woocommerce-cart p.return-to-shop a:hover, .wp-element-button.wc-block-cart__submit-button:hover, .wp-element-button.wc-block-components-button.wc-block-components-checkout-place-order-button:hover{background-color:#f5f5f5;}.widget_shopping_cart a.button.checkout:hover{border-color:#f5f5f5;}.onsale, .product-label, .wc-block-grid__product-onsale{background-color:#a61e00;color:#ffffff;}.content-area .summary .onsale{color:#a61e00;}.summary .product-label:before, .product-details-wrapper .product-label:before{border-right-color:#a61e00;}.rtl .product-details-wrapper .product-label:before{border-left-color:#a61e00;}.entry-content .testimonial-entry-title:after, .cart-summary .widget li strong::before, p.stars.selected a.active::before, p.stars:hover a::before, p.stars.selected a:not(.active)::before{color:#ee9e13;}.star-rating > span:before{background-color:#ee9e13;}header.woocommerce-products-header, .shoptimizer-category-banner{background-color:#efeee3;}.term-description p, .term-description a, .term-description a:hover, .shoptimizer-category-banner h1, .shoptimizer-category-banner .taxonomy-description p{color:#222;}.single-product .site-content .col-full{background-color:#ffffff;}.call-back-feature button{background-color:#dc9814;}.call-back-feature button, .site-content div.call-back-feature button:hover{color:#fff;}ul.checkout-bar:before, .woocommerce-checkout .checkout-bar li.active:after, ul.checkout-bar li.visited:after{background-color:#000000;}.below-content .widget .ri{color:#999;}.below-content .widget svg{stroke:#999;}footer.site-footer, footer.copyright{background-color:#111;color:#ccc;}.site footer.site-footer .widget .widget-title, .site-footer .widget.widget_block h2{color:#fff;}footer.site-footer a:not(.button), footer.copyright a{color:#999;}footer.site-footer a:not(.button):hover, footer.copyright a:hover{color:#fff;}footer.site-footer li a:after{border-color:#fff;}.top-bar{font-size:14px;}.menu-primary-menu-container > ul > li > a span:before, .menu-primary-menu-container > ul > li.nolink > span:before{border-color:#000000;}.secondary-navigation .menu a, .ri.menu-item:before, .fa.menu-item:before{color:#404040;}.secondary-navigation .icon-wrapper svg{stroke:#404040;}.shoptimizer-cart a.cart-contents .count, .shoptimizer-cart a.cart-contents .count:after{border-color:#000000;}.shoptimizer-cart a.cart-contents .count, .shoptimizer-cart-icon i{color:#000000;}.shoptimizer-cart a.cart-contents:hover .count, .shoptimizer-cart a.cart-contents:hover .count{background-color:#000000;}.shoptimizer-cart .cart-contents{color:#000000;}.header-widget-region .widget{padding-top:12px;padding-bottom:12px;}.col-full, .single-product .site-content .shoptimizer-sticky-add-to-cart .col-full, body .woocommerce-message, .single-product .site-content .commercekit-sticky-add-to-cart .col-full, .wc-block-components-notice-banner{max-width:1170px;}.product-details-wrapper, .single-product .woocommerce:has(.woocommerce-message), .single-product .woocommerce-Tabs-panel, .single-product .archive-header .woocommerce-breadcrumb, .plp-below.archive.woocommerce .archive-header .woocommerce-breadcrumb, .related.products, .site-content #sspotReviews:not([data-shortcode="1"]), .upsells.products, .composite_summary, .composite_wrap, .wc-prl-recommendations, .yith-wfbt-section.woocommerce{max-width:calc(1170px + 5.2325em);}.main-navigation ul li.menu-item-has-children.full-width .container, .single-product .woocommerce-error{max-width:1170px;}.below-content .col-full, footer .col-full{max-width:calc(1170px + 40px);}body, button, input, select, option, textarea, :root :where(body){font-family:sans-serif;}:root{font-family:sans-serif;}.menu-primary-menu-container > ul > li > a, .shoptimizer-cart .cart-contents, .menu-primary-menu-container > ul > li.nolink > span{font-family:sans-serif;font-size:15px;letter-spacing:0px;}.main-navigation ul.menu ul li > a, .main-navigation ul.nav-menu ul li > a, .main-navigation ul.menu ul li.nolink{font-family:sans-serif;}.main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li.menu-item-has-children > a, .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li.heading > a, .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li.nolink > span{font-family:sans-serif;font-size:15px;font-weight:600;letter-spacing:0px;color:#111;}.entry-content{font-family:sans-serif;}h1{font-family:sans-serif;}h2{font-family:sans-serif;}h3{font-family:sans-serif;}h4{font-family:sans-serif;}h5{font-family:sans-serif;}blockquote p{font-family:sans-serif;}.widget .widget-title, .widget .widgettitle, .widget.widget_block h2{font-family:sans-serif;font-size:15px;font-weight:600;}.single-post h1{font-family:sans-serif;}.term-description, .shoptimizer-category-banner .taxonomy-description{font-family:sans-serif;}ul.products li.product .woocommerce-loop-product__title, ul.products li.product:not(.product-category) h2, ul.products li.product .woocommerce-loop-product__title, ul.products li.product .woocommerce-loop-product__title, .main-navigation ul.menu ul li.product .woocommerce-loop-product__title a, .wc-block-grid__product .wc-block-grid__product-title{font-family:sans-serif;font-size:15px;font-weight:600;}.summary h1{font-family:sans-serif;font-weight:600;}body .woocommerce #respond input#submit.alt, body .woocommerce a.button.alt, body .woocommerce button.button.alt, body .woocommerce input.button.alt, .product .cart .single_add_to_cart_button, .shoptimizer-sticky-add-to-cart__content-button a.button, #cgkit-tab-commercekit-sticky-atc-title button, #cgkit-mobile-commercekit-sticky-atc button, .widget_shopping_cart a.button.checkout{font-family:sans-serif;font-weight:600;letter-spacing:0px;text-transform:none;}@media (min-width: 993px){.is_stuck .primary-navigation.with-logo .menu-primary-menu-container{margin-left:60px;}.header-4 .header-4-container{border-bottom-color:#eee;}.col-full-nav{background-color:#222;}.col-full.main-header{padding-top:30px;padding-bottom:30px;}.menu-primary-menu-container > ul > li > a, .menu-primary-menu-container > ul > li.nolink > span, .site-header-cart, .logo-mark{line-height:60px;}.site-header-cart, .menu-primary-menu-container > ul > li.menu-button{height:60px;}.menu-primary-menu-container > ul > li > a, .menu-primary-menu-container > ul > li.nolink > span{color:#fff;}.main-navigation ul.menu > li.menu-item-has-children > a::after{background-color:#fff;}.menu-primary-menu-container > ul.menu:hover > li > a{opacity:0.65;}.main-navigation ul.menu ul.sub-menu{background-color:#fff;}.main-navigation ul.menu ul li a, .main-navigation ul.nav-menu ul li a{color:#323232;}.main-navigation ul.menu ul li.menu-item:not(.menu-item-image):not(.heading) > a:hover{color:#000000;}.shoptimizer-cart-icon svg{stroke:#000000;}.shoptimizer-cart a.cart-contents:hover .count{color:#ffffff;}body.header-4:not(.full-width-header) .header-4-inner, .summary form.cart.commercekit_sticky-atc .commercekit-pdp-sticky-inner, .commercekit-atc-sticky-tabs ul.commercekit-atc-tab-links, .h-ckit-filters.no-woocommerce-sidebar .commercekit-product-filters{max-width:1170px;}#secondary{width:25%;}.content-area{width:75%;}}@media (max-width: 992px){.main-header, .site-branding{height:70px;}.main-header .site-header-cart{top:calc(-14px + 70px / 2);}.sticky-m .mobile-filter, .sticky-m #cgkitpf-horizontal{top:70px;}.sticky-m .commercekit-atc-sticky-tabs{top:calc(70px - 1px);}.m-search-bh.sticky-m .commercekit-atc-sticky-tabs, .m-search-toggled.sticky-m .commercekit-atc-sticky-tabs{top:calc(70px + 60px - 1px);}.m-search-bh.sticky-m .mobile-filter, .m-search-toggled.sticky-m .mobile-filter, .m-search-bh.sticky-m #cgkitpf-horizontal, .m-search-toggled.sticky-m #cgkitpf-horizontal{top:calc(70px + 60px);}.sticky-m .cg-layout-vertical-scroll .cg-thumb-swiper{top:calc(70px + 10px);}body.theme-shoptimizer .site-header .custom-logo-link img, body.wp-custom-logo .site-header .custom-logo-link img{height:22px;}.m-search-bh .site-search, .m-search-toggled .site-search, .site-branding button.menu-toggle, .site-branding button.menu-toggle:hover{background-color:#fff;}.menu-toggle .bar, .shoptimizer-cart a.cart-contents:hover .count{background-color:#111;}.menu-toggle .bar-text, .menu-toggle:hover .bar-text, .shoptimizer-cart a.cart-contents .count{color:#111;}.mobile-search-toggle svg, .shoptimizer-myaccount svg{stroke:#111;}.shoptimizer-cart a.cart-contents:hover .count{background-color:#000000;}.shoptimizer-cart a.cart-contents:not(:hover) .count{color:#000000;}.shoptimizer-cart-icon svg{stroke:#000000;}.shoptimizer-cart a.cart-contents .count, .shoptimizer-cart a.cart-contents .count:after{border-color:#000000;}.col-full-nav{background-color:#fff;}.main-navigation ul li a, .menu-primary-menu-container > ul > li.nolink > span, body .main-navigation ul.menu > li.menu-item-has-children > span.caret::after, .main-navigation .woocommerce-loop-product__title, .main-navigation ul.menu li.product, body .main-navigation ul.menu li.menu-item-has-children.full-width>.sub-menu-wrapper li h6 a, body .main-navigation ul.menu li.menu-item-has-children.full-width>.sub-menu-wrapper li h6 a:hover, .main-navigation ul.products li.product .price, body .main-navigation ul.menu li.menu-item-has-children li.menu-item-has-children span.caret, body.mobile-toggled .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li p.product__categories a, body.mobile-toggled ul.products li.product p.product__categories a, body li.menu-item-product p.product__categories, main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li.menu-item-has-children > a, .main-navigation ul.menu li.menu-item-has-children.full-width > .sub-menu-wrapper li.heading > a, .mobile-extra, .mobile-extra h4, .mobile-extra a:not(.button){color:#222;}.main-navigation ul.menu li.menu-item-has-children span.caret::after{background-color:#222;}.main-navigation ul.menu > li.menu-item-has-children.dropdown-open > .sub-menu-wrapper{border-bottom-color:#eee;}}@media (min-width: 992px){.top-bar .textwidget{padding-top:8px;padding-bottom:8px;}}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><meta name="generator" content="WP Rocket 3.23.1" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_image_dimensions wpr_minify_css wpr_preload_links wpr_desktop" /></head>
+
+
+<body class="wp-singular page-template page-template-template-fullwidth page-template-template-fullwidth-php page page-id-44 wp-theme-shoptimizer wp-child-theme-ghost-guns min-h-screen flex flex-col theme-shoptimizer woocommerce-no-js cart-is-empty sticky-m sticky-d m-grid-2 wc-active product-align-left">
+
+    
+    <button class="mobile-menu close-drawer" aria-label="Close menu">
+				<span aria-hidden="true">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+				</span>
+		</button>
+    		<a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+				<div data-rocket-location-hash="da338c4c489a421a6ff42b0ca4d6e4e5" tabindex="-1" id="shoptimizerCartDrawer" class="shoptimizer-mini-cart-wrap" role="dialog" aria-label="Cart drawer">
+			<div data-rocket-location-hash="d90582bdeebd4ec650e3fdc8b8680cc5" id="ajax-loading">
+				<div data-rocket-location-hash="0a364fc9d22a93c485b7b5aea3a2c3b4" class="shoptimizer-loader">
+					<div class="spinner">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+					</div>
+				</div>
+			</div>
+			<div data-rocket-location-hash="fe3087d6ecd646fe6bebc5433a3f097d" class="cart-drawer-heading">Your Cart</div>
+			<button type="button" aria-label="Close drawer" class="close-drawer">
+				<span aria-hidden="true">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+				</span>
+			</button>
+
+				<div data-rocket-location-hash="fb33b1721c37f969dcc6777b468181c8" class="widget woocommerce widget_shopping_cart"><div data-rocket-location-hash="a8079a534d9c7636d25f2bf8b9b44d29" class="widget_shopping_cart_content"></div></div>
+			</div>
+
+			
+    <!-- Header -->
+    <header data-rocket-location-hash="41a206207d6247261438927178280718" class="w-full bg-white sticky top-0 z-50 font-['Helvetica_Neue',Helvetica,Arial,sans-serif]">
+        <!-- Tier 1: Logo + Search + Icons -->
+        <div data-rocket-location-hash="4caeafd35ab1775c4540b40e6daf56c0" class="w-full">
+            <div data-rocket-location-hash="b026d4b19af2b0781355f644b3d227f4" class="lg:container lg:mx-auto border-b lg:border-l lg:border-r border-[#ccc]">
+                <div id="header-bar" class="flex items-center h-[36px]">
+                    <!-- Logo Section -->
+                    <a href="/" class="flex items-center h-full shrink-0">
+                        <!-- Logo Box -->
+                        <div class="flex items-center justify-center w-[36px] h-full border-r border-[#ccc] px-[6px]">
+                            <img width="288" height="397" class="h-[24px] w-auto object-contain"
+                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20288%20397'%3E%3C/svg%3E" alt="Ghost Guns logo" data-lazy-src="https://ghostguns.com/wp-content/themes/ghost-guns/images/logo-black.svg" /><noscript><img width="288" height="397" class="h-[24px] w-auto object-contain"
+                                src="https://ghostguns.com/wp-content/themes/ghost-guns/images/logo-black.svg" alt="Ghost Guns logo" /></noscript>
+                        </div>
+                        <!-- Brand Name -->
+                        <div class="flex items-center h-full border-r border-[#ccc] px-[24px]">
+                            <span class="text-[16px] font-bold text-black uppercase leading-[16px]">GHOST GUNS</span>
+                        </div>
+                    </a>
+
+                    <!-- Search Bar (expands to fill) -->
+                    <div class="widget_search flex-1 h-full border-r border-[#ccc]">
+                        <form role="search" method="get" class="flex h-full w-full" action="https://ghostguns.com/">
+                            <input type="search"
+                                id="header-search-input"
+                                class="flex-1 h-full px-[24px] text-[12px] text-black placeholder-[#ccc] focus:outline-none rounded-none appearance-none bg-white uppercase border-none"
+                                placeholder="SEARCH..."
+                                value=""
+                                name="s" />
+                            <input type="hidden" name="post_type" value="product" />
+                            <button type="submit" class="search-submit-btn" style="display:flex;align-items:center;justify-content:center;width:36px;min-width:36px;height:100%;background-color:#000;border:none;cursor:pointer;flex-shrink:0;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:block;">
+                                    <path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right Icons -->
+                    <div class="flex items-center h-full shrink-0">
+                        <!-- Cart Icon with AJAX count (works with shoptimizer cart drawer) -->
+                        <a href="https://ghostguns.com/cart/" class="ggn-cart-icon cart-contents flex items-center justify-center w-[36px] h-full border-r border-[#ccc] relative" title="View cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+                            </svg>
+                                                        <span class="ggn-cart-count" style="position:absolute;top:2px;right:2px;background:#9f0712;color:white;font-size:9px;font-weight:bold;border-radius:50%;min-width:14px;height:14px;display:none;align-items:center;justify-content:center;line-height:1;padding:0 3px;">0</span>
+                        </a>
+
+                        <!-- User Icon (Desktop Only - Last item, no border) -->
+                        <a href="/my-account" class="hidden md:flex items-center justify-center w-[36px] h-full">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Mobile Menu Button (Last item on mobile) -->
+                        <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-[36px] h-full bg-[#ccc]">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tier 2: Navigation (Desktop Only) -->
+        <div data-rocket-location-hash="b6d5e824ef663aa8c1e893071048ecb5" class="hidden md:block w-full bg-white">
+            <div data-rocket-location-hash="3a16f2105ba9ce8f40aa01f99a8e8345" class="lg:container lg:mx-auto border-b lg:border-l lg:border-r border-[#ccc]">
+                <nav class="flex items-center h-[36px]">
+                    <!-- Black Square Spacer -->
+                    <div class="w-[36px] h-full bg-black border-r border-[#ccc] shrink-0"></div>
+
+                    <!-- Nav Links -->
+                    <div class="flex items-center gap-[24px] px-[24px] h-full">
+                        <a href="/shop" class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">SHOP</a>
+                        <a href="/build-kit/" class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">BUILD KITS</a>
+                        <a href="/80-firearm/" class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">80 PERCENT</a>
+                        <!-- Parts dropdown -->
+                        <div class="relative group h-full flex items-center">
+                            <a href="/component/" class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap flex items-center gap-1 leading-none">
+                                PARTS
+                                <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </a>
+                            <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-[#ccc] min-w-[160px] z-50">
+                                <a href="/component/slide/" class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">Slides</a>
+                                <a href="/component/rails/" class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">Rails</a>
+                                <a href="/component/receiver/" class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50">Receivers</a>
+                            </div>
+                        </div>
+                        <!-- 3D Printing dropdown -->
+                        <div class="relative group h-full flex items-center">
+                            <a href="/3d-printing/" class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap flex items-center gap-1 leading-none">
+                                3D PRINTING
+                                <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </a>
+                            <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-[#ccc] min-w-[160px] z-50">
+                                <a href="/3d-printing/3d-files/" class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">3D Files</a>
+                                <a href="/3d-printing/3d-printer-accessories/" class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50">Accessories</a>
+                            </div>
+                        </div>
+                        <a href="/gun-accessories/" class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">ACCESSORIES</a>
+                        <a href="/contact" class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">CONTACT</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div data-rocket-location-hash="849717d019368ff6dbbaa873465c090d" id="mobile-menu" class="fixed left-0 w-full z-50 hidden flex-col" style="top: 36px; height: calc(100dvh - 36px);">
+        <!-- Nav items -->
+        <div data-rocket-location-hash="068d93e70e7e9d2ee1a7b60a3ed12f88" class="flex flex-col bg-white border-b border-t border-[#ccc] overflow-y-auto" style="max-height: calc(100dvh - 36px);">
+            <a href="/shop" class="px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">SHOP</a>
+            <a href="/build-kit/" class="px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">BUILD KITS</a>
+            <a href="/80-firearm/" class="px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">80 PERCENT</a>
+            <!-- Parts accordion -->
+            <div data-rocket-location-hash="6960227442999278819299c8835fa168" class="mobile-submenu">
+                <button class="mobile-submenu-toggle w-full flex justify-between items-center px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">
+                    PARTS
+                    <svg class="mobile-submenu-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="mobile-submenu-items hidden bg-gray-50">
+                    <a href="/component/" class="block pl-10 pr-6 py-3 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-100">All Parts</a>
+                    <a href="/component/slide/" class="block pl-10 pr-6 py-3 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-100">Slides</a>
+                    <a href="/component/rails/" class="block pl-10 pr-6 py-3 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-100">Rails</a>
+                    <a href="/component/receiver/" class="block pl-10 pr-6 py-3 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-100">Receivers</a>
+                </div>
+            </div>
+            <!-- 3D Printing accordion -->
+            <div data-rocket-location-hash="5599c0111ee5ba800aeec62bf652d914" class="mobile-submenu">
+                <button class="mobile-submenu-toggle w-full flex justify-between items-center px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">
+                    3D PRINTING
+                    <svg class="mobile-submenu-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="mobile-submenu-items hidden bg-gray-50">
+                    <a href="/3d-printing/" class="block pl-10 pr-6 py-3 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-100">All 3D Printing</a>
+                    <a href="/3d-printing/3d-files/" class="block pl-10 pr-6 py-3 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-100">3D Files</a>
+                    <a href="/3d-printing/3d-printer-accessories/" class="block pl-10 pr-6 py-3 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-100">Accessories</a>
+                </div>
+            </div>
+            <a href="/gun-accessories/" class="px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">ACCESSORIES</a>
+            <a href="/contact" class="px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">CONTACT</a>
+            <a href="/my-account" class="px-6 py-4 border-b border-[#ccc] text-black font-normal uppercase text-[12px] tracking-wide hover:bg-gray-50">ACCOUNT</a>
+        </div>
+        <!-- Dark backdrop - tap to close -->
+        <div data-rocket-location-hash="0cae28ed361b98aa6f9237897947cf85" id="mobile-menu-backdrop" class="flex-1 bg-black/50" style="min-height: 0; height: 100%;"></div>
+    </div>
+
+    		<div data-rocket-location-hash="ba1549302a5759e20cdf50517313d9c9" class="mobile-overlay"></div>
+			
+				
+<!-- Outer flex-grow wrapper -->
+<div data-rocket-location-hash="b2ece84153cfbf41d3498cab2b6b8747" class="w-full flex-grow bg-white flex flex-col">
+            <!-- Non-front pages: container has borders -->
+        <div data-rocket-location-hash="f6e52a9046a6a6b69d6cd3efc099b9f7" class="lg:container lg:mx-auto lg:border-l lg:border-r border-[#e5e5e5] flex-grow flex flex-col">
+            <div data-rocket-location-hash="c1b49654085e08727c12811f571b851a" class="flex-grow px-4 md:px-6 py-8">
+    				<header class="entry-header">
+			<h1 class="entry-title">Refund Policy</h1>		</header><!-- .entry-header -->
+				
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<div id="post-44" class="post-44 page type-page status-publish hentry">
+			<div class="entry-content">
+			
+<p class="wp-block-paragraph">If you are not completely satisfied with your purchase for any reason, please see below for more information on our return policy.</p>
+
+
+
+<p class="wp-block-paragraph"><br><strong>Return Process<br></strong>To return an item, please email customer service at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="becdcbceced1cccafed9d6d1cdcad9cbd0cd90ddd1d3">[email&#160;protected]</a> for approval and a Return Merchandise Authorization (RMA) number. After receiving an RMA number, place the item securely in its original packaging and include your proof of purchase, and mail your return to the following<br>address:<br><br>13740 N Highway 183, Ste J-2 Austin, TX 78750-1832</p>
+
+
+
+<p class="wp-block-paragraph"><br>Please note, you are responsible for shipping charges, and we recommend you use a trackable method to mail your return.</p>
+
+
+
+<p class="wp-block-paragraph"><br><strong>Refunds</strong><br>After receiving your return and inspecting the condition of your item, we will process your return or exchange. Please allow up to ten business days from the receipt of your item to process your return or exchange. We will notify you by email when your return has been processed.</p>
+					</div><!-- .entry-content -->
+		</div><!-- #post-## -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+            </div>
+            <!-- Close inner content padding div (non-front pages only) -->
+
+        
+        
+        
+        <!-- Footer content - INSIDE the container -->
+        <footer data-rocket-location-hash="2a8262a6ebb1d20b2b662e7e4ffadf90" class="mt-auto">
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/ghost-guns/*","/wp-content/themes/shoptimizer/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<input type="hidden" id="commercekit_nonce" name="commercekit_nonce" value="6f5d0e6f97" /><input type="hidden" name="_wp_http_referer" value="/refund-policy/" /><script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+/* <![CDATA[ */
+document.addEventListener( 'DOMContentLoaded', function() {
+	var cgkit_nonce_ustate = 0;
+	var cgkit_nonce_cvalue = Cookies.get( 'commercekit-nonce-value' );
+	var cgkit_nonce_cstate = Cookies.get( 'commercekit-nonce-state' );
+	var cgkit_user_switched = 0;
+	if ( cgkit_nonce_cvalue == '' || cgkit_nonce_cstate != cgkit_nonce_ustate || cgkit_user_switched == 1 ) {
+		var timestamp = new Date().getTime();
+		fetch( commercekit_ajs.ajax_url + '=commercekit_get_nonce&v=' + timestamp, {
+			method: 'GET',
+		} ).then( response => response.json() ).then( json => {
+			if ( json.status == 1 ) {
+				var twohrs = new Date( new Date().getTime() + 120 * 60 * 1000 );
+				if ( window.Cookiebot ) { /* Cookiebot compatible */
+					if ( window.Cookiebot.consent.preferences || window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing ) {
+						Cookies.set( 'commercekit-nonce-value', json.nonce, { expires: twohrs } );
+						Cookies.set( 'commercekit-nonce-state', json.state, { expires: twohrs } );
+					} else {
+						Cookies.remove( 'commercekit-nonce-value' );
+						Cookies.remove( 'commercekit-nonce-state' );
+					}
+				} else {
+					Cookies.set( 'commercekit-nonce-value', json.nonce, { expires: twohrs } );
+					Cookies.set( 'commercekit-nonce-state', json.state, { expires: twohrs } );
+				}
+				cgkit_nonce_ustate = json.state;
+				commercekit_update_nonce( json.nonce );
+			}
+		} );
+	} else {
+		commercekit_update_nonce( cgkit_nonce_cvalue );
+	}
+} );
+function commercekit_update_nonce( nonce ) {
+	var nonce_input = document.querySelector( '#commercekit_nonce' );
+	if ( nonce_input ) {
+		nonce_input.value = nonce;
+	} else {
+		document.body.insertAdjacentHTML( 'beforeend', '<input type="hidden" id="commercekit_nonce" name="commercekit_nonce" value="' + nonce + '" />' );
+	}
+	commercekit_ajs.ajax_nonce = 1;
+	if ( typeof cgkit_update_order_bump_views == 'function' ) {
+		cgkit_update_order_bump_views();
+	}
+}
+/* ]]> */
+</script>
+	<script type="text/rocketlazyloadscript" id='kirki-viewport-lists'>var kirkiViewports = {"md":{"value":1200,"scale":1,"minWidth":1200,"maxWidth":1200,"title":"Desktop","icon":"desktop","activeIcon":"desktop-hover","id":"md","type":"max"},"tablet":{"value":991,"scale":1,"minWidth":991,"maxWidth":991,"title":"Tablet","icon":"tablet-default","activeIcon":"tablet-hover","type":"max","id":"tablet"},"mobileLandscape":{"value":767,"scale":1,"minWidth":767,"maxWidth":767,"title":"Landscape","icon":"phone-hr-default","activeIcon":"phone-hr-hover","type":"max","id":"mobileLandscape"},"mobile":{"value":575,"scale":1,"minWidth":575,"maxWidth":575,"title":"Mobile","icon":"phone-vr-default","activeIcon":"phone-vr-hover","type":"max","id":"mobile"}};</script><script type="text/rocketlazyloadscript" id='kirki-variable-lists'>var kirkiCSSVariable = {"data":[{"title":"Colors","key":"color","modes":[{"title":"Default","key":"default"}],"variables":[]},{"title":"Numbers","key":"size","modes":[{"title":"Default","key":"default"}],"variables":[]},{"title":"Text Styles","key":"text-style","modes":[{"title":"Default","key":"default"}],"variables":[]},{"title":"Font Family","key":"font-family","modes":[{"title":"Default","key":"default"}],"variables":[]}]};</script><script type="text/rocketlazyloadscript" id="kirki-api-and-nonce">
+    window.wp_kirki = {
+        ajaxUrl: "https://ghostguns.com/wp-admin/admin-ajax.php",
+        restUrl: "https://ghostguns.com/wp-json/",
+        siteUrl: "https://ghostguns.com",
+        apiVersion: "v1",
+        postId: "44",
+        nonce: "b989106306",
+        call_from: "",
+        templateId: "",
+        context: {"id":44,"type":"post"}
+    };
+    </script><script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">jQuery(function($){		function load_authorize_net_cim_credit_card_payment_form_handler() {
+			window.wc_authorize_net_cim_credit_card_payment_form_handler = new WC_Authorize_Net_Payment_Form_Handler( {"plugin_id":"authorize_net_cim","id":"authorize_net_cim_credit_card","id_dasherized":"authorize-net-cim-credit-card","type":"credit-card","csc_required":true,"csc_required_for_tokens":false,"logging_enabled":true,"lightbox_enabled":false,"login_id":"8gK9EZbV89v","client_key":"","general_error":"An error occurred, please try again or try an alternate form of payment.","ajax_url":"https:\/\/ghostguns.com\/wp-admin\/admin-ajax.php","ajax_log_nonce":"52f5011b75","enabled_card_types":["visa","mastercard","amex","discover","dinersclub","jcb"]} );window.jQuery( document.body ).trigger( "update_checkout" );		}
+
+		try {
+
+			if ( 'undefined' !== typeof WC_Authorize_Net_Payment_Form_Handler ) {
+				load_authorize_net_cim_credit_card_payment_form_handler();
+			} else {
+				window.jQuery( document.body ).on( 'wc_authorize_net_payment_form_handler_loaded', load_authorize_net_cim_credit_card_payment_form_handler );
+			}
+
+		} catch ( err ) {
+
+			
+		var errorName    = '',
+		    errorMessage = '';
+
+		if ( 'undefined' === typeof err || 0 === err.length || ! err ) {
+			errorName    = 'A script error has occurred.';
+			errorMessage = 'The script WC_Authorize_Net_Payment_Form_Handler could not be loaded.';
+		} else {
+			errorName    = 'undefined' !== typeof err.name    ? err.name    : '';
+			errorMessage = 'undefined' !== typeof err.message ? err.message : '';
+		}
+
+		
+		console.log( [ errorName, errorMessage ].filter( Boolean ).join( ' ' ) );
+
+		
+		jQuery.post( 'https://ghostguns.com/wp-admin/admin-ajax.php', {
+			action:   'wc_authorize_net_cim_credit_card_payment_form_log_script_event',
+			security: 'aa6a3611bb',
+			name:     errorName,
+			message:  errorMessage,
+		} );
+
+				}
+		});</script><script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">jQuery(function($){		function load_authorize_net_cim_echeck_payment_form_handler() {
+			window.wc_authorize_net_cim_echeck_payment_form_handler = new WC_Authorize_Net_Payment_Form_Handler( {"plugin_id":"authorize_net_cim","id":"authorize_net_cim_echeck","id_dasherized":"authorize-net-cim-echeck","type":"echeck","csc_required":false,"csc_required_for_tokens":false,"logging_enabled":false,"lightbox_enabled":false,"login_id":"8gK9EZbV89v","client_key":"","general_error":"An error occurred, please try again or try an alternate form of payment.","ajax_url":"https:\/\/ghostguns.com\/wp-admin\/admin-ajax.php","ajax_log_nonce":"5b7a97f69b"} );window.jQuery( document.body ).trigger( "update_checkout" );		}
+
+		try {
+
+			if ( 'undefined' !== typeof WC_Authorize_Net_Payment_Form_Handler ) {
+				load_authorize_net_cim_echeck_payment_form_handler();
+			} else {
+				window.jQuery( document.body ).on( 'wc_authorize_net_payment_form_handler_loaded', load_authorize_net_cim_echeck_payment_form_handler );
+			}
+
+		} catch ( err ) {
+
+			
+		var errorName    = '',
+		    errorMessage = '';
+
+		if ( 'undefined' === typeof err || 0 === err.length || ! err ) {
+			errorName    = 'A script error has occurred.';
+			errorMessage = 'The script WC_Authorize_Net_Payment_Form_Handler could not be loaded.';
+		} else {
+			errorName    = 'undefined' !== typeof err.name    ? err.name    : '';
+			errorMessage = 'undefined' !== typeof err.message ? err.message : '';
+		}
+
+		
+		jQuery.post( 'https://ghostguns.com/wp-admin/admin-ajax.php', {
+			action:   'wc_authorize_net_cim_echeck_payment_form_log_script_event',
+			security: 'e8fe0b9147',
+			name:     errorName,
+			message:  errorMessage,
+		} );
+
+				}
+		});</script>	<script type="text/rocketlazyloadscript" data-rocket-type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="text/rocketlazyloadscript" data-minify="1" async data-rocket-src='https://ghostguns.com/wp-content/cache/min/1/onsite/js/XFjpDB/klaviyo.js?ver=1788788737'></script><script type="text/rocketlazyloadscript" data-minify="1" id="plausible-woocommerce-integration-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/plausible-analytics/assets/dist/js/plausible-woocommerce-integration.js?ver=1788788737" data-rocket-defer defer></script>
+<script id="plausible-form-submit-integration-js-extra">
+var plausible_analytics_i18n = {"form_completions":"WP Form Completions"};
+//# sourceURL=plausible-form-submit-integration-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="plausible-form-submit-integration-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/plausible-analytics/assets/dist/js/plausible-form-submit-integration.js?ver=1788788737" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="js-cookie-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/commercegurus-commercekit/assets/js/js.cookie.min.js?ver=3.0.5" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="commercekit-ajax-search-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/commercegurus-commercekit/assets/js/ajax-search.js?ver=1788788737" data-rocket-defer defer></script>
+<script id="wc-add-to-cart-variation-js-extra">
+var wc_add_to_cart_variation_params = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_no_matching_variations_text":"Sorry, no products matched your selection. Please choose a different combination.","i18n_make_a_selection_text":"Please select some product options before adding this product to your cart.","i18n_unavailable_text":"Sorry, this product is unavailable. Please choose a different combination.","i18n_reset_alert_text":"Your selection has been reset. Please select some product options before adding this product to your cart."};
+//# sourceURL=wc-add-to-cart-variation-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-wp-strategy="defer" id="wc-add-to-cart-variation-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=11.1.0" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="commercekit-attribute-swatches-js-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/commercegurus-commercekit/assets/js/commercegurus-attribute-swatches.js?ver=1788788737" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="wc-aelia-foundation-classes-frontend-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/wc-aelia-foundation-classes/src/js/frontend/frontend.js?ver=1788788737" data-rocket-defer defer></script>
+<script id="awdr-main-js-extra">
+var awdr_params = {"ajaxurl":"https://ghostguns.com/wp-admin/admin-ajax.php","nonce":"5ae8f03d09","enable_update_price_with_qty":"show_when_matched","refresh_order_review":"0","custom_target_simple_product":"","custom_target_variable_product":"","js_init_trigger":"","awdr_opacity_to_bulk_table":"","awdr_dynamic_bulk_table_status":"0","awdr_dynamic_bulk_table_off":"on","custom_simple_product_id_selector":"","custom_variable_product_id_selector":""};
+//# sourceURL=awdr-main-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="awdr-main-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/woo-discount-rules/v2/Assets/Js/site_main.js?ver=1788788737" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="awdr-dynamic-price-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/woo-discount-rules/v2/Assets/Js/awdr-dynamic-price.js?ver=1788788737" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-wp-strategy="async" id="cloudflare-turnstile-js" data-rocket-src="https://challenges.cloudflare.com/turnstile/v0/api.js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="cloudflare-turnstile-js-after">
+document.addEventListener( 'wpcf7submit', e => turnstile.reset() );
+//# sourceURL=cloudflare-turnstile-js-after
+</script>
+<script id="metorik-js-js-extra">
+var metorik_params = {"source_tracking":{"enabled":true,"cookie_lifetime":6,"session_length":30,"sbjs_domain":false,"cookie_name":"mtk_src_trk"},"cart_tracking":{"enabled":true,"cart_items_count":0,"item_was_added_to_cart":false,"wc_ajax_capture_customer_data_url":"/?wc-ajax=metorik_capture_customer_data","wc_ajax_email_opt_out_url":"/?wc-ajax=metorik_email_opt_out","wc_ajax_email_opt_in_url":"/?wc-ajax=metorik_email_opt_in","wc_ajax_seen_add_to_cart_form_url":"/?wc-ajax=metorik_seen_add_to_cart_form","add_cart_popup_should_scroll_to":true,"add_cart_popup_placement":"bottom","add_to_cart_should_mark_as_seen":true,"add_to_cart_form_selectors":[".ajax_add_to_cart",".single_add_to_cart_button"]},"nonce":"56779f02d3"};
+//# sourceURL=metorik-js-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="metorik-js-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/metorik-helper/assets/js/metorik.min.js?ver=2.0.10" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/checkout/??(.*)|/cart/?|/my-account/??(.*)|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://ghostguns.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script type="text/rocketlazyloadscript" id="shoptimizer-main-js" data-rocket-src="https://ghostguns.com/wp-content/themes/shoptimizer/assets/js/main.min.js?ver=2.9.1" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="shoptimizer-main-js-after">
+			
+			document.querySelectorAll('.woocommerce-image__wrapper').forEach(carousel => {
+		    const carouselInner = carousel.querySelector('.shoptimizer-plp-image-wrapper');
+		    const dots = carousel.querySelectorAll('.shoptimizer-plp-carousel--dot');
+		    const carouselContainer = carousel.querySelector('.shoptimizer-plp-carousel-container');
+
+		    // Check if the carousel container exists
+		    if (carouselContainer) {
+		        function updateDots() {
+		            const scrollLeft = carouselContainer.scrollLeft;
+		            const viewportWidth = carouselContainer.clientWidth;
+		            const index = Math.round(scrollLeft / viewportWidth);
+
+		            dots.forEach((dot, i) => {
+		                dot.classList.toggle('active', i === index);
+		            });
+		        }
+
+		        let isScrolling;
+		        carouselContainer.addEventListener('scroll', () => {
+		            clearTimeout(isScrolling);
+		            isScrolling = setTimeout(() => {
+		                updateDots();
+		            }, 50);
+		        });
+
+		        // Initialize the dots
+		        updateDots();
+		    } else {
+		        console.warn('Carousel container not found:', carousel);
+		    }
+		});
+
+		
+
+				jQuery( document ).ready( function( $ ) {
+					$( 'body' ).on( 'added_to_cart', function( event, fragments, cart_hash ) {
+						if ( ! $( 'body' ).hasClass( 'elementor-editor-active' ) ) {
+							$( 'body' ).addClass( 'drawer-open' );
+							$( '#shoptimizerCartDrawer').focus();
+						}
+					} );				
+				} );
+				document.addEventListener( 'DOMContentLoaded', function() {
+					document.addEventListener( 'click', function( event ) {
+						var is_inner = event.target.closest( '.shoptimizer-mini-cart-wrap' );
+						if ( ! event.target.classList.contains( 'shoptimizer-mini-cart-wrap' ) && ! is_inner ) {
+							document.querySelector( 'body' ).classList.remove( 'drawer-open' );
+						}
+						var is_inner2 = event.target.closest( '.shoptimizer-cart' );
+						if ( event.target.classList.contains( 'shoptimizer-cart' ) || is_inner2 ) {
+							var is_header = event.target.closest( '.site-header-cart' );
+							var is_shortcode = event.target.closest( '.shoptimizer-cart-shortcode' );
+							if ( is_header || is_shortcode ) {
+								event.preventDefault();
+								document.querySelector( 'body' ).classList.toggle( 'drawer-open' );
+								document.getElementById('shoptimizerCartDrawer').focus();
+							}
+						}
+						if ( event.target.classList.contains( 'close-drawer' ) ) {
+							document.querySelector( 'body' ).classList.remove( 'drawer-open' );
+						}
+					} );
+				} );
+
+				// Mini Cart Ajax state.
+				document.addEventListener( 'DOMContentLoaded', function() {
+				    document.querySelector( '#ajax-loading' ).style.display = 'none';
+				} );
+
+				;
+				( function( $ ) {
+					'use strict';
+
+				    var events_to_monitor = [
+				        'wc-ajax=get_refreshed_fragments',
+				        'wc-ajax=remove_from_cart',
+				    ];
+
+				    function handle_mini_cart_ajax_events( settings, show_loading ) {
+				        if ( events_to_monitor.some( function( event ) {
+				            return settings.url.indexOf( event ) !== -1;
+				        })) {
+				            if ( show_loading ) {
+				                $( '#ajax-loading' ).css( 'display', 'block' );
+				            } else {
+				                $( '#ajax-loading' ).css( 'display', 'none' );
+				            }
+				        }
+				    }
+
+				    events_to_monitor.forEach( function( event ) {
+				        $( document ).ajaxSend( function( event, jqXHR, settings ) {
+				            handle_mini_cart_ajax_events( settings, true ); 
+				        });
+				        $( document ).ajaxComplete( function( event, jqXHR, settings ) {
+				            handle_mini_cart_ajax_events( settings, false );
+				        });
+				    });
+				    
+				// Close anon function.
+				}( jQuery ) );
+				
+
+			
+			var observer = new IntersectionObserver(function(entries) {
+				if(entries[0].intersectionRatio === 0)
+					document.querySelector('.col-full-nav').classList.add('is_stuck');
+				else if(entries[0].intersectionRatio === 1)
+					document.querySelector('.col-full-nav').classList.remove('is_stuck');
+			}, { threshold: [0,1] });
+
+			observer.observe(document.querySelector('.s-observer'));
+		
+//# sourceURL=shoptimizer-main-js-after
+</script>
+<script type="text/rocketlazyloadscript" id="sourcebuster-js-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.1.0" data-rocket-defer defer></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://ghostguns.com/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="wc-order-attribution-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.1.0" data-rocket-defer defer></script>
+<script id="kl-identify-browser-js-extra">
+var klUser = {"current_user_email":"","commenter_email":""};
+//# sourceURL=kl-identify-browser-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="kl-identify-browser-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/plugins/klaviyo/inc/js/kl-identify-browser.js?ver=1788788737" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="site-js-js" data-rocket-src="https://ghostguns.com/wp-content/cache/min/1/wp-content/themes/ghost-guns/js/site.js?ver=1788788737" data-rocket-defer defer></script>
+<script id="wc-cart-fragments-js-extra">
+var wc_cart_fragments_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_0b426daab9e006234cd090bda14a40cd","fragment_name":"wc_fragments_0b426daab9e006234cd090bda14a40cd","request_timeout":"5000"};
+//# sourceURL=wc-cart-fragments-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-wp-strategy="defer" defer id="wc-cart-fragments-js" data-rocket-src="https://ghostguns.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=11.1.0"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://ghostguns.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+            
+            <!-- Main footer grid: 4 columns -->
+            <div class="flex flex-col md:grid md:grid-cols-4 border-t border-[#e5e5e5] ">
+
+                <!-- Col 1: Ghost Guns -->
+                <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
+                    <p class="uppercase text-black mb-4 font-heading text-lg">Ghost Guns</p>
+                    <div class="flex flex-col gap-1">
+                        <a class="text-black text-xs uppercase font-mono" href="/shop">/ shop</a>
+                        <a class="text-black text-xs uppercase font-mono" href="/about">/ about</a>
+                        <a class="text-black text-xs uppercase font-mono" href="/blog">/ blog</a>
+                        <a class="text-black text-xs uppercase font-mono" href="https://www.instagram.com/dd.ghostguns" target="_blank">/ instagram</a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Help -->
+                <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
+                    <p class="uppercase text-black mb-4 font-heading text-lg">Help</p>
+                    <div class="flex flex-col gap-1">
+                        <a class="text-black text-xs uppercase font-mono" href="/contact">/ contact</a>
+                        <a class="text-black text-xs uppercase font-mono" href="/refund-policy">/ refund policy</a>
+                        <a class="text-black text-xs uppercase font-mono" href="/shipping-policy">/ shipping policy</a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Legal -->
+                <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
+                    <p class="uppercase text-black mb-4 font-heading text-lg">Legal</p>
+                    <div class="flex flex-col gap-1">
+                        <a class="text-black text-xs uppercase font-mono" href="/shipping-restrictions">/ shipping restrictions</a>
+                        <a class="text-black text-xs uppercase font-mono" href="/terms-and-conditions">/ terms & conditions</a>
+                        <a class="text-black text-xs uppercase font-mono" href="/privacy-policy">/ privacy policy</a>
+                    </div>
+                </div>
+
+                <!-- Col 4: All Rights Reversed (Black) -->
+                <div class="p-6 bg-black text-white">
+                    <p class="uppercase text-white mb-3 font-heading text-lg">All Rights Reversed</p>
+                    <p class="text-white text-xs font-mono leading-relaxed m-0">
+                        Since Jan. 1 2021, no warrants have been served to ghostguns.com principals or employees.<br><br>
+                        No searches or seizures have been performed on ghostguns.com assets.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Trademark + disclaimer row -->
+            <div class="flex flex-col-reverse md:flex-row md:items-start gap-3 px-4 py-3 border-t border-[#ccc] ">
+                <p class="!m-0 text-[10px] leading-relaxed text-neutral-500 md:flex-1">Ghost Guns hardware and software are not currently available to persons outside the United States and are not available to residents of and persons in the states of New Jersey and California who do not possess a federal firearms license.</p>
+                <span class="text-xs text-black font-mono uppercase whitespace-nowrap md:ml-auto self-end md:self-auto">
+                    Ghost Guns 2026                </span>
+            </div>
+
+        </footer>
+
+    </div>
+    <!-- Close container (lg:container) -->
+</div>
+<!-- Close outer flex-grow wrapper -->
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/ghostguns.com\/wp-admin\/admin-ajax.php","nonce":"5e6fb5334c","url":"https:\/\/ghostguns.com\/refund-policy","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preload_fonts":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preload_fonts_exclusions":["api.fontshare.com","cdn.fontshare.com"],"processed_extensions":["woff2","woff","ttf"],"external_font_exclusions":[],"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='https://ghostguns.com/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1789634347 -->

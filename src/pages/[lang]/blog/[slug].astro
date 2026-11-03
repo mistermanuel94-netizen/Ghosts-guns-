@@ -1,0 +1,26 @@
+---
+import BlogPostView from '../../../views/BlogPostView.astro';
+import posts from '../../../data/posts.json';
+import { LOCALES, type Locale } from '../../../utils/i18n';
+
+export function getStaticPaths() {
+  const targetLocales = LOCALES.filter(l => l !== 'en');
+  const paths: any[] = [];
+  
+  targetLocales.forEach((lang) => {
+    posts.forEach((post) => {
+      paths.push({
+        params: { lang, slug: post.slug },
+        props: { post }
+      });
+    });
+  });
+
+  return paths;
+}
+
+const { lang } = Astro.params;
+const { post } = Astro.props;
+---
+
+<BlogPostView post={post} lang={lang as Locale} />

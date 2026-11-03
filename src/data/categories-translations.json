@@ -1,0 +1,580 @@
+{
+  "3d-files": {
+    "en": {
+      "name": "3D Files",
+      "description": "Downloadable STL and CAD files for 3D printed firearm frames, receivers, and components."
+    },
+    "de": {
+      "name": "3D-Dateien",
+      "description": "Herunterladbare STL- und CAD-Dateien für 3D-gedruckte Waffengehäuse und Komponenten."
+    },
+    "nl": {
+      "name": "3D-Bestanden",
+      "description": "Downloadbare STL- en CAD-bestanden voor 3D-geprinte vuurwapens en onderdelen."
+    },
+    "fr": {
+      "name": "Fichiers 3D",
+      "description": "Fichiers STL et CAD téléchargeables pour carcasses et composants imprimés en 3D."
+    },
+    "es": {
+      "name": "Archivos 3D",
+      "description": "Archivos STL y CAD descargables para armazones y componentes de armas impresas en 3D."
+    },
+    "it": {
+      "name": "File 3D",
+      "description": "File STL e CAD scaricabili per fusti e componenti di armi stampate in 3D."
+    },
+    "pl": {
+      "name": "Pliki 3D",
+      "description": "Pliki STL i CAD do pobrania do druku 3D szkieletów broni i komponentów."
+    },
+    "bg": {
+      "name": "3D Файлове",
+      "description": "STL и CAD файлове за изтегляне за 3D принтирани рами и компоненти за оръжия."
+    }
+  },
+  "3d-printing": {
+    "en": {
+      "name": "3D Printing",
+      "description": "Complete kits, hardware, rails, and accessories engineered for DIY 3D printed firearms."
+    },
+    "de": {
+      "name": "3D-Druck",
+      "description": "Komplette Bausätze, Beschläge, Schienen und Zubehör für DIY 3D-Druckwaffen."
+    },
+    "nl": {
+      "name": "3D-Printen",
+      "description": "Complete sets, hardware, rails en accessoires voor DIY 3D-geprinte vuurwapens."
+    },
+    "fr": {
+      "name": "Impression 3D",
+      "description": "Kits complets, quincaillerie, rails et accessoires pour armes imprimées en 3D."
+    },
+    "es": {
+      "name": "Impresión 3D",
+      "description": "Kits completos, tornillería, rieles y accesorios para armas impresas en 3D DIY."
+    },
+    "it": {
+      "name": "Stampa 3D",
+      "description": "Kit completi, viteria, guide e accessori progettati per armi fai-da-te stampate in 3D."
+    },
+    "pl": {
+      "name": "Druk 3D",
+      "description": "Kompletne zestawy, osprzęt, szyny i akcesoria zaprojektowane do broni z druku 3D DIY."
+    },
+    "bg": {
+      "name": "3D Принтиране",
+      "description": "Пълни комплекти, обков, релси и аксесоари за DIY 3D принтирани оръжия."
+    }
+  },
+  "80-firearm": {
+    "en": {
+      "name": "80 Percent Firearms",
+      "description": "80% firearms, frames, and build components from GhostGuns.com. Browse G80 pistol frames, grip modules, jigs, and accessories."
+    },
+    "de": {
+      "name": "80% Feuerwaffen",
+      "description": "80%-Waffen, Gehäuse und Baukomponenten von GhostGuns.com. G80-Pistolenrahmen, Griffstücke, Schablonen und Zubehör."
+    },
+    "nl": {
+      "name": "80% Vuurwapens",
+      "description": "80% vuurwapens, frames en componenten van GhostGuns.com. Bekijk G80 pistoolframes, greepmodules en boormallen."
+    },
+    "fr": {
+      "name": "Armes 80%",
+      "description": "Armes 80%, carcasses et composants GhostGuns.com. Découvrez les carcasses G80, modules de poignée et gabarits."
+    },
+    "es": {
+      "name": "Armas al 80%",
+      "description": "Armas al 80%, armazones y componentes de montaje de GhostGuns.com. Armazones G80, módulos de empuñadura y guías."
+    },
+    "it": {
+      "name": "Armi all'80%",
+      "description": "Armi all'80%, fusti e componenti GhostGuns.com. Esplora fusti G80 per pistola, moduli impugnatura e dime."
+    },
+    "pl": {
+      "name": "Broń 80%",
+      "description": "Broń 80%, szkielety i komponenty montażowe od GhostGuns.com. Szkielety pistoletów G80, chwyty i przyrządy wiertarskie."
+    },
+    "bg": {
+      "name": "80% Оръжия",
+      "description": "80% оръжия, рами и компоненти от GhostGuns.com. G80 пистолетни рами, ръкохватки и шаблони за обработка."
+    }
+  },
+  "accessories": {
+    "en": {
+      "name": "Accessories",
+      "description": "Jigs, tools, drill bits, and specialized workshop accessories for firearm finishing."
+    },
+    "de": {
+      "name": "Zubehör",
+      "description": "Schablonen, Werkzeuge, Bohrer und Zubehör für die Waffenfertigstellung."
+    },
+    "nl": {
+      "name": "Accessoires",
+      "description": "Mallen, gereedschappen, boren en werkplaatsaccessoires voor afwerking van vuurwapens."
+    },
+    "fr": {
+      "name": "Accessoires",
+      "description": "Gabarits, outils, forets et accessoires d'atelier pour l'usinage d'armes."
+    },
+    "es": {
+      "name": "Accesorios",
+      "description": "Guías, herramientas, brocas y accesorios de taller para el acabado de armas."
+    },
+    "it": {
+      "name": "Accessori",
+      "description": "Dime, attrezzi, punte di trapano e accessori da officina per la finitura di armi."
+    },
+    "pl": {
+      "name": "Akcesoria",
+      "description": "Przyrządy, narzędzia, wiertła i akcesoria warsztatowe do wykańczania broni."
+    },
+    "bg": {
+      "name": "Аксесоари",
+      "description": "Шаблони, инструменти, свредла и аксесоари за довършване на оръжия."
+    }
+  },
+  "build-kit": {
+    "en": {
+      "name": "Build Kits",
+      "description": "Complete ghost gun kits with slides, barrels, triggers, and internals to finish your build. Frames sold separately."
+    },
+    "de": {
+      "name": "Bausätze",
+      "description": "Komplette Ghost Gun-Bausätze mit Schlitten, Läufen, Abzügen und Innenteilen. Gehäuse separat erhältlich."
+    },
+    "nl": {
+      "name": "Bouwpakketten",
+      "description": "Complete bouwpakketten met sledes, lopen, trekkers en interne onderdelen. Frames apart verkrijgbaar."
+    },
+    "fr": {
+      "name": "Kits d'assemblage",
+      "description": "Kits complets avec culasses, canons, détentes et pièces internes. Carcasses vendues séparément."
+    },
+    "es": {
+      "name": "Kits de montaje",
+      "description": "Kits completos de montaje con correderas, cañones, disparadores e internos. Armazones por separado."
+    },
+    "it": {
+      "name": "Kit di montaggio",
+      "description": "Kit completi di montaggio con carrelli, canne, grilletti e parti interne. Fusti venduti separatamente."
+    },
+    "pl": {
+      "name": "Zestawy do montażu",
+      "description": "Kompletne zestawy z zamkami, lufami, spustami i częściami wewnętrznymi. Szkielety sprzedawane oddzielnie."
+    },
+    "bg": {
+      "name": "Комплекти за сглобяване",
+      "description": "Пълни комплекти със затвори, цеви, спусъци и вътрешни компоненти. Рамите се продават отделно."
+    }
+  },
+  "component": {
+    "en": {
+      "name": "Components",
+      "description": "Individual slides, rails, locking blocks, and replacement firearm components."
+    },
+    "de": {
+      "name": "Komponenten",
+      "description": "Einzelne Schlitten, Schienen, Verriegelungsblöcke und Ersatzteile für Feuerwaffen."
+    },
+    "nl": {
+      "name": "Componenten",
+      "description": "Losse sledes, rails, vergrendelingsblokken en vervangende vuurwapenonderdelen."
+    },
+    "fr": {
+      "name": "Composants",
+      "description": "Culasses, rails, blocs de verrouillage et pièces de rechange pour armes."
+    },
+    "es": {
+      "name": "Componentes",
+      "description": "Correderas individuales, rieles, bloques de cierre y componentes de repuesto."
+    },
+    "it": {
+      "name": "Componenti",
+      "description": "Carrelli, guide, blocchi di chiusura e componenti di ricambio per armi."
+    },
+    "pl": {
+      "name": "Komponenty",
+      "description": "Pojedyncze zamki, szyny, bloki ryglujące i części zamienne do broni."
+    },
+    "bg": {
+      "name": "Компоненти",
+      "description": "Отделни затвори, релси, заключващи блокове и резервни части."
+    }
+  },
+  "slide": {
+    "en": {
+      "name": "Slides",
+      "description": "Precision machined slide assemblies for Glock 17, 19, 26, and 43 platforms."
+    },
+    "de": {
+      "name": "Schlitten",
+      "description": "Präzisionsgefräste Schlitten für Glock 17, 19, 26 und 43 Plattformen."
+    },
+    "nl": {
+      "name": "Sledes",
+      "description": "Precisie-gefreesde sledes voor Glock 17, 19, 26 en 43 platformen."
+    },
+    "fr": {
+      "name": "Culasses",
+      "description": "Ensembles culasses usinés avec précision pour plateformes Glock 17, 19, 26 et 43."
+    },
+    "es": {
+      "name": "Correderas",
+      "description": "Conjuntos de corredera mecanizados con precisión para Glock 17, 19, 26 y 43."
+    },
+    "it": {
+      "name": "Carrelli",
+      "description": "Carrelli lavorati con precisione per piattaforme Glock 17, 19, 26 e 43."
+    },
+    "pl": {
+      "name": "Zamki",
+      "description": "Precyzyjnie frezowane zamki do pistoletów Glock 17, 19, 26 oraz 43."
+    },
+    "bg": {
+      "name": "Затвори",
+      "description": "Прецизно изработени затвори за платформи Glock 17, 19, 26 и 43."
+    }
+  },
+  "rails": {
+    "en": {
+      "name": "Rails",
+      "description": "CNC stainless steel rail systems and locking blocks for 3D printed frames."
+    },
+    "de": {
+      "name": "Schienen",
+      "description": "CNC-Edelstahlschienen und Verriegelungsblöcke für 3D-gedruckte Rahmen."
+    },
+    "nl": {
+      "name": "Rails",
+      "description": "RVS railsystemen en vergrendelingsblokken voor 3D-geprinte frames."
+    },
+    "fr": {
+      "name": "Rails",
+      "description": "Systèmes de rails en acier inoxydable CNC et blocs de verrouillage pour carcasses 3D."
+    },
+    "es": {
+      "name": "Rieles",
+      "description": "Sistemas de rieles CNC de acero inoxidable y bloques de cierre para armazones 3D."
+    },
+    "it": {
+      "name": "Guide",
+      "description": "Guide in acciaio inossidabile CNC e blocchi di chiusura per fusti stampati in 3D."
+    },
+    "pl": {
+      "name": "Szyny",
+      "description": "Szyny ze stali nierdzewnej CNC i bloki ryglowe do szkieletów drukowanych w 3D."
+    },
+    "bg": {
+      "name": "Релси",
+      "description": "Релси от неръждаема стомана CNC и заключващи блокове за 3D рами."
+    }
+  },
+  "receiver": {
+    "en": {
+      "name": "Receivers",
+      "description": "80% AR-15 and pistol receivers, raw and hard-coat anodized finishes."
+    },
+    "de": {
+      "name": "Gehäuse",
+      "description": "80% AR-15- und Pistolen-Unterteile, roh oder harteloxiert."
+    },
+    "nl": {
+      "name": "Kasten",
+      "description": "80% AR-15 en pistoolkasten, ruw of geanodiseerd."
+    },
+    "fr": {
+      "name": "Carcasses",
+      "description": "Carcasses 80% AR-15 et pistolets, finitions brutes et anodisées."
+    },
+    "es": {
+      "name": "Receptores",
+      "description": "Receptores al 80% para AR-15 y pistolas, acabados en bruto y anodizado."
+    },
+    "it": {
+      "name": "Castelli",
+      "description": "Castelli all'80% per AR-15 e pistole, finiture grezze e anodizzate dure."
+    },
+    "pl": {
+      "name": "Szkielety",
+      "description": "Szkielety 80% do AR-15 i pistoletów, surowe oraz anodowane."
+    },
+    "bg": {
+      "name": "Рами",
+      "description": "80% рами за AR-15 и пистолети, сурови и твърдо анодизирани."
+    }
+  },
+  "gun-accessories": {
+    "en": {
+      "name": "Gun Accessories",
+      "description": "Stocks, grips, magazines, and range gear for your completed builds."
+    },
+    "de": {
+      "name": "Waffenzubehör",
+      "description": "Schultern, Griffe, Magazine und Ausrüstung für Ihre fertigen Bauten."
+    },
+    "nl": {
+      "name": "Wapenaccessoires",
+      "description": "Kolven, handgrepen, magazijnen en uitrusting voor uw voltooide wapens."
+    },
+    "fr": {
+      "name": "Accessoires pour armes",
+      "description": "Crosses, poignées, chargeurs et équipements pour vos créations terminées."
+    },
+    "es": {
+      "name": "Accesorios para armas",
+      "description": "Culatas, empuñaduras, cargadores y equipamiento de tiro para tus proyectos."
+    },
+    "it": {
+      "name": "Accessori per armi",
+      "description": "Calci, impugnature, caricatori ed equipaggiamento per le tue armi assemblate."
+    },
+    "pl": {
+      "name": "Akcesoria do broni",
+      "description": "Kolby, chwyty, magazynki i wyposażenie strzeleckie do Twoich konstrukcji."
+    },
+    "bg": {
+      "name": "Оръжейни аксесоари",
+      "description": "Приклади, ръкохватки, пълнители и оборудване за завършените проекти."
+    }
+  },
+  "magazines": {
+    "en": {
+      "name": "Magazines",
+      "description": "High-capacity, drum, and standard magazines for AR-15, Glock, and 9mm builds."
+    },
+    "de": {
+      "name": "Magazine",
+      "description": "Hochkapazitäts-, Trommel- und Standardmagazine für AR-15, Glock und 9mm."
+    },
+    "nl": {
+      "name": "Magazijnen",
+      "description": "Standaard-, trommel- en verlengde magazijnen voor AR-15, Glock en 9mm."
+    },
+    "fr": {
+      "name": "Chargeurs",
+      "description": "Chargeurs haute capacité, tambours et standards pour AR-15, Glock et calibres 9mm."
+    },
+    "es": {
+      "name": "Cargadores",
+      "description": "Cargadores de alta capacidad, de tambor y estándar para AR-15, Glock y 9mm."
+    },
+    "it": {
+      "name": "Caricatori",
+      "description": "Caricatori ad alta capacità, a tamburo e standard per AR-15, Glock e 9mm."
+    },
+    "pl": {
+      "name": "Magazynki",
+      "description": "Magazynki bębnowe, powiększone i standardowe do AR-15, Glock oraz 9mm."
+    },
+    "bg": {
+      "name": "Пълнители",
+      "description": "Барабанни, разширени и стандартни пълнители за AR-15, Glock и 9mm."
+    }
+  },
+  "most-popular": {
+    "en": {
+      "name": "Most Popular",
+      "description": "Our best-selling ghost gun build kits, 80% receivers, and DIY essentials."
+    },
+    "de": {
+      "name": "Beliebteste",
+      "description": "Unsere meistverkauften Bausätze, 80%-Gehäuse und DIY-Grundausstattung."
+    },
+    "nl": {
+      "name": "Meest Populair",
+      "description": "Onze best verkochte bouwpakketten, 80% kasten en DIY essentials."
+    },
+    "fr": {
+      "name": "Les Plus Populaires",
+      "description": "Nos kits d'armes les plus vendus, carcasses 80% et incontournables DIY."
+    },
+    "es": {
+      "name": "Más Populares",
+      "description": "Nuestros kits de armas más vendidos, receptores al 80% y elementos esenciales."
+    },
+    "it": {
+      "name": "Più Popolari",
+      "description": "I nostri kit più venduti, castelli all'80% ed elementi essenziali per il fai-da-te."
+    },
+    "pl": {
+      "name": "Najpopularniejsze",
+      "description": "Nasze najlepiej sprzedające się zestawy, szkielety 80% i niezbędniki DIY."
+    },
+    "bg": {
+      "name": "Най-популярни",
+      "description": "Най-продаваните комплекти за сглобяване, 80% рами и DIY продукти."
+    }
+  },
+  "software": {
+    "en": {
+      "name": "Software",
+      "description": "Digital design files, documentation, and CNC software packages."
+    },
+    "de": {
+      "name": "Software",
+      "description": "Digitale Designdateien, Dokumentationen und CNC-Softwarepakete."
+    },
+    "nl": {
+      "name": "Software",
+      "description": "Digitale ontwerpbestanden, documentatie en CNC-softwarepakketten."
+    },
+    "fr": {
+      "name": "Logiciels",
+      "description": "Fichiers de conception numérique, documentation et logiciels CNC."
+    },
+    "es": {
+      "name": "Software",
+      "description": "Archivos de diseño digital, documentación y paquetes de software CNC."
+    },
+    "it": {
+      "name": "Software",
+      "description": "File di progettazione digitale, documentazione e pacchetti software CNC."
+    },
+    "pl": {
+      "name": "Oprogramowanie",
+      "description": "Pliki projektowe, dokumentacja i pakiety oprogramowania CNC."
+    },
+    "bg": {
+      "name": "Софтуер",
+      "description": "Дигитални дизайнерски файлове, документация и софтуерни пакети за CNC."
+    }
+  },
+  "3d-printers": {
+    "en": {
+      "name": "3D Printers",
+      "description": "Expert tested and ranked 3D printers engineered for DIY firearms, 80% lowers, Glock frames, and precision accessories."
+    },
+    "de": {
+      "name": "3D-Drucker",
+      "description": "Von Experten getestete 3D-Drucker, optimiert für den Bau von Gehäusen, Griffstücken und Zubehörteilen."
+    },
+    "nl": {
+      "name": "3D-Printers",
+      "description": "Deskundig geteste 3D-printers, geoptimaliseerd voor het zelf printen van vuurwapenonderdelen en frames."
+    },
+    "fr": {
+      "name": "Imprimantes 3D",
+      "description": "Imprimantes 3D testées par des experts, idéales pour l'impression de carcasses, pièces et accessoires."
+    },
+    "es": {
+      "name": "Impresoras 3D",
+      "description": "Impresoras 3D probadas por expertos, diseñadas para la fabricación de armazones, piezas y accesorios."
+    },
+    "it": {
+      "name": "Stampanti 3D",
+      "description": "Stampanti 3D testate da esperti e ottimizzate per la produzione di componenti, fusti e accessori."
+    },
+    "pl": {
+      "name": "Drukarki 3D",
+      "description": "Przetestowane przez ekspertów drukarki 3D, zoptymalizowane do druku szkieletów broni i akcesoriów."
+    },
+    "bg": {
+      "name": "3D Принтери",
+      "description": "Експертно тествани 3D принтери, проектирани за производство на оръжейни рами и прецизни компоненти."
+    }
+  },
+  "glock": {
+    "en": {
+      "name": "Glock Compatible",
+      "description": "Precision slide kits, lower parts, rails, and hardware compatible with Glock 17, 19, and 26 builds."
+    },
+    "de": {
+      "name": "Glock-Kompatibel",
+      "description": "Präzisions-Schlittenbausätze, Unterteile, Schienen und Zubehör für Glock 17, 19 und 26 Bauten."
+    },
+    "nl": {
+      "name": "Glock-Compatibel",
+      "description": "Precisie sledesets, onderdelen, rails en hardware compatibel met Glock 17, 19 en 26 bouwprojecten."
+    },
+    "fr": {
+      "name": "Compatible Glock",
+      "description": "Kits de culasse de précision, pièces inférieures, rails et accessoires pour Glock 17, 19 et 26."
+    },
+    "es": {
+      "name": "Compatible Glock",
+      "description": "Kits de corredera de precisión, piezas inferiores, rieles y tornillería para Glock 17, 19 y 26."
+    },
+    "it": {
+      "name": "Compatibile Glock",
+      "description": "Kit carrello di precisione, parti fusto, guide e viteria per Glock 17, 19 e 26."
+    },
+    "pl": {
+      "name": "Kompatybilne z Glock",
+      "description": "Precyzyjne zestawy zamka, części szkieletu, szyny i elementy montażowe do Glock 17, 19 i 26."
+    },
+    "bg": {
+      "name": "Съвместими с Glock",
+      "description": "Прецизни комплекти за затвор, долни части, релси и крепежи за Glock 17, 19 и 26."
+    }
+  },
+  "jigs": {
+    "en": {
+      "name": "Router Jigs & Tools",
+      "description": "Heavy-duty multi-platform router jigs, carbide end mills, and drill bits for milling 80% lower receivers."
+    },
+    "de": {
+      "name": "Frässchablonen & Werkzeuge",
+      "description": "Robuste Multi-Plattform Frässchablonen, Hartmetallfräser und Bohrer zum Fräsen von 80% Gehäusen."
+    },
+    "nl": {
+      "name": "Freesmallen & Gereedschap",
+      "description": "Duurzame router jigs, hardmetalen frezen en boren voor het bewerken van 80% ontvangers."
+    },
+    "fr": {
+      "name": "Gabarits et Outils de Fraisage",
+      "description": "Gabarits de défonceuse multi-plateformes, fraises carbure et forets pour l'usinage des boîtiers 80%."
+    },
+    "es": {
+      "name": "Plantillas de Fresado y Herramientas",
+      "description": "Plantillas multi-plataforma de alta resistencia, fresas de carburo y brocas para fresar receptores 80%."
+    },
+    "it": {
+      "name": "Dime di Fresatura & Strumenti",
+      "description": "Dime per fresatrice multi-piattaforma, frese in metallo duro e punte per lavorare lower receiver 80%."
+    },
+    "pl": {
+      "name": "Szablony Frezarskie i Narzędzia",
+      "description": "Wytrzymałe szablony frezarskie, frezy węglikowe i wiertła do obróbki komór 80%."
+    },
+    "bg": {
+      "name": "Фрезови Кондуктори и Инструменти",
+      "description": "Устойчиви мултиплатформени кондуктори, карбидни фрези и свредла за фрезоване на 80% приемници."
+    }
+  },
+  "3d-printer-accessories": {
+    "en": {
+      "name": "3D Printer Accessories & Filaments",
+      "description": "Hardened steel nozzles, high-impact carbon fiber filaments, PEI build plates, and upgrades for firearm printing."
+    },
+    "de": {
+      "name": "3D-Drucker Zubehör & Filamente",
+      "description": "Gehärtete Stahldüsen, schlagfeste Kohlefaser-Filamente, PEI-Druckplatten und Upgrades für den Waffendruck."
+    },
+    "nl": {
+      "name": "3D-Printer Accessoires & Filamenten",
+      "description": "Gehard stalen spuitmonden, slagvaste carbonvezel filamenten, PEI-bouwplaten en upgrades."
+    },
+    "fr": {
+      "name": "Accessoires & Filaments 3D",
+      "description": "Buses en acier trempé, filaments renforcés en fibre de carbone, plaques PEI et améliorations pour impression armurière."
+    },
+    "es": {
+      "name": "Accesorios y Filamentos 3D",
+      "description": "Boquillas de acero templado, filamentos reforzados con fibra de carbono, bases PEI y mejoras para impresión."
+    },
+    "it": {
+      "name": "Accessori e Filamenti 3D",
+      "description": "Ugelli in acciaio temprato, filamenti rinforzati in fibra di carbonio, piatti PEI e accessori per la stampa."
+    },
+    "pl": {
+      "name": "Akcesoria do Drukarek 3D i Filamenty",
+      "description": "Dysze ze stali utwardzanej, filamenty z włóknem węglowym, płyty PEI i ulepszenia do druku broni."
+    },
+    "bg": {
+      "name": "3D Принтер Аксесоари и Нишки",
+      "description": "Дюзи от закалена стомана, карбонови нишки с висока якост, PEI подложки и ъпгрейди за 3D принтиране."
+    }
+  }
+}

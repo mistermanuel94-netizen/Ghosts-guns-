@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+
+interface Props {
+  post: any;
+  lang?: Locale;
+}
+
+const { post, lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+
+const cleanDescription = post.excerpt?.rendered 
+  ? post.excerpt.rendered.replace(/<[^>]*>?/gm, '').trim()
+  : '';
+---
+
+<Layout
+  title={`${post.title.rendered} | Ghost Guns`}
+  description={cleanDescription}
+  lang={lang}
+>
+  <div class="lg:container lg:mx-auto">
+    <!-- Breadcrumbs -->
+    <div class="border-l border-r border-b border-[#e5e5e5] px-4 py-3 text-xs font-mono uppercase text-neutral-500 flex items-center gap-2">
+      <a href={getLocalizedPath('/', lang)} class="hover:text-black">Home</a>
+      <span>/</span>
+      <a href={getLocalizedPath('/blog/', lang)} class="hover:text-black">Blog</a>
+      <span>/</span>
+      <span class="text-black font-bold truncate max-w-[200px] md:max-w-none">{post.title.rendered}</span>
+    </div>
+
+    <!-- Article Header -->
+    <header class="border-l border-r border-b border-[#e5e5e5] p-6 md:p-12 bg-neutral-50">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-xs font-mono text-neutral-500 mb-3 uppercase flex items-center gap-2">
+          <span>PUBLISHED ON {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+          <span>•</span>
+          <span>BY CODY WILSON</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-heading font-black uppercase text-black leading-tight tracking-tight">
+          {post.title.rendered}
+        </h1>
+      </div>
+    </header>
+
+    <!-- Article Body -->
+    <div class="border-l border-r border-b border-[#e5e5e5] p-6 md:p-12 bg-white">
+      <article class="max-w-3xl mx-auto prose prose-neutral prose-headings:font-heading prose-headings:uppercase prose-headings:font-bold prose-table:border prose-table:border-[#e5e5e5] prose-th:border prose-th:border-[#e5e5e5] prose-th:p-2 prose-td:border prose-td:border-[#e5e5e5] prose-td:p-2 prose-img:rounded-none" set:html={post.content.rendered} />
+    </div>
+
+    <!-- Back to blog link -->
+    <div class="border-l border-r border-b border-[#e5e5e5] p-6 flex justify-between items-center bg-neutral-50">
+      <a href={getLocalizedPath('/blog/', lang)} class="text-xs font-mono uppercase font-bold text-black hover:underline flex items-center gap-2">
+        &larr; Back to all articles
+      </a>
+      <a href={getLocalizedPath('/shop/', lang)} class="text-xs font-mono uppercase font-bold text-[#9f0712] hover:underline">
+        Explore Parts &amp; Build Kits &rarr;
+      </a>
+    </div>
+  </div>
+</Layout>

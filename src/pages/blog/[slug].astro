@@ -1,0 +1,15 @@
+---
+import BlogPostView from '../../views/BlogPostView.astro';
+import posts from '../../data/posts.json';
+
+export function getStaticPaths() {
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<BlogPostView post={post} lang="en" />

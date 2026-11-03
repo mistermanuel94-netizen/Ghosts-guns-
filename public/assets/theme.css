@@ -1,0 +1,3088 @@
+/*
+ Theme Name:     Ghost Guns
+ Theme URI:      https://ghostguns.com
+ Description:    A custom child theme of Shoptimizer
+ Author:         Haroon Khalid
+ Author URI:     https://ghostguns.com
+ Template:       shoptimizer
+Version:        1.4.8
+*/
+
+a {
+  color: black !important;
+}
+
+/* Sale banner colors are managed in Appearance → Banner. */
+.gg-sale-banner__panel {
+  background-color: var(--gg-banner-bg);
+  color: var(--gg-banner-text);
+}
+
+.gg-sale-banner__button,
+.gg-sale-banner__button:hover,
+.gg-sale-banner__button:focus {
+  background-color: var(--gg-banner-button-bg);
+  border-color: var(--gg-banner-button-bg);
+  color: var(--gg-banner-button-text) !important;
+}
+
+.gg-sale-banner__button:hover,
+.gg-sale-banner__button:focus {
+  filter: brightness(0.9);
+}
+
+.gg-sale-banner__countdown {
+  font-variant-numeric: tabular-nums;
+}
+
+.container > header .entry-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* =============================================================================
+   Header Cart - Custom cart icon with Shoptimizer's AJAX fragment structure
+   ============================================================================= */
+
+.site-header-cart {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.site-header-cart .shoptimizer-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.site-header-cart .cart-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 36px;
+  height: 100%;
+}
+
+/* Hide ALL of Shoptimizer's default cart elements */
+.site-header-cart .amount,
+.site-header-cart .shoptimizer-cart-icon svg,
+.site-header-cart .shoptimizer-cart-icon > svg,
+.site-header-cart .cart-contents svg,
+.site-header-cart .cart-contents > svg {
+  display: none !important;
+}
+
+/* Hide any Shoptimizer cart icon backgrounds/pseudo-elements */
+.site-header-cart .shoptimizer-cart-icon {
+  background: none !important;
+  background-image: none !important;
+}
+
+.site-header-cart .shoptimizer-cart-icon::before,
+.site-header-cart .shoptimizer-cart-icon::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hide basket style icon (uses CSS background) */
+.site-header-cart .cart-contents .count::before,
+.site-header-cart .cart-contents .count::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+/* Add our custom cart icon via CSS */
+.site-header-cart .cart-contents::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Cart count badge - works for both .mini-count (cart/bag style) and .count (basket style) */
+.site-header-cart .mini-count,
+.site-header-cart .count {
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+  background: #9f0712 !important;
+  color: white !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  border-radius: 15% !important;
+  min-width: 14px !important;
+  height: 14px !important;
+  display: flex !important;
+  border: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  padding: 0 3px !important;
+  z-index: 10 !important;
+  box-sizing: border-box !important;
+  pointer-events: none !important;
+}
+
+/* Hide count badge when cart is empty (body class added via PHP) */
+body.cart-is-empty .site-header-cart .mini-count,
+body.cart-is-empty .site-header-cart .count {
+  display: none !important;
+}
+
+/* Ensure containers don't clip the badge */
+#header-bar,
+.site-header-cart,
+.site-header-cart .shoptimizer-cart,
+.site-header-cart .cart-contents,
+.site-header-cart .shoptimizer-cart-icon {
+  overflow: visible !important;
+  position: relative;
+}
+
+/* Mobile positioning */
+@media (max-width: 767px) {
+  .site-header-cart .mini-count,
+  .site-header-cart .count {
+    top: 4px !important;
+    right: 4px !important;
+  }
+
+  header .flex.items-center.h-full.shrink-0 {
+    overflow: visible !important;
+  }
+
+  #header-bar {
+    overflow: visible !important;
+  }
+}
+
+/* Desktop positioning */
+@media (min-width: 768px) {
+  .site-header-cart .mini-count,
+  .site-header-cart .count {
+    top: 16px !important;
+    right: 4px !important;
+  }
+}
+
+/* Header search button - override Shoptimizer hiding */
+#header-bar .widget_search button[type="submit"],
+#header-bar .widget_search .search-submit-btn {
+  clip: auto !important;
+  clip-path: none !important;
+  position: static !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 100% !important;
+  background-color: #000 !important;
+  border: none !important;
+  flex-shrink: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#header-bar .widget_search button[type="submit"] svg,
+#header-bar .widget_search .search-submit-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  fill: white !important;
+  display: block !important;
+}
+
+.added_to_cart.wc-forward:focus,
+.added_to_cart.wc-forward:focus-visible,
+.added_to_cart.wc-forward:hover,
+.woocommerce-checkout .wc-block-components-checkout-place-order-button,
+.woocommerce-mini-cart__buttons.buttons .button.wc-forward,
+body.woocommerce-cart
+  .wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained,
+.single_add_to_cart_button.button,
+.button.product_type_variable,
+.add_to_cart_button {
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: #9f0712 !important;
+  color: white !important;
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.woocommerce-checkout .wc-block-components-checkout-place-order-button:hover,
+.woocommerce-mini-cart__buttons.buttons .button.wc-forward:hover,
+body.woocommerce-cart
+  .wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained:hover,
+.single_add_to_cart_button.button:hover,
+.button.product_type_variable:hover,
+.add_to_cart_button:hover {
+  background-color: #B90A0E !important;
+}
+
+.woocommerce-checkout .wp-element-button.wc-block-components-button.wc-block-components-checkout-place-order-button:before {
+  background-color: #ffffff !important;
+}
+
+/* Kill Shoptimizer's product card hover overlay entirely */
+ul.products li.product:not(.product-category)::before,
+ul.products li.product:hover::before,
+ul.products li.product:focus-within::before {
+  display: none !important;
+}
+
+body.single-product {
+  .product_meta {
+    left: unset !important;
+    right: unset !important;
+    margin-left: unset !important;
+    margin-right: unset !important;
+  }
+}
+
+.quantity-nav,
+input.input-text.qty.text {
+  border-color: #e5e5e5 !important;
+  border-radius: 0 !important;
+}
+
+.woocommerce-info {
+  color: black !important;
+  background: none !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 0 !important;
+}
+
+.woocommerce-error,
+.woocommerce-message {
+  background: #9f0712 !important;
+  border: none !important;
+  margin-bottom: 25px !important;
+  border-radius: 0;
+
+  .message-inner {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .buttons-wrapper {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .button.cart {
+    color: #fff !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .button.checkout {
+    color: #fff !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+  }
+
+  .message-content {
+    color: #fff !important;
+  }
+
+  .message-content a {
+    color: #fff !important;
+  }
+}
+
+.single-product .woocommerce-message .buttons-wrapper .checkout {
+  order: 2;
+  margin-left: 1em;
+  background-color: #9f0712 !important;
+  color: #fff !important;
+}
+
+li.product .woocommerce-card__header {
+  box-shadow: none !important;
+}
+
+@media (max-width: 992px) {
+  .single-product:has(:not(.woocommerce-breadcrumb)) .site-main {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .single-product .content-area {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+.wc-block-cart .wc-block-cart__submit-container--sticky {
+  box-shadow: none !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+#wc-block-components-totals-coupon__input-coupon {
+  border-radius: 0 !important;
+}
+
+body.single-product button.product_type_simple,
+body.woocommerce-shop .button.product_type_simple,
+.wp-block-woocommerce-checkout-order-summary-block {
+  border-radius: 0 !important;
+  border: 1px solid #e5e5e5 !important;
+  font-weight: normal !important;
+}
+
+button.wc-block-components-quantity-selector__button.wc-block-components-quantity-selector__button--minus {
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+body.woocommerce-checkout
+  .wc-block-components-radio-control-accordion-option.wc-block-components-radio-control-accordion-option--checked-option-highlighted,
+body.woocommerce-checkout input,
+body.woocommerce-checkout select {
+  border-radius: 0 !important;
+}
+
+.woocommerce-checkout
+  .wp-element-button.wc-block-components-button.wc-block-components-checkout-place-order-button:before {
+  background-color: white !important;
+}
+
+.wc-block-components-radio-control-accordion-option.wc-block-components-radio-control-accordion-option--checked-option-highlighted {
+  box-shadow: none !important;
+  border: 1px solid #e5e5e5 !important;
+  margin-bottom: 1px !important;
+}
+.single-product div.product form.cart .button.added::before, #payment .place-order .button:before, .cart-collaterals .checkout-button:before, .widget_shopping_cart .buttons .checkout:before {
+    background-color: #ffffff !important;
+}
+
+#shoptimizerCartDrawer > div.widget.woocommerce.widget_shopping_cart > div > p.woocommerce-mini-cart__buttons.buttons > a:nth-child(1) {
+    border-radius: 0 !important;
+    border: 1px solid #e5e5e5 !important;
+    background-color: transparent !important;
+    color: black !important;
+    font-weight: normal !important;
+}
+
+.wp-block-woocommerce-checkout-order-summary-coupon-form-block {
+  border-top: 1px solid #e5e5e5 !important;
+}
+
+.wp-block-woocommerce-checkout-order-summary-totals-block {
+  border-top: 1px solid #e5e5e5 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+header h1.entry-title {
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+.woocommerce-product-gallery__image img.zoomImg {
+  background: white;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.woocommerce-product-gallery__wrapper {
+  background: white;
+  /* Prevent background bleed-through */
+}
+
+.woocommerce-product-gallery__image {
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .mobile-fix-height {
+    height: calc(var(--locked-vh) - 36px);
+  }
+}
+
+html,
+body {
+  height: 100% !important;
+  background-color: white !important;
+}
+
+body.vh-loading {
+  visibility: hidden;
+}
+
+body.vh-ready {
+  visibility: visible;
+}
+
+#primary.content-area {
+  width: 100% !important;
+}
+
+.ajax_add_to_cart.add_to_cart_button:after {
+  border-left-color: #e5e5e5 !important;
+}
+
+body.woocommerce-shop .button.product_type_simple {
+  border: 0 !important;
+}
+.woocommerce-product-search:before,
+.wp-block-search__inside-wrapper:before,
+form.search-form:before {
+  left: unset !important;
+  top: 10px !important;
+  display: none !important;
+}
+
+body.single-product .wp-block-table thead {
+  border: 0 !important;
+  background: #f5f5f5 !important;
+}
+
+@media (max-width: 767px) {
+  /* Header is sticky via Tailwind classes, but ensure proper stacking */
+  header.sticky {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  body {
+    padding-top: 36px;
+  }
+}
+
+/* Header search input - remove Safari styling */
+header input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+header input[type="search"]::-webkit-search-decoration,
+header input[type="search"]::-webkit-search-cancel-button,
+header input[type="search"]::-webkit-search-results-button,
+header input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Cart count badge - AJAX updates */
+.cart-count {
+  font-family: 'Helvetica', Arial, sans-serif;
+  line-height: 1;
+}
+
+.wp-block-woocommerce-checkout.wc-block-checkout {
+  margin-top: 0 !important;
+}
+
+.wp-block-woocommerce-checkout {
+  padding-top: 12px !important;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+  padding: 20px !important;
+  margin-top: 0 !important;
+}
+
+.woocommerce-checkout .wc-block-checkout__actions_row {
+  margin-top: 12px !important;
+}
+
+.woocommerce-checkout #main {
+  padding-top: 0 !important;
+}
+
+.woocommerce-checkout .wc-block-components-notices {
+  margin-top: 0 !important;
+}
+
+#ckwtl-button2 {
+  border-radius: 0 !important;
+  border: 1px solid #e5e5e5 !important;
+  background-color: black !important;
+  color: white !important;
+  font-weight: normal !important;
+}
+
+
+/* Helvetica Now Display for headings (exclude product titles) */
+h1:not(.product_title), h2, h3 {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Product page body text - use Helvetica */
+body.single-product,
+body.single-product p,
+body.single-product li,
+.woocommerce-Tabs-panel,
+.woocommerce-Tabs-panel p,
+.woocommerce-product-details__short-description,
+.woocommerce-product-details__short-description p {
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/* Product title - Helvetica Now Display, larger */
+.product_title,
+.woocommerce div.product .product_title {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+}
+
+/* Product price - Commit Mono for accent */
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce div.product .summary .price {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+/* Search Input - remove all rounding */
+.widget_search input[type="search"] {
+  border-radius: 0 !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* AJAX Search Dropdown */
+.widget_search .commercekit-ajs-results {
+  border: 1px solid #e5e5e5 !important;
+  border-top: none !important;
+  margin-top: 0 !important;
+  min-height: auto !important;
+  width: 100% !important;
+  left: 0 !important;
+  top: 100% !important;
+  z-index: 100 !important;
+}
+
+.widget_search .commercekit-ajs-suggestions {
+  border: none !important;
+  width: 100% !important;
+}
+
+.widget_search .commercekit-ajs-view-all-holder > a {
+  background: black !important;
+  color: white !important;
+}
+
+/* ============================================
+   CONTACT PAGE STYLES
+   ============================================ */
+
+/* Contact Form 7 - Brutalist Styling */
+.wpcf7 {
+  max-width: 100%;
+}
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 select,
+.wpcf7 textarea,
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form select,
+.wpcf7-form textarea,
+body .wpcf7 input,
+body .wpcf7 textarea,
+body .wpcf7 select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+  border-radius: 0 !important;
+  background-color: white;
+  font-size: 14px;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.wpcf7 input[type="text"]:focus,
+.wpcf7 input[type="email"]:focus,
+.wpcf7 input[type="tel"]:focus,
+.wpcf7 select:focus,
+.wpcf7 textarea:focus {
+  outline: none;
+  border-color: #9f0712 !important;
+}
+
+.wpcf7 input::placeholder,
+.wpcf7 textarea::placeholder {
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.wpcf7 textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.wpcf7 select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.wpcf7 input[type="submit"] {
+  background-color: #9f0712 !important;
+  color: white !important;
+  border: 1px solid #9f0712 !important;
+  border-radius: 0 !important;
+  padding: 12px 32px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+  letter-spacing: 0.05em;
+}
+
+.wpcf7 input[type="submit"]:hover {
+  background-color: #B90A0E !important;
+}
+
+/* CF7 Validation states */
+.wpcf7-not-valid {
+  border-color: #9f0712 !important;
+}
+
+.wpcf7-not-valid-tip {
+  color: #9f0712;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+
+.wpcf7-response-output {
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 0 !important;
+  padding: 12px !important;
+  margin: 16px 0 0 0 !important;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Hide empty response output - ensure no spacing */
+.wpcf7-response-output:empty,
+.wpcf7 form.init .wpcf7-response-output,
+.wpcf7-response-output[style*="display: none"] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Cloudflare Turnstile captcha - position between message and submit */
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Remove extra gap from form elements */
+.wpcf7-form > p,
+.wpcf7-form > div {
+  margin: 0;
+}
+
+/* Give form fields a base order */
+.wpcf7-form > p,
+.wpcf7-form > div {
+  order: 1;
+}
+
+/* Captcha comes after message (order 90) */
+.wpcf7-form > p:has(.cf-turnstile),
+.wpcf7-form > div:has(.cf-turnstile),
+.wpcf7-form > div.cf-turnstile-wrapper,
+.wpcf7-form [data-sitekey] {
+  order: 90 !important;
+}
+
+/* Cloudflare Turnstile - aggressive spacing removal for production */
+.wpcf7-form .cf-turnstile,
+.wpcf7-form .wpcf7-turnstile,
+.wpcf7-form [data-sitekey],
+.wpcf7-form div:has(.cf-turnstile),
+.wpcf7-form p:has(.cf-turnstile),
+.wpcf7-form p:has([data-sitekey]) {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0;
+}
+
+/* Turnstile iframe container - remove any inherited spacing */
+.cf-turnstile iframe,
+[data-sitekey] iframe {
+  display: block;
+  margin: 0 !important;
+}
+
+/* Submit button comes last (order 100) */
+.wpcf7-form > p:has(input[type="submit"]) {
+  order: 100 !important;
+}
+
+/* Response output at the very end */
+.wpcf7-form .wpcf7-response-output {
+  order: 110 !important;
+}
+
+.wpcf7-mail-sent-ok {
+  border-color: #e5e5e5 !important;
+  background-color: white;
+}
+
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+  border-color: #9f0712 !important;
+  color: #9f0712;
+}
+
+/* CF7 Spinner */
+.wpcf7 .wpcf7-spinner {
+  margin: 0 0 0 12px;
+}
+
+/* Hide spinner from layout when not active - prevents extra whitespace */
+.wpcf7-form .wpcf7-spinner:not(.is-active) {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Form field labels */
+.wpcf7 label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: black;
+}
+
+/* ============================================
+   FAQ ACCORDION STYLES
+   ============================================ */
+
+.faq-accordion summary,
+.woocommerce-Tabs-panel details summary {
+  list-style: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.faq-accordion summary::-webkit-details-marker,
+.woocommerce-Tabs-panel details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-accordion summary::marker,
+.woocommerce-Tabs-panel details summary::marker {
+  display: none;
+}
+
+/* Icon rotation handled by Tailwind group-open:rotate-45 */
+
+/* ============================================
+   PRODUCT FAQ - Auto-styled in Descriptions
+   ============================================ */
+
+/* FAQ container in product tabs */
+.woocommerce-Tabs-panel details,
+body .woocommerce-Tabs-panel details,
+.woocommerce-tabs .panel details {
+  border: 1px solid #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+  border-radius: 0 !important;
+  margin-bottom: -1px;
+}
+
+.woocommerce-Tabs-panel details:last-of-type {
+  margin-bottom: 24px;
+}
+
+.woocommerce-Tabs-panel details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.15s;
+}
+
+.woocommerce-Tabs-panel details summary:hover {
+  background-color: #fafafa;
+}
+
+/* Plus icon - auto-generated */
+.woocommerce-Tabs-panel details summary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.2s;
+}
+
+.woocommerce-Tabs-panel details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+/* Answer content */
+.woocommerce-Tabs-panel details > div,
+.woocommerce-Tabs-panel details > p:not(:first-child) {
+  padding: 0 16px 16px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.woocommerce-Tabs-panel details > p:first-of-type:not(summary + p) {
+  padding-top: 0;
+}
+
+/* ============================================
+   CATEGORY PAGE HEADER
+   ============================================ */
+
+/* Kill Shoptimizer's tan background on category header */
+.tax-product_cat .woocommerce-products-header {
+  background: none !important;
+  background-color: transparent !important;
+  margin-bottom: 0 !important;
+}
+
+/* Category page title */
+.tax-product_cat .woocommerce-products-header__title.page-title {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .tax-product_cat .woocommerce-products-header__title.page-title {
+    font-size: 36px;
+  }
+}
+
+/* Category description (above products) */
+.gg-cat-description {
+  padding: 0 0 16px;
+  margin: 0;
+}
+
+.gg-cat-description p {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* ============================================
+   CATEGORY SEO CONTENT (Below Products)
+   ============================================ */
+
+/* Reset Shoptimizer default wrapper */
+.below-woocommerce-category {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: inherit !important;
+}
+
+/* Main container — extends into parent padding so borders touch content area edges */
+.gg-cat-seo {
+  --gg-gutter: 16px;
+  margin: 48px calc(-1 * var(--gg-gutter)) 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .gg-cat-seo {
+    --gg-gutter: 24px;
+  }
+}
+
+/* Section header */
+.gg-section-header {
+  padding: 16px var(--gg-gutter);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.gg-section-header h2 {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Kicker text */
+.gg-kicker {
+  display: block;
+  font-family: 'Commit Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9f0712;
+  margin-bottom: 4px;
+}
+
+/* Guide content area */
+.gg-guide-content {
+  padding: 32px var(--gg-gutter);
+}
+
+.gg-guide-content h3 {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin: 0 0 8px 0;
+}
+
+/* Subsection separators — extend to container edges */
+.gg-guide-content h3:not(:first-child) {
+  margin: 32px calc(-1 * var(--gg-gutter)) 8px;
+  padding: 32px var(--gg-gutter) 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.gg-guide-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 12px 0;
+  color: #444;
+  max-width: 100%;
+}
+
+.gg-guide-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* FAQ accordion inside category SEO */
+.gg-cat-seo .faq-accordion {
+  border-top: 1px solid #e5e5e5;
+}
+
+.gg-cat-seo .faq-accordion details {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.gg-cat-seo .faq-accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px var(--gg-gutter);
+  cursor: pointer;
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.15s;
+}
+
+.gg-cat-seo .faq-accordion summary:hover {
+  background-color: #fafafa;
+}
+
+.gg-cat-seo .faq-accordion .gg-faq-icon {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.2s;
+}
+
+.gg-cat-seo .faq-accordion details[open] .gg-faq-icon {
+  transform: rotate(45deg);
+}
+
+.gg-cat-seo .faq-accordion details > div {
+  padding: 0 var(--gg-gutter) 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 10px;
+  color: #444;
+  max-width: 100%;
+}
+
+/* ============================================
+   GOOGLE MAP STYLES
+   ============================================ */
+
+#contact-map {
+  width: 100%;
+  min-height: 300px;
+  height: 300px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  #contact-map {
+    min-height: 400px;
+    height: 400px;
+  }
+}
+
+/* Loading state - shown until map loads */
+#contact-map:empty::before {
+  content: "Loading map...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* ============================================
+   PRODUCT CATALOG STYLES - Match Homepage
+   ============================================ */
+
+/* Product grid - 4 columns on large screens, 2 on mobile */
+ul.products {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+@media (min-width: 1024px) {
+  ul.products {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* Product card styling */
+ul.products li.product {
+  margin: 0 !important;
+  padding: 12px !important;
+  border-bottom: 0px solid black !important;
+  border-right: 0px solid black !important;
+  width: 100% !important;
+  float: none !important;
+}
+
+/* Remove right border on last column items */
+ul.products li.product:nth-child(2n) {
+  border-right: none !important;
+}
+
+@media (min-width: 1024px) {
+  ul.products li.product:nth-child(2n) {
+    border-right: 0px solid black !important;
+  }
+  ul.products li.product:nth-child(4n) {
+    border-right: none !important;
+  }
+}
+
+/* Reset all spacing inside product cards */
+ul.products li.product a,
+ul.products li.product > a,
+ul.products li.product .woocommerce-card__header {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Product image - consistent sizing with margin and background */
+ul.products li.product a img,
+ul.products li.product .woocommerce-card__header img {
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  background-color: #f5f5f5 !important;
+  display: block !important;
+}
+
+/* Product image hover swap transition */
+.woocommerce-image__wrapper img[data-hover-src] {
+  cursor: pointer;
+}
+
+/* Product title - underline, mono font */
+ul.products li.product .woocommerce-loop-product__title,
+ul.products li.product h2 {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  text-decoration: underline !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  text-transform: capitalize !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+}
+
+/* Product price - mono font, smaller text */
+ul.products li.product .price {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* Remove hover background on products */
+ul.products li.product:hover {
+  background-color: transparent !important;
+}
+
+/* Hide ALL buttons in product grid (Add to cart, Read more, Join waitlist, etc.) */
+ul.products li.product .button,
+ul.products li.product a.button,
+ul.products li.product .added_to_cart,
+ul.products li.product .ckwtl-button2,
+ul.products li.product #ckwtl-button2,
+ul.products li.product [class*="waitlist"],
+ul.products li.product a[href*="waitlist"],
+.woocommerce ul.products li.product .button {
+  display: none !important;
+}
+
+/* Out of stock badge - black bg, white text */
+.product-out-of-stock,
+ul.products li.product .product-out-of-stock {
+  background-color: black !important;
+  color: white !important;
+}
+
+.product-out-of-stock em {
+  color: white !important;
+  font-style: normal !important;
+}
+
+/* Related products & upsells - disable carousel, use 2x2 grid on mobile */
+@media (max-width: 992px) {
+  /* Override parent theme carousel - force grid layout */
+  .related.products ul.products,
+  .upsells.products ul.products,
+  .up-sells ul.products,
+  .cross-sells ul.products {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    scroll-snap-type: none !important;
+    -webkit-overflow-scrolling: auto !important;
+  }
+
+  /* Override product card carousel styles */
+  .related.products ul.products li.product,
+  .upsells.products ul.products li.product,
+  .up-sells ul.products li.product,
+  .cross-sells ul.products li.product {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    scroll-snap-align: none !important;
+  }
+
+  /* Limit to 4 products (2x2 grid) */
+  .related.products ul.products li.product:nth-child(n+5),
+  .upsells.products ul.products li.product:nth-child(n+5),
+  .up-sells ul.products li.product:nth-child(n+5),
+  .cross-sells ul.products li.product:nth-child(n+5) {
+    display: none !important;
+  }
+
+  /* Container overflow control */
+  .related.products,
+  .upsells.products,
+  .up-sells,
+  .cross-sells,
+  section.related,
+  section.upsells {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ============================================
+   Stock Status - Brand Red Styling
+   ============================================ */
+
+/* In-stock text and icon */
+.stock.in-stock,
+.bundled_product .stock.in-stock {
+  color: #9f0712 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+.stock.in-stock::before,
+.bundled_product .stock.in-stock::before {
+  background-color: #9f0712 !important;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7' /%3E%3C/svg%3E") !important;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7' /%3E%3C/svg%3E") !important;
+}
+
+/* Out-of-stock text and icon */
+.stock.out-of-stock,
+.bundled_product .stock.out-of-stock {
+  color: #666 !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+.stock.out-of-stock::before,
+.bundled_product .stock.out-of-stock::before {
+  background-color: #666 !important;
+}
+
+/* ============================================
+   SINGLE PRODUCT PAGE - Headings Typography
+   ============================================ */
+
+/* Fix all headings in product tabs/description to use Helvetica Now Display */
+.woocommerce-Tabs-panel h1,
+.woocommerce-Tabs-panel h2,
+.woocommerce-Tabs-panel h3,
+.woocommerce-tabs .panel h1,
+.woocommerce-tabs .panel h2,
+.woocommerce-tabs .panel h3,
+body.single-product .entry-content h1,
+body.single-product .entry-content h2,
+body.single-product .entry-content h3 {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  font-weight: bold !important;
+}
+
+.woocommerce-Tabs-panel h1,
+.woocommerce-tabs .panel h1,
+body.single-product .entry-content h1 {
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  margin: 24px 0 16px 0 !important;
+}
+
+.woocommerce-Tabs-panel h2,
+.woocommerce-tabs .panel h2,
+body.single-product .entry-content h2 {
+  font-size: 24px !important;
+  margin: 24px 0 12px 0 !important;
+}
+
+.woocommerce-Tabs-panel h3,
+.woocommerce-tabs .panel h3,
+body.single-product .entry-content h3 {
+  font-size: 20px !important;
+  margin: 20px 0 8px 0 !important;
+}
+
+.woocommerce-Tabs-panel h4,
+.woocommerce-tabs .panel h4,
+body.single-product .entry-content h4 {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  margin: 20px 0 8px 0 !important;
+}
+
+/* First heading - no top margin */
+.woocommerce-Tabs-panel h1:first-child,
+.woocommerce-Tabs-panel h2:first-child,
+.woocommerce-Tabs-panel h3:first-child,
+.woocommerce-tabs .panel h1:first-child,
+.woocommerce-tabs .panel h2:first-child,
+.woocommerce-tabs .panel h3:first-child {
+  margin-top: 0 !important;
+}
+
+/* Paragraph spacing in product descriptions */
+.woocommerce-Tabs-panel p,
+.woocommerce-tabs .panel p {
+  margin-bottom: 1em !important;
+}
+
+.woocommerce-Tabs-panel p:last-child,
+.woocommerce-tabs .panel p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Gutenberg block spacing in product tabs */
+.woocommerce-Tabs-panel .wp-block-column p,
+.woocommerce-Tabs-panel .wp-block-columns p {
+  margin-bottom: 0.75em !important;
+}
+
+/* Gutenberg blocks in product tabs - light gray borders instead of black */
+.woocommerce-Tabs-panel .wp-block-column,
+.woocommerce-Tabs-panel .wp-block-columns,
+.woocommerce-Tabs-panel .wp-block-group,
+body.single-product .entry-content .wp-block-column,
+body.single-product .entry-content .wp-block-columns,
+body.single-product .entry-content .wp-block-group {
+  border-color: #e5e5e5 !important;
+}
+
+/* ============================================
+   PRODUCT PAGE SPACER - Full width of content area
+   ============================================ */
+
+/* Break out of parent padding (px-4 mobile, md:px-6 desktop) */
+.gg-product-spacer .spacer-stripe {
+  width: calc(100% + calc(var(--spacing) * 8)) !important;
+  margin-left: calc(var(--spacing) * -4) !important;
+  margin-right: calc(var(--spacing) * -4) !important;
+  margin-top: 0px !important;
+  margin-bottom: 14px !important;
+}
+
+@media (min-width: 48rem) {
+  .gg-product-spacer .spacer-stripe {
+    width: calc(100% + calc(var(--spacing) * 12)) !important;
+    margin-left: calc(var(--spacing) * -6) !important;
+    margin-right: calc(var(--spacing) * -6) !important;
+  }
+}
+
+/* ============================================
+   WOOCOMMERCE PRODUCT TABS - Horizontal on All Screens
+   ============================================ */
+
+/* Force horizontal tabs on all screen sizes */
+.woocommerce-tabs ul.tabs {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center;
+  gap: 24px;
+  border-bottom: none !important;
+  margin-bottom: 24px;
+  margin-top: 32px !important;
+  padding: 0 !important;
+}
+
+.woocommerce-tabs ul.tabs li {
+  display: inline-block !important;
+  float: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+body.single-product .woocommerce-tabs ul.wc-tabs li a,
+.woocommerce-tabs ul.tabs li a {
+  display: inline-block;
+  padding: 8px 0 !important;
+  border: none !important;
+  border-bottom: 1px solid transparent !important;
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: #666 !important;
+}
+
+body.single-product .woocommerce-tabs ul.wc-tabs li.active a,
+.woocommerce-tabs ul.tabs li.active a {
+  color: black !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid black !important;
+  box-shadow: none !important;
+}
+
+/* Remove default thick underline/border styles */
+.woocommerce-tabs ul.tabs li.active,
+.woocommerce-tabs ul.tabs li.active a:after,
+.woocommerce-tabs ul.tabs li a:after {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.woocommerce-tabs.wc-tabs-wrapper {
+  border-top: none !important;
+}
+
+/* Mobile - smaller font to fit without scrolling */
+@media (max-width: 767px) {
+  .woocommerce-tabs ul.tabs {
+    gap: 12px !important;
+    padding: 0 12px !important;
+  }
+
+  body.single-product .woocommerce-tabs ul.wc-tabs li a,
+  .woocommerce-tabs ul.tabs li a {
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.02em !important;
+  }
+}
+
+/* ============================================
+   IN THE BOX TAB STYLES - Brutalist Design
+   ============================================ */
+
+/* Tab content wrapper */
+.gg-in-the-box {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section spacing */
+.gg-in-the-box .gg-itb-section {
+  margin-bottom: 32px;
+}
+
+.gg-in-the-box .gg-itb-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Section title - brutalist uppercase */
+.gg-in-the-box .gg-itb-section-title {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+}
+
+/* Table - brutalist light borders */
+.gg-in-the-box .gg-itb-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+  border-radius: 0 !important;
+}
+
+/* Table header - gray background */
+.gg-in-the-box .gg-itb-table thead {
+  background-color: #f5f5f5 !important;
+}
+
+.gg-in-the-box .gg-itb-table th {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em;
+  padding: 10px 12px !important;
+  text-align: left !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+/* Qty column width */
+.gg-in-the-box .gg-itb-table th.gg-itb-qty,
+.gg-in-the-box .gg-itb-table td.gg-itb-qty {
+  width: 60px;
+  text-align: center !important;
+}
+
+/* Table cells */
+.gg-in-the-box .gg-itb-table td {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 12px !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+/* Last row - no bottom border */
+.gg-in-the-box .gg-itb-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.added_to_cart.wc-forward:focus, .added_to_cart.wc-forward:focus-visible, .added_to_cart.wc-forward:hover, .woocommerce-checkout .wc-block-components-checkout-place-order-button, .woocommerce-mini-cart__buttons.buttons .button.wc-forward, body.woocommerce-cart .wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained, .single_add_to_cart_button.button, .button.product_type_variable, .add_to_cart_button {
+    border: none !important;
+}
+
+/* ============================================
+   CART PAGE - Typography & Design
+   ============================================ */
+
+/* Cart table headers (PRODUCT, TOTAL) */
+.wc-block-cart-items__header span,
+.wc-block-cart-items__header-image,
+.wc-block-cart-items__header-product,
+.wc-block-cart-items__header-total {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-size: 12px !important;
+}
+
+/* Cart totals heading */
+.wc-block-cart__totals-title {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Product name in cart */
+.wc-block-cart-item__product-name,
+.wc-block-cart-item__product-name a {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+}
+
+/* Product description/excerpt in cart */
+.wc-block-cart-item__product-metadata,
+.wc-block-cart-item__product .wc-block-components-product-metadata {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #666 !important;
+}
+
+/* Prices in cart - Commit Mono */
+.wc-block-cart .wc-block-formatted-money-amount,
+.wc-block-cart-item__total .wc-block-formatted-money-amount,
+.wc-block-cart-item__prices .wc-block-formatted-money-amount,
+body.woocommerce-cart .wc-block-formatted-money-amount {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-weight: 400 !important;
+}
+
+/* Quantity selector input */
+.wc-block-components-quantity-selector input.wc-block-components-quantity-selector__input {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-weight: 400 !important;
+}
+
+/* Remove item link */
+.wc-block-cart-item__remove-link {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  letter-spacing: 0.03em !important;
+  text-decoration: underline !important;
+}
+
+/* Estimated total label */
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__label {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Estimated total value */
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__value {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-weight: 700 !important;
+}
+
+/* Shipping notice text */
+.wc-block-components-totals-footer-item-tax {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 12px !important;
+}
+
+/* Add coupons accordion */
+.wc-block-components-totals-coupon .wc-block-components-panel__button {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* Proceed to checkout button */
+body.woocommerce-cart .wc-block-cart__submit-button {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* ============================================
+   CHECKOUT PAGE - Typography & Design
+   ============================================ */
+
+/* Section headings (Contact info, Billing, Shipping, Payment) */
+.wc-block-components-checkout-step__title {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+/* Section descriptions */
+.wc-block-components-checkout-step__description {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 13px !important;
+}
+
+/* ============================================
+   ORDER SUMMARY - Comprehensive Styling
+   ============================================ */
+
+/* Order summary container */
+.wp-block-woocommerce-checkout-order-summary-block {
+  padding: 20px !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 0 !important;
+}
+
+/* NUCLEAR: Remove ALL internal borders first */
+.wp-block-woocommerce-checkout-order-summary-block *,
+.wc-block-components-order-summary *,
+.wc-block-components-totals-wrapper,
+.wc-block-components-totals-item,
+.wc-block-components-totals-coupon,
+.wc-block-components-totals-footer-item,
+.wc-block-components-panel,
+.wc-block-components-panel__content,
+.wc-block-components-order-summary-item {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Order summary heading - uppercase, bold */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-panel__button,
+.wc-block-components-order-summary .wc-block-components-panel__button,
+.wc-block-checkout__sidebar .wc-block-components-panel__button {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-size: 14px !important;
+  padding: 0 0 16px 0 !important;
+}
+
+/* Order summary heading text specifically */
+.wc-block-components-order-summary .wc-block-components-panel__button span {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+/* Product item container in order summary - NO border */
+.wc-block-components-order-summary-item {
+  padding: 0 0 16px 0 !important;
+}
+
+/* Product name in order summary */
+.wc-block-components-order-summary-item__product-name,
+.wc-block-components-order-summary-item__description .wc-block-components-product-name {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+}
+
+/* Product price next to name - make it smaller/lighter since total is on right */
+.wc-block-components-order-summary-item__individual-price {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  color: #666 !important;
+}
+
+/* Product total price on the right */
+.wc-block-components-order-summary-item__total-price {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+
+/* Product quantity badge - brutalist square style */
+.wc-block-components-order-summary-item__quantity {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0 !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  line-height: 18px !important;
+  padding: 0 4px !important;
+  box-shadow: none !important;
+}
+
+/* Product description in order summary */
+.wc-block-components-order-summary-item__description p,
+.wc-block-components-order-summary-item__description {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 11px !important;
+  color: #888 !important;
+  line-height: 1.4 !important;
+  margin-top: 4px !important;
+}
+
+/* Product image in order summary */
+.wc-block-components-order-summary-item__image {
+  border-radius: 0 !important;
+}
+
+/* Form input labels */
+.wc-block-components-text-input label,
+.wc-block-components-select label,
+.wc-block-components-combobox label,
+.wc-block-components-country-input label,
+.wc-block-components-state-input label {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 13px !important;
+}
+
+/* Form input text */
+.wc-block-components-text-input input,
+.wc-block-components-select select,
+.wc-block-components-combobox input,
+body.woocommerce-checkout input[type="text"],
+body.woocommerce-checkout input[type="email"],
+body.woocommerce-checkout input[type="tel"],
+body.woocommerce-checkout select {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 14px !important;
+}
+
+/* ============================================
+   ORDER SUMMARY - Totals Section
+   ============================================ */
+
+/* Single border between products and totals */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-totals-wrapper:first-of-type {
+  border-top: 1px solid #e5e5e5 !important;
+  padding-top: 16px !important;
+  margin-top: 0 !important;
+}
+
+/* Add coupons accordion button */
+.wc-block-components-totals-coupon .wc-block-components-panel__button {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 8px 0 !important;
+}
+
+/* Subtotal/Delivery labels */
+.wc-block-components-totals-item__label {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}
+
+/* Subtotal/Delivery values */
+.wc-block-components-totals-item__value {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+}
+
+/* "Enter address to calculate" or "No available delivery option" text */
+.wc-block-components-totals-item__value span:not(.wc-block-formatted-money-amount) {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 12px !important;
+  color: #666 !important;
+}
+
+/* Totals rows spacing */
+.wc-block-components-totals-item {
+  padding: 4px 0 !important;
+}
+
+/* Grand total row - more prominent, with top border */
+.wc-block-components-totals-footer-item {
+  border-top: 1px solid #e5e5e5 !important;
+  padding-top: 12px !important;
+  margin-top: 8px !important;
+}
+
+/* Grand total label - bolder, larger */
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__label {
+  font-weight: 900 !important;
+  font-size: 14px !important;
+}
+
+/* Grand total value - bolder, larger */
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__value,
+.wc-block-components-totals-footer-item .wc-block-formatted-money-amount {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+/* All prices in checkout should use Commit Mono */
+body.woocommerce-checkout .wc-block-formatted-money-amount {
+  font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+/* Delivery notice text */
+.wc-block-components-totals-item__description {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 11px !important;
+  color: #888 !important;
+}
+
+/* Shipping options notice */
+.wc-block-components-shipping-placeholder__message {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+}
+
+/* Payment options heading */
+.wc-block-checkout__payment-method .wc-block-components-radio-control__label {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* Add a note checkbox label */
+.wc-block-checkout__add-note .wc-block-components-checkbox__label,
+.wc-block-checkout__use-address-for-billing .wc-block-components-checkbox__label {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 14px !important;
+}
+
+/* Terms & conditions text */
+.wc-block-checkout__terms,
+.wc-block-checkout__terms a {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 13px !important;
+}
+
+/* Return to cart link */
+.wc-block-components-checkout-return-to-cart-button {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Place order button */
+body.woocommerce-checkout .wc-block-components-checkout-place-order-button {
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Error notices */
+.wc-block-components-notice-banner {
+  font-family: 'Helvetica', Arial, sans-serif !important;
+}
+
+/* ============================================
+   CART & CHECKOUT - Design Refinements
+   ============================================ */
+
+/* Quantity selector - sharp corners, consistent borders */
+.wc-block-components-quantity-selector {
+  border-radius: 0 !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+.wc-block-components-quantity-selector button {
+  border-radius: 0 !important;
+}
+
+/* Checkout sidebar container - no extra border */
+.wc-block-checkout__sidebar {
+  border: none !important;
+}
+
+/* Coupon input field */
+.wc-block-components-totals-coupon__input input {
+  border-radius: 0 !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* Coupon apply button */
+.wc-block-components-totals-coupon__button {
+  border-radius: 0 !important;
+  background-color: black !important;
+  color: white !important;
+  font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  letter-spacing: 0.03em !important;
+}
+
+.wc-block-components-totals-coupon__button:hover {
+  background-color: #333 !important;
+}
+
+/* Checkout form inputs - consistent focus state */
+body.woocommerce-checkout .wc-block-components-text-input input:focus,
+body.woocommerce-checkout .wc-block-components-select select:focus {
+  border-color: black !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Shipping notice box */
+.wc-block-components-shipping-placeholder {
+  background-color: #f9f9f9 !important;
+  border-radius: 0 !important;
+}
+
+/* Payment method radio buttons - cleaner look */
+.wc-block-components-radio-control--highlight-checked .wc-block-components-radio-control-accordion-option--checked-option-highlighted {
+  box-shadow: none !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* Remove extra shadows on checkout elements */
+.wc-block-checkout .wc-block-components-panel,
+.wc-block-cart .wc-block-components-panel {
+  box-shadow: none !important;
+}
+
+/* Ensure buttons maintain brand red */
+body.woocommerce-cart .wc-block-cart__submit-button,
+body.woocommerce-checkout .wc-block-components-checkout-place-order-button {
+  background-color: #9f0712 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+body.woocommerce-cart .wc-block-cart__submit-button:hover,
+body.woocommerce-checkout .wc-block-components-checkout-place-order-button:hover {
+  background-color: #B90A0E !important;
+}
+
+/* ============================================
+   KLAVIYO REVIEWS - Brutalist Styling
+   ============================================ */
+
+/* Star rating widget spacing */
+.klaviyo-star-rating-widget {
+  margin: 12px 0 16px 0;
+}
+
+/* Reviews widget spacing */
+#klaviyo-reviews-all {
+  margin: 40px 0;
+}
+
+/* Override Klaviyo default rounded corners for brutalist aesthetic */
+#klaviyo-product-reviews-wrapper button,
+#klaviyo-product-reviews-wrapper input,
+#klaviyo-product-reviews-wrapper textarea,
+#klaviyo-product-reviews-wrapper select {
+  border-radius: 0 !important;
+}
+
+.onsale, .product-label, .wc-block-grid__product-onsale {
+    border-radius: 0px !important;
+}
+
+.onsale {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    color: #ffffff !important;
+    background-color: #a61e00 !important;
+    padding: 4px;
+    font-size: 11px !important;
+}
+
+.bundled_product.bundled_product_summary.product > div.details > h4 > span.bundled_product_title_inner > span.item_title {
+	font-size: 14px;
+}
+.bundled_product.bundled_product_summary.product > div.details > div.bundled_product_excerpt.product_excerpt {
+
+}
+.bundled_product.bundled_product_summary.product > div.bundled_product_images.images > figure {
+	max-width: 120px;
+}
+ .bundled_product.bundled_product_summary.product > div.details > div.cart > div {
+	display: none;
+}
+.bundled_product_summary .bundled_product_title a.bundled_product_permalink:before {
+    content: "";
+    font-family: "FontAwesomePB";
+    position: absolute;
+	
+    font-size: .4em !important;
+    top: 55% !important;
+    left: 0;
+    -ms-transform: translateY(-46%);
+    transform: translateY(-46%);
+}
+/* ============================================
+   PRODUCT PAGE REDESIGN - FIGMA DESIGN
+   Exact spacing values from Figma node 4772-2326
+   ============================================ */
+
+/* ---------- Product Summary Container ---------- */
+
+.single-product .product .summary,
+.single-product .product .entry-summary {
+    padding: 12px !important;
+}
+
+/* ---------- Product Summary Typography ---------- */
+
+/* Product Title - 48px, uppercase, bold, line-height 48px */
+.single-product .product .product_title {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    line-height: 48px !important;
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
+    color: #000;
+}
+
+/* SKU - 12px, Commit Mono, gray #999, line-height 16px */
+.single-product .product .gg-product-sku,
+.single-product .product .sku_wrapper,
+.single-product .product .product_meta .sku_wrapper {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 12px !important;
+    color: #999 !important;
+    display: block;
+    margin: 0 0 0 0 !important;
+    padding: 0 !important;
+    line-height: 16px !important;
+}
+
+.single-product .product .sku_wrapper .sku {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    color: inherit !important;
+}
+
+/* Gap between SKU and price = 8px (via wrapper gap) */
+
+/* Price - 18px, Commit Mono, line-height 24px */
+.single-product .product > .summary .price,
+.single-product .product .entry-summary .price {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 18px !important;
+    color: #000 !important;
+    line-height: 24px !important;
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+.single-product .product .price .woocommerce-Price-amount {
+    font-family: inherit !important;
+    font-size: inherit !important;
+}
+
+.single-product .product .price del {
+    opacity: 0.5;
+    margin-right: 8px;
+}
+
+/* Description - 16px, line-height 24px, gap 24px before */
+.single-product .product .woocommerce-product-details__short-description,
+.single-product .product .entry-summary .woocommerce-product-details__short-description {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #000;
+    margin: 24px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+.single-product .product .woocommerce-product-details__short-description p {
+    margin: 0 0 16px 0 !important;
+}
+
+.single-product .product .woocommerce-product-details__short-description p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* ---------- Note Section ---------- */
+
+.gg-product-note {
+    padding: 8px 0;
+    margin: 24px 0 0 0;
+    font-size: 12px;
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #000;
+    line-height: 16px;
+}
+
+.gg-product-note .gg-note-label {
+    font-weight: 700;
+}
+
+.gg-product-note .gg-note-text {
+    font-weight: 400;
+}
+
+/* ============================================
+   ADD-ON PRODUCTS SECTION
+   ============================================ */
+
+/* Container - padding 12px, gap 24px above/below content */
+.gg-addon-products-section {
+    margin: 0;
+    padding: 12px;
+}
+
+/* Header - 14px, bold, uppercase, gap 8px below */
+.gg-addon-header {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    color: #000;
+    line-height: 20px !important;
+}
+
+/* Product list container - no gap between items (border collapse) */
+.gg-addon-products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Individual add-on item - with spacing between items */
+.gg-addon-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    margin-top: 8px; /* Spacing between items */
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+    flex-wrap: nowrap;
+    min-height: 52px;
+    background: #fff;
+    position: relative;
+}
+
+.gg-addon-item:first-child {
+    margin-top: 8px;
+}
+
+.gg-addon-item:hover {
+    border-color: #999;
+    z-index: 1;
+}
+
+/* Left side: checkbox + details */
+.gg-addon-item > .gg-addon-checkbox-wrapper + .gg-addon-details {
+    margin-left: 0;
+}
+
+/* Checkbox wrapper */
+.gg-addon-checkbox-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Hide default checkbox */
+.gg-addon-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Custom checkbox - 16x16, border 1px #ccc */
+.gg-addon-checkmark {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+}
+
+/* Checkbox checked state - black fill */
+.gg-addon-checkbox:checked + .gg-addon-checkmark {
+    background-color: #000;
+    border-color: #000;
+}
+
+/* No checkmark icon - just solid fill */
+.gg-addon-checkmark::after {
+    display: none;
+}
+
+/* Product details - gap 4px between name and SKU */
+.gg-addon-details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+/* Product name - 16px, underlined, line-height 24px */
+.gg-addon-name {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: underline;
+    line-height: 24px;
+}
+
+/* SKU - 12px, #999, line-height 16px */
+.gg-addon-sku {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 12px;
+    color: #999;
+    line-height: 16px;
+    text-transform: none;
+}
+
+/* Price - 14px, line-height 20px */
+.gg-addon-price {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 20px;
+}
+
+.gg-addon-price .woocommerce-Price-amount {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+}
+
+/* ---------- Total Price Row ---------- */
+
+.gg-total-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 0 0;
+    margin: 0 0 16px 0;
+}
+
+/* For products without add-ons - simpler layout */
+.gg-total-price-row.gg-no-addons {
+    margin: 0 0 16px 0;
+}
+
+.gg-total-price {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+}
+
+.gg-total-price .woocommerce-Price-amount {
+    font-family: inherit !important;
+    font-size: inherit !important;
+}
+
+/* ---------- Quantity Selector ---------- */
+
+/* Hide original elements when JS creates custom ones */
+.gg-original-qty-hidden,
+.quantity.gg-original-qty-hidden,
+.single-product .gg-original-qty-hidden {
+    display: none !important;
+}
+
+.gg-original-stock-hidden,
+.stock.gg-original-stock-hidden,
+.single-product .gg-original-stock-hidden,
+p.stock.gg-original-stock-hidden,
+.bundle_availability .gg-original-stock-hidden,
+.product-type-bundle .gg-original-stock-hidden {
+    display: none !important;
+}
+
+/* Hide bundle availability when in stock (we have our own stock display) */
+/* Don't hide when out of stock — CommerceKit waitlist lives inside bundle_availability */
+.gg-bundle-product .bundle_form:not(.bundle_out_of_stock) .bundle_availability {
+    display: none !important;
+}
+
+/* When bundle IS out of stock, hide just the stock text (waitlist handles the rest) */
+.gg-bundle-product .bundle_form.bundle_out_of_stock .bundle_availability .stock {
+    display: none !important;
+}
+
+.gg-original-price-hidden,
+.price.gg-original-price-hidden,
+p.price.gg-original-price-hidden,
+.gg-total-price-row.gg-original-price-hidden,
+.bundle_price.gg-original-price-hidden {
+    display: none !important;
+}
+
+/* Custom quantity selector - built from scratch by JS */
+.gg-quantity {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    width: 88px;
+    height: 40px;
+}
+
+.gg-qty-minus,
+.gg-qty-plus {
+    width: 24px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-family: inherit;
+}
+
+.gg-qty-minus:hover,
+.gg-qty-plus:hover {
+    color: #000;
+}
+
+.gg-qty-input {
+    width: 30px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    -moz-appearance: textfield;
+    height: 40px;
+    line-height: 40px;
+}
+
+.gg-qty-input::-webkit-outer-spin-button,
+.gg-qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Legacy support - hide any remaining original quantity elements */
+.single-product .product form.cart .quantity .minus:hover,
+.single-product .product form.cart .quantity .plus:hover {
+    color: #000 !important;
+}
+
+/* ---------- Stock Status ---------- */
+
+/* Hide the stock display that appears in the wrong position */
+.single-product .product .entry-summary > .stock,
+.single-product .product .summary > .stock {
+    display: none !important;
+}
+
+/* Stock displayed inside/near the form */
+.single-product .product form.cart .stock,
+.single-product .product form.cart + .stock {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    text-align: right !important;
+    margin: 4px 0 0 0 !important;
+    padding: 0 !important;
+    color: #000 !important;
+    display: block !important;
+    border: none !important;
+    background: none !important;
+}
+
+.single-product .product .stock::before {
+    display: none !important;
+}
+
+.single-product .product .in-stock {
+    color: #000 !important;
+}
+
+/* ---------- Add to Cart Form Layout ---------- */
+
+.single-product .product form.cart {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 24px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+/* Row with total price + quantity */
+.single-product .product .gg-total-price-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin: 0 0 4px 0 !important;
+    width: 100% !important;
+}
+
+/* Quantity + stock wrapper (right side of total price row) */
+.gg-qty-stock-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+}
+
+/* Stock display inside wrapper */
+.gg-stock-display {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    text-align: center !important;
+    width: 88px !important;
+    margin: 4px 0 0 0 !important;
+    padding: 0 !important;
+    color: #000 !important;
+}
+
+/* ---------- Add to Cart Button ---------- */
+
+.single-product .product form.cart .single_add_to_cart_button {
+    background-color: #9F0712!important;
+    border: 1px solid #9F0712 !important;
+    color: #fff !important;
+    width: 100% !important;
+    text-transform: uppercase !important;
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    padding: 8px 24px !important;
+    line-height: 24px !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease;
+    margin: 24px 0 0 0 !important;
+    display: block !important;
+    order: 10 !important; /* Ensure button is last */
+}
+
+.single-product .product form.cart .single_add_to_cart_button:hover {
+    background-color: #b50010 !important;
+}
+
+/* ---------- Secure Checkout Row ---------- */
+
+.gg-secure-checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0 0 0;
+    padding: 0;
+}
+
+.gg-secure-checkout-text {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.2;
+}
+
+.gg-payment-icons {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Payment icon wrapper and SVG */
+.gg-payment-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gg-payment-icon svg {
+    display: block;
+    width: 32px;
+    height: 20px;
+}
+
+/* For img fallback if needed */
+.gg-payment-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+/* ---------- Mobile Adjustments ---------- */
+
+@media (max-width: 767px) {
+    .single-product .product .product_title {
+        font-size: 32px !important;
+        line-height: 32px !important;
+    }
+
+    .gg-addon-item {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+
+    .gg-addon-name {
+        font-size: 14px;
+    }
+
+    .gg-addon-price {
+        font-size: 13px;
+    }
+
+    .gg-addon-sku {
+        font-size: 11px;
+    }
+
+    .gg-secure-checkout {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .gg-payment-icons {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============================================
+   BUNDLE PRODUCT PAGE - Layout Fix
+   ============================================ */
+
+/* Hide PHP-generated total price row on bundles - JS creates its own */
+.product-type-bundle .gg-total-price-row:not(.gg-bundle-price-row),
+.gg-bundle-product .gg-total-price-row:not(.gg-bundle-price-row) {
+    display: none !important;
+}
+
+/* Hide original bundle plugin price display */
+.gg-bundle-product .bundle_price,
+.product-type-bundle .bundle_price {
+    display: none !important;
+}
+
+/* Bundle price row layout */
+.gg-bundle-price-row {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin-bottom: 16px !important;
+}
+
+.gg-bundle-price-row .gg-total-price {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 16px !important;
+}
+
+/* Bundle stock display */
+.gg-bundle-price-row .gg-stock-display {
+    font-size: 14px !important;
+    text-align: right !important;
+    width: 88px !important;
+    margin-top: 4px !important;
+}
+
+/* Hide add-ons section on bundle pages */
+.product-type-bundle .gg-addon-products-section,
+.gg-bundle-product .gg-addon-products-section {
+    display: none !important;
+}
+
+/* Waitlist popup - hidden by default to prevent blocking the page on load.
+   CommerceKit renders it with --active class server-side; we gate display
+   on our own .gg-waitlist-user-opened class added via JS on button click. */
+#commercekit-waitlist-popup:not(.gg-waitlist-user-opened) {
+    display: none !important;
+}
+
+/* ============================================
+   BLOG - Post Content Typography
+   ============================================ */
+
+.gg-post-content h2 {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 32px 0 16px 0;
+    line-height: 1.2;
+}
+
+.gg-post-content h3 {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 24px 0 12px 0;
+    line-height: 1.3;
+}
+
+.gg-post-content h4 {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 8px 0;
+    line-height: 1.4;
+}
+
+.gg-post-content p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    margin: 0 0 1.25em 0;
+}
+
+.gg-post-content ul,
+.gg-post-content ol {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    margin: 0 0 1.25em 0;
+    padding-left: 1.5em;
+}
+
+.gg-post-content li {
+    margin-bottom: 0.25em;
+}
+
+.gg-post-content blockquote {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    border-left: 3px solid #9f0712;
+    margin: 1.5em 0;
+    padding: 0.5em 0 0.5em 1.5em;
+}
+
+.gg-post-content p a,
+.gg-post-content li a,
+.gg-post-content td a {
+    color: #9f0712 !important;
+    text-decoration: none !important;
+}
+
+.gg-post-content p a:hover,
+.gg-post-content li a:hover,
+.gg-post-content td a:hover {
+    color: #7f060e !important;
+}
+
+.gg-post-content code {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 14px;
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.gg-post-content pre {
+    background: #f5f5f5;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 0 0 1.25em 0;
+}
+
+.gg-post-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.gg-post-content figcaption {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.gg-post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gg-post-content .wp-block-image {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.gg-post-content .wp-block-image img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gg-post-content .wp-block-image.alignleft {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    float: none;
+}
+
+.gg-post-content .wp-block-image.alignleft img {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.gg-post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.25em 0;
+}
+
+.gg-post-content th {
+    font-family: 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #e5e5e5;
+}
+
+.gg-post-content td {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid #e5e5e5;
+}
+
+.gg-post-content hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 2em 0;
+}
+
+/* ---------- Blog Post Content - Mobile ---------- */
+
+@media (max-width: 767px) {
+    .gg-post-content h2 {
+        font-size: 20px;
+    }
+
+    .gg-post-content h3 {
+        font-size: 18px;
+    }
+
+    .gg-post-content p,
+    .gg-post-content ul,
+    .gg-post-content ol {
+        font-size: 15px;
+    }
+}
+
+/* ---------- Blog Pagination ---------- */
+
+.gg-blog-pagination .page-numbers {
+    font-family: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 14px;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #e5e5e5;
+}
+
+.gg-blog-pagination .page-numbers.current {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.gg-blog-pagination .page-numbers:hover:not(.current) {
+    background: #f5f5f5;
+}
+
+/* ---------- Blog Embedded Product Card ---------- */
+
+.gg-post-content .wp-block-woocommerce-single-product {
+    max-width: 100%;
+    margin: 2em 0;
+    border: 1px solid #ddd;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-columns {
+    margin: 0;
+    gap: 0;
+    align-items: stretch;
+}
+
+/* Image column: 28% */
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-columns > .wp-block-column:first-child {
+    flex-basis: 28% !important;
+    border-right: 1px solid #ddd;
+    min-height: 0;
+}
+
+/* Force image block, link, and img to fill the column */
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-image {
+    height: 100%;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-image a {
+    display: block;
+    height: 100%;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    background: none !important;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #f5f5f5;
+    display: block;
+}
+
+/* Details column: 72% */
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-columns > .wp-block-column:last-child {
+    flex-basis: 72% !important;
+    padding: 1.5em;
+}
+
+/* Product title */
+.gg-post-content .wp-block-woocommerce-single-product h2.wp-block-post-title {
+    font-family: 'Helvetica Now Display', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4em;
+    line-height: 1.1;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product h2.wp-block-post-title a {
+    color: #000 !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    background: none !important;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product h2.wp-block-post-title a:hover {
+    color: #9f0712 !important;
+}
+
+/* Price */
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-price {
+    font-family: 'Commit Mono', monospace;
+    font-size: 18px;
+    margin-bottom: 0.6em;
+}
+
+/* Short description */
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-summary {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+/* Hide product meta (SKU, categories, tags) */
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-meta {
+    display: none !important;
+}
+
+/* Hide bundled items, sale badge, stock text, and availability in blog product cards */
+.gg-post-content .wp-block-woocommerce-single-product .bundled_product,
+.gg-post-content .wp-block-woocommerce-single-product .onsale,
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-sale-badge,
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-add-to-cart-form > p,
+.gg-post-content .wp-block-woocommerce-single-product .bundle_availability,
+.gg-post-content .wp-block-woocommerce-single-product p.stock,
+.gg-post-content .wp-block-woocommerce-single-product .bundle_price,
+.gg-post-content .wp-block-woocommerce-single-product .bundle_error {
+    display: none !important;
+}
+
+/* Add to Cart form */
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-add-to-cart-form form.cart {
+    display: flex !important;
+    align-items: stretch;
+    padding-left: 0 !important;
+    gap: 0.5em;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-add-to-cart-form .quantity {
+    display: none !important;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-add-to-cart-form button.single_add_to_cart_button {
+    background: #9f0712 !important;
+    color: #fff !important;
+    font-family: 'Helvetica Now Display', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none !important;
+    border-radius: 0 !important;
+    height: 44px;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product .wp-block-add-to-cart-form button.single_add_to_cart_button:hover {
+    background: #7f060e !important;
+}
+
+/* View Product CTA (injected via JS) — black button next to Add to Cart */
+.gg-post-content .wp-block-woocommerce-single-product .gg-view-product-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 2em;
+    margin-top: 0;
+    font-family: 'Helvetica Now Display', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff !important;
+    background: #000 !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    border-radius: 0;
+    transition: background 0.2s;
+}
+
+.gg-post-content .wp-block-woocommerce-single-product .gg-view-product-link:hover {
+    background: #333 !important;
+}
+
+/* Bundle button container — flex for side-by-side CTAs */
+.gg-post-content .wp-block-woocommerce-single-product .bundle_button {
+    display: flex !important;
+    align-items: stretch;
+    gap: 0.5em;
+}
+
+/* ---------- Blog Embedded Product Card: Responsive ---------- */
+
+@media (max-width: 767px) {
+    .gg-post-content .wp-block-woocommerce-single-product {
+        max-width: 100%;
+    }
+
+    .gg-post-content .wp-block-woocommerce-single-product .wp-block-columns {
+        flex-direction: column !important;
+    }
+
+    .gg-post-content .wp-block-woocommerce-single-product .wp-block-columns > .wp-block-column:first-child {
+        flex-basis: auto !important;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .gg-post-content .wp-block-woocommerce-single-product .wp-block-woocommerce-product-image img {
+        max-height: 280px;
+        object-fit: contain;
+    }
+
+    .gg-post-content .wp-block-woocommerce-single-product .wp-block-columns > .wp-block-column:last-child {
+        padding: 1.2em;
+    }
+
+    .gg-post-content .wp-block-woocommerce-single-product .wp-block-add-to-cart-form form.cart {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .gg-post-content .wp-block-woocommerce-single-product .wp-block-add-to-cart-form .quantity input {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .gg-post-content .wp-block-woocommerce-single-product {
+        max-width: 600px;
+    }
+
+    .gg-post-content .wp-block-woocommerce-single-product h2.wp-block-post-title {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from './ProductCard.astro';
+import products from '../data/products.json';
+import { useTranslations, getLocalizedPath, getCategoryTranslation, type Locale } from '../utils/i18n';
+
+interface Props {
+  title?: string;
+  categorySlug: string;
+  subCategorySlugs?: string[];
+  description?: string;
+  lang?: Locale;
+}
+
+const {
+  title,
+  categorySlug,
+  subCategorySlugs = [],
+  description,
+  lang = 'en'
+} = Astro.props;
+
+const t = useTranslations(lang);
+const catTr = getCategoryTranslation(categorySlug, lang);
+const displayTitle = catTr?.name || title || categorySlug;
+const displayDesc = catTr?.description || description || `Browse our catalog of ${displayTitle}. All items in stock and ready to ship.`;
+
+// Filter matching products
+const matchingSlugs = [categorySlug, ...subCategorySlugs];
+const categoryProducts = products.filter(p => 
+  p.categories && p.categories.some((c: any) => matchingSlugs.includes(c.slug))
+);
+
+// Fallback: if category has 0 directly tagged products, show top products
+const displayProducts = categoryProducts.length > 0 ? categoryProducts : products.slice(0, 8);
+
+// Dynamic hero background based on category
+const heroBgImage = categorySlug.includes('3d') 
+  ? '/assets/images/hero-bg.webp' 
+  : categorySlug.includes('80') || categorySlug.includes('build') 
+  ? '/assets/images/hero-pbs.webp' 
+  : '/assets/images/hero-bg.webp';
+
+// Quick Category Chips
+const categoryChips = [
+  { slug: 'all', name: t('categoryHero.allCategories') || 'All Shop', path: '/shop/' },
+  { slug: '3d-printers', name: t('catalog.filter3DPrinters') || '3D Printers', path: '/3d-printers/', isNew: true },
+  { slug: 'build-kit', name: t('catalog.filterBuildKits') || 'Build Kits', path: '/build-kit/' },
+  { slug: '80-firearm', name: t('catalog.filter80Percent') || '80% Firearms', path: '/80-firearm/' },
+  { slug: 'component', name: t('catalog.filterParts') || 'Components', path: '/component/' },
+  { slug: '3d-printing', name: t('catalog.filter3DPrinting') || '3D Printing', path: '/3d-printing/' },
+  { slug: 'accessories', name: t('catalog.filterAccessories') || 'Accessories', path: '/accessories/' },
+];
+---
+
+<Layout title={`${displayTitle} | Ghost Guns`} description={displayDesc} lang={lang}>
+  <div class="lg:container lg:mx-auto">
+    <!-- 1. Captivating Category Hero Section -->
+    <div class="relative bg-black text-white border-l border-r border-b border-[#e5e5e5] overflow-hidden">
+      <!-- Background texture/image overlay -->
+      <div 
+        class="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-luminosity filter contrast-125 pointer-events-none"
+        style={`background-image: url('${heroBgImage}');`}
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none"></div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 px-4 py-10 sm:py-14 md:py-16 max-w-5xl mx-auto text-center">
+        <!-- Breadcrumbs Navigation -->
+        <div class="text-[11px] sm:text-xs font-mono uppercase text-neutral-400 flex items-center justify-center gap-2 mb-4">
+          <a href={getLocalizedPath('/', lang)} class="hover:text-white transition-colors">{t('product.home')}</a>
+          <span>/</span>
+          <a href={getLocalizedPath('/shop/', lang)} class="hover:text-white transition-colors">{t('product.shop')}</a>
+          <span>/</span>
+          <span class="text-white font-bold">{displayTitle}</span>
+        </div>
+
+        <!-- Category Kicker Tag -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#9f0712]/20 border border-[#9f0712]/50 text-[#9f0712] text-[10px] sm:text-xs font-mono uppercase tracking-widest font-bold mb-4">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full animate-pulse"></span>
+          <span>{t('categoryHero.tag')}</span>
+        </div>
+
+        <!-- Master Title with Red Indicator -->
+        <div class="flex items-center justify-center gap-2 sm:gap-3 mb-4">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white font-heading tracking-tight leading-none m-0">
+            {displayTitle}
+          </h1>
+          <div class="w-2 sm:w-3 h-7 sm:h-10 bg-[#9f0712] shrink-0"></div>
+        </div>
+
+        <!-- Subtitle / Localized Copy -->
+        <p class="text-xs sm:text-sm md:text-base text-neutral-300 font-sans leading-relaxed max-w-3xl mx-auto mb-8">
+          {displayDesc}
+        </p>
+
+        <!-- 3 Quick Highlight Badges -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 max-w-xl mx-auto text-center border-t border-neutral-800 pt-6">
+          <div class="p-2 sm:p-3 bg-neutral-900/80 border border-neutral-800">
+            <span class="block text-lg sm:text-2xl font-black text-white font-mono leading-none mb-1">
+              {displayProducts.length}
+            </span>
+            <span class="block text-[9px] sm:text-[11px] font-mono uppercase text-neutral-400">
+              {t('categoryHero.statInStock')}
+            </span>
+          </div>
+          <div class="p-2 sm:p-3 bg-neutral-900/80 border border-neutral-800">
+            <span class="block text-lg sm:text-2xl font-black text-[#9f0712] font-mono leading-none mb-1">100%</span>
+            <span class="block text-[9px] sm:text-[11px] font-mono uppercase text-neutral-400">
+              {t('categoryHero.statShipping')}
+            </span>
+          </div>
+          <div class="p-2 sm:p-3 bg-neutral-900/80 border border-neutral-800">
+            <span class="block text-lg sm:text-2xl font-black text-white font-mono leading-none mb-1">€ EUR</span>
+            <span class="block text-[9px] sm:text-[11px] font-mono uppercase text-neutral-400">
+              {t('categoryHero.statCurrency')}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Sticky / Responsive Filter & Sort Toolbar -->
+    <div class="sticky top-[36px] md:top-[72px] z-40 bg-white border-l border-r border-b border-[#e5e5e5] px-3 sm:px-4 py-3 sm:py-4 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
+        
+        <!-- Left: Category Chips (Touch scrollable on mobile) -->
+        <div class="w-full md:w-auto overflow-hidden">
+          <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar whitespace-nowrap py-0.5 text-xs font-mono">
+            {categoryChips.map((chip) => {
+              const isActive = (chip.slug === categorySlug);
+              return (
+                <a 
+                  href={getLocalizedPath(chip.path, lang)} 
+                  class={`px-2.5 sm:px-3 py-1.5 uppercase font-bold text-[11px] sm:text-xs shrink-0 transition-colors flex items-center gap-1 border ${
+                    isActive 
+                      ? 'bg-black text-white border-black' 
+                      : chip.isNew 
+                      ? 'bg-white border-[#9f0712] text-[#9f0712] hover:bg-[#9f0712] hover:text-white' 
+                      : 'bg-white border-[#ccc] hover:border-black text-black'
+                  }`}
+                >
+                  <span>{chip.name}</span>
+                  {chip.isNew && !isActive && (
+                    <span class="text-[9px] bg-[#9f0712] text-white px-1 py-0.2 rounded-none font-bold">NEW</span>
+                  )}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+
+        <!-- Right: Sort Dropdown & Product Counter -->
+        <div class="flex items-center justify-between md:justify-end gap-3 w-full md:w-auto shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-neutral-200">
+          <span class="text-xs font-mono text-neutral-500 uppercase tracking-tight">
+            {t('catalog.showingAll').replace('{count}', displayProducts.length.toString())}
+          </span>
+
+          <div class="flex items-center gap-1.5">
+            <label for="category-sort-select" class="text-xs font-mono text-neutral-600 uppercase font-bold hidden sm:inline">
+              {t('catalog.sortLabel')}
+            </label>
+            <div class="relative">
+              <select 
+                id="category-sort-select" 
+                class="appearance-none bg-neutral-100 hover:bg-neutral-200 border border-[#ccc] hover:border-black text-black font-mono text-xs px-3 py-1.5 pr-8 cursor-pointer uppercase font-medium focus:outline-none focus:border-black rounded-none transition-colors"
+                aria-label={t('catalog.sortLabel')}
+              >
+                <option value="default">{t('catalog.sortDefault')}</option>
+                <option value="popularity">{t('catalog.sortPopularity')}</option>
+                <option value="date">{t('catalog.sortLatest')}</option>
+                <option value="price-asc">{t('catalog.sortPriceAsc')}</option>
+                <option value="price-desc">{t('catalog.sortPriceDesc')}</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-neutral-700">
+                <svg class="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. Products Grid -->
+    <ul id="category-product-grid" class="products list-none m-0 p-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-l border-r border-b border-[#e5e5e5]">
+      {displayProducts.map((product: any) => (
+        <ProductCard product={product} lang={lang} />
+      ))}
+    </ul>
+  </div>
+</Layout>
+
+<script>
+  // Dynamic Client-side Category Product Sorting
+  function initCategorySort() {
+    const sortSelect = document.getElementById('category-sort-select') as HTMLSelectElement | null;
+    const productGrid = document.getElementById('category-product-grid');
+    
+    if (sortSelect && productGrid) {
+      const originalItems = Array.from(productGrid.querySelectorAll('li.product')) as HTMLElement[];
+      
+      function applySort(sortValue: string) {
+        const sortedItems = [...originalItems];
+        
+        switch (sortValue) {
+          case 'popularity':
+            sortedItems.sort((a, b) => {
+              const popA = parseFloat(a.dataset.popularity || '0');
+              const popB = parseFloat(b.dataset.popularity || '0');
+              return popB - popA;
+            });
+            break;
+            
+          case 'price-asc':
+            sortedItems.sort((a, b) => {
+              const priceA = parseFloat(a.dataset.price || '0');
+              const priceB = parseFloat(b.dataset.price || '0');
+              return priceA - priceB;
+            });
+            break;
+            
+          case 'price-desc':
+            sortedItems.sort((a, b) => {
+              const priceA = parseFloat(a.dataset.price || '0');
+              const priceB = parseFloat(b.dataset.price || '0');
+              return priceB - priceA;
+            });
+            break;
+            
+          case 'date':
+            sortedItems.sort((a, b) => {
+              const idA = parseInt(a.dataset.id || '0', 10);
+              const idB = parseInt(b.dataset.id || '0', 10);
+              return idB - idA;
+            });
+            break;
+            
+          case 'default':
+          default:
+            // original ordering
+            break;
+        }
+        
+        // Re-append items in sorted order
+        sortedItems.forEach(item => productGrid.appendChild(item));
+      }
+      
+      // Check URL query param for existing sort
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialSort = urlParams.get('orderby');
+      if (initialSort && ['popularity', 'date', 'price-asc', 'price-desc', 'default'].includes(initialSort)) {
+        sortSelect.value = initialSort;
+        applySort(initialSort);
+      }
+      
+      // Handle change event
+      sortSelect.addEventListener('change', (e) => {
+        const target = e.target as HTMLSelectElement;
+        const val = target.value;
+        applySort(val);
+        
+        // Update URL query param without full page reload
+        const newUrl = new URL(window.location.href);
+        if (val === 'default') {
+          newUrl.searchParams.delete('orderby');
+        } else {
+          newUrl.searchParams.set('orderby', val);
+        }
+        window.history.replaceState({}, '', newUrl.toString());
+      });
+    }
+  }
+
+  // Run on initial load and navigation
+  initCategorySort();
+  document.addEventListener('astro:page-load', initCategorySort);
+</script>

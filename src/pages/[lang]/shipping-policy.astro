@@ -1,0 +1,14 @@
+---
+import PolicyView from '../../views/PolicyView.astro';
+import { LOCALES, type Locale } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.filter(l => l !== 'en').map(lang => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<PolicyView slug="shipping-policy" lang={lang as Locale} />

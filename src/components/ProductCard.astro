@@ -1,0 +1,95 @@
+---
+import { getLangFromUrl, getLocalizedPath, formatPrice, getProductTranslation, type Locale } from '../utils/i18n';
+
+interface Props {
+  product: {
+    id: number;
+    name: string;
+    slug: string;
+    permalink?: string;
+    prices?: {
+      price?: string;
+      regular_price?: string;
+      sale_price?: string;
+      currency_symbol?: string;
+    };
+    images?: Array<{
+      id: number;
+      src: string;
+      localSrc?: string;
+      alt?: string;
+    }>;
+    categories?: Array<{
+      id: number;
+      name: string;
+      slug: string;
+    }>;
+    is_in_stock?: boolean;
+    on_sale?: boolean;
+  };
+  lang?: Locale;
+}
+
+const { product, lang } = Astro.props;
+const currentLang = lang || getLangFromUrl(Astro.url);
+
+// Determine image URLs
+const primaryImage = product.images?.[0]?.localSrc || product.images?.[0]?.src || '/assets/images/logo-black.svg';
+const hoverImage = product.images?.[1]?.localSrc || product.images?.[1]?.src || primaryImage;
+
+// Localized product details
+const translation = getProductTranslation(product.id, product.slug, currentLang);
+const productName = translation?.name || product.name;
+const formattedPrice = formatPrice(product.prices?.price);
+const productUrl = getLocalizedPath(`/product/${product.slug}/`, currentLang);
+// Format Price in Euro and sorting metrics
+const rawPrice = product.prices?.price ? parseFloat(product.prices.price) : 0;
+const popularSlugs = ['3d-printed-g19-build-kit', 'harlot', 'bambu-lab-p2s-3d-printer', 'ar15-lower-receiver-80', 'pbs-17-build-kit', 'glock-19-slide-parts-kit', 'bambu-lab-pa-cf-filament', 'ar15-80-percent-lower-jig-kit', 'elegoo-centauri-carbon-3d-printer', 'prusa-core-one-plus-3d-printer'];
+const popIndex = popularSlugs.indexOf(product.slug);
+const popularityScore = popIndex !== -1 ? (100 - popIndex) : (product.id ? (product.id % 50) : 10);
+---
+
+<li 
+  class="product m-0 p-0 border-r border-b border-[#e5e5e5] list-none group"
+  data-id={product.id}
+  data-price={rawPrice}
+  data-popularity={popularityScore}
+  data-name={productName.toLowerCase()}
+>
+  <a href={productUrl} class="block h-full">
+    <div class="p-[12px] flex flex-col h-full justify-between">
+      <div>
+        <div class="woocommerce-image__wrapper mb-4 bg-[#f5f5f5] overflow-hidden aspect-[4/3] flex items-center justify-center relative">
+          <img
+            class="w-full h-full object-contain p-2 transition-opacity duration-300 group-hover:opacity-0"
+            width="768"
+            height="576"
+            src={primaryImage}
+            alt={productName}
+            loading="lazy"
+          />
+          {hoverImage && hoverImage !== primaryImage && (
+            <img
+              class="w-full h-full object-contain p-2 absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              width="768"
+              height="576"
+              src={hoverImage}
+              alt={`${productName} alternate view`}
+              loading="lazy"
+            />
+          )}
+        </div>
+        <p class="text-black mb-3 capitalize underline font-mono text-sm leading-tight hover:text-neutral-600 transition-colors">
+          {productName}
+        </p>
+      </div>
+      <div>
+        <p class="m-0 text-black text-sm font-mono font-bold">
+          <span class="woocommerce-Price-amount amount">
+            {formattedPrice}
+          </span>
+        </p>
+      </div>
+    </div>
+  </a>
+</li>

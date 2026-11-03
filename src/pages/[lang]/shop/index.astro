@@ -1,0 +1,14 @@
+---
+import ShopView from '../../../views/ShopView.astro';
+import { LOCALES, type Locale } from '../../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.filter(l => l !== 'en').map(lang => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<ShopView lang={lang as Locale} />

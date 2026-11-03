@@ -1,0 +1,25 @@
+---
+import ProductDetailView from '../../../views/ProductDetailView.astro';
+import products from '../../../data/products.json';
+import { LOCALES, type Locale } from '../../../utils/i18n';
+
+export function getStaticPaths() {
+  const nonDefaultLocales = LOCALES.filter(l => l !== 'en');
+  const paths: any[] = [];
+
+  for (const lang of nonDefaultLocales) {
+    for (const product of products) {
+      paths.push({
+        params: { lang, slug: product.slug },
+        props: { product, lang }
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { product, lang } = Astro.props;
+---
+
+<ProductDetailView product={product} lang={lang as Locale} />

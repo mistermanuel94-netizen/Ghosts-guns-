@@ -1,0 +1,17 @@
+---
+import CategoryView from '../../components/CategoryView.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { sub: 'jigs' }, props: { title: 'Jigs & Tooling', slug: 'jigs' } }
+  ];
+}
+
+const { title, slug } = Astro.props;
+---
+
+<CategoryView
+  title={title}
+  categorySlug={slug}
+  description="Precision jigs and tooling required to finish receiver projects safely."
+/>

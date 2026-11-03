@@ -1,0 +1,1390 @@
+[
+  {
+    "id": 18837,
+    "date": "2026-03-20T18:09:25",
+    "date_gmt": "2026-03-20T18:09:25",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=18837"
+    },
+    "modified": "2026-03-20T18:09:28",
+    "modified_gmt": "2026-03-20T18:09:28",
+    "slug": "shipping-restrictions",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/shipping-restrictions/",
+    "title": {
+      "rendered": "Shipping Restrictions"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 6,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "page-shipping-restrictions.php",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-18837",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/18837",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/6"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=18837"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/18837/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 18839,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/18837/revisions/18839"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=18837"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 12066,
+    "date": "2026-02-14T20:24:57",
+    "date_gmt": "2026-02-14T20:24:57",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=12066"
+    },
+    "modified": "2026-02-16T20:40:39",
+    "modified_gmt": "2026-02-16T20:40:39",
+    "slug": "home",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/",
+    "title": {
+      "rendered": "Home"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 6,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-12066",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/12066",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/6"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=12066"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/12066/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 12067,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/12066/revisions/12067"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=12066"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 12061,
+    "date": "2026-02-14T20:03:31",
+    "date_gmt": "2026-02-14T20:03:31",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=12061"
+    },
+    "modified": "2026-02-14T20:03:32",
+    "modified_gmt": "2026-02-14T20:03:32",
+    "slug": "blog",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/blog/",
+    "title": {
+      "rendered": "Blog"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 6,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-12061",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/12061",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/6"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=12061"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/12061/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 12062,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/12061/revisions/12062"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=12061"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "date": "2025-05-22T15:31:18",
+    "date_gmt": "2025-05-22T15:31:18",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=54"
+    },
+    "modified": "2025-06-28T10:11:11",
+    "modified_gmt": "2025-06-28T10:11:11",
+    "slug": "contact",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/contact/",
+    "title": {
+      "rendered": "Contact Us"
+    },
+    "content": {
+      "rendered": "\n<p class=\"wp-block-paragraph\"><strong>Ghost Guns</strong><br>13740 N. Highway 183, Ste J-2<br>Austin, TX 78759-1832<br>Email: <a href=\"mailto:support@ghostguns.com\">support@ghostguns.com</a><br>Phone: (855) 754-4678</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Ghost Guns13740 N. Highway 183, Ste J-2Austin, TX 78759-1832Email: support@ghostguns.comPhone: (855) 754-4678</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-54",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/54",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=54"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/54/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 55,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/54/revisions/55"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=54"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "date": "2025-05-22T15:30:12",
+    "date_gmt": "2025-05-22T15:30:12",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=52"
+    },
+    "modified": "2026-02-16T00:47:04",
+    "modified_gmt": "2026-02-16T00:47:04",
+    "slug": "about",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/about/",
+    "title": {
+      "rendered": "About"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-52",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/52",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=52"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/52/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 12180,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/52/revisions/12180"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=52"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "date": "2025-05-22T15:27:11",
+    "date_gmt": "2025-05-22T15:27:11",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=50"
+    },
+    "modified": "2026-02-08T21:45:53",
+    "modified_gmt": "2026-02-08T21:45:53",
+    "slug": "terms-and-conditions",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/terms-and-conditions/",
+    "title": {
+      "rendered": "Terms and Conditions"
+    },
+    "content": {
+      "rendered": "\n<p class=\"wp-block-paragraph\"><strong>Last modified: 01/01/2026</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">To use GhostGuns.com (“Ghost Guns”), you must be at least 21 years old. If you are age 20 or younger, use of this site is strictly prohibited.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>GENERAL PROHIBITION AGAINST ACCESS BY CERTAIN USERS</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Notwithstanding any other part of these Terms of Service, and notwithstanding any other express or implied grant of permission, the following persons/entities are expressly forbidden from using, accessing, or obtaining any information from Ghost Guns for any reason: Federal and state law enforcement agencies operating within or under the authority of the states of New Jersey, New York, California, Connecticut, Pennsylvania, and Washington. Agents of the offices of the Attorneys General of New Jersey, New York, California, Connecticut, Pennsylvania and Washington. Agents of the offices of Consumer Affairs or Consumer Protection in the states of New Jersey, New York, California, Connecticut, Pennsylvania, and Washington.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Employees, agents, members and associates of the gun control organizations including but not limited to: Brady, Giffords, Everytown for Gun Safety, Mom’s Demand Action, MAF Corporation, Newtown Action Alliance, The Gatalog, Sandy Hook Promise, Gatalog Foundation, The Trace, and The United Methodist Church. Attorneys, employees, agents and associates of the law firms represented by the FACT coalition, including but not limited to the firms: Arnold &amp; Porter LLP, Bilzin Sumberg Baena Price &amp; Axelrod LLP, Cooley LLP, Covington &amp; Burling LLP, Dentons USLLP, Gibson Dunn And Crutcher LLP, Hogan Lovells US LLP, Keker, Van Nest &amp; Peters LLP, Mayer Brown LLP, Morrison &amp; Foerster LLP, Morvillo Abramowitz Grand Iason &amp; Anello PC, Munger Tolles &amp; Olson LLP, O’Melveny &amp; Myers LLP, Paul, Weiss, Rifkind, Wharton &amp; Garrison LLP, and Simpson Thacher &amp; Bartlett LLP. Attorneys, employees, agents and associates of the law firms Venable, LLP and Keker, Van Nest &amp; Peters, Sullivan and Cromwell, and Zermay Law.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Any access or use of any part of this site, whether directly or indirectly, by or at the direction of, any of the above-listed persons is expressly forbidden and is unlawful. Any violation of this prohibition may lead to civil and/or criminal liability pursuant to the Computer Fraud and Abuse Act, 18 U.S.C. § 1030 (the “CFAA”).</p>\n\n\n\n<p class=\"wp-block-paragraph\">This prohibition is intended to clarify that no permission to access is granted to any of the above-listed users. Further, for avoidance of doubt, this prohibition is intended to immediately and permanently revoke any pre-existing express or implied grant of permission to access this site within the meaning of Facebook, Inc v. Power Ventures, Inc, 844 F.3d 1058 (9th Cir. 2016) (noting, “a defendant can run afoul of the CFAA when he or she has no permission to access a computer or when such permission has been revoked explicitly.”).</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Acceptance of the Terms of Use</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">These terms of use are entered into by and between You and Ghost Guns (“Company”, “we” or “us”). The following terms and conditions, together with any documents they expressly incorporate by reference (collectively, these “Terms of Use”), govern your access to and use of the Ghost Guns website, including any content, functionality and services offered on or through www.ghostguns.com (the “Website”), whether as a guest or a registered user. Please read the Terms of Use carefully before you start to use the Website. By using the Website, you accept and agree to be bound and abide by these Terms of Use and our&nbsp;<a href=\"https://g80.com/privacy-policy\">Privacy Policy</a>, incorporated herein by reference. If you do not want to agree to these Terms of Use or the Privacy Policy, you must not access or use the Website.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Changes to the Terms of Use</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">We may revise and update these Terms of Use from time to time in our sole discretion. All changes are effective immediately when we post them, and apply to all access to and use of the Website thereafter. Your continued use of the Website following the posting of revised Terms of Use means that you accept and agree to the changes. You are expected to check this page each time you access this Website so you are aware of any changes, as they are binding on you.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Accessing the Website and Account Security</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">We reserve the right to withdraw or amend this Website, and any service or material we provide on the Website, in our sole discretion without notice. We will not be liable if for any reason all or any part of the Website is unavailable at any time or for any period. From time to time, we may restrict access to some parts of the Website, or the entire Website, to users, including registered users.&nbsp; To access the Website or some of the resources it offers, you may be asked to provide certain registration details or other information. It is a condition of your use of the Website that all the information you provide on the Website is correct, current and complete. You agree that all information you provide to register with this Website or otherwise, including but not limited to use of any interactive features on the Website, is governed by our&nbsp;<a href=\"https://g80.com/privacy-policy\">Privacy Policy</a>, and you consent to all actions we take with respect to your information consistent with our Privacy Policy. If you choose, or are provided with, a username, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any other person or entity. You also acknowledge that your account is personal to you and agree not to provide any other person with access to this Website or portions of it using your username, password or other security information. You agree to notify us immediately of any unauthorized access to or use of your username or password or any other breach of security. You also agree to ensure that you exit from your account at the end of each session. You should use particular caution when accessing your account from a public or shared computer so that others are not able to view or record your password or other personal information. We have the right to disable any username, password or other identifier, whether chosen by you or provided by us, at any time in our sole discretion for any or no reason, including if, in our opinion, you have violated any provision of these Terms of Use.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Ownership</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">This Website is owned and operated by Ghost Guns. All right, title and interest in and to the materials provided on this Site and Applications, including but not limited to information, documents, logos, graphics, sounds and images (the “Materials”) are owned either by Ghost Guns or by our respective third-party authors, developers or vendors (“Third Party Providers”). Except as otherwise expressly provided by Ghost Guns, none of the Materials may be copied, reproduced, republished, downloaded, uploaded, posted, displayed, transmitted or distributed in any way and nothing on this Website or on any Applications shall be construed to confer any license under any of the intellectual property rights of Ghost Guns, whether by estoppel, implication or otherwise. Ghost Guns does not sell, license, lease or otherwise provide any of the Website content other than those specifically identified as being provided by Ghost Guns. Any rights not expressly granted herein are reserved by Ghost Guns.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Prohibited Uses</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">You may use the Website only for lawful purposes and in accordance with these Terms of Use. You agree not to use the Website:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>In any way that violates any applicable federal, state, local or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).</li>\n\n\n\n<li>For the purpose of exploiting, harming or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.</li>\n\n\n\n<li>To transmit, or procure the sending of, any advertising or promotional material without our prior written consent, including any “junk mail”, “chain letter” or “spam” or any other similar solicitation.</li>\n\n\n\n<li>To impersonate or attempt to impersonate the Company, a Company employee, another user or any other person or entity (including, without limitation, by using e-mail addresses or names associated with any of the foregoing).</li>\n\n\n\n<li>To engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of the Website, or which, as determined by us, may harm the Company or users of the Website or expose them to liability.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Additionally, you agree not to:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Use the Website in any manner that could disable, overburden, damage, or impair the site or interfere with any other party’s use of the Website, including their ability to engage in real time activities through the Website.</li>\n\n\n\n<li>Use any device, software or routine that interferes with the proper working of the Website.</li>\n\n\n\n<li>Attempt to gain unauthorized access to, interfere with, damage or disrupt any parts of the Website, the server on which the Website is stored, or any server, computer or database connected to the Website.</li>\n\n\n\n<li>Otherwise attempt to interfere with the proper working of the Website.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">You further represent and warranty that each of the following are true and correct under penalty of perjury pursuant to 28 U.S.C. § 1746:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>You are a citizen or lawful permanent resident of the United States of America, or of any other country in which the operation of this site is lawful</li>\n\n\n\n<li>You have not renounced your U.S. citizenship</li>\n\n\n\n<li>You are not an illegal or unlawful alien, and are not a nonimmigrant alien</li>\n\n\n\n<li>Your possession and/or use of the products available through this site does not violate any local, state, or federal law of the jurisdiction in which you reside</li>\n\n\n\n<li>You are not currently under indictment for, and have never been convicted in any court of, a crime punishable by imprisonment for one year or more</li>\n\n\n\n<li>You are not a fugitive from justice</li>\n\n\n\n<li>You are not an unlawful user of, or addicted to, any controlled substance</li>\n\n\n\n<li>You have not been adjudicated as a mental defective and have not been committed to any mental institution</li>\n\n\n\n<li>You have never been and are not expected to be discharged from the Armed Forces under dishonorable conditions</li>\n\n\n\n<li>You are not currently subject to a domestic violence restraining order of any kind</li>\n\n\n\n<li>You have never been convicted in any court of a crime of domestic violence</li>\n\n\n\n<li>You will not use, and do not intend to use, CAD models appearing on Ghost Guns, or any physical parts created from such models, for any unlawful purpose including, but not limited to, causing physical injury or death to yourself or to any other person.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Provided you meet all of the above requirements, the use of Ghost Guns is free to anyone except for those persons/agencies identified in the GENERAL PROHIBITION listed above. However, Ghost Guns is not currently accepting or fulfilling orders from foreign persons, as defined at 22 CFR § 120.16 and 15 CFR § 772.1, or individuals behind the &#8220;Blue Wall,&#8221; which include residents of the states of California and New Jersey who do not possess a federal firearms license.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Monitoring and Enforcement; Termination</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">We have the right to:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Website.</li>\n\n\n\n<li>Terminate or suspend your access to all or part of the Website for any or no reason, including without limitation, any violation of these Terms of Use. Without limiting the foregoing, we have the right to fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity or other information of anyone posting any materials on or through the Website. YOU WAIVE AND HOLD HARMLESS THE COMPANY AND ITS AFFILIATES, LICENSEES AND SERVICE PROVIDERS FROM ANY CLAIMS RESULTING FROM ANY ACTION TAKEN BY ANY OF THE FOREGOING PARTIES DURING OR AS A RESULT OF ITS INVESTIGATIONS AND FROM ANY ACTIONS TAKEN AS A CONSEQUENCE OF INVESTIGATIONS BY EITHER SUCH PARTIES OR LAW ENFORCEMENT AUTHORITIES.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Content Standards</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">These content standards apply to any and all User Contributions and use of Interactive Services. User Contributions must in their entirety comply with all applicable federal, state, local and international laws and regulations. Without limiting the foregoing, User Contributions must not: upload, download, display, perform, transmit or otherwise distribute any content that: (i) is libelous, defamatory, obscene, pornographic, abusive or threatening; (b) advocates or encourages conduct that could constitute a criminal offense, give rise to civil liability or otherwise violate any applicable local, state, national or foreign law or regulation; or (c) advertises or otherwise solicits funds or is a solicitation for goods or services. Ghost Guns reserves the right to terminate or delete such material from its servers. Ghost Guns will cooperate fully with any law enforcement officials or agencies in the investigation of any violation of these Terms of Use or of any applicable laws.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Changes to the Website</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">We may update the content on this Website from time to time, but its content is not necessarily complete or up to date. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Information About You and Your Visits to the Website</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">All information we collect on this Website is subject to our&nbsp;<a href=\"https://g80.com/privacy-policy\">Privacy Policy</a>. By using the Website, you consent to all actions taken by us with respect to your information in compliance with the Privacy Policy.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Online Purchases and Other Terms and Conditions</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">All purchases through our site or other transactions for the sale of goods or information formed through the Website or as a result of visits made by you are governed by our Terms of Sale, which are hereby incorporated into these Terms of Use.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Compliance with Export Restrictions</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">You may not access, download, use or export the Website in violation of United States export laws or regulations or in violation of any other applicable laws or regulations. You agree to comply with all export laws and restrictions and regulations of any United States or foreign agency or authority and to assume sole responsibility for obtaining licenses to export or re-export as may be required. You acknowledge and agree that our products are subject to the United States Export Administration Laws and Regulations and agree that none of the Company’s goods or any direct product therefrom is being or will be acquired for, shipped, transferred or re-exported, directly or indirectly, to proscribed or embargoed countries or their nationals or used for any prohibited purpose.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>NO WARRANTY</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">THE WEBSITE, AND ALL GOODS, DOCUMENTS, AND INFORMATION PROVIDED ON OR THROUGH YOUR USE OF THE WEBSITE ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, GHOST GUNS EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. GHOST GUNS MAKES NO WARRANTY THAT: (A) THE WEBSITE, INCLUDING ANY GOODS OR ITEMS PURCHASED THROUGH THE WEBSITE, WILL MEET YOUR REQUIREMENTS; (B) THE WEBSITE WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE OR ERROR-FREE BASIS; (C) THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE WEBSITE OR ANY GOODS OFFERED THROUGH THE WEBSITE WILL BE ACCURATE OR RELIABLE; OR (D) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE WEBSITE WILL MEET YOUR EXPECTATIONS. OBTAINING ANY GOODS OR OTHER MATERIALS THROUGH THE USE OF THE WEBSITE IS DONE AT YOUR OWN DISCRETION AND AT YOUR OWN RISK. GHOST GUNS SHALL HAVE NO RESPONSIBILITY FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF ANY CONTENT, MATERIALS, INFORMATION OR SOFTWARE.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>LIMITATION OF LIABILITY AND INDEMNIFICATION</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD GHOST GUNS AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES (INCLUDING ATTORNEYS’ FEES AND ALL RELATED COSTS AND EXPENSES OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM YOUR USE OF THE WEBSITE AND ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF GHOST GUNS HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON THE PART OF GHOST GUNS, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Governing Law and Jurisdiction</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">All matters relating to the Website and these Terms of Use and any dispute or claim arising therefrom or related thereto (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the internal laws of the State of Texas without giving effect to any choice or conflict of law provision or rule (whether of the State of Texas or any other jurisdiction).<br>Any legal suit, action or proceeding arising out of, or related to, these Terms of Use or the Website shall be instituted exclusively in the federal courts of the United States or the courts of the State of Texas, in each case located in the City of Austin, Travis County, Texas although we retain the right to bring any suit, action or proceeding against you for breach of these Terms of Use in your country of residence or any other relevant country. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Arbitration</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">At the Company’s sole discretion, we may require You to submit any disputes arising from the use of these Terms of Use or the Website, including disputes arising from or concerning their interpretation, violation, invalidity, non-performance, or termination, to final and binding arbitration under the Rules of Arbitration of the American Arbitration Association applying Texas state law.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Limitation on Time to File Claims</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">ANY CAUSE OF ACTION OR CLAIM YOU MAY HAVE ARISING OUT OF OR RELATING TO THESE TERMS OF USE OR THE WEBSITE MUST BE COMMENCED WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES, OTHERWISE, SUCH CAUSE OF ACTION OR CLAIM IS PERMANENTLY BARRED.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Waiver and Severability</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">No waiver of by the Company of any term or condition set forth in these Terms of Use shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of the Company to assert a right or provision under these Terms of Use shall not constitute a waiver of such right or provision.<br>If any provision of these Terms of Use is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms of Use will continue in full force and effect.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Entire Agreement</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">The Terms of Use and, our Privacy Policy, and Terms of Sale constitute the sole and entire agreement between you and Ghost Guns with respect to the Website and supersede all prior and contemporaneous understandings, agreements, representations and warranties, both written and oral, with respect to the Website.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Last modified: 01/01/2026 To use GhostGuns.com (“Ghost Guns”), you must be at least 21 years old. If you are age 20 or younger, use of this site is strictly prohibited. GENERAL PROHIBITION AGAINST ACCESS BY CERTAIN USERS Notwithstanding any other part of these Terms of Service, and notwithstanding any other express or implied grant of [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "template-fullwidth.php",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-50",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/50",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=50"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 3,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/50/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 9559,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/50/revisions/9559"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=50"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "date": "2025-05-22T15:22:50",
+    "date_gmt": "2025-05-22T15:22:50",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=48"
+    },
+    "modified": "2025-05-22T15:22:50",
+    "modified_gmt": "2025-05-22T15:22:50",
+    "slug": "website-terms-of-use",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/website-terms-of-use/",
+    "title": {
+      "rendered": "Website Terms of Use"
+    },
+    "content": {
+      "rendered": "\n<p class=\"wp-block-paragraph\"><strong>Ghost Guns Website Terms of Use</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Last Modified: 5/1/2021</p>\n\n\n\n<p class=\"wp-block-paragraph\">THIS DOCUMENT CONTAINS VERY IMPORTANT INFORMATION REGARDING YOUR RIGHTS AND OBLIGATIONS, AS WELL AS CONDITIONS, LIMITATIONS, AND EXCLUSIONS THAT MIGHT APPLY TO YOU. PLEASE READ IT CAREFULLY.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Notwithstanding any other part of these Terms of Service, and notwithstanding any other express or implied grant of permission, the following persons/entities are expressly forbidden from using, accessing, or obtaining any information from Ghost Guns for any reason:Federal and state law enforcement agencies operating within or under the authority of the states of New Jersey, New York, Connecticut, Pennsylvania, and Washington. Agents of the offices of the Attorneys General of New Jersey, New York, Connecticut, Pennsylvania and Washington. Agents of the offices of Consumer Affairs or Consumer Protection in the states of New Jersey, New York, Connecticut, Pennsylvania, and Washington.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Employees, agents, members and associates of the gun control organizations including but not limited to: Brady, Giffords, Everytown for Gun Safety, Mom&#8217;s Demand Action, Newtown Action Alliance, Sandy Hook Promise, The Trace, and The United Methodist Church. Attorneys, employees, agents and associates of the law firms represented by the FACT coalition, including but not limited to the firms: Arnold &amp; Porter LLP, Bilzin Sumberg Baena Price &amp; Axelrod LLP, Cooley LLP, Covington &amp; Burling LLP, Dentons USLLP, Gibson Dunn And Crutcher LLP, Hogan Lovells US LLP, Keker, Van Nest &amp; Peters LLP, Mayer Brown LLP, Morrison &amp; Foerster LLP, Morvillo Abramowitz Grand Iason &amp; Anello PC, Munger Tolles &amp; Olson LLP, O’Melveny &amp; Myers LLP, Paul, Weiss, Rifkind, Wharton &amp; Garrison LLP, and Simpson Thacher &amp; Bartlett LLP.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Any access or use of any part of this site, whether directly or indirectly, by or at the direction of, any of the above-listed persons is expressly forbidden and is unlawful. Any violation of this prohibition may lead to civil and/or criminal liability pursuant to the Computer Fraud and Abuse Act, 18 U.S.C. § 1030 (the “CFAA”).</p>\n\n\n\n<p class=\"wp-block-paragraph\">This prohibition is intended to clarify that no permission to access is granted to any of the above-listed users. Further, for avoidance of doubt, this prohibition is intended to immediately and permanently revoke any pre-existing express or implied grant of permission to access this site within the meaning of Facebook, Inc v. Power Ventures, Inc, 844 F.3d 1058 (9th Cir. 2016) (noting, “a defendant can run afoul of the CFAA when he or she has no permission to access a computer or when such permission has been revoked explicitly.”).</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>1.&nbsp;Acceptance of the Terms of Use.</strong> These terms of use are entered into by and between You and GHOST GUNS (&#8220;Company&#8221;, &#8220;we&#8221; or &#8220;us&#8221;). The following terms and conditions, together with any documents they expressly incorporate by reference (collectively, these &#8220;Terms of Use&#8221;), govern your access to and use of the Ghost Guns website, including any content, functionality and services offered on or through www.ghostguns.com (the &#8220;Website&#8221;), whether as a guest or a registered user. Please read the Terms of Use carefully before you start to use the Website. By using the Website, you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, found at <a href=\"https://ghostguns.com/pages/privacy\">https://ghostguns.com/pages/privacy</a>, incorporated herein by reference. If you do not want to agree to these Terms of Use or the Privacy Policy, you must not access or use the Website.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>2.&nbsp;Changes to the Terms of Use.</strong> We may revise and update these Terms of Use from time to time in our sole discretion. All changes are effective immediately when we post them, and apply to all access to and use of the Website thereafter. Your continued use of the Website following the posting of revised Terms of Use means that you accept and agree to the changes. You are expected to check this page each time you access this Website so you are aware of any changes, as they are binding on you.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>3.&nbsp;Accessing the Website and Account Security.</strong> We reserve the right to withdraw or amend this Website, and any service or material we provide on the Website, in our sole discretion without notice. We will not be liable if for any reason all or any part of the Website is unavailable at any time or for any period. From time to time, we may restrict access to some parts of the Website, or the entire Website, to users, including registered users. &nbsp;To access the Website or some of the resources it offers, you may be asked to provide certain registration details or other information. It is a condition of your use of the Website that all the information you provide on the Website is correct, current and complete. You agree that all information you provide to register with this Website or otherwise, including but not limited to use of any interactive features on the Website, is governed by our Privacy Policy&nbsp;<a href=\"https://ghostguns.com/pages/privacy\">https://ghostguns.com/pages/privacy</a>, and you consent to all actions we take with respect to your information consistent with our Privacy Policy. If you choose, or are provided with, a user name, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any other person or entity. You also acknowledge that your account is personal to you and agree not to provide any other person with access to this Website or portions of it using your user name, password or other security information. You agree to notify us immediately of any unauthorized access to or use of your user name or password or any other breach of security. You also agree to ensure that you exit from your account at the end of each session. You should use particular caution when accessing your account from a public or shared computer so that others are not able to view or record your password or other personal information. We have the right to disable any user name, password or other identifier, whether chosen by you or provided by us, at any time in our sole discretion for any or no reason, including if, in our opinion, you have violated any provision of these Terms of Use.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>4.&nbsp;Ownership.</strong> This Website is owned and operated by Ghost Guns. All right, title and interest in and to the materials provided on this Site and Applications, including but not limited to information, documents, logos, graphics, sounds and images (the &#8220;Materials&#8221;) are owned either by Ghost Guns or by our respective third-party authors, developers or vendors (&#8220;Third Party Providers&#8221;). Except as otherwise expressly provided by Ghost Guns, none of the Materials may be copied, reproduced, republished, downloaded, uploaded, posted, displayed, transmitted or distributed in any way and nothing on this Website or on any Applications shall be construed to confer any license under any of the intellectual property rights of Ghost Guns, whether by estoppel, implication or otherwise. Ghost Guns does not sell, license, lease or otherwise provide any of the Website content other than those specifically identified as being provided by Ghost Guns. Any rights not expressly granted herein are reserved by Ghost Guns.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>5.&nbsp;Prohibited Uses.</strong> You may use the Website only for lawful purposes and in accordance with these Terms of Use. You agree not to use the Website:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>In any way that violates any applicable federal, state, local or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).</li>\n\n\n\n<li>For the purpose of exploiting, harming or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.</li>\n\n\n\n<li>To transmit, or procure the sending of, any advertising or promotional material without our prior written consent, including any &#8220;junk mail&#8221;, &#8220;chain letter&#8221; or &#8220;spam&#8221; or any other similar solicitation.</li>\n\n\n\n<li>To impersonate or attempt to impersonate the Company, a Company employee, another user or any other person or entity (including, without limitation, by using e-mail addresses or names associated with any of the foregoing).</li>\n\n\n\n<li>To engage in any other conduct that restricts or inhibits anyone&#8217;s use or enjoyment of the Website, or which, as determined by us, may harm the Company or users of the Website or expose them to liability.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Additionally, you agree not to:</strong></p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Use the Website in any manner that could disable, overburden, damage, or impair the site or interfere with any other party&#8217;s use of the Website, including their ability to engage in real time activities through the Website.</li>\n\n\n\n<li>Use any device, software or routine that interferes with the proper working of the Website.</li>\n\n\n\n<li>Attempt to gain unauthorized access to, interfere with, damage or disrupt any parts of the Website, the server on which the Website is stored, or any server, computer or database connected to the Website.</li>\n\n\n\n<li>Otherwise attempt to interfere with the proper working of the Website.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>You further represent and warranty that each of the following are true and correct under penalty of perjury pursuant to 28 U.S.C. § 1746:</strong></p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>You are a citizen or lawful permanent resident of the United States of America, or of any other country in which the operation of this site is lawful</li>\n\n\n\n<li>You have not renounced your U.S. citizenship</li>\n\n\n\n<li>You are not an illegal or unlawful alien, and are not a nonimmigrant alien</li>\n\n\n\n<li>Your possession and/or use of the products available through this site does not violate any local, state, or federal law of the jurisdiction in which you reside</li>\n\n\n\n<li>You are not currently under indictment for, and have never been convicted in any court of, a crime punishable by imprisonment for one year or more</li>\n\n\n\n<li>You are not a fugitive from justice</li>\n\n\n\n<li>You are not an unlawful user of, or addicted to, any controlled substance</li>\n\n\n\n<li>You have not been adjudicated as a mental defective and have not been committed to any mental institution</li>\n\n\n\n<li>You have never been and are not expected to be discharged from the Armed Forces under dishonorable conditions</li>\n\n\n\n<li>You are not currently subject to a domestic violence restraining order of any kind</li>\n\n\n\n<li>You have never been convicted in any court of a crime of domestic violence</li>\n\n\n\n<li>You will not use, and do not intend to use, CAD models appearing on DEFCAD, or any physical parts created from such models, for any unlawful purpose including, but not limited to, causing physical injury or death to yourself or to any other person</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>6.&nbsp;Monitoring and Enforcement; Termination.</strong> We have the right to:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Remove or refuse to post any User Contributions for any or no reason in our sole discretion.</li>\n\n\n\n<li>Take any action with respect to any User Contribution that we deem necessary or appropriate in our sole discretion, including if we believe that such User Contribution violates the Terms of Use, including the Content Standards, infringes any intellectual property right or other right of any person or entity, threatens the personal safety of users of the Website or the public or could create liability for the Company.</li>\n\n\n\n<li>Disclose your identity or other information about you to any third party who claims that material posted by you violates their rights, including their intellectual property rights or their right to privacy.</li>\n\n\n\n<li>Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Website.</li>\n\n\n\n<li>Terminate or suspend your access to all or part of the Website for any or no reason, including without limitation, any violation of these Terms of Use. Without limiting the foregoing, we have the right to fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity or other information of anyone posting any materials on or through the Website. YOU WAIVE AND HOLD HARMLESS THE COMPANY AND ITS AFFILIATES, LICENSEES AND SERVICE PROVIDERS FROM ANY CLAIMS RESULTING FROM ANY ACTION TAKEN BY ANY OF THE FOREGOING PARTIES DURING OR AS A RESULT OF ITS INVESTIGATIONS AND FROM ANY ACTIONS TAKEN AS A CONSEQUENCE OF INVESTIGATIONS BY EITHER SUCH PARTIES OR LAW ENFORCEMENT AUTHORITIES. However, we do not undertake to review all material before it is posted on the Website, and cannot ensure prompt removal of objectionable material after it has been posted. Accordingly, we assume no liability for any action or inaction regarding transmissions, communications or content provided by any user or third party. We have no liability or responsibility to anyone for performance or nonperformance of the activities described in this section.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>7.&nbsp;Content Standards.</strong> These content standards apply to any and all User Contributions and use of Interactive Services. User Contributions must in their entirety comply with all applicable federal, state, local and international laws and regulations. Without limiting the foregoing, User Contributions must not: upload, download, display, perform, transmit or otherwise distribute any content that: (i) is libelous, defamatory, obscene, pornographic, abusive or threatening; (b) advocates or encourages conduct that could constitute a criminal offense, give rise to civil liability or otherwise violate any applicable local, state, national or foreign law or regulation; or (c) advertises or otherwise solicits funds or is a solicitation for goods or services. Ghost Guns reserves the right to terminate or delete such material from its servers. Ghost Guns will cooperate fully with any law enforcement officials or agencies in the investigation of any violation of these Terms of Use or of any applicable laws.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>8.&nbsp;Changes to the Website.</strong> We may update the content on this Website from time to time, but its content is not necessarily complete or up-to-date. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>9.&nbsp;Information About You and Your Visits to the Website.</strong> All information we collect on this Website is subject to our Privacy Policy&nbsp;<a href=\"https://ghostguns.com/pages/privacy\">https://ghostguns.com/pages/privacy</a>. By using the Website, you consent to all actions taken by us with respect to your information in compliance with the Privacy Policy.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>10.&nbsp;Online Purchases and Other Terms and Conditions.</strong> All purchases through our site or other transactions for the sale of goods or information formed through the Website or as a result of visits made by you are governed by our Terms of Sale <a href=\"https://ghostguns.com/pages/terms-and-conditions\">https://ghostguns.com/pages/terms-and-conditions</a>, which are hereby incorporated into these Terms of Use.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>11.&nbsp;Compliance with Export Restrictions.</strong> You may not access, download, use or export the Website in violation of United States export laws or regulations or in violation of any other applicable laws or regulations. You agree to comply with all export laws and restrictions and regulations of any United States or foreign agency or authority and to assume sole responsibility for obtaining licenses to export or re-export as may be required. You acknowledge and agree that our products are subject to the United States Export Administration Laws and Regulations and agree that none of the Company’s goods or any direct product therefrom is being or will be acquired for, shipped, transferred or re-exported, directly or indirectly, to proscribed or embargoed countries or their nationals or used for any prohibited purpose.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>12.&nbsp;NO WARRANTY.</strong> THE WEBSITE, AND ALL GOODS, DOCUMENTS, AND INFORMATION PROVIDED ON OR THROUGH YOUR USE OF THE WEBSITE ARE PROVIDED ON AN &#8220;AS IS&#8221; AND &#8220;AS AVAILABLE&#8221; BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, GHOST GUNS EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. GHOST GUNS MAKES NO WARRANTY THAT: (A) THE WEBSITE, INCLUDING ANY GOODS OR ITEMS PURCHASED THROUGH THE WEBSITE, WILL MEET YOUR REQUIREMENTS; (B) THE WEBSITE WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE OR ERROR-FREE BASIS; (C) THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE WEBSITE OR ANY GOODS OFFERED THROUGH THE WEBSITE WILL BE ACCURATE OR RELIABLE; OR (D) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE WEBSITE WILL MEET YOUR EXPECTATIONS. OBTAINING ANY GOODS OR OTHER MATERIALS THROUGH THE USE OF THE WEBSITE IS DONE AT YOUR OWN DISCRETION AND AT YOUR OWN RISK. GHOST GUNS SHALL HAVE NO RESPONSIBILITY FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF ANY CONTENT, MATERIALS, INFORMATION OR SOFTWARE.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>13.&nbsp;LIMITATION OF LIABILITY AND INDEMNIFICATION.</strong> EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD GHOST GUNS AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES (INCLUDING ATTORNEYS&#8217; FEES AND ALL RELATED COSTS AND EXPENSES OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM YOUR USE OF THE WEBSITE AND ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF GHOST GUNS HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON THE PART OF GHOST GUNS, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>14.&nbsp;Governing Law and Jurisdiction.</strong> All matters relating to the Website and these Terms of Use and any dispute or claim arising therefrom or related thereto (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the internal laws of the State of Texas without giving effect to any choice or conflict of law provision or rule (whether of the State of Texas or any other jurisdiction).<br>Any legal suit, action or proceeding arising out of, or related to, these Terms of Use or the Website shall be instituted exclusively in the federal courts of the United States or the courts of the State of Texas, in each case located in the City of Austin, Travis County, Texas although we retain the right to bring any suit, action or proceeding against you for breach of these Terms of Use in your country of residence or any other relevant country. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>15.&nbsp;Arbitration.</strong> At the Company’s sole discretion, we may require You to submit any disputes arising from the use of these Terms of Use or the Website, including disputes arising from or concerning their interpretation, violation, invalidity, non-performance, or termination, to final and binding arbitration under the Rules of Arbitration of the American Arbitration Association applying Texas state law.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>16. Limitation on Time to File Claims.</strong> ANY CAUSE OF ACTION OR CLAIM YOU MAY HAVE ARISING OUT OF OR RELATING TO THESE TERMS OF USE OR THE WEBSITE MUST BE COMMENCED WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES, OTHERWISE, SUCH CAUSE OF ACTION OR CLAIM IS PERMANENTLY BARRED.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>17.&nbsp;Waiver and Severability.</strong> No waiver of by the Company of any term or condition set forth in these Terms of Use shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of the Company to assert a right or provision under these Terms of Use shall not constitute a waiver of such right or provision.<br>If any provision of these Terms of Use is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms of Use will continue in full force and effect.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>18.&nbsp;Entire Agreement.</strong> The Terms of Use and, our Privacy Policy, and Terms of Sale constitute the sole and entire agreement between you and Ghost Guns with respect to the Website and supersede all prior and contemporaneous understandings, agreements, representations and warranties, both written and oral, with respect to the Website.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>19.&nbsp;Your Comments and Concerns.</strong> All feedback, comments, requests for technical support and other communications relating to the Website should be directed to: support@ghostguns.com.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Ghost Guns Website Terms of Use Last Modified: 5/1/2021 THIS DOCUMENT CONTAINS VERY IMPORTANT INFORMATION REGARDING YOUR RIGHTS AND OBLIGATIONS, AS WELL AS CONDITIONS, LIMITATIONS, AND EXCLUSIONS THAT MIGHT APPLY TO YOU. PLEASE READ IT CAREFULLY. Notwithstanding any other part of these Terms of Service, and notwithstanding any other express or implied grant of permission, [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-48",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/48",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=48"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/48/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 49,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/48/revisions/49"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=48"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "date": "2025-05-22T15:20:29",
+    "date_gmt": "2025-05-22T15:20:29",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=46"
+    },
+    "modified": "2025-06-28T10:20:47",
+    "modified_gmt": "2025-06-28T10:20:47",
+    "slug": "shipping-policy",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/shipping-policy/",
+    "title": {
+      "rendered": "Shipping Policy"
+    },
+    "content": {
+      "rendered": "\n<p class=\"wp-block-paragraph\">We are committed to ensuring your satisfaction with our products and services. This Shipping Policy outlines our shipping and delivery procedures. Please read this policy carefully before placing your order to ensure a smooth and timely delivery.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><br><strong>Order Processing Time<br></strong>All orders are processed within two business days. Orders are not shipped or delivered on weekends or holidays.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><br><strong>Shipping Rates and Delivery Estimates<br></strong>Shipping charges for your order will be calculated and displayed at checkout. Delivery estimates will be provided once your order has been processed.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><br><strong>Shipment Confirmation and Order Tracking<br></strong>Once your order has been shipped, you will receive a shipment confirmation email with a tracking number that you can use to track your package&#8217;s progress. The tracking information may take up to one business day to appear on the carrier&#8217;s website.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><br><strong>Lost or Damaged Items<br></strong>If you received a damaged item, please contact us immediately at <a href=\"mailto:support@ghostguns.com\">support@ghostguns.com</a>. Please provide a description of the damage along with photographs of the item and packaging. We will work with you to resolve the issue as quickly as possible.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>We are committed to ensuring your satisfaction with our products and services. This Shipping Policy outlines our shipping and delivery procedures. Please read this policy carefully before placing your order to ensure a smooth and timely delivery. Order Processing TimeAll orders are processed within two business days. Orders are not shipped or delivered on weekends [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "template-fullwidth.php",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-46",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/46",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=46"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/46/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 47,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/46/revisions/47"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=46"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "date": "2025-05-22T15:19:34",
+    "date_gmt": "2025-05-22T15:19:34",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=44"
+    },
+    "modified": "2025-06-28T10:21:00",
+    "modified_gmt": "2025-06-28T10:21:00",
+    "slug": "refund-policy",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/refund-policy/",
+    "title": {
+      "rendered": "Refund Policy"
+    },
+    "content": {
+      "rendered": "\n<p class=\"wp-block-paragraph\">If you are not completely satisfied with your purchase for any reason, please see below for more information on our return policy.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><br><strong>Return Process<br></strong>To return an item, please email customer service at support@ghostguns.com for approval and a Return Merchandise Authorization (RMA) number. After receiving an RMA number, place the item securely in its original packaging and include your proof of purchase, and mail your return to the following<br>address:<br><br>13740 N Highway 183, Ste J-2 Austin, TX 78750-1832</p>\n\n\n\n<p class=\"wp-block-paragraph\"><br>Please note, you are responsible for shipping charges, and we recommend you use a trackable method to mail your return.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><br><strong>Refunds</strong><br>After receiving your return and inspecting the condition of your item, we will process your return or exchange. Please allow up to ten business days from the receipt of your item to process your return or exchange. We will notify you by email when your return has been processed.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>If you are not completely satisfied with your purchase for any reason, please see below for more information on our return policy. Return ProcessTo return an item, please email customer service at support@ghostguns.com for approval and a Return Merchandise Authorization (RMA) number. After receiving an RMA number, place the item securely in its original packaging [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "template-fullwidth.php",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-44",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/44",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=44"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/44/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 45,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/44/revisions/45"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=44"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "date": "2025-05-13T16:14:23",
+    "date_gmt": "2025-05-13T16:14:23",
+    "guid": {
+      "rendered": "https://ghostguns.com/my-account/"
+    },
+    "modified": "2025-05-13T16:14:23",
+    "modified_gmt": "2025-05-13T16:14:23",
+    "slug": "my-account",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/my-account/",
+    "title": {
+      "rendered": "My account"
+    },
+    "content": {
+      "rendered": "<div class=\"woocommerce\"></div>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-10",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/10",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=10"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 0,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/10/revisions"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=10"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "date": "2025-05-13T16:14:23",
+    "date_gmt": "2025-05-13T16:14:23",
+    "guid": {
+      "rendered": "https://ghostguns.com/checkout/"
+    },
+    "modified": "2026-04-24T16:31:52",
+    "modified_gmt": "2026-04-24T16:31:52",
+    "slug": "checkout",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/checkout/",
+    "title": {
+      "rendered": "Checkout"
+    },
+    "content": {
+      "rendered": "<p><div class=\"woocommerce\"></div></p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-9",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/9",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=9"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 2,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/9/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 101458,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/9/revisions/101458"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=9"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "date": "2025-05-13T16:14:23",
+    "date_gmt": "2025-05-13T16:14:23",
+    "guid": {
+      "rendered": "https://ghostguns.com/cart/"
+    },
+    "modified": "2025-06-28T02:41:31",
+    "modified_gmt": "2025-06-28T02:41:31",
+    "slug": "cart",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/cart/",
+    "title": {
+      "rendered": "Cart"
+    },
+    "content": {
+      "rendered": "\n<div data-block-name=\"woocommerce/cart\" class=\"wp-block-woocommerce-cart alignwide is-loading\">\n<div data-block-name=\"woocommerce/filled-cart-block\" class=\"wp-block-woocommerce-filled-cart-block\">\n<div data-block-name=\"woocommerce/cart-items-block\" class=\"wp-block-woocommerce-cart-items-block\">\n<div data-block-name=\"woocommerce/cart-line-items-block\" class=\"wp-block-woocommerce-cart-line-items-block\"></div>\n\n\n\n<div data-block-name=\"woocommerce/cart-cross-sells-block\" class=\"wp-block-woocommerce-cart-cross-sells-block\">\n<h2 class=\"wp-block-heading has-large-font-size\">You may be interested in…</h2>\n\n\n\n<div data-block-name=\"woocommerce/cart-cross-sells-products-block\" class=\"wp-block-woocommerce-cart-cross-sells-products-block\"></div>\n</div>\n</div>\n\n\n\n<div data-block-name=\"woocommerce/cart-totals-block\" class=\"wp-block-woocommerce-cart-totals-block\">\n<div data-block-name=\"woocommerce/cart-order-summary-block\" class=\"wp-block-woocommerce-cart-order-summary-block\">\n<div data-block-name=\"woocommerce/cart-order-summary-heading-block\" class=\"wp-block-woocommerce-cart-order-summary-heading-block\"></div><div data-block-name=\"woocommerce/cart-order-summary-coupon-form-block\" class=\"wp-block-woocommerce-cart-order-summary-coupon-form-block\"></div><div data-block-name=\"woocommerce/cart-order-summary-totals-block\" class=\"wp-block-woocommerce-cart-order-summary-totals-block\">\n<div data-block-name=\"woocommerce/cart-order-summary-subtotal-block\" class=\"wp-block-woocommerce-cart-order-summary-subtotal-block\"></div>\n<div data-block-name=\"woocommerce/cart-order-summary-discount-block\" class=\"wp-block-woocommerce-cart-order-summary-discount-block\"></div>\n<div data-block-name=\"woocommerce/cart-order-summary-fee-block\" class=\"wp-block-woocommerce-cart-order-summary-fee-block\"></div>\n<div data-block-name=\"woocommerce/cart-order-summary-shipping-block\" class=\"wp-block-woocommerce-cart-order-summary-shipping-block\"></div>\n<div data-block-name=\"woocommerce/cart-order-summary-taxes-block\" class=\"wp-block-woocommerce-cart-order-summary-taxes-block\"></div></div>\n</div>\n\n\n\n<div data-block-name=\"woocommerce/cart-express-payment-block\" class=\"wp-block-woocommerce-cart-express-payment-block\"></div>\n\n\n\n<div data-block-name=\"woocommerce/proceed-to-checkout-block\" class=\"wp-block-woocommerce-proceed-to-checkout-block\"></div>\n\n\n\n<div data-block-name=\"woocommerce/cart-accepted-payment-methods-block\" class=\"wp-block-woocommerce-cart-accepted-payment-methods-block\"></div>\n</div>\n</div>\n\n\n\n<div data-block-name=\"woocommerce/empty-cart-block\" class=\"wp-block-woocommerce-empty-cart-block\">\n<h2 class=\"wp-block-heading has-text-align-center with-empty-cart-icon wc-block-cart__empty-cart__title\">Your cart is currently empty!</h2>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity is-style-dots\"/>\n\n\n\n<h2 class=\"wp-block-heading has-text-align-center\">New in store</h2>\n\n\n<div data-block-name=\"woocommerce/product-new\" data-columns=\"4\" data-rows=\"1\" class=\"wc-block-grid wp-block-product-new wp-block-woocommerce-product-new wc-block-product-new has-4-columns\"><ul class=\"wc-block-grid__products\"><li class=\"wc-block-grid__product\">\n\t\t\t\t<a href=\"https://ghostguns.com/product/trash-panda-build-kit/\" class=\"wc-block-grid__product-link\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"wc-block-grid__product-image\"><img decoding=\"async\" width=\"1200\" height=\"900\" src=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1.png\" class=\"attachment-woocommerce_thumbnail size-woocommerce_thumbnail\" alt=\"Trash Panda Build Kit\" srcset=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1.png 1200w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1-300x225.png 300w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1-1024x768.png 1024w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1-768x576.png 768w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1-990x743.png 990w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1-441x331.png 441w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1788424003676-emxlztoyzcu-1-150x113.png 150w\" sizes=\"(max-width: 360px) 147px, (max-width: 1200px) 100vw, 1200px\" /></div>\n\t\t\t\t\t<div class=\"wc-block-grid__product-title\">Trash Panda Build Kit</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wc-block-grid__product-price price\"><span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&#036;</span>599.99</span></div>\n\t\t\t\t\n\t\t\t\t<div class=\"wp-block-button wc-block-grid__product-add-to-cart\"><a href=\"/wp-json/wp/v2/pages?per_page=100&#038;add-to-cart=102227\" aria-label=\"Add to cart: &ldquo;Trash Panda Build Kit&rdquo;\" data-quantity=\"1\" data-product_id=\"102227\" data-product_sku=\"BK_TRASH_PANDA\" data-price=\"599.99\" rel=\"nofollow\" class=\"wp-block-button__link  add_to_cart_button ajax_add_to_cart\">Add to cart</a></div>\n\t\t\t</li><li class=\"wc-block-grid__product\">\n\t\t\t\t<a href=\"https://ghostguns.com/product/g80-hardware-replacement-set/\" class=\"wc-block-grid__product-link\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"wc-block-grid__product-image\"><img decoding=\"async\" width=\"1200\" height=\"900\" src=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1.png\" class=\"attachment-woocommerce_thumbnail size-woocommerce_thumbnail\" alt=\"G80 Hardware Replacement Set\" srcset=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1.png 1200w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1-300x225.png 300w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1-1024x768.png 1024w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1-768x576.png 768w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1-990x743.png 990w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1-441x331.png 441w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1779909218022-3mjb65fnvgi-1-150x113.png 150w\" sizes=\"(max-width: 360px) 147px, (max-width: 1200px) 100vw, 1200px\" /></div>\n\t\t\t\t\t<div class=\"wc-block-grid__product-title\">G80 Hardware Replacement Set</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wc-block-grid__product-price price\"><span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&#036;</span>9.99</span></div>\n\t\t\t\t\n\t\t\t\t<div class=\"wp-block-button wc-block-grid__product-add-to-cart\"><a href=\"/wp-json/wp/v2/pages?per_page=100&#038;add-to-cart=102111\" aria-label=\"Add to cart: &ldquo;G80 Hardware Replacement Set&rdquo;\" data-quantity=\"1\" data-product_id=\"102111\" data-product_sku=\"G80-PINSPRSET\" data-price=\"9.99\" rel=\"nofollow\" class=\"wp-block-button__link  add_to_cart_button ajax_add_to_cart\">Add to cart</a></div>\n\t\t\t</li><li class=\"wc-block-grid__product\">\n\t\t\t\t<a href=\"https://ghostguns.com/product/awcy-usb/\" class=\"wc-block-grid__product-link\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"wc-block-grid__product-image\"><img decoding=\"async\" width=\"1800\" height=\"1350\" src=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1.png\" class=\"attachment-woocommerce_thumbnail size-woocommerce_thumbnail\" alt=\"AWCY? USB\" srcset=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1.png 1800w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1-300x225.png 300w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1-1024x768.png 1024w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1-768x576.png 768w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1-1536x1152.png 1536w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1-990x743.png 990w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1-441x331.png 441w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784521747252-ult9x10aw6k-1-150x113.png 150w\" sizes=\"(max-width: 360px) 147px, (max-width: 1800px) 100vw, 1800px\" /></div>\n\t\t\t\t\t<div class=\"wc-block-grid__product-title\">AWCY? USB</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wc-block-grid__product-price price\"><span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&#036;</span>14.99</span></div>\n\t\t\t\t\n\t\t\t\t<div class=\"wp-block-button wc-block-grid__product-add-to-cart\"><a href=\"/wp-json/wp/v2/pages?per_page=100&#038;add-to-cart=101876\" aria-label=\"Add to cart: &ldquo;AWCY? USB&rdquo;\" data-quantity=\"1\" data-product_id=\"101876\" data-product_sku=\"AWCY-USB\" data-price=\"14.99\" rel=\"nofollow\" class=\"wp-block-button__link  add_to_cart_button ajax_add_to_cart\">Add to cart</a></div>\n\t\t\t</li><li class=\"wc-block-grid__product\">\n\t\t\t\t<a href=\"https://ghostguns.com/product/black-lotus-coalition-usb/\" class=\"wc-block-grid__product-link\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"wc-block-grid__product-image\"><img decoding=\"async\" width=\"1800\" height=\"1350\" src=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1.png\" class=\"attachment-woocommerce_thumbnail size-woocommerce_thumbnail\" alt=\"Black Lotus Coalition USB\" srcset=\"https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1.png 1800w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1-300x225.png 300w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1-1024x768.png 1024w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1-768x576.png 768w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1-1536x1152.png 1536w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1-990x743.png 990w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1-441x331.png 441w, https://ghostgunsdotcom.s3.us-east-2.amazonaws.com/wp-content/uploads/2026/09/1784520957396-0i652szjqz5d-1-150x113.png 150w\" sizes=\"(max-width: 360px) 147px, (max-width: 1800px) 100vw, 1800px\" /></div>\n\t\t\t\t\t<div class=\"wc-block-grid__product-title\">Black Lotus Coalition USB</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wc-block-grid__product-price price\"><span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&#036;</span>14.99</span></div>\n\t\t\t\t\n\t\t\t\t<div class=\"wp-block-button wc-block-grid__product-add-to-cart\"><a href=\"/wp-json/wp/v2/pages?per_page=100&#038;add-to-cart=101874\" aria-label=\"Add to cart: &ldquo;Black Lotus Coalition USB&rdquo;\" data-quantity=\"1\" data-product_id=\"101874\" data-product_sku=\"BLC-USB\" data-price=\"14.99\" rel=\"nofollow\" class=\"wp-block-button__link  add_to_cart_button ajax_add_to_cart\">Add to cart</a></div>\n\t\t\t</li></ul></div></div>\n</div>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-8",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/8",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=8"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/8/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 12,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/8/revisions/12"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=8"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "date": "2025-05-13T16:14:23",
+    "date_gmt": "2025-05-13T16:14:23",
+    "guid": {
+      "rendered": "https://ghostguns.com/shop/"
+    },
+    "modified": "2025-05-13T16:14:23",
+    "modified_gmt": "2025-05-13T16:14:23",
+    "slug": "shop",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/shop/",
+    "title": {
+      "rendered": "Shop"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-7",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/7",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=7"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 0,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/7/revisions"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=7"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "date": "2025-05-13T16:13:19",
+    "date_gmt": "2025-05-13T16:13:19",
+    "guid": {
+      "rendered": "https://ghostguns.com/?page_id=3"
+    },
+    "modified": "2025-06-28T10:21:20",
+    "modified_gmt": "2025-06-28T10:21:20",
+    "slug": "privacy-policy",
+    "status": "publish",
+    "type": "page",
+    "link": "https://ghostguns.com/privacy-policy/",
+    "title": {
+      "rendered": "Privacy Policy"
+    },
+    "content": {
+      "rendered": "\n<p class=\"wp-block-paragraph\"><strong>Ghost Guns Privacy Policy</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Last Modified: 6/11/2019</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>1. Introduction.</strong> Defense Distributed (“Company” or “We”) respect your privacy and are committed to protecting it through our compliance with this policy. This policy describes the types of information we may collect from you or that you may provide when you visit the website www.ghostguns.com (our “Website”) and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>\n\n\n\n<p class=\"wp-block-paragraph\">This policy applies to information we collect:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>On this Website.</li>\n\n\n\n<li>In email, text, and other electronic messages between you and this Website.</li>\n\n\n\n<li>Through mobile and desktop applications you download from this Website, which provide dedicated non-browser-based interaction between you and this Website.</li>\n\n\n\n<li>When you interact with our advertising and applications on third-party websites and services, if those applications or advertising include links to this policy.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">It does not apply to information collected by:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>any third party, including through any application or content (including advertising) that may link to or be accessible from the Website.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Please read this policy carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is not to use our Website. By accessing or using this Website, you agree to this privacy policy. This policy may change from time to time. Your continued use of this Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>2. Information We Collect About You and How We Collect It.</strong> We collect several types of information from and about users of our Website, including information:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>by which you may be personally identified, such as name, postal address, e-mail address, telephone number, or any other identifier by which you may be contacted online or offline (“personal information”);</li>\n\n\n\n<li>that is about you but individually does not identify you; and</li>\n\n\n\n<li>about your internet connection, the equipment you use to access our Website and usage details.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">We collect this information:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Directly from you when you provide it to us.</li>\n\n\n\n<li>Automatically as you navigate through the site. Information collected automatically may include usage details, IP addresses, and information collected through cookies, web beacons, and other tracking technologies.</li>\n\n\n\n<li>From third parties, for example, our business partners.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>3. Information You Provide to Us.</strong> The information we collect on or through our Website may include:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Information that you provide by filling in forms on our Website. This includes information provided at the time of registering to use our Website, subscribing to our emails, including newsletters and updates, posting material, or submitting requests. We may also ask you for information when you report a problem with our Website.</li>\n\n\n\n<li>Records and copies of your correspondence (including email addresses), if you contact us.</li>\n\n\n\n<li>Details of transactions you carry out through our Website and of the fulfillment of your orders. You may be required to provide financial information before placing an order through our Website.</li>\n\n\n\n<li>Your search queries on the Website.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>4. Information We Collect Through Automatic Data Collection Technologies.</strong> As you navigate through and interact with our Website, we may use automatic data collection technologies to collect certain information about your equipment,</p>\n\n\n\n<p class=\"wp-block-paragraph\">browsing actions, and patterns, including:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Details of your visits to our Website and other communication data and the resources that you access and use on the Website.</li>\n\n\n\n<li>Information about your computer and internet connection, including your IP address, operating system, and browser type.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">The information we collect automatically is statistical data and does not include personal information, but we may maintain it or associate it with personal information we collect in other ways or receive from third parties. It helps us to improve our Website and to deliver a better and more personalized service, including by enabling us to:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Estimate our audience size and usage patterns.</li>\n\n\n\n<li>Store information about your preferences, allowing us to customize our Website according to your individual interests.</li>\n\n\n\n<li>Speed up your searches.</li>\n\n\n\n<li>Recognize you when you return to our Website.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">The technologies we use for this automatic data collection may include:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Cookies (or browser cookies). A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting you may be unable to access certain parts of our Website. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Website.</li>\n\n\n\n<li>Flash Cookies. Certain features of our Website may use local stored objects (or Flash cookies) to collect and store information about your preferences and navigation to, from, and on our Website. Flash cookies are not managed by the same browser settings as are used for browser cookies. For information about managing your privacy and security settings for Flash cookies.</li>\n\n\n\n<li>Web Beacons. Pages of the Website and our e-mails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of certain website content and verifying system and server integrity).</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>5. Third-Party Use of Cookies and Other Tracking Technologies.</strong> Some content or applications, including advertisements, on the Website are served by third-parties, including advertisers, ad networks and servers, content providers, and application providers. These third parties may use cookies to collect information about you when you use our website. The information they collect may be associated with your personal information or they may collect information, including personal information, about your online activities over time and across different websites and other online services. They may use this information to provide you with interest-based (behavioral) advertising or other targeted content.</p>\n\n\n\n<p class=\"wp-block-paragraph\">We do not control these third parties’ tracking technologies or how they may be used. If you have any questions about an advertisement or other targeted content, you should contact the responsible provider directly. For information about how you can opt out of receiving targeted advertising from many providers, see Choices About How We Use and Disclose Your Information.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>6. How We Use Your Information.</strong> We use information that we collect about you or that you provide to us, including any personal information:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>To present our Website and its contents to you.</li>\n\n\n\n<li>To provide you with information, products, or services that you request from us.</li>\n\n\n\n<li>To provide you with notices about your account and fulfill any other purpose for which you provide it.</li>\n\n\n\n<li>To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection.</li>\n\n\n\n<li>To notify you about changes to our Website or any products or services we offer or provide though it.</li>\n\n\n\n<li>In any other way we may describe when you provide the information.</li>\n\n\n\n<li>For any other purpose with your consent.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">We may also use your information to contact you about our own and third-parties’ goods and services that may be of interest to you. If you do not want us to use your information in this way, please see Section 8 of this privacy policy for choices about how we use and disclose your information.</p>\n\n\n\n<p class=\"wp-block-paragraph\">We may use the information we have collected from you to enable us to display advertisements to our advertisers’ target audiences. Even though we do not disclose your personal information for these purposes without your consent, if you click on or otherwise interact with an advertisement, the advertiser may assume that you meet its target criteria.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>7. Disclosure of Your Information.</strong> We may disclose aggregated information about our users, and information that does not identify any individual, without restriction. We may disclose personal information that we collect or you provide as described in this privacy policy:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>To our subsidiaries and affiliates.</li>\n\n\n\n<li>To contractors, service providers, and other third parties we use to support our business.</li>\n\n\n\n<li>To fulfill the purpose for which you provide it. For example, if you give us an email address to use the “email a friend” feature of our Website or email, we will transmit the contents of that email and your email address to the recipients.</li>\n\n\n\n<li>For any other purpose disclosed by us when you provide the information.</li>\n\n\n\n<li>With your consent.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">We may also disclose your personal information:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>To comply with any court order, law, or legal process, including to respond to any government or regulatory request.</li>\n\n\n\n<li>To access our terms of use https://ghostguns.com/content/13-website-terms-of-use or terms of sale https://ghostguns.com/content/3-terms-and-conditions-policy and other agreements, including for billing and collection purposes.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of Defense Distributed, our customers, or others.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>8. Choices About How We Use and Disclose Your Information.</strong> We strive to provide you with choices regarding the personal information you provide to us. We have created mechanisms to provide you with the following control over your information:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Tracking Technologies and Advertising.</strong> You can set your browser to refuse all or some browser cookies, or to alert you when cookies are being sent. To learn how you can manage your Flash cookie settings, visit the Flash player settings page on Adobe’s website. If you disable or refuse cookies, please note that some parts of this site may then be inaccessible or not function properly.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>9. Accessing and Correcting Your Information.</strong> You may also send us an email at support@ghostguns.com to request access to, correct or delete any personal information that you have provided to us. We may not accommodate a request to change information if we believe the change would violate any law or legal requirement or cause the information to be incorrect.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>10. Changes to Our Privacy Policy.</strong> It is our policy to post any changes we make to our privacy policy on this page with a notice that the privacy policy has been updated on the Website home page. If we make material changes to how we treat our users’ personal information, we will notify you by email to the primary email address specified in your account and/or through a notice on the Website home page. The date the privacy policy was last revised is identified at the top of the page. You are responsible for ensuring we have an up-to-date active and deliverable email address for you, and for periodically visiting our Website and this privacy policy to check for any changes.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Contact Information<br></strong>To ask questions or comment about this policy and our privacy practices contact us at: support@ghostguns.com.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Ghost Guns Privacy Policy Last Modified: 6/11/2019 1. Introduction. Defense Distributed (“Company” or “We”) respect your privacy and are committed to protecting it through our compliance with this policy. This policy describes the types of information we may collect from you or that you may provide when you visit the website www.ghostguns.com (our “Website”) and [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "open",
+    "template": "template-fullwidth.php",
+    "meta": {
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-3",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/3",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://ghostguns.com/wp-json/wp/v2/comments?post=3"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/3/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 43,
+          "href": "https://ghostguns.com/wp-json/wp/v2/pages/3/revisions/43"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://ghostguns.com/wp-json/wp/v2/media?parent=3"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations, type Locale } from '../utils/i18n';
+import pagesTranslationsData from '../data/pages-translations.json';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+const pageData = (pagesTranslationsData as any)['about']?.[lang] || (pagesTranslationsData as any)['about']?.['en'];
+---
+
+<Layout title={`${pageData.title} | Ghost Guns`} description={pageData.subheading} lang={lang}>
+  <div class="content-page-wrapper w-full font-sans">
+    <div class="w-full flex-grow bg-white flex flex-col">
+      <div class="lg:container lg:mx-auto lg:border-l lg:border-r border-[#e5e5e5] flex-grow flex flex-col">
+        <div class="flex-grow px-4 md:px-6 py-8">
+          
+          <!-- Hero Section -->
+          <div class="w-full border-b border-[#e5e5e5]">
+            <div class="px-[12px] py-[24px] md:py-[48px]">
+              <p class="text-xs uppercase text-[#9f0712] m-0 mb-2 font-mono">// Who We Are</p>
+              <h1 class="uppercase font-bold text-black text-3xl md:text-4xl m-0 font-heading tracking-tight">{pageData.heading}</h1>
+              <p class="text-black text-sm mt-4 m-0 max-w-xl font-mono">{pageData.subheading}</p>
+            </div>
+          </div>
+
+          <!-- Company Story: 2/3 + 1/3 Grid -->
+          <div class="w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-3 border-b border-[#e5e5e5]">
+              <!-- Story Column (2/3) -->
+              <div class="lg:col-span-2 border-b lg:border-b-0 lg:border-r border-[#e5e5e5]">
+                <div class="border-b border-[#e5e5e5] px-[12px] py-[12px]">
+                  <p class="uppercase font-bold text-black text-lg m-0 font-heading">Our Mission</p>
+                </div>
+                <div class="p-[12px] md:p-[24px] flex flex-col gap-4 text-black text-sm leading-relaxed" set:html={pageData.content}>
+                </div>
+              </div>
+
+              <!-- At a Glance Column (1/3) -->
+              <div class="lg:col-span-1">
+                <div class="border-b border-[#e5e5e5] px-[12px] py-[12px]">
+                  <p class="uppercase font-bold text-black text-lg m-0 font-heading">At a Glance</p>
+                </div>
+                <div class="p-[12px] md:p-[24px] flex flex-col gap-6 font-mono">
+                  <div>
+                    <p class="uppercase font-bold text-black text-xs m-0 mb-1">Headquarters</p>
+                    <p class="text-black text-sm m-0">Austin, Texas, USA</p>
+                  </div>
+                  <div>
+                    <p class="uppercase font-bold text-black text-xs m-0 mb-1">Currency Supported</p>
+                    <p class="text-black text-sm m-0">Euro (€) / Cryptocurrencies</p>
+                  </div>
+                  <div>
+                    <p class="uppercase font-bold text-black text-xs m-0 mb-1">Inventory</p>
+                    <p class="text-black text-sm m-0">100% In-Stock Warehouse</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

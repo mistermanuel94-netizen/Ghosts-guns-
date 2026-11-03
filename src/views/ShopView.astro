@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import products from '../data/products.json';
+import { useTranslations, getLocalizedPath, type Locale } from '../utils/i18n';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+const allProducts = products;
+---
+
+<Layout
+  title={`${t('catalog.shopCatalog')} | Ghost Guns`}
+  description={t('shopHero.subtitle')}
+  lang={lang}
+>
+  <div class="lg:container lg:mx-auto">
+    <!-- 1. Captivating Shop Hero Section -->
+    <div class="relative bg-black text-white border-l border-r border-b border-[#e5e5e5] overflow-hidden">
+      <!-- Background texture/image overlay -->
+      <div 
+        class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-luminosity filter contrast-125 pointer-events-none"
+        style="background-image: url('/assets/images/hero-bg.webp');"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none"></div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 px-4 py-10 sm:py-14 md:py-16 max-w-5xl mx-auto text-center">
+        <!-- Category Kicker Tag -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#9f0712]/20 border border-[#9f0712]/50 text-[#9f0712] text-[10px] sm:text-xs font-mono uppercase tracking-widest font-bold mb-4">
+          <span class="w-1.5 h-1.5 bg-[#9f0712] rounded-full animate-pulse"></span>
+          <span>{t('shopHero.tag')}</span>
+        </div>
+
+        <!-- Master Title -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white font-heading tracking-tight leading-none mb-4">
+          {t('shopHero.title')}
+        </h1>
+
+        <!-- Subtitle / Copy -->
+        <p class="text-xs sm:text-sm md:text-base text-neutral-300 font-sans leading-relaxed max-w-3xl mx-auto mb-8">
+          {t('shopHero.subtitle')}
+        </p>
+
+        <!-- 3 Quick Highlight Badges -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 max-w-xl mx-auto text-center border-t border-neutral-800 pt-6">
+          <div class="p-2 sm:p-3 bg-neutral-900/80 border border-neutral-800">
+            <span class="block text-lg sm:text-2xl font-black text-white font-mono leading-none mb-1">{allProducts.length}</span>
+            <span class="block text-[9px] sm:text-[11px] font-mono uppercase text-neutral-400">{t('shopHero.statPlatforms')}</span>
+          </div>
+          <div class="p-2 sm:p-3 bg-neutral-900/80 border border-neutral-800">
+            <span class="block text-lg sm:text-2xl font-black text-[#9f0712] font-mono leading-none mb-1">100%</span>
+            <span class="block text-[9px] sm:text-[11px] font-mono uppercase text-neutral-400">{t('shopHero.statShipping')}</span>
+          </div>
+          <div class="p-2 sm:p-3 bg-neutral-900/80 border border-neutral-800">
+            <span class="block text-lg sm:text-2xl font-black text-white font-mono leading-none mb-1">€ EUR</span>
+            <span class="block text-[9px] sm:text-[11px] font-mono uppercase text-neutral-400">{t('shopHero.statCurrency')}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Sticky / Responsive Filter & Sort Toolbar -->
+    <div class="sticky top-[36px] md:top-[72px] z-40 bg-white border-l border-r border-b border-[#e5e5e5] px-3 sm:px-4 py-3 sm:py-4 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
+        
+        <!-- Left: Silo Filter Chips (Horizontal touch scroll on mobile) -->
+        <div class="w-full md:w-auto overflow-hidden">
+          <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar whitespace-nowrap py-0.5 text-xs font-mono">
+            <a 
+              href={getLocalizedPath('/shop/', lang)} 
+              class="px-2.5 sm:px-3 py-1.5 bg-black text-white border border-black uppercase font-bold text-[11px] sm:text-xs shrink-0"
+            >
+              ALL ({allProducts.length})
+            </a>
+            <a 
+              href={getLocalizedPath('/3d-printers/', lang)} 
+              class="px-2.5 sm:px-3 py-1.5 bg-white border border-[#9f0712] text-[#9f0712] font-bold hover:bg-[#9f0712] hover:text-white uppercase transition-colors text-[11px] sm:text-xs shrink-0 flex items-center gap-1"
+            >
+              <span>{t('catalog.filter3DPrinters')}</span>
+              <span class="text-[9px] bg-[#9f0712] text-white px-1 py-0.2 rounded-none font-bold">NEW</span>
+            </a>
+            <a 
+              href={getLocalizedPath('/build-kit/', lang)} 
+              class="px-2.5 sm:px-3 py-1.5 bg-white border border-[#ccc] hover:border-black uppercase text-[11px] sm:text-xs text-black shrink-0"
+            >
+              {t('catalog.filterBuildKits')}
+            </a>
+            <a 
+              href={getLocalizedPath('/80-firearm/', lang)} 
+              class="px-2.5 sm:px-3 py-1.5 bg-white border border-[#ccc] hover:border-black uppercase text-[11px] sm:text-xs text-black shrink-0"
+            >
+              {t('catalog.filter80Percent')}
+            </a>
+            <a 
+              href={getLocalizedPath('/component/', lang)} 
+              class="px-2.5 sm:px-3 py-1.5 bg-white border border-[#ccc] hover:border-black uppercase text-[11px] sm:text-xs text-black shrink-0"
+            >
+              {t('catalog.filterParts')}
+            </a>
+            <a 
+              href={getLocalizedPath('/3d-printing/', lang)} 
+              class="px-2.5 sm:px-3 py-1.5 bg-white border border-[#ccc] hover:border-black uppercase text-[11px] sm:text-xs text-black shrink-0"
+            >
+              {t('catalog.filter3DPrinting')}
+            </a>
+            <a 
+              href={getLocalizedPath('/gun-accessories/', lang)} 
+              class="px-2.5 sm:px-3 py-1.5 bg-white border border-[#ccc] hover:border-black uppercase text-[11px] sm:text-xs text-black shrink-0"
+            >
+              {t('catalog.filterAccessories')}
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Sort Dropdown & Product Count Indicator -->
+        <div class="flex items-center justify-between md:justify-end gap-3 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-neutral-100">
+          <p id="shop-item-count" class="text-[11px] sm:text-xs font-mono text-neutral-500 uppercase whitespace-nowrap m-0">
+            {t('catalog.showingAll').replace('{count}', allProducts.length.toString())}
+          </p>
+
+          <!-- Interactive Sort Selector -->
+          <div class="flex items-center gap-2">
+            <label for="shop-sort-select" class="hidden sm:inline text-xs font-mono uppercase font-bold text-neutral-600 whitespace-nowrap">
+              {t('catalog.sortLabel')}
+            </label>
+            <div class="relative min-w-[170px] sm:min-w-[190px]">
+              <select
+                id="shop-sort-select"
+                class="w-full h-[36px] pl-3 pr-8 text-xs font-mono font-bold uppercase bg-white border border-[#ccc] hover:border-black focus:outline-none focus:border-black rounded-none appearance-none cursor-pointer transition-colors text-black"
+                aria-label={t('catalog.sortLabel')}
+              >
+                <option value="default">{t('catalog.sortDefault')}</option>
+                <option value="popularity">{t('catalog.sortPopularity')}</option>
+                <option value="date">{t('catalog.sortLatest')}</option>
+                <option value="price-asc">{t('catalog.sortPriceAsc')}</option>
+                <option value="price-desc">{t('catalog.sortPriceDesc')}</option>
+              </select>
+              <!-- Dropdown Chevron -->
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. Products Grid -->
+    <ul id="shop-products-grid" class="products list-none m-0 p-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-l border-r border-b border-[#e5e5e5] transition-opacity duration-200">
+      {allProducts.map((product: any) => (
+        <ProductCard product={product} lang={lang} />
+      ))}
+    </ul>
+  </div>
+</Layout>
+
+<style>
+  /* Custom utility to hide scrollbar on mobile while allowing touch scrolling */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+<script>
+  // Dynamic Client-Side Product Sorting for Shop Catalog
+  const sortSelect = document.getElementById('shop-sort-select') as HTMLSelectElement | null;
+  const productsGrid = document.getElementById('shop-products-grid');
+
+  if (sortSelect && productsGrid) {
+    // Preserve original default DOM order of product elements
+    const initialItems = Array.from(productsGrid.children) as HTMLElement[];
+
+    function sortProducts(criteria: string) {
+      // Temporary fade transition
+      productsGrid.style.opacity = '0.5';
+
+      setTimeout(() => {
+        let sorted = [...initialItems];
+
+        if (criteria === 'price-asc') {
+          sorted.sort((a, b) => {
+            const priceA = parseFloat(a.getAttribute('data-price') || '0');
+            const priceB = parseFloat(b.getAttribute('data-price') || '0');
+            return priceA - priceB;
+          });
+        } else if (criteria === 'price-desc') {
+          sorted.sort((a, b) => {
+            const priceA = parseFloat(a.getAttribute('data-price') || '0');
+            const priceB = parseFloat(b.getAttribute('data-price') || '0');
+            return priceB - priceA;
+          });
+        } else if (criteria === 'popularity') {
+          sorted.sort((a, b) => {
+            const popA = parseInt(a.getAttribute('data-popularity') || '0', 10);
+            const popB = parseInt(b.getAttribute('data-popularity') || '0', 10);
+            return popB - popA;
+          });
+        } else if (criteria === 'date') {
+          sorted.sort((a, b) => {
+            const idA = parseInt(a.getAttribute('data-id') || '0', 10);
+            const idB = parseInt(b.getAttribute('data-id') || '0', 10);
+            return idB - idA;
+          });
+        } else {
+          // Default order
+          sorted = [...initialItems];
+        }
+
+        // Re-append sorted elements
+        sorted.forEach(el => productsGrid.appendChild(el));
+        productsGrid.style.opacity = '1';
+
+        // Update URL query parameter without full reload
+        const url = new URL(window.location.href);
+        if (criteria === 'default') {
+          url.searchParams.delete('orderby');
+        } else {
+          url.searchParams.set('orderby', criteria);
+        }
+        window.history.replaceState({}, '', url.toString());
+      }, 80);
+    }
+
+    // Check URL parameters on page load (e.g. ?orderby=date or ?orderby=popularity)
+    const currentParams = new URLSearchParams(window.location.search);
+    const initialOrderby = currentParams.get('orderby');
+    if (initialOrderby && ['popularity', 'date', 'price-asc', 'price-desc'].includes(initialOrderby)) {
+      sortSelect.value = initialOrderby;
+      sortProducts(initialOrderby);
+    }
+
+    // Change listener
+    sortSelect.addEventListener('change', (e) => {
+      const val = (e.target as HTMLSelectElement).value;
+      sortProducts(val);
+    });
+  }
+</script>

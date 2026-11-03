@@ -1,0 +1,133 @@
+{
+  "header": {
+    "brand": "GHOST GUNS",
+    "logo": "/assets/images/logo-black.svg",
+    "links": [
+      {
+        "title": "SHOP",
+        "url": "/shop"
+      },
+      {
+        "title": "BUILD KITS",
+        "url": "/build-kit/"
+      },
+      {
+        "title": "80 PERCENT",
+        "url": "/80-firearm/"
+      },
+      {
+        "title": "PARTS",
+        "url": "/component/",
+        "children": [
+          {
+            "title": "Slides",
+            "url": "/component/slide/"
+          },
+          {
+            "title": "Rails",
+            "url": "/component/rails/"
+          },
+          {
+            "title": "Receivers",
+            "url": "/component/receiver/"
+          }
+        ]
+      },
+      {
+        "title": "3D PRINTING",
+        "url": "/3d-printing/",
+        "children": [
+          {
+            "title": "3D Files",
+            "url": "/3d-printing/3d-files/"
+          },
+          {
+            "title": "Accessories",
+            "url": "/3d-printing/3d-printer-accessories/"
+          }
+        ]
+      },
+      {
+        "title": "3D Printers",
+        "url": "/3d-printers/",
+        "is_highlighted": true,
+        "children": []
+      },
+      {
+        "title": "ACCESSORIES",
+        "url": "/gun-accessories/"
+      },
+      {
+        "title": "CONTACT",
+        "url": "/contact"
+      }
+    ]
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Ghost Guns",
+        "links": [
+          {
+            "title": "/ shop",
+            "url": "/shop"
+          },
+          {
+            "title": "/ about",
+            "url": "/about"
+          },
+          {
+            "title": "/ blog",
+            "url": "/blog"
+          },
+          {
+            "title": "/ instagram",
+            "url": "https://www.instagram.com/dd.ghostguns",
+            "external": true
+          }
+        ]
+      },
+      {
+        "title": "Help",
+        "links": [
+          {
+            "title": "/ contact",
+            "url": "/contact"
+          },
+          {
+            "title": "/ refund policy",
+            "url": "/refund-policy"
+          },
+          {
+            "title": "/ shipping policy",
+            "url": "/shipping-policy"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "title": "/ shipping restrictions",
+            "url": "/shipping-restrictions"
+          },
+          {
+            "title": "/ terms & conditions",
+            "url": "/terms-and-conditions"
+          },
+          {
+            "title": "/ privacy policy",
+            "url": "/privacy-policy"
+          }
+        ]
+      },
+      {
+        "title": "All Rights Reversed",
+        "isCanary": true,
+        "content": "Since Jan. 1 2021, no warrants have been served to ghostguns.com principals or employees.<br><br>No searches or seizures have been performed on ghostguns.com assets."
+      }
+    ],
+    "disclaimer": "Ghost Guns hardware and software are not currently available to persons outside the United States and are not available to residents of and persons in the states of New Jersey and California who do not possess a federal firearms license.",
+    "copyright": "Ghost Guns 2026"
+  }
+}

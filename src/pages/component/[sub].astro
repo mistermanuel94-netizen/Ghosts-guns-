@@ -1,0 +1,20 @@
+---
+import CategoryView from '../../components/CategoryView.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { sub: 'slide' }, props: { title: 'Slide Kits', slug: 'slide' } },
+    { params: { sub: 'rails' }, props: { title: 'Rail Kits', slug: 'rails' } },
+    { params: { sub: 'receiver' }, props: { title: 'Receivers', slug: 'receiver' } },
+    { params: { sub: 'glock' }, props: { title: 'Glock Parts', slug: 'glock' } },
+  ];
+}
+
+const { title, slug } = Astro.props;
+---
+
+<CategoryView
+  title={title}
+  categorySlug={slug}
+  description={`Browse our premium collection of ${title}. Tested and verified for reliable custom builds.`}
+/>

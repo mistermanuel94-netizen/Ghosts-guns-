@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+import pagesTranslationsData from '../data/pages-translations.json';
+
+interface Props {
+  slug: string;
+  lang?: Locale;
+}
+
+const { slug, lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+const pageData = (pagesTranslationsData as any)[slug]?.[lang] || (pagesTranslationsData as any)[slug]?.['en'] || {
+  title: 'Legal Policy | Ghost Guns',
+  heading: 'LEGAL POLICY',
+  desc: 'Legal policy information and compliance details.',
+  content: '<p>Content being updated.</p>'
+};
+
+const policyLinks = [
+  { slug: 'shipping-restrictions', label: t('footer.shippingRestrictionsLink') || 'Shipping Restrictions' },
+  { slug: 'terms-and-conditions', label: t('footer.termsConditionsLink') || 'Terms & Conditions' },
+  { slug: 'privacy-policy', label: t('footer.privacyPolicyLink') || 'Privacy Policy' },
+  { slug: 'refund-policy', label: t('footer.refundPolicyLink') || 'Refund Policy' },
+  { slug: 'shipping-policy', label: t('footer.shippingPolicyLink') || 'Shipping Policy' },
+  { slug: 'website-terms-of-use', label: 'Website Terms of Use' }
+];
+---
+
+<Layout title={`${pageData.title}`} description={pageData.desc} lang={lang}>
+  <div class="content-page-wrapper w-full font-sans">
+    <div class="w-full flex-grow bg-white flex flex-col">
+      <div class="lg:container lg:mx-auto lg:border-l lg:border-r border-[#e5e5e5] flex-grow flex flex-col">
+        <div class="flex-grow px-4 md:px-6 py-8">
+          
+          <!-- Hero Section -->
+          <div class="w-full border-b border-[#e5e5e5]">
+            <div class="px-[12px] py-[24px] md:py-[40px]">
+              <p class="text-xs uppercase text-[#9f0712] m-0 mb-2 font-mono">// Legal & Compliance</p>
+              <h1 class="uppercase font-bold text-black text-3xl md:text-4xl m-0 font-heading tracking-tight">{pageData.heading}</h1>
+              {pageData.desc && (
+                <p class="text-neutral-600 text-sm mt-3 m-0 max-w-2xl font-mono">{pageData.desc}</p>
+              )}
+            </div>
+          </div>
+
+          <!-- Two-Column Layout: Policy Content (3/4) + Sidebar Links (1/4) -->
+          <div class="w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-4 border-b border-[#e5e5e5]">
+              
+              <!-- Content Area (3 cols) -->
+              <div class="lg:col-span-3 border-b lg:border-b-0 lg:border-r border-[#e5e5e5]">
+                <div class="p-[12px] md:p-[28px] text-neutral-800 text-sm leading-relaxed policy-prose" set:html={pageData.content}>
+                </div>
+              </div>
+
+              <!-- Sidebar Legal Directory (1 col) -->
+              <div class="lg:col-span-1 bg-neutral-50/50">
+                <div class="border-b border-[#e5e5e5] px-[16px] py-[12px]">
+                  <p class="uppercase font-bold text-black text-xs m-0 font-mono tracking-wider">All Policies</p>
+                </div>
+                <div class="p-[16px] flex flex-col gap-2 font-mono text-xs">
+                  {policyLinks.map((item) => {
+                    const isActive = item.slug === slug;
+                    return (
+                      <a 
+                        href={getLocalizedPath(`/${item.slug}/`, lang)}
+                        class={`py-1.5 px-2 border-l-2 transition-colors ${
+                          isActive 
+                            ? 'border-[#9f0712] text-black font-bold bg-neutral-100' 
+                            : 'border-transparent text-neutral-600 hover:text-black hover:border-neutral-400'
+                        }`}
+                      >
+                        {item.label}
+                      </a>
+                    );
+                  })}
+                </div>
+
+                <div class="border-t border-[#e5e5e5] p-[16px] mt-4 font-mono">
+                  <p class="text-[11px] uppercase font-bold text-black mb-1">Questions?</p>
+                  <p class="text-xs text-neutral-600 mb-3">Our support desk is available Mon - Fri.</p>
+                  <a href={getLocalizedPath('/contact/', lang)} class="inline-block bg-black hover:bg-[#9f0712] text-white text-[11px] font-bold uppercase py-2 px-3 transition-colors">
+                    {t('footer.contactLink') || 'Contact Us'}
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

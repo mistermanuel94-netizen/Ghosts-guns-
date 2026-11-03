@@ -1,0 +1,14 @@
+---
+import AccountView from '../../views/AccountView.astro';
+import { LOCALES, type Locale } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.filter(l => l !== 'en').map(lang => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<AccountView lang={lang as Locale} />

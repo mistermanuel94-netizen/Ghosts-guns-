@@ -1,0 +1,67 @@
+---
+import { getLangFromUrl, getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang } = Astro.props;
+const currentLang = lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+---
+
+<footer class="mt-auto w-full bg-white">
+  <div class="lg:container lg:mx-auto">
+    <!-- Main footer grid: 4 columns -->
+    <div class="flex flex-col md:grid md:grid-cols-4 border-t border-[#e5e5e5] lg:border-l lg:border-r border-[#e5e5e5]">
+      
+      <!-- Col 1: Ghost Guns -->
+      <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
+        <p class="uppercase text-black mb-4 font-heading text-lg font-bold">{t('footer.col1Title')}</p>
+        <div class="flex flex-col gap-1">
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/shop/', currentLang)}>{t('footer.shopLink')}</a>
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/about/', currentLang)}>{t('footer.aboutLink')}</a>
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/blog/', currentLang)}>{t('footer.blogLink')}</a>
+          <a class="text-black text-xs uppercase font-mono hover:underline" href="https://www.instagram.com/dd.ghostguns" target="_blank" rel="noopener noreferrer">{t('footer.instagramLink')}</a>
+        </div>
+      </div>
+
+      <!-- Col 2: Help -->
+      <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
+        <p class="uppercase text-black mb-4 font-heading text-lg font-bold">{t('footer.col2Title')}</p>
+        <div class="flex flex-col gap-1">
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/contact/', currentLang)}>{t('footer.contactLink')}</a>
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/refund-policy/', currentLang)}>{t('footer.refundPolicyLink')}</a>
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/shipping-policy/', currentLang)}>{t('footer.shippingPolicyLink')}</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Legal -->
+      <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
+        <p class="uppercase text-black mb-4 font-heading text-lg font-bold">{t('footer.col3Title')}</p>
+        <div class="flex flex-col gap-1">
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/shipping-restrictions/', currentLang)}>{t('footer.shippingRestrictionsLink')}</a>
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/terms-and-conditions/', currentLang)}>{t('footer.termsConditionsLink')}</a>
+          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/privacy-policy/', currentLang)}>{t('footer.privacyPolicyLink')}</a>
+        </div>
+      </div>
+
+      <!-- Col 4: All Rights Reversed (Black) -->
+      <div class="p-6 bg-black text-white">
+        <p class="uppercase text-white mb-3 font-heading text-lg font-bold">{t('footer.col4Title')}</p>
+        <p class="text-white text-xs font-mono leading-relaxed m-0" set:html={t('footer.canaryText')}>
+        </p>
+      </div>
+    </div>
+
+    <!-- Trademark + disclaimer row -->
+    <div class="flex flex-col-reverse md:flex-row md:items-start gap-3 px-4 py-3 border-t border-[#ccc] lg:border-l lg:border-r border-[#e5e5e5]">
+      <p class="!m-0 text-[10px] leading-relaxed text-neutral-500 md:flex-1">
+        {t('footer.disclaimer')}
+      </p>
+      <span class="text-xs text-black font-mono uppercase whitespace-nowrap md:ml-auto self-end md:self-auto">
+        {t('footer.copyright')}
+      </span>
+    </div>
+  </div>
+</footer>

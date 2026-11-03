@@ -1,0 +1,186 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getLangFromUrl, getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang } = Astro.props;
+const currentLang = lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+---
+
+<header class="w-full bg-white sticky top-0 z-50 font-['Helvetica_Neue',Helvetica,Arial,sans-serif]">
+  <!-- Top Bar: Multi-Language Switcher (Every language listed) -->
+  <LanguageSwitcher currentLang={currentLang} currentPath={Astro.url.pathname} />
+
+  <!-- Tier 1: Logo + Search + Icons -->
+  <div class="w-full bg-white">
+    <div class="lg:container lg:mx-auto border-b lg:border-l lg:border-r border-[#ccc]">
+      <div id="header-bar" class="flex items-center h-[36px]">
+        <!-- Logo Section -->
+        <a href={getLocalizedPath('/', currentLang)} class="flex items-center h-full shrink-0">
+          <!-- Logo Box -->
+          <div class="flex items-center justify-center w-[36px] h-full border-r border-[#ccc] px-[6px]">
+            <img width="288" height="397" class="h-[24px] w-auto object-contain" src="/assets/images/logo-black.svg" alt="Ghost Guns logo" />
+          </div>
+          <!-- Brand Name -->
+          <div class="flex items-center h-full border-r border-[#ccc] px-[24px]">
+            <span class="text-[16px] font-bold text-black uppercase leading-[16px]">{t('nav.brand')}</span>
+          </div>
+        </a>
+
+        <!-- Search Bar (expands to fill) -->
+        <div class="widget_search flex-1 h-full border-r border-[#ccc]">
+          <form role="search" method="get" class="flex h-full w-full" action={getLocalizedPath('/shop/', currentLang)}>
+            <input
+              type="search"
+              id="header-search-input"
+              class="flex-1 h-full px-[24px] text-[12px] text-black placeholder-[#ccc] focus:outline-none rounded-none appearance-none bg-white uppercase border-none"
+              placeholder={t('nav.searchPlaceholder')}
+              value=""
+              name="s"
+            />
+            <button type="submit" class="search-submit-btn" style="display:flex;align-items:center;justify-content:center;width:36px;min-width:36px;height:100%;background-color:#000;border:none;cursor:pointer;flex-shrink:0;" aria-label="Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:block;">
+                <path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Icons -->
+        <div class="flex items-center h-full shrink-0">
+          <!-- Cart Icon -->
+          <button id="cart-drawer-trigger" class="ggn-cart-icon cart-contents flex items-center justify-center w-[36px] h-full border-r border-[#ccc] relative bg-transparent border-0 cursor-pointer" title={t('nav.cart')} aria-label={t('nav.cart')}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+            </svg>
+            <span id="header-cart-count" class="ggn-cart-count" style="position:absolute;top:2px;right:2px;background:#9f0712;color:white;font-size:9px;font-weight:bold;border-radius:50%;min-width:14px;height:14px;display:none;align-items:center;justify-content:center;line-height:1;padding:0 3px;">0</span>
+          </button>
+
+          <!-- User Icon (Desktop Only) -->
+          <a href={getLocalizedPath('/my-account/', currentLang)} class="hidden md:flex items-center justify-center w-[36px] h-full" title={t('nav.myAccount')} aria-label={t('nav.myAccount')}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+            </svg>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-[36px] h-full bg-[#ccc] border-0 cursor-pointer" aria-label="Toggle Navigation Menu">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tier 2: Navigation (Desktop Only) -->
+  <div class="hidden md:block w-full bg-white">
+    <div class="lg:container lg:mx-auto border-b lg:border-l lg:border-r border-[#ccc]">
+      <nav class="flex items-center h-[36px]">
+        <!-- Black Square Spacer -->
+        <div class="w-[36px] h-full bg-black border-r border-[#ccc] shrink-0"></div>
+
+        <!-- Nav Links -->
+        <div class="flex items-center gap-[24px] px-[24px] h-full">
+          <a href={getLocalizedPath('/shop/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.shop')}</a>
+          <a href={getLocalizedPath('/build-kit/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.buildKits')}</a>
+          <a href={getLocalizedPath('/80-firearm/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.eightyPercent')}</a>
+          
+          <!-- Parts dropdown -->
+          <div class="relative group h-full flex items-center">
+            <a href={getLocalizedPath('/component/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap flex items-center gap-1 leading-none">
+              {t('nav.parts')}
+              <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-[#ccc] min-w-[160px] z-50 shadow-md">
+              <a href={getLocalizedPath('/component/slide/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">{t('nav.slides')}</a>
+              <a href={getLocalizedPath('/component/rails/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">{t('nav.rails')}</a>
+              <a href={getLocalizedPath('/component/receiver/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50">{t('nav.receivers')}</a>
+            </div>
+          </div>
+
+          <!-- 3D Printing dropdown -->
+          <div class="relative group h-full flex items-center">
+            <a href={getLocalizedPath('/3d-printing/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap flex items-center gap-1 leading-none">
+              {t('nav.threeDPrinting')}
+              <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-[#ccc] min-w-[180px] z-50 shadow-md">
+              <a href={getLocalizedPath('/3d-printers/', currentLang)} class="block px-4 py-3 text-[13px] font-bold uppercase text-[#9f0712] hover:bg-neutral-50 border-b border-[#ccc] flex items-center justify-between">
+                <span>{t('nav.threeDPrinters') || '3D Printers'}</span>
+                <span class="text-[9px] bg-[#9f0712] text-white px-1.5 py-0.5 rounded-none font-mono">NEW</span>
+              </a>
+              <a href={getLocalizedPath('/3d-printing/3d-files/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">{t('nav.threeDFiles')}</a>
+              <a href={getLocalizedPath('/3d-printing/3d-printer-accessories/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50">{t('nav.printerAccessories')}</a>
+            </div>
+          </div>
+
+          <a href={getLocalizedPath('/3d-printers/', currentLang)} class="text-[13px] font-bold uppercase text-[#9f0712] hover:text-black whitespace-nowrap leading-none border-b-2 border-[#9f0712] pb-0.5">{t('nav.threeDPrinters') || '3D PRINTERS'}</a>
+          <a href={getLocalizedPath('/gun-accessories/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.accessories')}</a>
+          <a href={getLocalizedPath('/contact/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.contact')}</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu-drawer" class="hidden md:hidden w-full bg-white border-b border-[#ccc]">
+    <div class="p-4 flex flex-col gap-3 font-mono text-sm uppercase">
+      <a href={getLocalizedPath('/shop/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.shop')}</a>
+      <a href={getLocalizedPath('/3d-printers/', currentLang)} class="py-2 border-b border-[#e5e5e5] text-[#9f0712] font-bold">/ {t('nav.threeDPrinters') || '3D PRINTERS'} (NEW)</a>
+      <a href={getLocalizedPath('/build-kit/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.buildKits')}</a>
+      <a href={getLocalizedPath('/80-firearm/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.eightyPercent')}</a>
+      <a href={getLocalizedPath('/component/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.parts')}</a>
+      <a href={getLocalizedPath('/component/slide/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.slides')}</a>
+      <a href={getLocalizedPath('/component/rails/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.rails')}</a>
+      <a href={getLocalizedPath('/component/receiver/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.receivers')}</a>
+      <a href={getLocalizedPath('/3d-printing/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.threeDPrinting')}</a>
+      <a href={getLocalizedPath('/3d-printers/', currentLang)} class="pl-4 py-1 text-xs text-[#9f0712] font-bold border-b border-[#f0f0f0]">-- {t('nav.threeDPrinters') || '3D Printers'}</a>
+      <a href={getLocalizedPath('/3d-printing/3d-files/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.threeDFiles')}</a>
+      <a href={getLocalizedPath('/gun-accessories/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.accessories')}</a>
+      <a href={getLocalizedPath('/about/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('footer.aboutLink')}</a>
+      <a href={getLocalizedPath('/contact/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.contact')}</a>
+      <a href={getLocalizedPath('/my-account/', currentLang)} class="py-2">/ {t('nav.myAccount')}</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobile-menu-button');
+  const menuDrawer = document.getElementById('mobile-menu-drawer');
+  if (menuBtn && menuDrawer) {
+    menuBtn.addEventListener('click', () => {
+      menuDrawer.classList.toggle('hidden');
+    });
+  }
+
+  // Update cart badge from localStorage
+  function updateCartBadge() {
+    try {
+      const cart = JSON.parse(localStorage.getItem('gg_cart') || '[]');
+      const count = cart.reduce((sum: number, item: any) => sum + (item.quantity || 1), 0);
+      const countEl = document.getElementById('header-cart-count');
+      if (countEl) {
+        if (count > 0) {
+          countEl.textContent = count.toString();
+          countEl.style.display = 'flex';
+        } else {
+          countEl.style.display = 'none';
+        }
+      }
+    } catch (e) {}
+  }
+  updateCartBadge();
+  window.addEventListener('storage', updateCartBadge);
+  window.addEventListener('gg-cart-updated', updateCartBadge);
+</script>

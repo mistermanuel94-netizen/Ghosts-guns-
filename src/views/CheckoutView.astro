@@ -1,0 +1,656 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations, getLocalizedPath, type Locale } from '../utils/i18n';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Layout
+  title={`${t('checkout.title')} | Ghost Guns`}
+  description="Complete your order securely at Ghost Guns."
+  lang={lang}
+>
+  <div class="lg:container lg:mx-auto">
+    <!-- Header banner -->
+    <div class="border-[#e5e5e5] border-r border-l border-t border-b px-4 py-6 bg-neutral-50 flex items-center gap-2">
+      <h1 class="uppercase font-black text-black text-2xl md:text-3xl m-0 leading-none font-heading">{t('checkout.title')}</h1>
+      <div class="w-[12px] h-[24px] bg-black"></div>
+    </div>
+
+    <!-- Legal Warning Callout -->
+    <div class="border-l border-r border-b border-[#e5e5e5] p-4 bg-amber-50 text-xs font-mono text-amber-900 flex items-center gap-3">
+      <svg class="w-5 h-5 text-amber-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+      </svg>
+      <span>
+        <strong>Notice:</strong> Ghost Guns hardware cannot be shipped to persons in California or New Jersey who do not possess a Federal Firearms License. Please review <a href={getLocalizedPath('/shipping-restrictions/', lang)} class="underline font-bold">Shipping Restrictions</a> before ordering.
+      </span>
+    </div>
+
+    <!-- Checkout Form & Order Review Grid -->
+    <div class="border-l border-r border-b border-[#e5e5e5] p-6 md:p-10 font-mono" data-lang={lang}>
+      <form id="checkout-form" class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Billing & Shipping Details (2/3) -->
+        <div class="lg:col-span-2 flex flex-col gap-6">
+          <h2 class="text-lg font-heading font-black uppercase text-black border-b border-[#e5e5e5] pb-2">
+            1. {t('checkout.billingDetails')}
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div>
+              <label class="block uppercase font-bold mb-1">{t('checkout.firstName')} *</label>
+              <input id="checkout-firstname" type="text" required class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            </div>
+            <div>
+              <label class="block uppercase font-bold mb-1">{t('checkout.lastName')} *</label>
+              <input id="checkout-lastname" type="text" required class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="text-xs">
+            <label class="block uppercase font-bold mb-1">{t('checkout.streetAddress')} *</label>
+            <input id="checkout-street" type="text" required placeholder="House number and street name" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none mb-2" />
+            <input type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+            <div>
+              <label class="block uppercase font-bold mb-1">{t('checkout.townCity')} *</label>
+              <input id="checkout-city" type="text" required class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            </div>
+            <div>
+              <label class="block uppercase font-bold mb-1">{t('checkout.stateCounty')} *</label>
+              <select id="checkout-state" required class="w-full p-3 border border-[#ccc] text-sm bg-white focus:border-black focus:outline-none">
+                <option value="">Select State / Region...</option>
+                <option value="TX">Texas (US)</option>
+                <option value="FL">Florida (US)</option>
+                <option value="EU">European Union / International</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="NL">Netherlands</option>
+                <option value="ES">Spain</option>
+                <option value="IT">Italy</option>
+                <option value="PL">Poland</option>
+                <option value="BG">Bulgaria</option>
+                <option value="CA">California (Restricted)</option>
+                <option value="NJ">New Jersey (Restricted)</option>
+                <option value="OTHER">Other Region</option>
+              </select>
+            </div>
+            <div>
+              <label class="block uppercase font-bold mb-1">{t('checkout.postcode')} *</label>
+              <input id="checkout-postcode" type="text" required class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div>
+              <label class="block uppercase font-bold mb-1">{t('checkout.phone')} *</label>
+              <input id="checkout-phone" type="tel" required class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            </div>
+            <div>
+              <label class="block uppercase font-bold mb-1">{t('checkout.email')} *</label>
+              <input id="checkout-email" type="email" required placeholder="your.email@domain.com" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="text-xs">
+            <label class="block uppercase font-bold mb-1">{t('checkout.orderNotes')}</label>
+            <textarea rows="2" placeholder={t('checkout.orderNotesPlaceholder')} class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none"></textarea>
+          </div>
+
+          <!-- Section 2: Payment Options -->
+          <div class="mt-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-[#e5e5e5] pb-2 mb-3">
+              <h2 class="text-lg font-heading font-black uppercase text-black m-0">
+                2. {t('checkout.paymentMethod')}
+              </h2>
+              <span class="text-[11px] text-neutral-500 font-bold uppercase tracking-wider mt-1 sm:mt-0">
+                {t('checkout.paymentSubtitle')}
+              </span>
+            </div>
+
+            <!-- CRITICAL BOLD NOTIFICATION ON CHECKING INBOX & SPAM FOLDERS -->
+            <div class="p-4 bg-amber-50 border-2 border-amber-500 rounded-md text-neutral-900 shadow-sm mb-4">
+              <div class="flex items-start gap-3">
+                <div class="p-2 bg-amber-500 text-black font-black rounded text-xs shrink-0 tracking-wider">
+                  ⚠️ NOTIFICATION
+                </div>
+                <div class="flex-1">
+                  <div class="font-black text-sm uppercase tracking-wide text-amber-950">
+                    {t('checkout.inboxSpamAlertHeader')}
+                  </div>
+                  <p class="font-extrabold text-xs text-neutral-950 mt-1 leading-relaxed m-0">
+                    {t('checkout.inboxSpamAlertBody')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 Localized Payment Options -->
+            <div class="flex flex-col gap-3 text-xs" id="payment-options-container">
+              
+              <!-- 1. Bank Transfer -->
+              <div class="payment-card border-2 border-black bg-neutral-50 rounded transition-all duration-200 overflow-hidden" data-method="bank">
+                <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+                  <input type="radio" name="payment" value="bank" checked class="mt-1 accent-black h-4 w-4 shrink-0" />
+                  <div class="flex-1">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                      <span class="font-black uppercase text-sm text-black tracking-wide flex items-center gap-2">
+                        <svg class="w-4 h-4 text-[#9f0712]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        {t('checkout.methodBankName')}
+                      </span>
+                      <span class="px-2 py-0.5 bg-black text-white text-[10px] font-bold uppercase tracking-wider rounded">
+                        {t('checkout.methodBankBadge')}
+                      </span>
+                    </div>
+                    <p class="text-[11px] text-neutral-600 m-0 mt-1">{t('checkout.methodBankDesc')}</p>
+                  </div>
+                </label>
+
+                <!-- Post-Order Instructions for Bank Transfer -->
+                <div class="method-instructions border-t border-[#e5e5e5] bg-white p-4 space-y-3">
+                  <div class="flex items-center gap-1.5 text-xs font-black uppercase text-[#9f0712] tracking-wider">
+                    <span class="w-2 h-2 bg-[#9f0712] inline-block"></span>
+                    <span>{t('checkout.instructionsAfterOrderTitle')}</span>
+                  </div>
+
+                  <!-- Bold highlight alert on Inbox/Spam -->
+                  <div class="p-3 bg-amber-100 border border-amber-400 rounded text-amber-950 font-black text-xs uppercase tracking-wide leading-snug">
+                    ⚠️ PLEASE CHECK YOUR INBOX AND SPAM FOLDERS REGULARLY FOR THE ACCOUNT DETAILS!
+                  </div>
+
+                  <p class="text-xs text-neutral-800 leading-relaxed m-0 font-sans">
+                    {t('checkout.methodBankInstructions')}
+                  </p>
+
+                  <div class="flex items-center gap-2 text-[11px] font-bold text-neutral-700 bg-neutral-100 p-2.5 rounded border border-neutral-200">
+                    <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>{t('checkout.receiptNotice')}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Western Union -->
+              <div class="payment-card border border-[#e5e5e5] bg-white rounded transition-all duration-200 overflow-hidden hover:border-neutral-400" data-method="westernUnion">
+                <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+                  <input type="radio" name="payment" value="westernUnion" class="mt-1 accent-black h-4 w-4 shrink-0" />
+                  <div class="flex-1">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                      <span class="font-black uppercase text-sm text-black tracking-wide flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        {t('checkout.methodWuName')}
+                      </span>
+                      <span class="px-2 py-0.5 bg-amber-500 text-black text-[10px] font-bold uppercase tracking-wider rounded">
+                        {t('checkout.methodWuBadge')}
+                      </span>
+                    </div>
+                    <p class="text-[11px] text-neutral-600 m-0 mt-1">{t('checkout.methodWuDesc')}</p>
+                  </div>
+                </label>
+
+                <!-- Post-Order Instructions for Western Union -->
+                <div class="method-instructions border-t border-[#e5e5e5] bg-white p-4 space-y-3 hidden">
+                  <div class="flex items-center gap-1.5 text-xs font-black uppercase text-[#9f0712] tracking-wider">
+                    <span class="w-2 h-2 bg-[#9f0712] inline-block"></span>
+                    <span>{t('checkout.instructionsAfterOrderTitle')}</span>
+                  </div>
+
+                  <!-- Bold highlight alert on Inbox/Spam -->
+                  <div class="p-3 bg-amber-100 border border-amber-400 rounded text-amber-950 font-black text-xs uppercase tracking-wide leading-snug">
+                    ⚠️ PLEASE CHECK YOUR INBOX AND SPAM FOLDERS REGULARLY FOR THE ACCOUNT DETAILS!
+                  </div>
+
+                  <p class="text-xs text-neutral-800 leading-relaxed m-0 font-sans">
+                    {t('checkout.methodWuInstructions')}
+                  </p>
+
+                  <div class="flex items-center gap-2 text-[11px] font-bold text-neutral-700 bg-neutral-100 p-2.5 rounded border border-neutral-200">
+                    <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>{t('checkout.receiptNotice')}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Crypto Currency BTC/USDT -->
+              <div class="payment-card border border-[#e5e5e5] bg-white rounded transition-all duration-200 overflow-hidden hover:border-neutral-400" data-method="crypto">
+                <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+                  <input type="radio" name="payment" value="crypto" class="mt-1 accent-black h-4 w-4 shrink-0" />
+                  <div class="flex-1">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                      <span class="font-black uppercase text-sm text-black tracking-wide flex items-center gap-2">
+                        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        {t('checkout.methodCryptoName')}
+                      </span>
+                      <span class="px-2 py-0.5 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider rounded">
+                        {t('checkout.methodCryptoBadge')}
+                      </span>
+                    </div>
+                    <p class="text-[11px] text-neutral-600 m-0 mt-1">{t('checkout.methodCryptoDesc')}</p>
+                  </div>
+                </label>
+
+                <!-- Post-Order Instructions for Crypto -->
+                <div class="method-instructions border-t border-[#e5e5e5] bg-white p-4 space-y-3 hidden">
+                  <div class="flex items-center gap-1.5 text-xs font-black uppercase text-[#9f0712] tracking-wider">
+                    <span class="w-2 h-2 bg-[#9f0712] inline-block"></span>
+                    <span>{t('checkout.instructionsAfterOrderTitle')}</span>
+                  </div>
+
+                  <!-- Bold highlight alert on Inbox/Spam -->
+                  <div class="p-3 bg-amber-100 border border-amber-400 rounded text-amber-950 font-black text-xs uppercase tracking-wide leading-snug">
+                    ⚠️ PLEASE CHECK YOUR INBOX AND SPAM FOLDERS REGULARLY FOR THE WALLET DETAILS!
+                  </div>
+
+                  <p class="text-xs text-neutral-800 leading-relaxed m-0 font-sans">
+                    {t('checkout.methodCryptoInstructions')}
+                  </p>
+
+                  <div class="flex items-center gap-2 text-[11px] font-bold text-neutral-700 bg-neutral-100 p-2.5 rounded border border-neutral-200">
+                    <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>{t('checkout.receiptNotice')}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Paysafe Cards -->
+              <div class="payment-card border border-[#e5e5e5] bg-white rounded transition-all duration-200 overflow-hidden hover:border-neutral-400" data-method="paysafe">
+                <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+                  <input type="radio" name="payment" value="paysafe" class="mt-1 accent-black h-4 w-4 shrink-0" />
+                  <div class="flex-1">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                      <span class="font-black uppercase text-sm text-black tracking-wide flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                        {t('checkout.methodPaysafeName')}
+                      </span>
+                      <span class="px-2 py-0.5 bg-blue-700 text-white text-[10px] font-bold uppercase tracking-wider rounded">
+                        {t('checkout.methodPaysafeBadge')}
+                      </span>
+                    </div>
+                    <p class="text-[11px] text-neutral-600 m-0 mt-1">{t('checkout.methodPaysafeDesc')}</p>
+                  </div>
+                </label>
+
+                <!-- Post-Order Instructions for Paysafe Cards -->
+                <div class="method-instructions border-t border-[#e5e5e5] bg-white p-4 space-y-3 hidden">
+                  <div class="flex items-center gap-1.5 text-xs font-black uppercase text-[#9f0712] tracking-wider">
+                    <span class="w-2 h-2 bg-[#9f0712] inline-block"></span>
+                    <span>{t('checkout.instructionsAfterOrderTitle')}</span>
+                  </div>
+
+                  <!-- Bold highlight alert on Inbox/Spam -->
+                  <div class="p-3 bg-amber-100 border border-amber-400 rounded text-amber-950 font-black text-xs uppercase tracking-wide leading-snug">
+                    ⚠️ PLEASE CHECK YOUR INBOX AND SPAM FOLDERS REGULARLY FOR VALIDATION & CONFIRMATION!
+                  </div>
+
+                  <p class="text-xs text-neutral-800 leading-relaxed m-0 font-sans">
+                    {t('checkout.methodPaysafeInstructions')}
+                  </p>
+
+                  <div class="flex items-center gap-2 text-[11px] font-bold text-neutral-700 bg-neutral-100 p-2.5 rounded border border-neutral-200">
+                    <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>{t('checkout.receiptNotice')}</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary (1/3) -->
+        <div class="lg:col-span-1 border border-[#e5e5e5] p-6 bg-neutral-50 flex flex-col justify-between h-fit rounded">
+          <div>
+            <h2 class="text-lg font-heading font-black uppercase text-black border-b border-[#e5e5e5] pb-2 mb-4">
+              {t('checkout.yourOrder')}
+            </h2>
+
+            <div id="checkout-items-list" class="divide-y divide-[#e5e5e5] text-xs mb-4">
+              <!-- Injected by JavaScript -->
+            </div>
+
+            <div class="flex justify-between items-center py-2 text-xs uppercase border-t border-[#e5e5e5]">
+              <span>{t('cart.subtotal')}</span>
+              <span id="checkout-subtotal" class="font-bold">€0.00</span>
+            </div>
+            <div class="flex justify-between items-center py-2 text-xs uppercase border-t border-[#e5e5e5]">
+              <span>Discreet Shipping</span>
+              <span class="font-bold">€12.50</span>
+            </div>
+            <div class="flex justify-between items-center py-3 text-sm uppercase font-bold text-black border-t border-b border-black">
+              <span>{t('cart.total')}</span>
+              <span id="checkout-total" class="text-base font-black text-[#9f0712]">€12.50</span>
+            </div>
+          </div>
+
+          <!-- Prominent Checkout Alert Right Above Submit -->
+          <div class="mt-6 flex flex-col gap-3">
+            <div class="p-3 bg-amber-50 border-2 border-[#9f0712] rounded text-xs text-neutral-900 shadow-sm">
+              <div class="font-black text-[#9f0712] uppercase flex items-center gap-1.5 mb-1 text-[11px] tracking-wide">
+                <svg class="w-4 h-4 text-[#9f0712] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+                <span>{t('checkout.inboxSpamAlertHeader')}</span>
+              </div>
+              <p class="text-[11px] font-bold text-neutral-900 leading-snug m-0">
+                {t('checkout.inboxSpamAlertBody')}
+              </p>
+            </div>
+
+            <button
+              type="submit"
+              id="place-order-button"
+              class="w-full py-4 bg-[#9f0712] hover:bg-[#B90A0E] text-white font-black uppercase text-xs tracking-wider transition-all duration-200 border-0 cursor-pointer text-center shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+            >
+              <span>{t('checkout.placeOrder')}</span>
+              <span class="text-base leading-none">&rarr;</span>
+            </button>
+
+            <p class="text-[10px] text-neutral-500 text-center leading-normal">
+              By placing your order you confirm compliance with all firearms manufacturing regulations. All transactions are securely processed in Euro (€).
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ORDER CONFIRMATION / PLACED MODAL -->
+  <div id="order-modal" class="fixed inset-0 z-[10000] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300">
+    <div class="max-h-[92vh] overflow-y-auto w-full max-w-2xl bg-white border-2 border-black shadow-2xl p-6 md:p-8 font-mono text-neutral-900 rounded-sm">
+      
+      <!-- Modal Header -->
+      <div class="text-center pb-4 border-b-2 border-black">
+        <div class="w-14 h-14 mx-auto mb-3 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center border-2 border-emerald-600">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-xl md:text-2xl font-black uppercase tracking-tight text-black m-0 font-heading">
+          {t('checkout.orderReceivedTitle')}
+        </h3>
+        <p class="text-xs text-neutral-600 mt-1 m-0">
+          {t('checkout.orderReceivedSubtitle')}
+        </p>
+      </div>
+
+      <!-- Critical Bold Notification on Inbox & Spam -->
+      <div class="my-5 p-4 bg-amber-500/15 border-2 border-amber-600 rounded text-neutral-950 shadow-sm">
+        <div class="flex items-start gap-3">
+          <div class="p-2 bg-amber-500 text-black font-black rounded text-xs shrink-0 tracking-wider">
+            🚨 ACTION REQUIRED
+          </div>
+          <div>
+            <div class="font-black text-sm uppercase tracking-wide text-amber-950">
+              {t('checkout.inboxSpamAlertHeader')}
+            </div>
+            <p class="font-extrabold text-xs text-neutral-950 mt-1 leading-snug m-0">
+              Payment credentials and details have been dispatched to: <span id="modal-email-target" class="underline font-black text-black"></span>.<br/>
+              <strong class="text-amber-900 bg-amber-200/80 px-1 py-0.5 rounded inline-block mt-1">
+                {t('checkout.inboxSpamAlertBody')}
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Details Summary Table -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-neutral-50 p-4 border border-[#e5e5e5] rounded text-xs mb-5">
+        <div>
+          <span class="block text-[10px] text-neutral-500 uppercase font-bold">{t('checkout.orderNumber')}</span>
+          <span id="modal-order-number" class="font-black text-sm text-black">#GG-00000</span>
+        </div>
+        <div>
+          <span class="block text-[10px] text-neutral-500 uppercase font-bold">{t('checkout.orderDate')}</span>
+          <span id="modal-order-date" class="font-bold text-xs text-black">--</span>
+        </div>
+        <div>
+          <span class="block text-[10px] text-neutral-500 uppercase font-bold">{t('checkout.orderTotal')}</span>
+          <span id="modal-order-total" class="font-black text-sm text-[#9f0712]">€0.00</span>
+        </div>
+        <div>
+          <span class="block text-[10px] text-neutral-500 uppercase font-bold">{t('checkout.paymentMethod')}</span>
+          <span id="modal-order-method" class="font-bold text-xs text-black uppercase">--</span>
+        </div>
+      </div>
+
+      <!-- Specific Post-Order Next Steps -->
+      <div class="p-4 bg-neutral-100 border border-neutral-300 rounded mb-5 space-y-2 text-xs">
+        <div class="flex items-center gap-1.5 font-black uppercase text-black text-xs tracking-wider">
+          <span class="w-2.5 h-2.5 bg-[#9f0712] inline-block"></span>
+          <span>{t('checkout.instructionsAfterOrderTitle')}</span>
+        </div>
+        <div id="modal-payment-instructions" class="p-3 bg-white border border-neutral-200 rounded font-sans text-neutral-800 leading-relaxed font-medium">
+          <!-- Dynamic instructions injected here -->
+        </div>
+        <div class="flex items-center gap-2 text-[11px] font-bold text-neutral-800 pt-1">
+          <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>{t('checkout.receiptNotice')}</span>
+        </div>
+      </div>
+
+      <!-- Confirmation Email Desk Box -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-neutral-50 border border-dashed border-neutral-400 rounded text-xs mb-6">
+        <div>
+          <span class="text-[11px] text-neutral-600 font-bold block">{t('checkout.sendToEmail')}</span>
+          <strong class="text-sm font-black text-black">support@ghostguns.com</strong>
+        </div>
+        <button
+          type="button"
+          id="modal-copy-email-btn"
+          class="px-4 py-2 bg-black hover:bg-neutral-800 text-white font-bold uppercase text-[11px] tracking-wider border-0 cursor-pointer rounded transition-colors"
+        >
+          Copy Support Email
+        </button>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3 pt-2 border-t border-[#e5e5e5]">
+        <button
+          type="button"
+          id="modal-print-btn"
+          class="flex-1 py-3 bg-neutral-200 hover:bg-neutral-300 text-black font-bold uppercase text-xs tracking-wider border-0 cursor-pointer rounded text-center transition-colors"
+        >
+          {t('checkout.printReceipt')}
+        </button>
+        <a
+          href={getLocalizedPath('/shop/', lang)}
+          class="flex-1 py-3 bg-[#9f0712] hover:bg-[#B90A0E] text-white font-bold uppercase text-xs tracking-wider border-0 cursor-pointer rounded text-center transition-colors block"
+        >
+          {t('checkout.continueShopping')} &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+</Layout>
+
+<script>
+  interface CartItem {
+    id: number;
+    name: string;
+    slug: string;
+    price: number;
+    image: string;
+    quantity: number;
+  }
+
+  // Render Checkout Cart Items
+  function renderCheckout() {
+    try {
+      const cart: CartItem[] = JSON.parse(localStorage.getItem('gg_cart') || '[]');
+      const listEl = document.getElementById('checkout-items-list');
+      const subtotalEl = document.getElementById('checkout-subtotal');
+      const totalEl = document.getElementById('checkout-total');
+
+      if (!listEl || !subtotalEl || !totalEl) return;
+
+      if (cart.length === 0) {
+        listEl.innerHTML = '<div class="py-4 text-neutral-500 font-medium">Your cart is currently empty.</div>';
+        subtotalEl.textContent = '€0.00';
+        totalEl.textContent = '€12.50';
+        return;
+      }
+
+      const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      const shipping = 12.50;
+      const total = subtotal + shipping;
+
+      subtotalEl.textContent = `€${subtotal.toFixed(2)}`;
+      totalEl.textContent = `€${total.toFixed(2)}`;
+
+      listEl.innerHTML = cart.map(item => `
+        <div class="py-2.5 flex justify-between items-center text-xs">
+          <div class="truncate pr-2">
+            <span class="font-bold text-black">${item.name}</span>
+            <span class="text-neutral-500 ml-1">× ${item.quantity}</span>
+          </div>
+          <span class="font-bold shrink-0 text-black">€${(item.price * item.quantity).toFixed(2)}</span>
+        </div>
+      `).join('');
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  renderCheckout();
+
+  // Payment Options Accordion / Tab Switching
+  const paymentCards = document.querySelectorAll('.payment-card');
+  const paymentRadios = document.querySelectorAll<HTMLInputElement>('input[name="payment"]');
+
+  function updatePaymentSelection(selectedMethod: string) {
+    paymentCards.forEach(card => {
+      const method = card.getAttribute('data-method');
+      const instructions = card.querySelector('.method-instructions');
+      const radio = card.querySelector<HTMLInputElement>('input[type="radio"]');
+
+      if (method === selectedMethod) {
+        card.classList.remove('border-[#e5e5e5]', 'bg-white');
+        card.classList.add('border-black', 'bg-neutral-50');
+        instructions?.classList.remove('hidden');
+        if (radio) radio.checked = true;
+      } else {
+        card.classList.remove('border-black', 'bg-neutral-50');
+        card.classList.add('border-[#e5e5e5]', 'bg-white');
+        instructions?.classList.add('hidden');
+      }
+    });
+  }
+
+  paymentRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.checked) {
+        updatePaymentSelection(radio.value);
+      }
+    });
+  });
+
+  paymentCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName.toLowerCase() !== 'input') {
+        const method = card.getAttribute('data-method');
+        if (method) updatePaymentSelection(method);
+      }
+    });
+  });
+
+  // Modal Handling
+  const modal = document.getElementById('order-modal');
+  const form = document.getElementById('checkout-form') as HTMLFormElement;
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const state = (document.getElementById('checkout-state') as HTMLSelectElement).value;
+    if (state === 'CA' || state === 'NJ') {
+      alert('Restricted Territory Notice: Orders containing firearms components cannot be shipped to CA or NJ without an FFL license. Please update your shipping destination.');
+      return;
+    }
+
+    const cart: CartItem[] = JSON.parse(localStorage.getItem('gg_cart') || '[]');
+    if (cart.length === 0) {
+      alert('Your cart is empty. Please add items to your cart before proceeding to checkout.');
+      return;
+    }
+
+    // Extract Order Data
+    const email = (document.getElementById('checkout-email') as HTMLInputElement).value;
+    const selectedRadio = document.querySelector<HTMLInputElement>('input[name="payment"]:checked');
+    const selectedMethod = selectedRadio ? selectedRadio.value : 'bank';
+
+    const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const total = subtotal + 12.50;
+
+    // Generate Order ID & Formatted Date
+    const randomOrderId = `#GG-${Math.floor(10000 + Math.random() * 90000)}`;
+    const now = new Date();
+    const formattedDate = now.toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+
+    // Populate Modal
+    const modalEmail = document.getElementById('modal-email-target');
+    const modalOrderNum = document.getElementById('modal-order-number');
+    const modalOrderDate = document.getElementById('modal-order-date');
+    const modalOrderTotal = document.getElementById('modal-order-total');
+    const modalOrderMethod = document.getElementById('modal-order-method');
+    const modalInstructions = document.getElementById('modal-payment-instructions');
+
+    if (modalEmail) modalEmail.textContent = email;
+    if (modalOrderNum) modalOrderNum.textContent = randomOrderId;
+    if (modalOrderDate) modalOrderDate.textContent = formattedDate;
+    if (modalOrderTotal) modalOrderTotal.textContent = `€${total.toFixed(2)}`;
+
+    // Read the active instructions from the selected card
+    const activeCard = document.querySelector(`.payment-card[data-method="${selectedMethod}"]`);
+    const cardTitle = activeCard?.querySelector('span.font-black')?.textContent?.trim() || selectedMethod;
+    const instructionP = activeCard?.querySelector('.method-instructions p')?.textContent?.trim() || '';
+
+    if (modalOrderMethod) modalOrderMethod.textContent = cardTitle;
+    if (modalInstructions) {
+      modalInstructions.innerHTML = `
+        <div class="mb-2 font-bold text-black uppercase tracking-wide">${cardTitle}</div>
+        <div class="text-neutral-800 leading-relaxed font-sans">${instructionP}</div>
+      `;
+    }
+
+    // Display modal
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Clear cart in localStorage & dispatch event to update UI
+    localStorage.removeItem('gg_cart');
+    window.dispatchEvent(new CustomEvent('cart-updated'));
+    renderCheckout();
+  });
+
+  // Modal Print Button
+  document.getElementById('modal-print-btn')?.addEventListener('click', () => {
+    window.print();
+  });
+
+  // Copy Email to Clipboard
+  document.getElementById('modal-copy-email-btn')?.addEventListener('click', async (e) => {
+    const btn = e.currentTarget as HTMLButtonElement;
+    try {
+      await navigator.clipboard.writeText('support@ghostguns.com');
+      const originalText = btn.textContent;
+      btn.textContent = 'COPIED TO CLIPBOARD!';
+      btn.classList.add('bg-emerald-700');
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('bg-emerald-700');
+      }, 2500);
+    } catch (err) {
+      console.error(err);
+    }
+  });
+</script>

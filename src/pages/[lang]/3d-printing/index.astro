@@ -1,0 +1,18 @@
+---
+import CategoryView from '../../../components/CategoryView.astro';
+import { LOCALES, type Locale } from '../../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.filter(l => l !== 'en').map(lang => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<CategoryView
+  categorySlug="3d-printing"
+  subCategorySlugs={['3d-printers', '3d-files', '3d-printer-accessories']}
+  lang={lang as Locale}
+/>

@@ -1,0 +1,14 @@
+---
+import HomeView from '../../views/HomeView.astro';
+import { LOCALES, type Locale } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.filter(l => l !== 'en').map(lang => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<HomeView lang={lang as Locale} />

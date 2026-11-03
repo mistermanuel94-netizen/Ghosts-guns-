@@ -1,0 +1,189 @@
+[
+  {
+    "id": 52,
+    "name": "3D Files",
+    "slug": "3d-files",
+    "description": "",
+    "parent": 53,
+    "count": 2,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/3d-printing/3d-files/"
+  },
+  {
+    "id": 53,
+    "name": "3D Printing",
+    "slug": "3d-printing",
+    "description": "",
+    "parent": 0,
+    "count": 2,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/3d-printing/"
+  },
+  {
+    "id": 30,
+    "name": "80 Percent Firearms",
+    "slug": "80-firearm",
+    "description": "80% firearms, frames, and build components from GhostGuns.com. Browse G80 pistol frames, grip modules, jigs, and accessories for your next ghost gun build.",
+    "parent": 0,
+    "count": 7,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/80-firearm/"
+  },
+  {
+    "id": 60,
+    "name": "Accessories",
+    "slug": "accessories",
+    "description": "",
+    "parent": 0,
+    "count": 1,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/accessories/"
+  },
+  {
+    "id": 18,
+    "name": "Build Kits",
+    "slug": "build-kit",
+    "description": "<div>\r\n<div>Ghost gun kits with the slides, barrels, triggers, and internals you need to complete your build. Shop 9mm ghost gun kits, .45 ACP kits, parts bundles, and more. Frames and receivers are not included.</div>\r\n</div>",
+    "parent": 0,
+    "count": 11,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/build-kit/"
+  },
+  {
+    "id": 22,
+    "name": "Components",
+    "slug": "component",
+    "description": "",
+    "parent": 0,
+    "count": 14,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/component/"
+  },
+  {
+    "id": 47,
+    "name": "Glock Parts",
+    "slug": "glock",
+    "description": "Aftermarket Glock parts for your ghost Glock build. Shop lower parts kits, slide parts kits, and individual components compatible with Glock 17, Glock 19, Glock 43, and other Glock-pattern pistols. All parts are Gen 3 compatible.",
+    "parent": 22,
+    "count": 4,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/component/glock/"
+  },
+  {
+    "id": 42,
+    "name": "Gun Accessories",
+    "slug": "gun-accessories",
+    "description": "",
+    "parent": 0,
+    "count": 3,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/gun-accessories/"
+  },
+  {
+    "id": 61,
+    "name": "Jigs",
+    "slug": "jigs",
+    "description": "",
+    "parent": 60,
+    "count": 1,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/accessories/jigs/"
+  },
+  {
+    "id": 48,
+    "name": "Magazines",
+    "slug": "magazines",
+    "description": "",
+    "parent": 0,
+    "count": 5,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/magazines/"
+  },
+  {
+    "id": 25,
+    "name": "Most popular",
+    "slug": "most-popular",
+    "description": "",
+    "parent": 0,
+    "count": 8,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/most-popular/"
+  },
+  {
+    "id": 38,
+    "name": "Rail Kits",
+    "slug": "rails",
+    "description": "",
+    "parent": 22,
+    "count": 2,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/component/rails/"
+  },
+  {
+    "id": 24,
+    "name": "Receivers",
+    "slug": "receiver",
+    "description": "",
+    "parent": 22,
+    "count": 3,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/component/receiver/"
+  },
+  {
+    "id": 35,
+    "name": "Slide Kits",
+    "slug": "slide",
+    "description": "",
+    "parent": 22,
+    "count": 2,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/component/slide/"
+  },
+  {
+    "id": 62,
+    "name": "Software",
+    "slug": "software",
+    "description": "",
+    "parent": 0,
+    "count": 1,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/software/"
+  },
+  {
+    "id": 15,
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "description": "",
+    "parent": 0,
+    "count": 4,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/uncategorized/"
+  },
+  {
+    "id": 70,
+    "name": "3D Printers",
+    "slug": "3d-printers",
+    "description": "Expert tested and ranked 3D printers engineered for DIY firearms, 80% lowers, Glock frames, and precision accessories.",
+    "parent": 53,
+    "count": 10,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://ghostguns.com/3d-printers/"
+  }
+]

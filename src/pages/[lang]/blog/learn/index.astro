@@ -1,0 +1,58 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import posts from '../../../../data/posts.json';
+import { LOCALES, type Locale, getLocalizedPath } from '../../../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.filter(l => l !== 'en').map(lang => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<Layout
+  title="Learn Ghost Guns | 2A Rights & DIY Manufacturing"
+  description="Learn about the constitutional rights, history, and engineering principles behind homemade firearms."
+  lang={lang as Locale}
+>
+  <div class="lg:container lg:mx-auto">
+    <div class="border-[#e5e5e5] border-r border-l border-t border-b px-4 py-8 bg-neutral-50 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="uppercase font-black text-black text-3xl md:text-4xl m-0 leading-none font-heading">LEARN &amp; RESEARCH</h1>
+          <div class="w-[12px] h-[28px] bg-black"></div>
+        </div>
+        <p class="text-xs font-mono text-neutral-500 mt-2 uppercase">Educational articles on Second Amendment and DIY firearms</p>
+      </div>
+
+      <div class="text-xs font-mono">
+        <a href={getLocalizedPath('/blog/', lang as Locale)} class="underline uppercase">All Articles</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-l border-r border-b border-[#e5e5e5]">
+      {posts.map((post: any) => (
+        <article class="p-6 border-b md:border-b-0 border-r border-[#e5e5e5] flex flex-col justify-between hover:bg-neutral-50/50 transition-colors">
+          <div>
+            <div class="text-xs font-mono text-neutral-400 mb-2 uppercase">
+              {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+            </div>
+            <h2 class="text-xl font-heading font-black uppercase text-black leading-snug mb-3">
+              <a href={getLocalizedPath(`/blog/${post.slug}/`, lang as Locale)} class="hover:underline">
+                {post.title.rendered}
+              </a>
+            </h2>
+            <div class="text-xs text-neutral-600 font-sans line-clamp-3 leading-relaxed mb-4 prose" set:html={post.excerpt.rendered} />
+          </div>
+          <div>
+            <a href={getLocalizedPath(`/blog/${post.slug}/`, lang as Locale)} class="inline-block text-xs font-mono uppercase font-bold text-black border-b border-black pb-0.5 hover:text-[#9f0712] hover:border-[#9f0712] transition-colors">
+              Read Article &rarr;
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</Layout>

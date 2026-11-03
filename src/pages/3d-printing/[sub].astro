@@ -1,0 +1,18 @@
+---
+import CategoryView from '../../components/CategoryView.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { sub: '3d-files' }, props: { title: '3D Files & USB Packs', slug: '3d-files' } },
+    { params: { sub: '3d-printer-accessories' }, props: { title: '3D Printer Accessories', slug: '3d-printer-accessories' } }
+  ];
+}
+
+const { title, slug } = Astro.props;
+---
+
+<CategoryView
+  title={title}
+  categorySlug={slug}
+  description={`Official ${title} for 3D printed defense builds.`}
+/>

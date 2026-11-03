@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations, type Locale } from '../utils/i18n';
+import pagesTranslationsData from '../data/pages-translations.json';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+const pageData = (pagesTranslationsData as any)['my-account']?.[lang] || (pagesTranslationsData as any)['my-account']?.['en'];
+---
+
+<Layout title={`${pageData.title}`} description={pageData.desc} lang={lang}>
+  <div class="content-page-wrapper w-full font-sans">
+    <div class="w-full flex-grow bg-white flex flex-col">
+      <div class="lg:container lg:mx-auto lg:border-l lg:border-r border-[#e5e5e5] flex-grow flex flex-col">
+        <div class="flex-grow px-4 md:px-6 py-8">
+          
+          <!-- Hero Section -->
+          <div class="w-full border-b border-[#e5e5e5]">
+            <div class="px-[12px] py-[24px] md:py-[40px]">
+              <p class="text-xs uppercase text-[#9f0712] m-0 mb-2 font-mono">// User Portal</p>
+              <h1 class="uppercase font-bold text-black text-3xl md:text-4xl m-0 font-heading tracking-tight">{pageData.heading}</h1>
+              <p class="text-neutral-600 text-sm mt-3 m-0 max-w-xl font-mono">{pageData.desc}</p>
+            </div>
+          </div>
+
+          <!-- Two-Column Grid: Login (2/3) + Register Info (1/3) -->
+          <div class="w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-3 border-b border-[#e5e5e5]">
+              
+              <!-- Login Form -->
+              <div class="lg:col-span-2 border-b lg:border-b-0 lg:border-r border-[#e5e5e5]">
+                <div class="border-b border-[#e5e5e5] px-[12px] py-[12px]">
+                  <p class="uppercase font-bold text-black text-lg m-0 font-heading">{pageData.loginTitle || 'LOGIN'}</p>
+                </div>
+                <div class="p-[12px] md:p-[28px] max-w-lg">
+                  <form class="flex flex-col gap-4 font-mono" onsubmit="event.preventDefault(); alert('Authentication demo mode active.');">
+                    <div class="flex flex-col gap-1">
+                      <label for="username" class="text-xs uppercase font-bold text-black">{pageData.usernameLabel} *</label>
+                      <input type="text" id="username" name="username" required class="w-full px-3 py-2 border border-[#ccc] focus:border-black focus:outline-none text-sm" />
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                      <label for="password" class="text-xs uppercase font-bold text-black">{pageData.passwordLabel} *</label>
+                      <input type="password" id="password" name="password" required class="w-full px-3 py-2 border border-[#ccc] focus:border-black focus:outline-none text-sm" />
+                    </div>
+
+                    <div class="flex items-center justify-between py-2 text-xs">
+                      <label class="flex items-center gap-2 cursor-pointer text-neutral-700">
+                        <input type="checkbox" name="rememberme" class="rounded border-[#ccc]" />
+                        <span>{pageData.rememberMe}</span>
+                      </label>
+                      <a href="#lost" class="text-neutral-500 hover:text-[#9f0712] underline">{pageData.lostPassword}</a>
+                    </div>
+
+                    <button type="submit" class="bg-black hover:bg-[#9f0712] text-white text-xs uppercase font-bold px-8 py-3 transition-colors tracking-wider w-max cursor-pointer">
+                      {pageData.loginBtn}
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Register / Perks Column -->
+              <div class="lg:col-span-1 bg-neutral-50/50">
+                <div class="border-b border-[#e5e5e5] px-[16px] py-[12px]">
+                  <p class="uppercase font-bold text-black text-xs m-0 font-mono tracking-wider">{pageData.needAccount || 'NEW CUSTOMER'}</p>
+                </div>
+                <div class="p-[16px] md:p-[24px] flex flex-col gap-4 font-mono text-xs">
+                  <p class="text-neutral-700 leading-relaxed m-0">
+                    {pageData.registerPrompt}
+                  </p>
+                  <ul class="list-disc pl-4 text-neutral-600 space-y-1.5 m-0">
+                    <li>Real-time shipment tracking</li>
+                    <li>Order history & Euro invoice receipts</li>
+                    <li>Exclusive CAD drops & firmware updates</li>
+                    <li>Discreet customer support portal</li>
+                  </ul>
+                  <button type="button" class="mt-4 border border-black hover:bg-black hover:text-white text-black font-bold uppercase py-2.5 px-4 text-xs transition-colors w-max">
+                    Create Account
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

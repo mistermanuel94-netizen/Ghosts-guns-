@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "audit": "node scripts/audit-site.js"
+    "audit": "node scripts/audit-site.js",
+    "deploy": "astro build && npx wrangler pages deploy dist --project-name=ghost-guns-shop"
   },
   "dependencies": {
     "astro": "^4.16.18"

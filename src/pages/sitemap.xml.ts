@@ -12,6 +12,8 @@ export const GET: APIRoute = () => {
     '/shop/',
     '/about/',
     '/blog/',
+    '/blog/guides/',
+    '/blog/learn/',
     '/contact/',
     '/shipping-restrictions/',
     '/terms-and-conditions/',
@@ -97,3 +99,4 @@ ${urlEntries.join('\n')}
     }
   });
 };
+

@@ -41,7 +41,18 @@
         "localSrc": "/assets/products/prod-102227-102228.png"
       }
     ],
-    "categories": [],
+    "categories": [
+      {
+        "id": 18,
+        "name": "Build Kits",
+        "slug": "build-kit"
+      },
+      {
+        "id": 53,
+        "name": "3D Printing",
+        "slug": "3d-printing"
+      }
+    ],
     "tags": [],
     "brands": [],
     "attributes": [],
@@ -156,7 +167,18 @@
         "localSrc": "/assets/products/prod-102111-102217.png"
       }
     ],
-    "categories": [],
+    "categories": [
+      {
+        "id": 30,
+        "name": "80 Percent Firearms",
+        "slug": "80-firearm"
+      },
+      {
+        "id": 22,
+        "name": "Components",
+        "slug": "component"
+      }
+    ],
     "tags": [
       {
         "id": 54,

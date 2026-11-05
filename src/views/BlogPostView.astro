@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+import { SILO_PILLARS } from '../utils/silo';
 
 interface Props {
   post: any;
@@ -10,7 +11,7 @@ interface Props {
 const { post, lang = 'en' } = Astro.props;
 const t = useTranslations(lang);
 
-const cleanDescription = post.excerpt?.rendered 
+const cleanDescription = post.excerpt?.rendered
   ? post.excerpt.rendered.replace(/<[^>]*>?/gm, '').trim()
   : '';
 ---
@@ -20,42 +21,73 @@ const cleanDescription = post.excerpt?.rendered
   description={cleanDescription}
   lang={lang}
 >
-  <div class="lg:container lg:mx-auto">
+  <div class="max-w-[1440px] mx-auto bg-white shadow-sm">
     <!-- Breadcrumbs -->
-    <div class="border-l border-r border-b border-[#e5e5e5] px-4 py-3 text-xs font-mono uppercase text-neutral-500 flex items-center gap-2">
-      <a href={getLocalizedPath('/', lang)} class="hover:text-black">Home</a>
-      <span>/</span>
-      <a href={getLocalizedPath('/blog/', lang)} class="hover:text-black">Blog</a>
-      <span>/</span>
-      <span class="text-black font-bold truncate max-w-[200px] md:max-w-none">{post.title.rendered}</span>
+    <div class="border-l border-r border-b border-neutral-300 bg-neutral-950 text-white px-4 sm:px-6 py-3 text-xs font-mono uppercase flex items-center gap-2">
+      <a href={getLocalizedPath('/', lang)} class="text-neutral-400 hover:text-white">Home</a>
+      <span class="text-neutral-600">/</span>
+      <a href={getLocalizedPath('/blog/', lang)} class="text-[#ff4d58] hover:underline font-bold">Knowledge Base</a>
+      <span class="text-neutral-600">/</span>
+      <span class="text-white font-bold truncate max-w-[200px] md:max-w-none">{post.title.rendered}</span>
     </div>
 
     <!-- Article Header -->
-    <header class="border-l border-r border-b border-[#e5e5e5] p-6 md:p-12 bg-neutral-50">
-      <div class="max-w-3xl mx-auto">
-        <div class="text-xs font-mono text-neutral-500 mb-3 uppercase flex items-center gap-2">
+    <header class="border-l border-r border-b border-neutral-300 p-6 sm:p-12 bg-neutral-950 text-white bg-blueprint-grid">
+      <div class="max-w-4xl">
+        <div class="text-xs font-mono text-[#ff4d58] mb-3 uppercase flex flex-wrap items-center gap-2 font-bold">
           <span>PUBLISHED ON {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-          <span>•</span>
-          <span>BY CODY WILSON</span>
+          <span>//</span>
+          <span>AUTHOR: CODY WILSON</span>
+          <span>//</span>
+          <span class="bg-white/10 text-white px-2 py-0.5">TECHNICAL FIELD GUIDE</span>
         </div>
-        <h1 class="text-3xl md:text-5xl font-heading font-black uppercase text-black leading-tight tracking-tight">
+        <h1 class="text-3xl sm:text-5xl font-heading font-black uppercase text-white leading-none tracking-tight m-0">
           {post.title.rendered}
         </h1>
       </div>
     </header>
 
-    <!-- Article Body -->
-    <div class="border-l border-r border-b border-[#e5e5e5] p-6 md:p-12 bg-white">
-      <article class="max-w-3xl mx-auto prose prose-neutral prose-headings:font-heading prose-headings:uppercase prose-headings:font-bold prose-table:border prose-table:border-[#e5e5e5] prose-th:border prose-th:border-[#e5e5e5] prose-th:p-2 prose-td:border prose-td:border-[#e5e5e5] prose-td:p-2 prose-img:rounded-none" set:html={post.content.rendered} />
+    <!-- Main 2-Column Layout: Article Body + Hardware Silo Sidebar -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 border-l border-r border-b border-neutral-300">
+      <div class="lg:col-span-8 p-6 sm:p-12 border-b lg:border-b-0 lg:border-r border-neutral-300 bg-white">
+        <article class="max-w-none prose" set:html={post.content.rendered} />
+      </div>
+
+      <!-- Right Sidebar: Direct Silo Links -->
+      <aside class="lg:col-span-4 p-6 sm:p-8 bg-neutral-50 flex flex-col gap-6">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-[#9f0712] font-bold block mb-1">
+            HARDWARE SILO DIRECTORY //
+          </span>
+          <h3 class="text-lg font-heading font-black uppercase text-neutral-950 mb-3">
+            Shop Featured Silos
+          </h3>
+          <div class="flex flex-col gap-2.5">
+            {SILO_PILLARS.map((pillar) => (
+              <a
+                href={getLocalizedPath(pillar.path, lang)}
+                class="p-3.5 bg-white hover:bg-neutral-950 text-neutral-950 hover:text-white border border-neutral-300 transition-colors block group"
+              >
+                <span class="text-[10px] font-mono text-[#9f0712] group-hover:text-[#ff4d58] font-bold block mb-0.5">
+                  {pillar.code}
+                </span>
+                <span class="text-xs font-heading font-black uppercase block">
+                  {pillar.defaultTitle} &rarr;
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
     </div>
 
-    <!-- Back to blog link -->
-    <div class="border-l border-r border-b border-[#e5e5e5] p-6 flex justify-between items-center bg-neutral-50">
-      <a href={getLocalizedPath('/blog/', lang)} class="text-xs font-mono uppercase font-bold text-black hover:underline flex items-center gap-2">
-        &larr; Back to all articles
+    <!-- Bottom Navigation -->
+    <div class="border-l border-r border-b border-neutral-300 p-6 flex flex-wrap justify-between items-center gap-4 bg-neutral-100">
+      <a href={getLocalizedPath('/blog/', lang)} class="text-xs font-mono uppercase font-bold text-neutral-950 hover:text-[#9f0712] flex items-center gap-2">
+        &larr; Back to Knowledge Base
       </a>
-      <a href={getLocalizedPath('/shop/', lang)} class="text-xs font-mono uppercase font-bold text-[#9f0712] hover:underline">
-        Explore Parts &amp; Build Kits &rarr;
+      <a href={getLocalizedPath('/shop/', lang)} class="px-5 py-2.5 bg-[#9f0712] hover:bg-neutral-950 text-white text-xs font-mono uppercase font-bold transition-colors">
+        Explore All 76 Platforms &amp; Build Kits &rarr;
       </a>
     </div>
   </div>

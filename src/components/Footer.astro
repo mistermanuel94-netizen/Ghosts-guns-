@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+import { SILO_PILLARS } from '../utils/silo';
 
 interface Props {
   lang?: Locale;
@@ -10,56 +11,109 @@ const currentLang = lang || getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 ---
 
-<footer class="mt-auto w-full bg-white">
-  <div class="lg:container lg:mx-auto">
-    <!-- Main footer grid: 4 columns -->
-    <div class="flex flex-col md:grid md:grid-cols-4 border-t border-[#e5e5e5] lg:border-l lg:border-r border-[#e5e5e5]">
-      
-      <!-- Col 1: Ghost Guns -->
-      <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
-        <p class="uppercase text-black mb-4 font-heading text-lg font-bold">{t('footer.col1Title')}</p>
-        <div class="flex flex-col gap-1">
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/shop/', currentLang)}>{t('footer.shopLink')}</a>
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/about/', currentLang)}>{t('footer.aboutLink')}</a>
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/blog/', currentLang)}>{t('footer.blogLink')}</a>
-          <a class="text-black text-xs uppercase font-mono hover:underline" href="https://www.instagram.com/dd.ghostguns" target="_blank" rel="noopener noreferrer">{t('footer.instagramLink')}</a>
+<footer class="mt-auto w-full bg-neutral-950 text-white border-t border-neutral-800">
+  <div class="max-w-[1440px] mx-auto lg:border-l lg:border-r border-neutral-800">
+    <!-- Top Silo Directory Strip -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 border-b border-neutral-800 divide-y sm:divide-y-0 sm:divide-x divide-neutral-800 bg-neutral-900/50">
+      {SILO_PILLARS.map((pillar) => (
+        <a
+          href={getLocalizedPath(pillar.path, currentLang)}
+          class="p-4 hover:bg-neutral-900 transition-colors flex flex-col justify-between group"
+        >
+          <span class="text-[9px] font-mono font-bold uppercase text-[#ff4d58] tracking-wider block mb-1">
+            {pillar.code.split('//')[0].trim()}
+          </span>
+          <span class="text-xs font-heading font-black uppercase text-white group-hover:text-[#ff4d58] transition-colors leading-tight block">
+            {pillar.defaultTitle} &rarr;
+          </span>
+        </a>
+      ))}
+      <a
+        href={getLocalizedPath('/blog/', currentLang)}
+        class="p-4 hover:bg-neutral-900 transition-colors flex flex-col justify-between group"
+      >
+        <span class="text-[9px] font-mono font-bold uppercase text-emerald-400 tracking-wider block mb-1">
+          SILO 06
+        </span>
+        <span class="text-xs font-heading font-black uppercase text-white group-hover:text-emerald-400 transition-colors leading-tight block">
+          Build Guides & Tech Archive &rarr;
+        </span>
+      </a>
+    </div>
+
+    <!-- Main 5-Column Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
+      <!-- Col 1: Brand & Core Navigation -->
+      <div class="p-6 sm:p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <img width="24" height="32" class="h-6 w-auto invert" src="/assets/images/logo-black.svg" alt="Ghost Guns" />
+            <span class="font-heading text-xl font-black uppercase tracking-tight text-white">{t('footer.col1Title')}</span>
+          </div>
+          <div class="flex flex-col gap-2 font-mono text-xs">
+            <a class="text-neutral-300 hover:text-white uppercase transition-colors" href={getLocalizedPath('/shop/', currentLang)}>{t('footer.shopLink')}</a>
+            <a class="text-neutral-300 hover:text-white uppercase transition-colors" href={getLocalizedPath('/about/', currentLang)}>{t('footer.aboutLink')}</a>
+            <a class="text-neutral-300 hover:text-white uppercase transition-colors" href={getLocalizedPath('/blog/', currentLang)}>{t('footer.blogLink')}</a>
+            <a class="text-neutral-300 hover:text-white uppercase transition-colors" href="https://www.instagram.com/dd.ghostguns" target="_blank" rel="noopener noreferrer">{t('footer.instagramLink')}</a>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-neutral-800/80 text-[10px] font-mono text-neutral-500 uppercase">
+          AUSTIN, TEXAS // GLOBAL EURO DISPATCH
         </div>
       </div>
 
-      <!-- Col 2: Help -->
-      <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
-        <p class="uppercase text-black mb-4 font-heading text-lg font-bold">{t('footer.col2Title')}</p>
-        <div class="flex flex-col gap-1">
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/contact/', currentLang)}>{t('footer.contactLink')}</a>
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/refund-policy/', currentLang)}>{t('footer.refundPolicyLink')}</a>
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/shipping-policy/', currentLang)}>{t('footer.shippingPolicyLink')}</a>
+      <!-- Col 2: Hardware Silo Spokes -->
+      <div class="p-6 sm:p-8">
+        <p class="uppercase text-white mb-4 font-heading text-lg font-black tracking-wide">HARDWARE SILOS</p>
+        <div class="flex flex-col gap-2 font-mono text-xs">
+          <a class="text-[#ff4d58] font-bold hover:underline uppercase" href={getLocalizedPath('/3d-printers/', currentLang)}>/ 3D Printers (CoreXY)</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/build-kit/', currentLang)}>/ Complete Build Kits</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/80-firearm/', currentLang)}>/ 80% Lower Receivers</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/component/slide/', currentLang)}>/ CNC Pistol Slides</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/component/rails/', currentLang)}>/ FMDA & DD19.2 Rails</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/accessories/jigs/', currentLang)}>/ Router Jigs & Tooling</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/magazines/', currentLang)}>/ Magazines & Springs</a>
         </div>
       </div>
 
-      <!-- Col 3: Legal -->
-      <div class="p-6 border-b md:border-b-0 md:border-r border-[#e5e5e5]">
-        <p class="uppercase text-black mb-4 font-heading text-lg font-bold">{t('footer.col3Title')}</p>
-        <div class="flex flex-col gap-1">
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/shipping-restrictions/', currentLang)}>{t('footer.shippingRestrictionsLink')}</a>
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/terms-and-conditions/', currentLang)}>{t('footer.termsConditionsLink')}</a>
-          <a class="text-black text-xs uppercase font-mono hover:underline" href={getLocalizedPath('/privacy-policy/', currentLang)}>{t('footer.privacyPolicyLink')}</a>
+      <!-- Col 3: Customer Support -->
+      <div class="p-6 sm:p-8">
+        <p class="uppercase text-white mb-4 font-heading text-lg font-black tracking-wide">{t('footer.col2Title')}</p>
+        <div class="flex flex-col gap-2 font-mono text-xs">
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/contact/', currentLang)}>{t('footer.contactLink')}</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/my-account/', currentLang)}>/ {t('nav.myAccount')}</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/refund-policy/', currentLang)}>{t('footer.refundPolicyLink')}</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/shipping-policy/', currentLang)}>{t('footer.shippingPolicyLink')}</a>
         </div>
       </div>
 
-      <!-- Col 4: All Rights Reversed (Black) -->
-      <div class="p-6 bg-black text-white">
-        <p class="uppercase text-white mb-3 font-heading text-lg font-bold">{t('footer.col4Title')}</p>
-        <p class="text-white text-xs font-mono leading-relaxed m-0" set:html={t('footer.canaryText')}>
-        </p>
+      <!-- Col 4: Legal & Compliance -->
+      <div class="p-6 sm:p-8">
+        <p class="uppercase text-white mb-4 font-heading text-lg font-black tracking-wide">{t('footer.col3Title')}</p>
+        <div class="flex flex-col gap-2 font-mono text-xs">
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/shipping-restrictions/', currentLang)}>{t('footer.shippingRestrictionsLink')}</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/terms-and-conditions/', currentLang)}>{t('footer.termsConditionsLink')}</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/privacy-policy/', currentLang)}>{t('footer.privacyPolicyLink')}</a>
+          <a class="text-neutral-300 hover:text-white uppercase" href={getLocalizedPath('/website-terms-of-use/', currentLang)}>/ website terms of use</a>
+        </div>
+      </div>
+
+      <!-- Col 5: Warrant Canary -->
+      <div class="p-6 sm:p-8 bg-neutral-900">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <p class="uppercase text-white m-0 font-heading text-lg font-black">{t('footer.col4Title')}</p>
+        </div>
+        <p class="text-neutral-300 text-xs font-mono leading-relaxed m-0" set:html={t('footer.canaryText')}></p>
       </div>
     </div>
 
-    <!-- Trademark + disclaimer row -->
-    <div class="flex flex-col-reverse md:flex-row md:items-start gap-3 px-4 py-3 border-t border-[#ccc] lg:border-l lg:border-r border-[#e5e5e5]">
-      <p class="!m-0 text-[10px] leading-relaxed text-neutral-500 md:flex-1">
+    <!-- Bottom Disclaimer & Copyright Row -->
+    <div class="flex flex-col-reverse md:flex-row md:items-center justify-between gap-4 px-6 py-4 border-t border-neutral-800 bg-black">
+      <p class="m-0 text-[11px] leading-relaxed text-neutral-400 md:max-w-4xl font-mono">
         {t('footer.disclaimer')}
       </p>
-      <span class="text-xs text-black font-mono uppercase whitespace-nowrap md:ml-auto self-end md:self-auto">
+      <span class="text-xs text-white font-mono font-bold uppercase whitespace-nowrap">
         {t('footer.copyright')}
       </span>
     </div>

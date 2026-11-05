@@ -5,6 +5,7 @@ import ProductCard from '../components/ProductCard.astro';
 import NichePillarSection from '../components/NichePillarSection.astro';
 import products from '../data/products.json';
 import { useTranslations, getLocalizedPath, LOCALES, LANGUAGES, type Locale } from '../utils/i18n';
+import { SILO_PILLARS, getCategoryProductCount } from '../utils/silo';
 
 interface Props {
   lang?: Locale;
@@ -17,7 +18,7 @@ const t = useTranslations(lang);
 const printerSlugs = ['bambu-lab-p2s-3d-printer', 'elegoo-centauri-carbon-3d-printer', 'prusa-core-one-plus-3d-printer', 'creality-sparkx-i7-3d-printer'];
 const mostPopularSlugs = ['3d-printed-g19-build-kit', 'harlot', 'ar15-lower-receiver-80', 'pbs-17-build-kit'];
 const precisionSlugs = ['glock-19-slide-parts-kit', 'bambu-lab-pa-cf-filament', 'ar15-80-percent-lower-jig-kit', 'high-impact-pla-plus-pro-filament'];
-const latestSlugs = ['g80-build-kit-polymer', 'g80-jig-polymer', 'hardened-steel-high-temp-nozzle-kit', 'ar15-magpul-m3-30rd-mag'];
+const latestSlugs = ['g80-build-kit', 'g80-jig', 'hardened-steel-high-temp-nozzle-kit', 'ar15-anodized-lower-receiver-80'];
 
 const printerProducts = printerSlugs.map(slug => products.find(p => p.slug === slug)).filter(Boolean);
 const mostPopularProducts = mostPopularSlugs.map(slug => products.find(p => p.slug === slug)).filter(Boolean);
@@ -30,107 +31,228 @@ const latestProducts = latestSlugs.map(slug => products.find(p => p.slug === slu
   description={t('sections.stopScrollingDesc')}
   lang={lang}
 >
-  <div class="lg:container lg:mx-auto">
-    <!-- 1. Hero Slider -->
+  <div class="max-w-[1440px] mx-auto bg-white shadow-sm">
+    <!-- 1. Hero Slider (Single, High-Impact) -->
     <Hero lang={lang} />
 
-    <!-- 1. Hero Slider -->
-    <Hero lang={lang} />
-
-    <!-- 2. Section: Featured 3D Printers -->
-    <div class="border-[#e5e5e5] border-r border-l border-b px-3 pt-5 pb-3 flex justify-between items-center bg-neutral-50/60">
-      <div class="flex items-center gap-2">
-        <h3 class="uppercase font-black text-black text-xl md:text-2xl m-0 leading-none font-heading flex items-center gap-2">
-          <span>{t('sections.featuredPrinters')}</span>
-          <span class="text-[10px] bg-[#9f0712] text-white px-2 py-0.5 rounded-none font-mono font-bold tracking-wider">NEW SILO</span>
-        </h3>
-        <div class="w-[12px] h-[24px] bg-[#9f0712]"></div>
+    <!-- 2. Interactive Silo Architecture Quick-Jump Bar -->
+    <section class="border-l border-r border-b border-neutral-300 bg-neutral-100 px-4 sm:px-6 py-5">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-[#9f0712]"></span>
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-neutral-900">
+            ARCHITECTURAL SILO DIRECTORY // 5 PRIMARY HARDWARE HUBS
+          </span>
+        </div>
+        <span class="text-[11px] font-mono text-neutral-500 uppercase">
+          SELECT A SILO HUB TO FILTER BY PLATFORM &rarr;
+        </span>
       </div>
-      <a href={getLocalizedPath('/3d-printers/', lang)} class="text-[#9f0712] font-bold underline font-mono text-sm hover:text-black">{t('sections.viewAll')}</a>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5">
+        {SILO_PILLARS.map((pillar) => {
+          const count = getCategoryProductCount(pillar.slug, pillar.spokes.map(s => s.slug));
+          return (
+            <a
+              href={getLocalizedPath(pillar.path, lang)}
+              class="p-3.5 bg-white hover:bg-neutral-950 text-neutral-950 hover:text-white border border-neutral-300 hover:border-neutral-950 transition-all group flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-[#9f0712] group-hover:text-[#ff4d58] uppercase">
+                    {pillar.code.split('//')[0].trim()}
+                  </span>
+                  <span class="text-[10px] font-mono bg-neutral-100 group-hover:bg-white/15 text-neutral-700 group-hover:text-white px-1.5 py-0.5 font-bold">
+                    {count} ITEMS
+                  </span>
+                </div>
+                <h2 class="text-sm font-heading font-black uppercase tracking-tight leading-snug m-0">
+                  {pillar.defaultTitle}
+                </h2>
+              </div>
+              <div class="mt-3 pt-2 border-t border-neutral-100 group-hover:border-neutral-800 flex items-center justify-between text-[10px] font-mono text-neutral-500 group-hover:text-neutral-300">
+                <span>{pillar.spokes.length} SUB-SILOS</span>
+                <span class="font-bold text-neutral-950 group-hover:text-white">EXPLORE &rarr;</span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- 3. SILO 01 SHOWCASE: Featured CoreXY 3D Printers -->
+    <div class="border-neutral-300 border-r border-l border-b px-4 sm:px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-neutral-50">
+      <div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-[#9f0712]">SILO 01 // ADDITIVE HARDWARE</span>
+          <span class="text-[10px] bg-[#9f0712] text-white px-2 py-0.5 font-mono font-bold tracking-wider">NEW SILO</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <h3 class="uppercase font-black text-neutral-950 text-2xl md:text-3xl m-0 leading-none font-heading">
+            {t('sections.featuredPrinters')}
+          </h3>
+          <div class="w-3 h-6 bg-[#9f0712]"></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+        <a href={getLocalizedPath('/3d-printing/3d-files/', lang)} class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 text-neutral-800 uppercase font-bold">
+          3D CAD Files
+        </a>
+        <a href={getLocalizedPath('/3d-printing/3d-printer-accessories/', lang)} class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 text-neutral-800 uppercase font-bold">
+          Nozzles & Upgrades
+        </a>
+        <a href={getLocalizedPath('/3d-printers/', lang)} class="px-4 py-1.5 bg-[#9f0712] hover:bg-neutral-950 text-white font-bold uppercase transition-colors">
+          {t('sections.viewAll')} (10) &rarr;
+        </a>
+      </div>
     </div>
 
-    <ul class="products list-none m-0 p-0 grid grid-cols-2 lg:grid-cols-4 border-l border-r border-b border-[#e5e5e5]">
+    <ul class="products list-none m-0 p-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-l border-t border-neutral-300">
       {printerProducts.map((product: any) => (
         <ProductCard product={product} lang={lang} />
       ))}
     </ul>
 
-    <!-- 4. Section: Most Popular Build Kits -->
-    <div class="border-[#e5e5e5] border-r border-l border-b px-3 pt-5 pb-3 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <h3 class="uppercase font-black text-black text-xl md:text-2xl m-0 leading-none font-heading">{t('sections.mostPopular')}</h3>
-        <div class="w-[12px] h-[24px] bg-black"></div>
+    <!-- 4. SILO 02 SHOWCASE: Most Popular Complete Build Kits -->
+    <div class="border-neutral-300 border-r border-l border-b px-4 sm:px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white">
+      <div>
+        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-neutral-500 block mb-1">
+          SILO 02 // COMPLETE DIY PLATFORMS
+        </span>
+        <div class="flex items-center gap-3">
+          <h3 class="uppercase font-black text-neutral-950 text-2xl md:text-3xl m-0 leading-none font-heading">
+            {t('sections.mostPopular')}
+          </h3>
+          <div class="w-3 h-6 bg-neutral-950"></div>
+        </div>
       </div>
-      <a href={getLocalizedPath('/most-popular/', lang)} class="text-black underline font-mono text-sm hover:text-gray-600">{t('sections.viewAll')}</a>
+      <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+        <a href={getLocalizedPath('/build-kit/', lang)} class="px-3 py-1.5 bg-neutral-100 border border-neutral-300 hover:border-neutral-950 text-neutral-800 uppercase font-bold">
+          All Build Kits (26)
+        </a>
+        <a href={getLocalizedPath('/most-popular/', lang)} class="px-4 py-1.5 bg-neutral-950 hover:bg-[#9f0712] text-white font-bold uppercase transition-colors">
+          {t('sections.viewAll')} &rarr;
+        </a>
+      </div>
     </div>
 
-    <ul class="products list-none m-0 p-0 grid grid-cols-2 lg:grid-cols-4 border-l border-r border-b border-[#e5e5e5]">
+    <ul class="products list-none m-0 p-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-l border-t border-neutral-300">
       {mostPopularProducts.map((product: any) => (
         <ProductCard product={product} lang={lang} />
       ))}
     </ul>
 
-    <!-- 5. Niche Authority Pillar SEO Section -->
+    <!-- 5. Master Silo Architecture Matrix & Authority Hub -->
     <NichePillarSection lang={lang} />
 
-    <!-- 6. Section: Precision Hardware, Jigs & Engineering Filaments -->
-    <div class="border-[#e5e5e5] border-r border-l border-b px-3 pt-5 pb-3 flex justify-between items-center bg-neutral-50/60">
-      <div class="flex items-center gap-2">
-        <h3 class="uppercase font-black text-black text-xl md:text-2xl m-0 leading-none font-heading">{t('sections.precisionParts')}</h3>
-        <div class="w-[12px] h-[24px] bg-black"></div>
+    <!-- 6. SILO 03 & 04 SHOWCASE: Precision Hardware, Jigs & Engineering Filaments -->
+    <div class="border-neutral-300 border-r border-l border-b px-4 sm:px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-neutral-50">
+      <div>
+        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-[#9f0712] block mb-1">
+          SILO 03 & 04 // MACHINING, RAILS & POLYMERS
+        </span>
+        <div class="flex items-center gap-3">
+          <h3 class="uppercase font-black text-neutral-950 text-2xl md:text-3xl m-0 leading-none font-heading">
+            {t('sections.precisionParts')}
+          </h3>
+          <div class="w-3 h-6 bg-neutral-950"></div>
+        </div>
       </div>
-      <a href={getLocalizedPath('/component/', lang)} class="text-black underline font-mono text-sm hover:text-gray-600">{t('sections.viewAll')}</a>
+      <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+        <a href={getLocalizedPath('/component/slide/', lang)} class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 text-neutral-800 uppercase font-bold">
+          Slides
+        </a>
+        <a href={getLocalizedPath('/component/rails/', lang)} class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 text-neutral-800 uppercase font-bold">
+          FMDA Rails
+        </a>
+        <a href={getLocalizedPath('/accessories/jigs/', lang)} class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 text-neutral-800 uppercase font-bold">
+          Router Jigs
+        </a>
+        <a href={getLocalizedPath('/component/', lang)} class="px-4 py-1.5 bg-neutral-950 hover:bg-[#9f0712] text-white font-bold uppercase transition-colors">
+          {t('sections.viewAll')} &rarr;
+        </a>
+      </div>
     </div>
 
-    <ul class="products list-none m-0 p-0 grid grid-cols-2 lg:grid-cols-4 border-l border-r border-b border-[#e5e5e5]">
+    <ul class="products list-none m-0 p-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-l border-t border-neutral-300">
       {precisionProducts.map((product: any) => (
         <ProductCard product={product} lang={lang} />
       ))}
     </ul>
 
-    <!-- 7. Section: Latest Products -->
-    <div class="border-[#e5e5e5] border-r border-l border-t border-b px-3 pt-5 pb-3 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <h3 class="uppercase font-black text-black text-xl md:text-2xl m-0 leading-none font-heading">{t('sections.latestProducts')}</h3>
-        <div class="w-[12px] h-[24px] bg-black"></div>
+    <!-- 7. Latest Catalog Drops & 80% Receivers -->
+    <div class="border-neutral-300 border-r border-l border-b px-4 sm:px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white">
+      <div>
+        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-neutral-500 block mb-1">
+          WAREHOUSE TELEMETRY // NEW ARRIVALS
+        </span>
+        <div class="flex items-center gap-3">
+          <h3 class="uppercase font-black text-neutral-950 text-2xl md:text-3xl m-0 leading-none font-heading">
+            {t('sections.latestProducts')}
+          </h3>
+          <div class="w-3 h-6 bg-neutral-950"></div>
+        </div>
       </div>
-      <a href={getLocalizedPath('/shop/?orderby=date', lang)} class="text-black underline font-mono text-sm hover:text-gray-600">{t('sections.viewAll')}</a>
+      <a href={getLocalizedPath('/shop/?orderby=date', lang)} class="px-4 py-1.5 bg-neutral-950 hover:bg-[#9f0712] text-white font-mono text-xs font-bold uppercase transition-colors self-start sm:self-auto">
+        {t('sections.viewAll')} &rarr;
+      </a>
     </div>
 
-    <ul class="products list-none m-0 p-0 grid grid-cols-2 lg:grid-cols-4 border-l border-r border-b border-[#e5e5e5]">
+    <ul class="products list-none m-0 p-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-l border-t border-neutral-300">
       {latestProducts.map((product: any) => (
         <ProductCard product={product} lang={lang} />
       ))}
     </ul>
 
     <!-- 8. Callout Banner: Stop Scrolling. Start Building. -->
-    <div class="flex flex-col md:flex-row h-[600px] md:h-[400px] border-r md:border-r-0 border-t border-[#e5e5e5]">
-      <div class="flex flex-none md:flex-1 border-l border-l-[#e5e5e5] border-r border-r-white flex-col justify-center">
-        <div class="flex flex-col gap-[8px] px-[12px] p-[24px]">
-          <p class="uppercase text-black text-xs m-0 font-mono">{t('sections.stopScrollingTag')}</p>
-          <p class="uppercase font-black text-black text-3xl md:text-4xl m-0 font-heading">{t('sections.stopScrollingTitle')}</p>
-          <p class="uppercase text-black text-xs m-0">{t('sections.stopScrollingDesc')}</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 border-l border-r border-b border-neutral-300 bg-neutral-950 text-white">
+      <div class="p-8 sm:p-12 lg:p-16 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-neutral-800">
+        <span class="text-xs font-mono uppercase text-[#ff4d58] font-bold tracking-widest mb-3">
+          {t('sections.stopScrollingTag')}
+        </span>
+        <h2 class="uppercase font-black text-white text-3xl sm:text-4xl lg:text-5xl m-0 mb-4 font-heading leading-none">
+          {t('sections.stopScrollingTitle')}
+        </h2>
+        <p class="text-neutral-300 text-sm sm:text-base leading-relaxed m-0 mb-8 max-w-xl">
+          {t('sections.stopScrollingDesc')}
+        </p>
+        <div class="flex flex-wrap gap-3">
           <a
             href={getLocalizedPath('/shop/', lang)}
-            class="text-white bg-black border border-[#e5e5e5] inline-block text-xs py-[8px] px-[24px] uppercase self-start hover:bg-neutral-800 font-mono font-bold mt-2"
+            class="text-white bg-[#9f0712] hover:bg-[#b90a0e] px-7 py-3.5 text-xs uppercase font-mono font-bold tracking-wider transition-colors"
           >
-            {t('sections.shopNow')}
+            {t('sections.shopNow')} &rarr;
+          </a>
+          <a
+            href={getLocalizedPath('/blog/', lang)}
+            class="text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 px-6 py-3.5 text-xs uppercase font-mono font-bold tracking-wider transition-colors"
+          >
+            READ BUILD GUIDES
           </a>
         </div>
       </div>
       <div
-        class="flex-1 md:h-auto border-t md:border-t-0 border-l border-r border-[#e5e5e5] bg-cover bg-center"
+        class="min-h-[320px] lg:min-h-[420px] bg-cover bg-center relative"
         style="background-image: url('/assets/images/learn.png');"
       >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4 right-4 p-4 bg-black/80 backdrop-blur-xs border border-neutral-800 flex items-center justify-between font-mono text-xs">
+          <span>76 VERIFIED PLATFORMS READY FOR DISPATCH</span>
+          <span class="text-[#ff4d58] font-bold">NO FFL // 100% PRIVATE</span>
+        </div>
       </div>
     </div>
 
-    <!-- 9. Dedicated In-Page Multi-Language Switcher Bar -->
-    <div class="border-l border-r border-b border-[#e5e5e5] bg-black text-white p-6 md:p-8">
+    <!-- 9. Dedicated Multi-Language Storefront Switcher Bar -->
+    <div class="border-l border-r border-b border-neutral-300 bg-neutral-900 text-white p-6 md:p-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-[#9f0712] block mb-1">GLOBAL STOREFRONT // 8 LOCALES</span>
-          <h4 class="text-base md:text-lg font-heading font-black uppercase text-white m-0 tracking-wide">{t('sections.selectLanguage')}</h4>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-[#ff4d58] font-bold block mb-1">
+            EUROPEAN & INTERNATIONAL STOREFRONT // 8 NATIVE LOCALES
+          </span>
+          <h4 class="text-base md:text-lg font-heading font-black uppercase text-white m-0 tracking-wide">
+            {t('sections.selectLanguage')}
+          </h4>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-2">
           {LOCALES.map(loc => {
@@ -141,9 +263,9 @@ const latestProducts = latestSlugs.map(slug => products.find(p => p.slug === slu
               <a
                 href={targetUrl}
                 class={`px-3 py-1.5 text-xs font-mono font-bold uppercase transition-all flex items-center gap-1.5 border ${
-                  isActive 
-                    ? 'bg-[#9f0712] text-white border-[#9f0712] shadow-sm' 
-                    : 'bg-neutral-900 text-neutral-300 border-neutral-700 hover:border-white hover:text-white'
+                  isActive
+                    ? 'bg-[#9f0712] text-white border-[#9f0712] shadow-sm'
+                    : 'bg-neutral-950 text-neutral-300 border-neutral-700 hover:border-white hover:text-white'
                 }`}
               >
                 <span>{meta.flag}</span>

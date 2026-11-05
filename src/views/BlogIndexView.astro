@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import posts from '../data/posts.json';
 import { getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+import { SILO_PILLARS } from '../utils/silo';
 
 interface Props {
   lang?: Locale;
@@ -16,47 +17,90 @@ const t = useTranslations(lang);
   description="Read expert guides, testing, and industry news on 3D printed ghost guns, 80 percent lower receivers, and DIY firearm manufacturing."
   lang={lang}
 >
-  <div class="lg:container lg:mx-auto">
-    <!-- Header banner -->
-    <div class="border-[#e5e5e5] border-r border-l border-t border-b px-4 py-8 bg-neutral-50 flex flex-col md:flex-row md:items-center justify-between gap-4">
-      <div>
-        <div class="flex items-center gap-2">
-          <h1 class="uppercase font-black text-black text-3xl md:text-4xl m-0 leading-none font-heading">GHOST GUNS BLOG</h1>
-          <div class="w-[12px] h-[28px] bg-black"></div>
+  <div class="max-w-[1440px] mx-auto bg-white shadow-sm">
+    <!-- 1. Technical Archive Hero Banner -->
+    <div class="border-l border-r border-b border-neutral-300 px-6 sm:px-10 py-12 bg-neutral-950 text-white bg-blueprint-grid">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#9f0712]/25 border border-[#9f0712] text-[#ff4d58] text-xs font-mono uppercase tracking-widest font-bold mb-3">
+            <span class="w-1.5 h-1.5 bg-[#9f0712]"></span>
+            <span>SILO 06 // TECHNICAL DOCUMENTATION & FIELD GUIDES</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <h1 class="uppercase font-black text-white text-3xl sm:text-5xl m-0 leading-none font-heading">
+              GHOST GUNS KNOWLEDGE BASE
+            </h1>
+            <div class="w-3 h-8 bg-[#9f0712] shrink-0"></div>
+          </div>
+          <p class="text-xs sm:text-sm font-mono text-neutral-300 mt-3 max-w-2xl uppercase">
+            Official build guides, 3D printing calibration references, and technical deep-dives connected to our hardware silos.
+          </p>
         </div>
-        <p class="text-xs font-mono text-neutral-500 mt-2 uppercase">Official news, build guides, and technical deep-dives</p>
-      </div>
 
-      <!-- Categories -->
-      <div class="flex gap-2 text-xs font-mono">
-        <a href={getLocalizedPath('/shop/', lang)} class="px-3 py-1 bg-black text-white hover:bg-[#9f0712] uppercase font-bold transition-colors">
-          {t('footer.shopLink') || 'Shop Catalog'}
-        </a>
+        <div class="flex flex-wrap gap-2 text-xs font-mono">
+          <a href={getLocalizedPath('/3d-printers/', lang)} class="px-4 py-2.5 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white uppercase font-bold transition-colors">
+            3D Printers Silo
+          </a>
+          <a href={getLocalizedPath('/build-kit/', lang)} class="px-4 py-2.5 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white uppercase font-bold transition-colors">
+            Build Kits Silo
+          </a>
+          <a href={getLocalizedPath('/shop/', lang)} class="px-5 py-2.5 bg-[#9f0712] hover:bg-[#b90a0e] text-white uppercase font-bold transition-colors">
+            {t('footer.shopLink') || 'Shop Catalog'} &rarr;
+          </a>
+        </div>
       </div>
     </div>
 
-    <!-- Posts Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-l border-r border-b border-[#e5e5e5]">
-      {posts.map((post: any) => (
-        <article class="p-6 border-b md:border-b-0 border-r border-[#e5e5e5] flex flex-col justify-between hover:bg-neutral-50/50 transition-colors">
+    <!-- 2. Articles Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 border-l border-r border-b border-neutral-300 divide-y md:divide-y-0 md:divide-x divide-neutral-300">
+      {posts.map((post: any, idx: number) => (
+        <article class="p-6 sm:p-8 flex flex-col justify-between bg-white hover:bg-neutral-50 transition-colors">
           <div>
-            <div class="text-xs font-mono text-neutral-400 mb-2 uppercase">
-              {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+            <div class="flex items-center justify-between gap-2 text-xs font-mono text-neutral-500 mb-4 pb-3 border-b border-neutral-200 uppercase">
+              <span class="px-2 py-0.5 bg-neutral-950 text-white font-bold text-[10px]">
+                GUIDE 0{idx + 1}
+              </span>
+              <span>
+                {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+              </span>
             </div>
-            <h2 class="text-xl font-heading font-black uppercase text-black leading-snug mb-3">
-              <a href={getLocalizedPath(`/blog/${post.slug}/`, lang)} class="hover:underline">
+            <h2 class="text-xl sm:text-2xl font-heading font-black uppercase text-neutral-950 leading-tight mb-4">
+              <a href={getLocalizedPath(`/blog/${post.slug}/`, lang)} class="hover:text-[#9f0712] transition-colors">
                 {post.title.rendered}
               </a>
             </h2>
-            <div class="text-xs text-neutral-600 font-sans line-clamp-3 leading-relaxed mb-4 prose" set:html={post.excerpt.rendered} />
+            <div class="text-sm text-neutral-600 font-sans line-clamp-4 leading-relaxed mb-6 prose" set:html={post.excerpt.rendered} />
           </div>
-          <div>
-            <a href={getLocalizedPath(`/blog/${post.slug}/`, lang)} class="inline-block text-xs font-mono uppercase font-bold text-black border-b border-black pb-0.5 hover:text-[#9f0712] hover:border-[#9f0712] transition-colors">
-              Read Article &rarr;
+          <div class="pt-4 border-t border-neutral-200 flex items-center justify-between">
+            <a
+              href={getLocalizedPath(`/blog/${post.slug}/`, lang)}
+              class="inline-flex items-center gap-2 text-xs font-mono uppercase font-bold text-white bg-neutral-950 hover:bg-[#9f0712] px-4 py-2.5 transition-colors"
+            >
+              <span>READ TECHNICAL GUIDE</span>
+              <span>&rarr;</span>
             </a>
+            <span class="text-[10px] font-mono uppercase text-neutral-400">BY CODY WILSON</span>
           </div>
         </article>
       ))}
+    </div>
+
+    <!-- 3. Hardware Silo Directory Strip -->
+    <div class="border-l border-r border-b border-neutral-300 bg-neutral-100 p-6 sm:p-8">
+      <span class="block text-[10px] font-mono uppercase tracking-widest text-[#9f0712] font-bold mb-2">
+        READY TO START BUILDING? // DIRECT HARDWARE SILOS
+      </span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        {SILO_PILLARS.map((pillar) => (
+          <a
+            href={getLocalizedPath(pillar.path, lang)}
+            class="p-4 bg-white hover:bg-neutral-950 text-neutral-950 hover:text-white border border-neutral-300 transition-colors block"
+          >
+            <span class="block text-[10px] font-mono text-[#9f0712] font-bold mb-1">{pillar.code}</span>
+            <span class="block text-sm font-heading font-black uppercase">{pillar.defaultTitle} &rarr;</span>
+          </a>
+        ))}
+      </div>
     </div>
   </div>
 </Layout>

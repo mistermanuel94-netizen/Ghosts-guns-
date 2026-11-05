@@ -1,6 +1,7 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import { getLangFromUrl, getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
+import { SILO_PILLARS, getCategoryProductCount } from '../utils/silo';
 
 interface Props {
   lang?: Locale;
@@ -9,67 +10,117 @@ interface Props {
 const { lang } = Astro.props;
 const currentLang = lang || getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
+const currentPath = Astro.url.pathname;
+
+const totalPrintersCount = getCategoryProductCount('3d-printers');
+const totalKitsCount = getCategoryProductCount('build-kit');
+const total80Count = getCategoryProductCount('80-firearm');
 ---
 
-<header class="w-full bg-white sticky top-0 z-50 font-['Helvetica_Neue',Helvetica,Arial,sans-serif]">
-  <!-- Top Bar: Multi-Language Switcher (Every language listed) -->
-  <LanguageSwitcher currentLang={currentLang} currentPath={Astro.url.pathname} />
+<header class="w-full bg-white sticky top-0 z-50 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
+  <!-- Top Bar: Multi-Language Switcher & Global Status -->
+  <LanguageSwitcher currentLang={currentLang} currentPath={currentPath} />
 
-  <!-- Tier 1: Logo + Search + Icons -->
-  <div class="w-full bg-white">
-    <div class="lg:container lg:mx-auto border-b lg:border-l lg:border-r border-[#ccc]">
-      <div id="header-bar" class="flex items-center h-[36px]">
-        <!-- Logo Section -->
-        <a href={getLocalizedPath('/', currentLang)} class="flex items-center h-full shrink-0">
-          <!-- Logo Box -->
-          <div class="flex items-center justify-center w-[36px] h-full border-r border-[#ccc] px-[6px]">
-            <img width="288" height="397" class="h-[24px] w-auto object-contain" src="/assets/images/logo-black.svg" alt="Ghost Guns logo" />
+  <!-- Tier 1: Brand Identity + Live Command Search + Quick Action Icons -->
+  <div class="w-full bg-white border-b border-neutral-300">
+    <div class="max-w-[1440px] mx-auto lg:border-l lg:border-r border-neutral-300">
+      <div id="header-bar" class="flex items-center h-[52px]">
+        <!-- Logo & Brand Section -->
+        <a href={getLocalizedPath('/', currentLang)} class="flex items-center h-full shrink-0 group">
+          <!-- Tactical Logo Box -->
+          <div class="flex items-center justify-center w-[52px] h-full border-r border-neutral-300 bg-neutral-950 group-hover:bg-[#9f0712] transition-colors px-2">
+            <img width="288" height="397" class="h-[28px] w-auto object-contain invert" src="/assets/images/logo-black.svg" alt="Ghost Guns logo" />
           </div>
-          <!-- Brand Name -->
-          <div class="flex items-center h-full border-r border-[#ccc] px-[24px]">
-            <span class="text-[16px] font-bold text-black uppercase leading-[16px]">{t('nav.brand')}</span>
+          <!-- Brand Name & Spec Tag -->
+          <div class="flex flex-col justify-center h-full border-r border-neutral-300 px-4 sm:px-6 bg-white group-hover:bg-neutral-50 transition-colors">
+            <span class="text-[17px] sm:text-[19px] font-black text-neutral-950 uppercase leading-none font-heading tracking-tight">
+              {t('nav.brand')}
+            </span>
+            <span class="text-[9px] font-mono uppercase tracking-widest text-[#9f0712] font-bold mt-0.5 hidden sm:block">
+              UNSERIALIZED // NO FFL
+            </span>
           </div>
         </a>
 
-        <!-- Search Bar (expands to fill) -->
-        <div class="widget_search flex-1 h-full border-r border-[#ccc]">
+        <!-- Search Bar (Expands to Fill) -->
+        <div class="widget_search flex-1 h-full border-r border-neutral-300 relative">
           <form role="search" method="get" class="flex h-full w-full" action={getLocalizedPath('/shop/', currentLang)}>
+            <div class="hidden sm:flex items-center pl-4 text-neutral-400 pointer-events-none">
+              <span class="text-[10px] font-mono uppercase tracking-wider bg-neutral-100 border border-neutral-200 px-1.5 py-0.5 text-neutral-600">CMD://</span>
+            </div>
             <input
               type="search"
               id="header-search-input"
-              class="flex-1 h-full px-[24px] text-[12px] text-black placeholder-[#ccc] focus:outline-none rounded-none appearance-none bg-white uppercase border-none"
-              placeholder={t('nav.searchPlaceholder')}
+              class="flex-1 h-full px-3 sm:px-4 text-xs font-mono text-neutral-950 placeholder-neutral-400 focus:outline-none focus:bg-neutral-50/80 rounded-none appearance-none bg-white uppercase border-none"
+              placeholder={`${t('nav.searchPlaceholder')} (G19, HARLOT, COREXY, 80% LOWER, PA-CF...)`}
               value=""
               name="s"
             />
-            <button type="submit" class="search-submit-btn" style="display:flex;align-items:center;justify-content:center;width:36px;min-width:36px;height:100%;background-color:#000;border:none;cursor:pointer;flex-shrink:0;" aria-label="Search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:block;">
-                <path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"/>
+            <button
+              type="submit"
+              class="search-submit-btn flex items-center justify-center gap-1.5 px-4 sm:px-5 h-full bg-neutral-950 hover:bg-[#9f0712] text-white transition-colors border-0 cursor-pointer shrink-0 font-mono text-[11px] font-bold uppercase tracking-wider"
+              aria-label="Search Catalog"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
+              <span class="hidden md:inline">FIND</span>
             </button>
           </form>
         </div>
 
-        <!-- Right Icons -->
-        <div class="flex items-center h-full shrink-0">
-          <!-- Cart Icon -->
-          <button id="cart-drawer-trigger" class="ggn-cart-icon cart-contents flex items-center justify-center w-[36px] h-full border-r border-[#ccc] relative bg-transparent border-0 cursor-pointer" title={t('nav.cart')} aria-label={t('nav.cart')}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
-            </svg>
-            <span id="header-cart-count" class="ggn-cart-count" style="position:absolute;top:2px;right:2px;background:#9f0712;color:white;font-size:9px;font-weight:bold;border-radius:50%;min-width:14px;height:14px;display:none;align-items:center;justify-content:center;line-height:1;padding:0 3px;">0</span>
-          </button>
+        <!-- Right Quick Actions -->
+        <div class="flex items-center h-full shrink-0 bg-white">
+          <!-- Silo Map Quick Trigger (Desktop) -->
+          <a
+            href={getLocalizedPath('/shop/', currentLang)}
+            class="hidden xl:flex items-center gap-2 px-4 h-full border-r border-neutral-300 text-[11px] font-mono font-bold uppercase text-neutral-800 hover:bg-neutral-100 transition-colors"
+            title="Full 76-Item Silo Index"
+          >
+            <span class="w-2 h-2 bg-emerald-600 rounded-full"></span>
+            <span>76 IN STOCK</span>
+          </a>
 
-          <!-- User Icon (Desktop Only) -->
-          <a href={getLocalizedPath('/my-account/', currentLang)} class="hidden md:flex items-center justify-center w-[36px] h-full" title={t('nav.myAccount')} aria-label={t('nav.myAccount')}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+          <!-- User Account Portal (Desktop Only) -->
+          <a
+            href={getLocalizedPath('/my-account/', currentLang)}
+            class="hidden md:flex items-center justify-center w-[52px] h-full border-r border-neutral-300 text-neutral-900 hover:bg-neutral-100 hover:text-[#9f0712] transition-colors"
+            title={t('nav.myAccount')}
+            aria-label={t('nav.myAccount')}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
             </svg>
           </a>
 
+          <!-- Cart Trigger Button -->
+          <button
+            id="cart-drawer-trigger"
+            class="ggn-cart-icon cart-contents flex items-center justify-center gap-2 px-4 min-w-[52px] h-full border-r md:border-r-0 border-neutral-300 relative bg-white hover:bg-neutral-950 hover:text-white text-neutral-950 transition-colors border-0 cursor-pointer group"
+            title={t('nav.cart')}
+            aria-label={t('nav.cart')}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+            </svg>
+            <span class="hidden sm:inline font-mono text-[11px] font-bold uppercase tracking-wider">{t('nav.cart')}</span>
+            <span
+              id="header-cart-count"
+              class="ggn-cart-count bg-[#9f0712] text-white font-mono text-[10px] font-bold px-1.5 py-0.5 min-w-[18px] h-[18px] items-center justify-center leading-none"
+              style="display:none;"
+            >
+              0
+            </span>
+          </button>
+
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-[36px] h-full bg-[#ccc] border-0 cursor-pointer" aria-label="Toggle Navigation Menu">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden flex items-center justify-center w-[52px] h-full bg-neutral-950 text-white hover:bg-[#9f0712] transition-colors border-0 cursor-pointer"
+            aria-label="Toggle Silo Navigation Menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
@@ -78,109 +129,328 @@ const t = useTranslations(currentLang);
     </div>
   </div>
 
-  <!-- Tier 2: Navigation (Desktop Only) -->
-  <div class="hidden md:block w-full bg-white">
-    <div class="lg:container lg:mx-auto border-b lg:border-l lg:border-r border-[#ccc]">
-      <nav class="flex items-center h-[36px]">
-        <!-- Black Square Spacer -->
-        <div class="w-[36px] h-full bg-black border-r border-[#ccc] shrink-0"></div>
+  <!-- Tier 2: Architectural Silo Mega-Navigation (Desktop Only) -->
+  <div class="hidden lg:block w-full bg-neutral-950 text-white border-b border-neutral-800">
+    <div class="max-w-[1440px] mx-auto lg:border-l lg:border-r border-neutral-800">
+      <nav class="flex items-center justify-between h-[42px]" aria-label="Primary Silo Architecture">
+        <div class="flex items-center h-full">
+          <!-- Silo Index Indicator -->
+          <a
+            href={getLocalizedPath('/shop/', currentLang)}
+            class="flex items-center gap-2 px-4 h-full bg-[#9f0712] hover:bg-[#b90a0e] text-white font-mono text-xs font-bold uppercase tracking-wider border-r border-neutral-800 transition-colors shrink-0"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+            <span>{t('nav.shop')} (ALL SILOS)</span>
+          </a>
 
-        <!-- Nav Links -->
-        <div class="flex items-center gap-[24px] px-[24px] h-full">
-          <a href={getLocalizedPath('/shop/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.shop')}</a>
-          <a href={getLocalizedPath('/build-kit/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.buildKits')}</a>
-          <a href={getLocalizedPath('/80-firearm/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.eightyPercent')}</a>
-          
-          <!-- Parts dropdown -->
-          <div class="relative group h-full flex items-center">
-            <a href={getLocalizedPath('/component/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap flex items-center gap-1 leading-none">
-              {t('nav.parts')}
-              <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <!-- SILO 01: 3D Printers & Additive Ecosystem Mega-Dropdown -->
+          <div class="relative group h-full flex items-center border-r border-neutral-800">
+            <a
+              href={getLocalizedPath('/3d-printers/', currentLang)}
+              class="px-4 h-full flex items-center gap-2 text-xs font-mono font-bold uppercase text-white hover:bg-neutral-900 transition-colors whitespace-nowrap"
+            >
+              <span class="text-[#ff3b47]">01//</span>
+              <span>{t('nav.threeDPrinters') || '3D PRINTERS'}</span>
+              <span class="text-[9px] bg-[#9f0712] text-white px-1.5 py-0.5 font-mono font-bold">SILO</span>
+              <svg class="w-3 h-3 text-neutral-400 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </a>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-[#ccc] min-w-[160px] z-50 shadow-md">
-              <a href={getLocalizedPath('/component/slide/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">{t('nav.slides')}</a>
-              <a href={getLocalizedPath('/component/rails/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">{t('nav.rails')}</a>
-              <a href={getLocalizedPath('/component/receiver/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50">{t('nav.receivers')}</a>
+            <!-- Mega Dropdown Panel -->
+            <div class="absolute left-0 top-full hidden group-hover:block w-[540px] bg-white text-neutral-950 border-2 border-neutral-950 shadow-2xl z-50">
+              <div class="bg-neutral-950 text-white px-4 py-2.5 flex items-center justify-between border-b border-neutral-800">
+                <span class="text-[10px] font-mono uppercase tracking-widest text-[#ff3b47] font-bold">SILO 01 // ADDITIVE MANUFACTURING ECOSYSTEM</span>
+                <span class="text-[10px] font-mono text-neutral-400">{totalPrintersCount} PRINTERS + FILAMENTS</span>
+              </div>
+              <div class="grid grid-cols-2 divide-x divide-neutral-200">
+                <div class="p-4 flex flex-col gap-2">
+                  <span class="text-[10px] font-mono uppercase text-neutral-400 font-bold tracking-wider mb-1">HARDWARE & MATERIALS</span>
+                  <a href={getLocalizedPath('/3d-printers/', currentLang)} class="p-2.5 border border-neutral-200 hover:border-[#9f0712] bg-neutral-50 hover:bg-white transition-all group/item">
+                    <div class="flex items-center justify-between">
+                      <span class="font-heading font-black text-sm uppercase text-neutral-950 group-hover/item:text-[#9f0712]">CoreXY & Resin 3D Printers</span>
+                      <span class="text-[9px] font-mono bg-[#9f0712] text-white px-1.5 py-0.5 font-bold">10 UNITS</span>
+                    </div>
+                    <p class="text-[11px] text-neutral-600 mt-1 m-0 leading-snug">Bambu Lab P2S/H2D, Prusa Core One+, Elegoo Centauri Carbon.</p>
+                  </a>
+                  <a href={getLocalizedPath('/3d-printing/', currentLang)} class="p-2.5 border border-neutral-200 hover:border-neutral-950 transition-all">
+                    <span class="font-heading font-bold text-xs uppercase text-neutral-950 block">3D Printing Hub & PA-CF Filaments</span>
+                    <span class="text-[11px] text-neutral-500 font-mono">Carbon Fiber Nylon & PLA+ Pro</span>
+                  </a>
+                  <a href={getLocalizedPath('/3d-printing/3d-printer-accessories/', currentLang)} class="p-2.5 border border-neutral-200 hover:border-neutral-950 transition-all">
+                    <span class="font-heading font-bold text-xs uppercase text-neutral-950 block">{t('nav.printerAccessories')} & Hardened Nozzles</span>
+                    <span class="text-[11px] text-neutral-500 font-mono">High-Temp Hotends & Build Plates</span>
+                  </a>
+                </div>
+                <div class="p-4 flex flex-col justify-between bg-neutral-50/60">
+                  <div class="flex flex-col gap-2">
+                    <span class="text-[10px] font-mono uppercase text-neutral-400 font-bold tracking-wider mb-1">DIGITAL CAD & SOFTWARE</span>
+                    <a href={getLocalizedPath('/3d-printing/3d-files/', currentLang)} class="p-2.5 bg-white border border-neutral-200 hover:border-neutral-950 transition-all">
+                      <span class="font-heading font-bold text-xs uppercase text-neutral-950 block">{t('nav.threeDFiles')} & USB Packs</span>
+                      <span class="text-[11px] text-neutral-500 font-mono">Verified STL / STEP Reference Packs</span>
+                    </a>
+                    <a href={getLocalizedPath('/software/', currentLang)} class="p-2.5 bg-white border border-neutral-200 hover:border-neutral-950 transition-all">
+                      <span class="font-heading font-bold text-xs uppercase text-neutral-950 block">Slicer Software & Tooling</span>
+                      <span class="text-[11px] text-neutral-500 font-mono">Pre-Tuned Print Profiles</span>
+                    </a>
+                  </div>
+                  <div class="pt-3 border-t border-neutral-200 mt-3">
+                    <a href={getLocalizedPath('/blog/best-3d-printed-gun-builds-to-start-with-from-easy-to-advanced/', currentLang)} class="text-[11px] font-mono font-bold text-[#9f0712] hover:underline flex items-center justify-between">
+                      <span>READ: 3D BUILD ROADMAP</span>
+                      <span>&rarr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- 3D Printing dropdown -->
-          <div class="relative group h-full flex items-center">
-            <a href={getLocalizedPath('/3d-printing/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap flex items-center gap-1 leading-none">
-              {t('nav.threeDPrinting')}
-              <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <!-- SILO 02: Build Kits Dropdown -->
+          <div class="relative group h-full flex items-center border-r border-neutral-800">
+            <a
+              href={getLocalizedPath('/build-kit/', currentLang)}
+              class="px-4 h-full flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-neutral-200 hover:text-white hover:bg-neutral-900 transition-colors whitespace-nowrap"
+            >
+              <span class="text-neutral-500">02//</span>
+              <span>{t('nav.buildKits')}</span>
+              <svg class="w-3 h-3 text-neutral-500 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </a>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-[#ccc] min-w-[180px] z-50 shadow-md">
-              <a href={getLocalizedPath('/3d-printers/', currentLang)} class="block px-4 py-3 text-[13px] font-bold uppercase text-[#9f0712] hover:bg-neutral-50 border-b border-[#ccc] flex items-center justify-between">
-                <span>{t('nav.threeDPrinters') || '3D Printers'}</span>
-                <span class="text-[9px] bg-[#9f0712] text-white px-1.5 py-0.5 rounded-none font-mono">NEW</span>
-              </a>
-              <a href={getLocalizedPath('/3d-printing/3d-files/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50 border-b border-[#ccc]">{t('nav.threeDFiles')}</a>
-              <a href={getLocalizedPath('/3d-printing/3d-printer-accessories/', currentLang)} class="block px-4 py-3 text-[13px] font-normal uppercase text-black hover:bg-gray-50">{t('nav.printerAccessories')}</a>
+            <div class="absolute left-0 top-full hidden group-hover:block w-[340px] bg-white text-neutral-950 border-2 border-neutral-950 shadow-2xl z-50">
+              <div class="bg-neutral-950 text-white px-4 py-2 text-[10px] font-mono uppercase tracking-widest font-bold flex justify-between">
+                <span>SILO 02 // COMPLETE DIY KITS</span>
+                <span class="text-[#ff3b47]">{totalKitsCount} KITS</span>
+              </div>
+              <div class="p-3 flex flex-col gap-1.5 font-mono text-xs">
+                <a href={getLocalizedPath('/build-kit/', currentLang)} class="px-3 py-2.5 bg-neutral-50 hover:bg-neutral-950 hover:text-white border border-neutral-200 font-bold uppercase flex items-center justify-between transition-colors">
+                  <span>All Complete Build Kits</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href={getLocalizedPath('/most-popular/', currentLang)} class="px-3 py-2.5 hover:bg-neutral-100 border border-transparent hover:border-neutral-200 uppercase flex items-center justify-between transition-colors">
+                  <span>Most Popular Proven Kits</span>
+                  <span class="text-[10px] bg-[#9f0712] text-white px-1.5 py-0.5">TOP 8</span>
+                </a>
+                <a href={getLocalizedPath('/product/3d-printed-g19-build-kit/', currentLang)} class="px-3 py-2 text-[11px] text-neutral-600 hover:text-[#9f0712] border-t border-neutral-100 pt-2">
+                  &bull; DD19.2 / G19 Complete Build Kit
+                </a>
+                <a href={getLocalizedPath('/product/harlot-22-parts-kit/', currentLang)} class="px-3 py-1.5 text-[11px] text-neutral-600 hover:text-[#9f0712]">
+                  &bull; Harlot .22 LR Starter Parts Kit
+                </a>
+                <a href={getLocalizedPath('/product/fgc-9-hardware-barrel-kit/', currentLang)} class="px-3 py-1.5 text-[11px] text-neutral-600 hover:text-[#9f0712]">
+                  &bull; FGC-9 MkII 9mm Carbine Kit
+                </a>
+              </div>
             </div>
           </div>
 
-          <a href={getLocalizedPath('/3d-printers/', currentLang)} class="text-[13px] font-bold uppercase text-[#9f0712] hover:text-black whitespace-nowrap leading-none border-b-2 border-[#9f0712] pb-0.5">{t('nav.threeDPrinters') || '3D PRINTERS'}</a>
-          <a href={getLocalizedPath('/gun-accessories/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.accessories')}</a>
-          <a href={getLocalizedPath('/contact/', currentLang)} class="text-[13px] font-normal uppercase text-black hover:text-gray-500 whitespace-nowrap leading-none">{t('nav.contact')}</a>
+          <!-- SILO 03: 80% Firearms & Jigs -->
+          <div class="relative group h-full flex items-center border-r border-neutral-800">
+            <a
+              href={getLocalizedPath('/80-firearm/', currentLang)}
+              class="px-4 h-full flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-neutral-200 hover:text-white hover:bg-neutral-900 transition-colors whitespace-nowrap"
+            >
+              <span class="text-neutral-500">03//</span>
+              <span>{t('nav.eightyPercent')}</span>
+              <svg class="w-3 h-3 text-neutral-500 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="absolute left-0 top-full hidden group-hover:block w-[320px] bg-white text-neutral-950 border-2 border-neutral-950 shadow-2xl z-50">
+              <div class="bg-neutral-950 text-white px-4 py-2 text-[10px] font-mono uppercase tracking-widest font-bold flex justify-between">
+                <span>SILO 03 // 80% FRAMES & JIGS</span>
+                <span class="text-[#ff3b47]">{total80Count} ITEMS</span>
+              </div>
+              <div class="p-3 flex flex-col gap-1.5 font-mono text-xs">
+                <a href={getLocalizedPath('/80-firearm/', currentLang)} class="px-3 py-2.5 bg-neutral-50 hover:bg-neutral-950 hover:text-white border border-neutral-200 font-bold uppercase flex justify-between transition-colors">
+                  <span>80% Lowers & G80 Frames</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href={getLocalizedPath('/accessories/jigs/', currentLang)} class="px-3 py-2.5 hover:bg-neutral-100 uppercase flex justify-between transition-colors">
+                  <span>Router Jigs & Milling Tools</span>
+                  <span class="text-[10px] text-[#9f0712] font-bold">CNC SPEC</span>
+                </a>
+                <a href={getLocalizedPath('/component/receiver/', currentLang)} class="px-3 py-2.5 hover:bg-neutral-100 uppercase flex justify-between transition-colors">
+                  <span>Unfinished Receivers (7075-T6)</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SILO 04: Precision Parts & Components -->
+          <div class="relative group h-full flex items-center border-r border-neutral-800">
+            <a
+              href={getLocalizedPath('/component/', currentLang)}
+              class="px-4 h-full flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-neutral-200 hover:text-white hover:bg-neutral-900 transition-colors whitespace-nowrap"
+            >
+              <span class="text-neutral-500">04//</span>
+              <span>{t('nav.parts')}</span>
+              <svg class="w-3 h-3 text-neutral-500 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="absolute left-0 top-full hidden group-hover:block w-[320px] bg-white text-neutral-950 border-2 border-neutral-950 shadow-2xl z-50">
+              <div class="bg-neutral-950 text-white px-4 py-2 text-[10px] font-mono uppercase tracking-widest font-bold">
+                SILO 04 // PRECISION HARDWARE SPOKES
+              </div>
+              <div class="p-3 flex flex-col gap-1.5 font-mono text-xs">
+                <a href={getLocalizedPath('/component/', currentLang)} class="px-3 py-2 bg-neutral-50 hover:bg-neutral-950 hover:text-white border border-neutral-200 font-bold uppercase flex justify-between transition-colors">
+                  <span>All Firearm Components</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href={getLocalizedPath('/component/slide/', currentLang)} class="px-3 py-2 hover:bg-neutral-100 uppercase flex justify-between">
+                  <span>{t('nav.slides')} (G17 / G19 / G26 / G43)</span>
+                  <span class="text-neutral-400">4140</span>
+                </a>
+                <a href={getLocalizedPath('/component/rails/', currentLang)} class="px-3 py-2 hover:bg-neutral-100 uppercase flex justify-between">
+                  <span>{t('nav.rails')} (FMDA / DD19.2)</span>
+                  <span class="text-[#9f0712] font-bold">SS</span>
+                </a>
+                <a href={getLocalizedPath('/component/receiver/', currentLang)} class="px-3 py-2 hover:bg-neutral-100 uppercase flex justify-between">
+                  <span>{t('nav.receivers')} & Lower Frames</span>
+                  <span class="text-neutral-400">80%</span>
+                </a>
+                <a href={getLocalizedPath('/component/glock/', currentLang)} class="px-3 py-2 hover:bg-neutral-100 uppercase flex justify-between">
+                  <span>Glock Gen 3 Parts & LPKs</span>
+                  <span class="text-neutral-400">OEM+</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SILO 05: Magazines & Accessories -->
+          <div class="relative group h-full flex items-center border-r border-neutral-800">
+            <a
+              href={getLocalizedPath('/gun-accessories/', currentLang)}
+              class="px-4 h-full flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-neutral-200 hover:text-white hover:bg-neutral-900 transition-colors whitespace-nowrap"
+            >
+              <span class="text-neutral-500">05//</span>
+              <span>{t('nav.accessories')}</span>
+              <svg class="w-3 h-3 text-neutral-500 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="absolute left-0 top-full hidden group-hover:block w-[290px] bg-white text-neutral-950 border-2 border-neutral-950 shadow-2xl z-50">
+              <div class="bg-neutral-950 text-white px-4 py-2 text-[10px] font-mono uppercase tracking-widest font-bold">
+                SILO 05 // MAGAZINES & GEAR
+              </div>
+              <div class="p-3 flex flex-col gap-1.5 font-mono text-xs">
+                <a href={getLocalizedPath('/magazines/', currentLang)} class="px-3 py-2 bg-neutral-50 hover:bg-neutral-950 hover:text-white border border-neutral-200 font-bold uppercase flex justify-between transition-colors">
+                  <span>Magazines & Menendez Packs</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href={getLocalizedPath('/gun-accessories/', currentLang)} class="px-3 py-2 hover:bg-neutral-100 uppercase flex justify-between">
+                  <span>Gun Accessories & Stocks</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href={getLocalizedPath('/accessories/jigs/', currentLang)} class="px-3 py-2 hover:bg-neutral-100 uppercase flex justify-between">
+                  <span>Workshop Jigs & Tooling</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Knowledge Base / Build Guides & Support -->
+        <div class="flex items-center h-full">
+          <a
+            href={getLocalizedPath('/blog/', currentLang)}
+            class="px-4 h-full flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-neutral-300 hover:text-white hover:bg-neutral-900 border-l border-neutral-800 transition-colors whitespace-nowrap"
+          >
+            <span class="w-1.5 h-1.5 bg-[#9f0712]"></span>
+            <span>BUILD GUIDES</span>
+          </a>
+          <a
+            href={getLocalizedPath('/contact/', currentLang)}
+            class="px-4 h-full flex items-center text-xs font-mono font-bold uppercase text-neutral-300 hover:text-white hover:bg-neutral-900 border-l border-neutral-800 transition-colors whitespace-nowrap"
+          >
+            {t('nav.contact')}
+          </a>
         </div>
       </nav>
     </div>
   </div>
 
-  <!-- Mobile Menu Dropdown -->
-  <div id="mobile-menu-drawer" class="hidden md:hidden w-full bg-white border-b border-[#ccc]">
-    <div class="p-4 flex flex-col gap-3 font-mono text-sm uppercase">
-      <a href={getLocalizedPath('/shop/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.shop')}</a>
-      <a href={getLocalizedPath('/3d-printers/', currentLang)} class="py-2 border-b border-[#e5e5e5] text-[#9f0712] font-bold">/ {t('nav.threeDPrinters') || '3D PRINTERS'} (NEW)</a>
-      <a href={getLocalizedPath('/build-kit/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.buildKits')}</a>
-      <a href={getLocalizedPath('/80-firearm/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.eightyPercent')}</a>
-      <a href={getLocalizedPath('/component/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.parts')}</a>
-      <a href={getLocalizedPath('/component/slide/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.slides')}</a>
-      <a href={getLocalizedPath('/component/rails/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.rails')}</a>
-      <a href={getLocalizedPath('/component/receiver/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.receivers')}</a>
-      <a href={getLocalizedPath('/3d-printing/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.threeDPrinting')}</a>
-      <a href={getLocalizedPath('/3d-printers/', currentLang)} class="pl-4 py-1 text-xs text-[#9f0712] font-bold border-b border-[#f0f0f0]">-- {t('nav.threeDPrinters') || '3D Printers'}</a>
-      <a href={getLocalizedPath('/3d-printing/3d-files/', currentLang)} class="pl-4 py-1 text-xs text-neutral-600 border-b border-[#f0f0f0]">-- {t('nav.threeDFiles')}</a>
-      <a href={getLocalizedPath('/gun-accessories/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.accessories')}</a>
-      <a href={getLocalizedPath('/about/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('footer.aboutLink')}</a>
-      <a href={getLocalizedPath('/contact/', currentLang)} class="py-2 border-b border-[#e5e5e5]">/ {t('nav.contact')}</a>
-      <a href={getLocalizedPath('/my-account/', currentLang)} class="py-2">/ {t('nav.myAccount')}</a>
+  <!-- Mobile Silo Menu Drawer -->
+  <div id="mobile-menu-drawer" class="hidden lg:hidden w-full bg-neutral-950 text-white border-b-2 border-[#9f0712] max-h-[82vh] overflow-y-auto">
+    <div class="p-4 flex flex-col gap-4 font-mono text-xs uppercase">
+      <!-- Quick Primary Actions -->
+      <div class="grid grid-cols-2 gap-2">
+        <a href={getLocalizedPath('/shop/', currentLang)} class="py-2.5 px-3 bg-[#9f0712] text-white font-bold text-center">
+          {t('nav.shop')} (76)
+        </a>
+        <a href={getLocalizedPath('/3d-printers/', currentLang)} class="py-2.5 px-3 bg-white text-neutral-950 font-bold text-center">
+          {t('nav.threeDPrinters')}
+        </a>
+      </div>
+
+      <!-- Structured Silo Tree -->
+      <div class="space-y-3 divide-y divide-neutral-800">
+        {SILO_PILLARS.map((pillar) => (
+          <div class="pt-3 first:pt-0">
+            <a href={getLocalizedPath(pillar.path, currentLang)} class="flex items-center justify-between font-bold text-white py-1">
+              <span>{pillar.code}: {pillar.defaultTitle}</span>
+              <span class="text-[#ff3b47]">&rarr;</span>
+            </a>
+            <div class="pl-3 mt-1.5 flex flex-col gap-1.5 border-l border-neutral-800">
+              {pillar.spokes.map((spoke) => (
+                <a href={getLocalizedPath(spoke.path, currentLang)} class="py-1 text-[11px] text-neutral-400 hover:text-white flex items-center justify-between">
+                  <span>— {spoke.defaultTitle}</span>
+                  <span class="text-[9px] text-neutral-600">{spoke.specCode}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Footer Links in Mobile Drawer -->
+      <div class="pt-3 border-t border-neutral-800 grid grid-cols-2 gap-2 text-[11px] text-neutral-300">
+        <a href={getLocalizedPath('/blog/', currentLang)} class="py-2 px-2 bg-neutral-900">/ BUILD GUIDES & BLOG</a>
+        <a href={getLocalizedPath('/about/', currentLang)} class="py-2 px-2 bg-neutral-900">/ {t('footer.aboutLink')}</a>
+        <a href={getLocalizedPath('/contact/', currentLang)} class="py-2 px-2 bg-neutral-900">/ {t('nav.contact')}</a>
+        <a href={getLocalizedPath('/my-account/', currentLang)} class="py-2 px-2 bg-neutral-900">/ {t('nav.myAccount')}</a>
+      </div>
     </div>
   </div>
 </header>
 
 <script>
-  // Mobile menu toggle
-  const menuBtn = document.getElementById('mobile-menu-button');
-  const menuDrawer = document.getElementById('mobile-menu-drawer');
-  if (menuBtn && menuDrawer) {
-    menuBtn.addEventListener('click', () => {
-      menuDrawer.classList.toggle('hidden');
-    });
+  function initHeaderInteractions() {
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const menuDrawer = document.getElementById('mobile-menu-drawer');
+    if (menuBtn && menuDrawer && !menuBtn.hasAttribute('data-bound')) {
+      menuBtn.setAttribute('data-bound', 'true');
+      menuBtn.addEventListener('click', () => {
+        menuDrawer.classList.toggle('hidden');
+      });
+    }
+
+    function updateCartBadge() {
+      try {
+        const cart = JSON.parse(localStorage.getItem('gg_cart') || '[]');
+        const count = cart.reduce((sum: number, item: any) => sum + (item.quantity || 1), 0);
+        const countEl = document.getElementById('header-cart-count');
+        if (countEl) {
+          if (count > 0) {
+            countEl.textContent = count.toString();
+            countEl.style.display = 'inline-flex';
+          } else {
+            countEl.style.display = 'none';
+          }
+        }
+      } catch (e) {}
+    }
+
+    updateCartBadge();
+    window.addEventListener('storage', updateCartBadge);
+    window.addEventListener('gg-cart-updated', updateCartBadge);
+    window.addEventListener('cart-updated', updateCartBadge);
   }
 
-  // Update cart badge from localStorage
-  function updateCartBadge() {
-    try {
-      const cart = JSON.parse(localStorage.getItem('gg_cart') || '[]');
-      const count = cart.reduce((sum: number, item: any) => sum + (item.quantity || 1), 0);
-      const countEl = document.getElementById('header-cart-count');
-      if (countEl) {
-        if (count > 0) {
-          countEl.textContent = count.toString();
-          countEl.style.display = 'flex';
-        } else {
-          countEl.style.display = 'none';
-        }
-      }
-    } catch (e) {}
-  }
-  updateCartBadge();
-  window.addEventListener('storage', updateCartBadge);
-  window.addEventListener('gg-cart-updated', updateCartBadge);
+  initHeaderInteractions();
+  document.addEventListener('astro:page-load', initHeaderInteractions);
 </script>

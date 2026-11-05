@@ -15,7 +15,7 @@ interface Props {
 
 const {
   title = "Ghost Guns | 3D Printed & 80 Percent Ghost Gun Kits",
-  description = "Browse our catalog of 3D printed build kits, 80 percent firearms, slides, parts and components. All in stock and ready to ship.",
+  description = "Browse our catalog of 3D printed build kits, CoreXY 3D printers, 80 percent firearms, slides, parts and components. All in stock and ready to ship.",
   canonical = Astro.url.href,
   image = "/assets/images/og.png",
   lang
@@ -25,7 +25,7 @@ const currentLang = lang || getLangFromUrl(Astro.url);
 ---
 
 <!DOCTYPE html>
-<html lang={currentLang}>
+<html lang={currentLang} class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,13 +53,9 @@ const currentLang = lang || getLangFromUrl(Astro.url);
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=League+Spartan:wght@400;700;900&display=swap" rel="stylesheet" />
-
-  <!-- Original Theme Stylesheets -->
-  <link rel="stylesheet" href="/assets/style.min.css" />
-  <link rel="stylesheet" href="/assets/theme.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&family=League+Spartan:wght@600;700;800;900&display=swap" rel="stylesheet" />
 </head>
-<body class="flex flex-col min-h-screen bg-white text-black antialiased font-['Helvetica_Neue',Helvetica,Arial,sans-serif]">
+<body class="flex flex-col min-h-screen bg-[#f8f8f8] text-neutral-950 antialiased selection:bg-[#9f0712] selection:text-white">
   <Header lang={currentLang} />
   
   <main class="flex-1 w-full">

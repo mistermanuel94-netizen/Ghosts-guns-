@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { useTranslations, type Locale } from '../utils/i18n';
+import { getLocalizedPath, useTranslations, type Locale } from '../utils/i18n';
 import pagesTranslationsData from '../data/pages-translations.json';
+import { SILO_PILLARS } from '../utils/silo';
 
 interface Props {
   lang?: Locale;
@@ -13,56 +14,69 @@ const pageData = (pagesTranslationsData as any)['about']?.[lang] || (pagesTransl
 ---
 
 <Layout title={`${pageData.title} | Ghost Guns`} description={pageData.subheading} lang={lang}>
-  <div class="content-page-wrapper w-full font-sans">
-    <div class="w-full flex-grow bg-white flex flex-col">
-      <div class="lg:container lg:mx-auto lg:border-l lg:border-r border-[#e5e5e5] flex-grow flex flex-col">
-        <div class="flex-grow px-4 md:px-6 py-8">
-          
-          <!-- Hero Section -->
-          <div class="w-full border-b border-[#e5e5e5]">
-            <div class="px-[12px] py-[24px] md:py-[48px]">
-              <p class="text-xs uppercase text-[#9f0712] m-0 mb-2 font-mono">// Who We Are</p>
-              <h1 class="uppercase font-bold text-black text-3xl md:text-4xl m-0 font-heading tracking-tight">{pageData.heading}</h1>
-              <p class="text-black text-sm mt-4 m-0 max-w-xl font-mono">{pageData.subheading}</p>
-            </div>
-          </div>
+  <div class="max-w-[1440px] mx-auto bg-white shadow-sm">
+    <!-- Hero Banner -->
+    <div class="border-l border-r border-b border-neutral-300 bg-neutral-950 text-white px-6 sm:px-12 py-12 sm:py-16 bg-blueprint-grid">
+      <p class="text-xs uppercase text-[#ff4d58] font-bold m-0 mb-2 font-mono tracking-widest">// WHO WE ARE & ENGINEERING MISSION</p>
+      <h1 class="uppercase font-black text-white text-3xl sm:text-5xl m-0 font-heading tracking-tight">{pageData.heading}</h1>
+      <p class="text-neutral-300 text-sm sm:text-base mt-4 m-0 max-w-2xl font-mono">{pageData.subheading}</p>
+    </div>
 
-          <!-- Company Story: 2/3 + 1/3 Grid -->
-          <div class="w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-3 border-b border-[#e5e5e5]">
-              <!-- Story Column (2/3) -->
-              <div class="lg:col-span-2 border-b lg:border-b-0 lg:border-r border-[#e5e5e5]">
-                <div class="border-b border-[#e5e5e5] px-[12px] py-[12px]">
-                  <p class="uppercase font-bold text-black text-lg m-0 font-heading">Our Mission</p>
-                </div>
-                <div class="p-[12px] md:p-[24px] flex flex-col gap-4 text-black text-sm leading-relaxed" set:html={pageData.content}>
-                </div>
-              </div>
-
-              <!-- At a Glance Column (1/3) -->
-              <div class="lg:col-span-1">
-                <div class="border-b border-[#e5e5e5] px-[12px] py-[12px]">
-                  <p class="uppercase font-bold text-black text-lg m-0 font-heading">At a Glance</p>
-                </div>
-                <div class="p-[12px] md:p-[24px] flex flex-col gap-6 font-mono">
-                  <div>
-                    <p class="uppercase font-bold text-black text-xs m-0 mb-1">Headquarters</p>
-                    <p class="text-black text-sm m-0">Austin, Texas, USA</p>
-                  </div>
-                  <div>
-                    <p class="uppercase font-bold text-black text-xs m-0 mb-1">Currency Supported</p>
-                    <p class="text-black text-sm m-0">Euro (€) / Cryptocurrencies</p>
-                  </div>
-                  <div>
-                    <p class="uppercase font-bold text-black text-xs m-0 mb-1">Inventory</p>
-                    <p class="text-black text-sm m-0">100% In-Stock Warehouse</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+    <!-- Company Story: 2/3 + 1/3 Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 border-l border-r border-b border-neutral-300">
+      <!-- Story Column (2/3) -->
+      <div class="lg:col-span-2 border-b lg:border-b-0 lg:border-r border-neutral-300">
+        <div class="border-b border-neutral-300 px-6 py-4 bg-neutral-50 flex items-center gap-2">
+          <span class="w-2.5 h-5 bg-[#9f0712]"></span>
+          <h2 class="uppercase font-black text-neutral-950 text-lg m-0 font-heading">Our Mission</h2>
         </div>
+        <div class="p-6 sm:p-10 text-neutral-800 text-sm sm:text-base leading-relaxed prose max-w-none" set:html={pageData.content}>
+        </div>
+      </div>
+
+      <!-- At a Glance Column (1/3) -->
+      <div class="lg:col-span-1 bg-neutral-50 flex flex-col justify-between">
+        <div>
+          <div class="border-b border-neutral-300 px-6 py-4 bg-white">
+            <h2 class="uppercase font-black text-neutral-950 text-lg m-0 font-heading">At a Glance</h2>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col gap-6 font-mono">
+            <div class="p-4 bg-white border border-neutral-300">
+              <p class="uppercase font-bold text-[#9f0712] text-[10px] m-0 mb-1">HEADQUARTERS</p>
+              <p class="text-neutral-950 font-bold text-sm m-0">Austin, Texas, USA</p>
+            </div>
+            <div class="p-4 bg-white border border-neutral-300">
+              <p class="uppercase font-bold text-[#9f0712] text-[10px] m-0 mb-1">CURRENCY & SETTLEMENT</p>
+              <p class="text-neutral-950 font-bold text-sm m-0">Euro (€) / Cryptocurrencies / Paysafe</p>
+            </div>
+            <div class="p-4 bg-white border border-neutral-300">
+              <p class="uppercase font-bold text-[#9f0712] text-[10px] m-0 mb-1">WAREHOUSE INVENTORY</p>
+              <p class="text-neutral-950 font-bold text-sm m-0">76 Platforms — 100% In-Stock</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 border-t border-neutral-300">
+          <a href={getLocalizedPath('/shop/', lang)} class="w-full py-3.5 px-6 bg-[#9f0712] hover:bg-neutral-950 text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-between">
+            <span>EXPLORE ALL 5 SILOS</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Silo Quick Overview -->
+    <div class="border-l border-r border-b border-neutral-300 p-6 sm:p-10 bg-neutral-100">
+      <span class="block text-[10px] font-mono uppercase tracking-widest text-[#9f0712] font-bold mb-3">
+        HARDWARE ARCHITECTURE //
+      </span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        {SILO_PILLARS.map((pillar) => (
+          <a href={getLocalizedPath(pillar.path, lang)} class="p-4 bg-white hover:bg-neutral-950 text-neutral-950 hover:text-white border border-neutral-300 transition-colors block">
+            <span class="text-[10px] font-mono font-bold text-[#9f0712] block mb-1">{pillar.code}</span>
+            <span class="text-xs font-heading font-black uppercase block">{pillar.defaultTitle} &rarr;</span>
+          </a>
+        ))}
       </div>
     </div>
   </div>

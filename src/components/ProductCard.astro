@@ -1,11 +1,13 @@
 ---
-import { getLangFromUrl, getLocalizedPath, formatPrice, getProductTranslation, type Locale } from '../utils/i18n';
+import { getLangFromUrl, getLocalizedPath, formatPrice, getProductTranslation, useTranslations, type Locale } from '../utils/i18n';
+import { getSiloForProduct } from '../utils/silo';
 
 interface Props {
   product: {
     id: number;
     name: string;
     slug: string;
+    sku?: string;
     permalink?: string;
     prices?: {
       price?: string;
@@ -32,6 +34,7 @@ interface Props {
 
 const { product, lang } = Astro.props;
 const currentLang = lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
 
 // Determine image URLs
 const primaryImage = product.images?.[0]?.localSrc || product.images?.[0]?.src || '/assets/images/logo-black.svg';
@@ -42,54 +45,163 @@ const translation = getProductTranslation(product.id, product.slug, currentLang)
 const productName = translation?.name || product.name;
 const formattedPrice = formatPrice(product.prices?.price);
 const productUrl = getLocalizedPath(`/product/${product.slug}/`, currentLang);
-// Format Price in Euro and sorting metrics
-const rawPrice = product.prices?.price ? parseFloat(product.prices.price) : 0;
-const popularSlugs = ['3d-printed-g19-build-kit', 'harlot', 'bambu-lab-p2s-3d-printer', 'ar15-lower-receiver-80', 'pbs-17-build-kit', 'glock-19-slide-parts-kit', 'bambu-lab-pa-cf-filament', 'ar15-80-percent-lower-jig-kit', 'elegoo-centauri-carbon-3d-printer', 'prusa-core-one-plus-3d-printer'];
+
+// Format numeric price in Euro and sorting metrics
+let rawPrice = product.prices?.price ? parseFloat(product.prices.price) : 0;
+let unitPriceEuro = rawPrice;
+if (product.prices?.price && !product.prices.price.includes('.') && rawPrice >= 100) {
+  unitPriceEuro = rawPrice / 100;
+}
+
+const popularSlugs = [
+  '3d-printed-g19-build-kit',
+  'harlot',
+  'bambu-lab-p2s-3d-printer',
+  'ar15-lower-receiver-80',
+  'pbs-17-build-kit',
+  'glock-19-slide-parts-kit',
+  'bambu-lab-pa-cf-filament',
+  'ar15-80-percent-lower-jig-kit',
+  'elegoo-centauri-carbon-3d-printer',
+  'prusa-core-one-plus-3d-printer'
+];
 const popIndex = popularSlugs.indexOf(product.slug);
 const popularityScore = popIndex !== -1 ? (100 - popIndex) : (product.id ? (product.id % 50) : 10);
+
+// Silo metadata for cross-linking
+const { spoke } = getSiloForProduct(product);
+const spokeUrl = getLocalizedPath(spoke.path, currentLang);
+const isFlagship = popIndex !== -1 && popIndex < 5;
 ---
 
-<li 
-  class="product m-0 p-0 border-r border-b border-[#e5e5e5] list-none group"
+<li
+  class="product m-0 p-0 border-r border-b border-neutral-300 list-none group bg-white hover:bg-neutral-50/70 transition-all duration-200 flex flex-col justify-between relative"
   data-id={product.id}
-  data-price={rawPrice}
+  data-price={unitPriceEuro}
   data-popularity={popularityScore}
   data-name={productName.toLowerCase()}
+  data-silo={spoke.slug}
 >
-  <a href={productUrl} class="block h-full">
-    <div class="p-[12px] flex flex-col h-full justify-between">
-      <div>
-        <div class="woocommerce-image__wrapper mb-4 bg-[#f5f5f5] overflow-hidden aspect-[4/3] flex items-center justify-center relative">
+  <!-- Top Silo & Telemetry Header Strip -->
+  <div class="px-3.5 pt-3 pb-2 flex items-center justify-between gap-2 border-b border-neutral-100">
+    <a
+      href={spokeUrl}
+      class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 bg-neutral-100 hover:bg-neutral-950 text-neutral-700 hover:text-white border border-neutral-200 transition-colors truncate"
+      title={`Explore ${spoke.defaultTitle} Silo`}
+    >
+      {spoke.specCode}
+    </a>
+    <div class="flex items-center gap-1.5 shrink-0">
+      {isFlagship && (
+        <span class="text-[9px] font-mono font-bold uppercase px-1.5 py-0.5 bg-[#9f0712] text-white tracking-wider">
+          TOP PICK
+        </span>
+      )}
+      <span class="inline-flex items-center gap-1 text-[10px] font-mono uppercase text-emerald-700 font-bold">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+        <span>{t('product.inStock')}</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Main Image & Title Link -->
+  <a href={productUrl} class="block flex-1 p-3.5 flex flex-col justify-between">
+    <div>
+      <div class="woocommerce-image__wrapper mb-3.5 bg-[#f4f4f5] border border-neutral-200/80 group-hover:border-neutral-400 overflow-hidden aspect-[4/3] flex items-center justify-center relative transition-colors">
+        <img
+          class="w-full h-full object-contain p-3 transition-all duration-300 group-hover:scale-105"
+          width="768"
+          height="576"
+          src={primaryImage}
+          alt={productName}
+          loading="lazy"
+        />
+        {hoverImage && hoverImage !== primaryImage && (
           <img
-            class="w-full h-full object-contain p-2 transition-opacity duration-300 group-hover:opacity-0"
+            class="w-full h-full object-contain p-3 bg-[#f4f4f5] absolute inset-0 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105"
             width="768"
             height="576"
-            src={primaryImage}
-            alt={productName}
+            src={hoverImage}
+            alt={`${productName} alternate view`}
             loading="lazy"
           />
-          {hoverImage && hoverImage !== primaryImage && (
-            <img
-              class="w-full h-full object-contain p-2 absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              width="768"
-              height="576"
-              src={hoverImage}
-              alt={`${productName} alternate view`}
-              loading="lazy"
-            />
-          )}
-        </div>
-        <p class="text-black mb-3 capitalize underline font-mono text-sm leading-tight hover:text-neutral-600 transition-colors">
-          {productName}
-        </p>
+        )}
       </div>
-      <div>
-        <p class="m-0 text-black text-sm font-mono font-bold">
-          <span class="woocommerce-Price-amount amount">
-            {formattedPrice}
-          </span>
-        </p>
-      </div>
+
+      {product.sku && (
+        <span class="block text-[10px] font-mono uppercase text-neutral-400 mb-1 tracking-wider">
+          REF // {product.sku}
+        </span>
+      )}
+
+      <h4 class="text-neutral-950 font-heading font-bold uppercase text-base sm:text-lg leading-snug group-hover:text-[#9f0712] transition-colors m-0 line-clamp-2">
+        {productName}
+      </h4>
     </div>
   </a>
+
+  <!-- Bottom Price & Quick-Add Action Bar -->
+  <div class="px-3.5 pb-3.5 pt-2.5 border-t border-neutral-100 flex items-center justify-between gap-2 bg-white">
+    <div>
+      <span class="block text-[9px] font-mono uppercase text-neutral-400 leading-none mb-0.5">DIRECT EURO</span>
+      <span class="woocommerce-Price-amount amount font-mono font-bold text-sm sm:text-base text-neutral-950">
+        {formattedPrice}
+      </span>
+    </div>
+
+    <div class="flex items-center gap-1.5">
+      <button
+        type="button"
+        class="quick-add-btn px-3 py-2 bg-neutral-950 hover:bg-[#9f0712] text-white font-mono text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer border-0 flex items-center gap-1.5"
+        data-id={product.id}
+        data-name={productName}
+        data-slug={product.slug}
+        data-price={unitPriceEuro}
+        data-image={primaryImage}
+        aria-label={`Add ${productName} to cart`}
+      >
+        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+        <span class="hidden sm:inline">ADD</span>
+      </button>
+    </div>
+  </div>
 </li>
+
+<script>
+  function bindQuickAddButtons() {
+    const buttons = document.querySelectorAll('.quick-add-btn:not([data-bound])');
+    buttons.forEach((btn) => {
+      btn.setAttribute('data-bound', 'true');
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const target = e.currentTarget as HTMLElement;
+        const id = parseInt(target.dataset.id || '0', 10);
+        const name = target.dataset.name || '';
+        const slug = target.dataset.slug || '';
+        const price = parseFloat(target.dataset.price || '0');
+        const image = target.dataset.image || '';
+
+        try {
+          const cart = JSON.parse(localStorage.getItem('gg_cart') || '[]');
+          const existing = cart.find((item: any) => item.id === id);
+          if (existing) {
+            existing.quantity += 1;
+          } else {
+            cart.push({ id, name, slug, price, image, quantity: 1 });
+          }
+          localStorage.setItem('gg_cart', JSON.stringify(cart));
+          window.dispatchEvent(new Event('gg-cart-updated'));
+          window.dispatchEvent(new Event('gg-open-cart'));
+        } catch (err) {
+          console.error(err);
+        }
+      });
+    });
+  }
+
+  bindQuickAddButtons();
+  document.addEventListener('astro:page-load', bindQuickAddButtons);
+</script>

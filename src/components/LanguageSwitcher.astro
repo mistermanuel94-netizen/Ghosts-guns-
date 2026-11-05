@@ -9,17 +9,21 @@ interface Props {
 const { currentLang = 'en', currentPath = Astro.url.pathname } = Astro.props;
 ---
 
-<div class="lang-bar w-full bg-[#111] text-white text-[11px] font-mono border-b border-[#222]">
-  <div class="lg:container lg:mx-auto flex flex-wrap items-center justify-between px-3 py-1.5 gap-2">
-    <!-- Notice / Promo -->
-    <div class="hidden sm:flex items-center gap-2 text-neutral-400">
-      <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-      <span class="uppercase tracking-wider">ALL ORDERS SHIPPED DISCREETLY // CURRENCY: EURO (€)</span>
+<div class="lang-bar w-full bg-neutral-950 text-white text-[11px] font-mono border-b border-neutral-800 relative z-60">
+  <div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between px-3 sm:px-4 py-1.5 gap-2 lg:border-l lg:border-r border-neutral-800">
+    <!-- Left Tactical Telemetry Notice -->
+    <div class="hidden sm:flex items-center gap-3 text-neutral-400">
+      <span class="inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>STATUS: ONLINE</span>
+      </span>
+      <span class="text-neutral-700">|</span>
+      <span class="uppercase tracking-wider text-neutral-300">STEALTH DISPATCH // DIRECT EURO (€) & CRYPTO SETTLEMENT</span>
     </div>
 
-    <!-- Language Selector List -->
-    <div class="flex items-center flex-wrap gap-1 md:gap-1.5 ml-auto" id="language-switcher-list">
-      <span class="text-neutral-400 uppercase text-[10px] mr-1 hidden lg:inline">LANGUAGE:</span>
+    <!-- Right Multi-Language Selector Strip -->
+    <div class="flex items-center flex-wrap gap-1 ml-auto" id="language-switcher-list">
+      <span class="text-neutral-500 uppercase text-[10px] mr-1 hidden xl:inline">LOCALE:</span>
       {LOCALES.map((loc) => {
         const langMeta = LANGUAGES[loc];
         const targetUrl = getLocalizedPath(currentPath, loc);
@@ -27,15 +31,15 @@ const { currentLang = 'en', currentPath = Astro.url.pathname } = Astro.props;
         return (
           <a
             href={targetUrl}
-            class={`lang-chip px-2 py-0.5 rounded-none flex items-center gap-1 transition-all ${
+            class={`px-2 py-0.5 flex items-center gap-1 transition-colors text-[11px] leading-tight ${
               isActive
-                ? 'bg-white text-black font-bold border border-white shadow-sm'
-                : 'text-neutral-300 hover:text-white hover:bg-neutral-800 border border-transparent'
+                ? 'bg-[#9f0712] text-white font-bold border border-[#9f0712]'
+                : 'text-neutral-400 hover:text-white hover:bg-neutral-800 border border-transparent'
             }`}
-            title={langMeta.name}
+            title={`${langMeta.name} (${langMeta.nativeName})`}
             aria-current={isActive ? 'page' : undefined}
           >
-            <span class="flag-icon text-xs leading-none">{langMeta.flag}</span>
+            <span class="text-xs leading-none">{langMeta.flag}</span>
             <span class="uppercase tracking-wider">{loc.toUpperCase()}</span>
           </a>
         );
@@ -43,19 +47,3 @@ const { currentLang = 'en', currentPath = Astro.url.pathname } = Astro.props;
     </div>
   </div>
 </div>
-
-<style>
-  .lang-bar {
-    position: relative;
-    z-index: 60;
-  }
-  .lang-chip {
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 11px;
-    line-height: 1.2;
-  }
-  .lang-chip:hover {
-    text-decoration: none;
-  }
-</style>

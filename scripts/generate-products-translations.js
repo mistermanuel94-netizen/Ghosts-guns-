@@ -166,7 +166,7 @@ for (const p of products) {
   // English default
   output[slug].en = {
     name: p.name,
-    short_description: p.short_description || `<p>${p.name} from GhostGuns.com</p>`
+    short_description: p.short_description || `<p>${p.name} from Ghost-Guns.shop</p>`
   };
 
   // If manual translation exists

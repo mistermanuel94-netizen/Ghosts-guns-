@@ -14,6 +14,33 @@ const t = useTranslations(lang);
 const cleanDescription = post.excerpt?.rendered
   ? post.excerpt.rendered.replace(/<[^>]*>?/gm, '').trim()
   : '';
+
+const SITE_URL = 'https://ghost-guns.shop';
+const postUrl = new URL(getLocalizedPath(`/blog/${post.slug}/`, lang), SITE_URL).href;
+const renderedContent = (post.content?.rendered || '').replace(/https?:\/\/(www\.)?ghostguns\.com/gi, SITE_URL);
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title.rendered,
+  "description": cleanDescription,
+  "datePublished": post.date,
+  "dateModified": post.modified || post.date,
+  "url": postUrl,
+  "author": {
+    "@type": "Person",
+    "name": "Cody Wilson"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ghost Guns",
+    "url": SITE_URL,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${SITE_URL}/assets/images/logo-black.svg`
+    }
+  }
+};
 ---
 
 <Layout
@@ -21,6 +48,7 @@ const cleanDescription = post.excerpt?.rendered
   description={cleanDescription}
   lang={lang}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <div class="max-w-[1440px] mx-auto bg-white shadow-sm">
     <!-- Breadcrumbs -->
     <div class="border-l border-r border-b border-neutral-300 bg-neutral-950 text-white px-4 sm:px-6 py-3 text-xs font-mono uppercase flex items-center gap-2">
@@ -50,7 +78,7 @@ const cleanDescription = post.excerpt?.rendered
     <!-- Main 2-Column Layout: Article Body + Hardware Silo Sidebar -->
     <div class="grid grid-cols-1 lg:grid-cols-12 border-l border-r border-b border-neutral-300">
       <div class="lg:col-span-8 p-6 sm:p-12 border-b lg:border-b-0 lg:border-r border-neutral-300 bg-white">
-        <article class="max-w-none prose" set:html={post.content.rendered} />
+        <article class="max-w-none prose" set:html={renderedContent} />
       </div>
 
       <!-- Right Sidebar: Direct Silo Links -->

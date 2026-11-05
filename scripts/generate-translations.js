@@ -108,7 +108,7 @@ const translations = {
       shippingRestrictionsLink: "/ shipping restrictions",
       termsConditionsLink: "/ terms & conditions",
       privacyPolicyLink: "/ privacy policy",
-      canaryText: "Since Jan. 1 2021, no warrants have been served to ghostguns.com principals or employees.<br><br>No searches or seizures have been performed on ghostguns.com assets.",
+      canaryText: "Since Jan. 1 2021, no warrants have been served to ghost-guns.shop principals or employees.<br><br>No searches or seizures have been performed on ghost-guns.shop assets.",
       disclaimer: "Ghost Guns hardware and software are not currently available to persons outside the United States and are not available to residents of and persons in the states of New Jersey and California who do not possess a federal firearms license.",
       copyright: "Ghost Guns 2026"
     }
@@ -220,7 +220,7 @@ const translations = {
       shippingRestrictionsLink: "/ versandbeschränkungen",
       termsConditionsLink: "/ agb",
       privacyPolicyLink: "/ datenschutzrichtlinie",
-      canaryText: "Seit dem 1. Januar 2021 wurden keine Durchsuchungsbefehle an Führungskräfte oder Mitarbeiter von ghostguns.com zugestellt.<br><br>Es wurden keine Beschlagnahmungen an Vermögenswerten von ghostguns.com durchgeführt.",
+      canaryText: "Seit dem 1. Januar 2021 wurden keine Durchsuchungsbefehle an Führungskräfte oder Mitarbeiter von ghost-guns.shop zugestellt.<br><br>Es wurden keine Beschlagnahmungen an Vermögenswerten von ghost-guns.shop durchgeführt.",
       disclaimer: "Die Hardware und Software von Ghost Guns sind derzeit für Personen außerhalb der Vereinigten Staaten nicht verfügbar.",
       copyright: "Ghost Guns 2026"
     }
@@ -332,7 +332,7 @@ const translations = {
       shippingRestrictionsLink: "/ verzendbeperkingen",
       termsConditionsLink: "/ voorwaarden",
       privacyPolicyLink: "/ privacybeleid",
-      canaryText: "Sinds 1 januari 2021 zijn er geen bevelen betekend aan leidinggevenden of werknemers van ghostguns.com.<br><br>Er zijn geen inbeslagnames uitgevoerd.",
+      canaryText: "Sinds 1 januari 2021 zijn er geen bevelen betekend aan leidinggevenden of werknemers van ghost-guns.shop.<br><br>Er zijn geen inbeslagnames uitgevoerd.",
       disclaimer: "Ghost Guns hardware en software zijn momenteel niet beschikbaar voor personen buiten de Verenigde Staten.",
       copyright: "Ghost Guns 2026"
     }
@@ -444,7 +444,7 @@ const translations = {
       shippingRestrictionsLink: "/ restrictions d'envoi",
       termsConditionsLink: "/ conditions générales",
       privacyPolicyLink: "/ confidentialité",
-      canaryText: "Depuis le 1er janvier 2021, aucun mandat n'a été signifié aux dirigeants ou employés de ghostguns.com.<br><br>Aucune saisie n'a été effectuée.",
+      canaryText: "Depuis le 1er janvier 2021, aucun mandat n'a été signifié aux dirigeants ou employés de ghost-guns.shop.<br><br>Aucune saisie n'a été effectuée.",
       disclaimer: "Le matériel et les logiciels Ghost Guns ne sont pas disponibles pour les personnes résidant hors des États-Unis.",
       copyright: "Ghost Guns 2026"
     }
@@ -556,7 +556,7 @@ const translations = {
       shippingRestrictionsLink: "/ restricciones de envío",
       termsConditionsLink: "/ términos y condiciones",
       privacyPolicyLink: "/ privacidad",
-      canaryText: "Desde el 1 de enero de 2021, no se han cursado órdenes judiciales contra directivos o empleados de ghostguns.com.<br><br>No se han realizado incautaciones.",
+      canaryText: "Desde el 1 de enero de 2021, no se han cursado órdenes judiciales contra directivos o empleados de ghost-guns.shop.<br><br>No se han realizado incautaciones.",
       disclaimer: "El hardware y software de Ghost Guns no están disponibles actualmente para personas fuera de los Estados Unidos.",
       copyright: "Ghost Guns 2026"
     }
@@ -668,7 +668,7 @@ const translations = {
       shippingRestrictionsLink: "/ restrizioni di spedizione",
       termsConditionsLink: "/ termini e condizioni",
       privacyPolicyLink: "/ privacy",
-      canaryText: "Dal 1° gennaio 2021 non è stato notificato alcun mandato ai dirigenti o dipendenti di ghostguns.com.<br><br>Nessun sequestro è stato eseguito.",
+      canaryText: "Dal 1° gennaio 2021 non è stato notificato alcun mandato ai dirigenti o dipendenti di ghost-guns.shop.<br><br>Nessun sequestro è stato eseguito.",
       disclaimer: "L'hardware e il software Ghost Guns non sono attualmente disponibili per persone residenti al di fuori degli Stati Uniti.",
       copyright: "Ghost Guns 2026"
     }
@@ -780,7 +780,7 @@ const translations = {
       shippingRestrictionsLink: "/ ograniczenia wysyłki",
       termsConditionsLink: "/ regulamin",
       privacyPolicyLink: "/ prywatność",
-      canaryText: "Od 1 stycznia 2021 r. żadne nakazy nie zostały doręczone dyrektorom ani pracownikom ghostguns.com.<br><br>Nie przeprowadzono żadnych konfiskat mienia.",
+      canaryText: "Od 1 stycznia 2021 r. żadne nakazy nie zostały doręczone dyrektorom ani pracownikom ghost-guns.shop.<br><br>Nie przeprowadzono żadnych konfiskat mienia.",
       disclaimer: "Sprzęt i oprogramowanie Ghost Guns nie są obecnie dostępne dla osób spoza Stanów Zjednoczonych.",
       copyright: "Ghost Guns 2026"
     }
@@ -892,7 +892,7 @@ const translations = {
       shippingRestrictionsLink: "/ ограничения за доставка",
       termsConditionsLink: "/ общи условия",
       privacyPolicyLink: "/ поверителност",
-      canaryText: "От 1 януари 2021 г. не са връчвани заповеди на ръководители или служители на ghostguns.com.<br><br>Не са извършвани изземвания.",
+      canaryText: "От 1 януари 2021 г. не са връчвани заповеди на ръководители или служители на ghost-guns.shop.<br><br>Не са извършвани изземвания.",
       disclaimer: "Хардуерът и софтуерът на Ghost Guns в момента не се предлагат на лица извън Съединените щати.",
       copyright: "Ghost Guns 2026"
     }

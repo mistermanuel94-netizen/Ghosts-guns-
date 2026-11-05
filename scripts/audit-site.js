@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 console.log('====================================================');
-console.log('       GHOSTGUNS.COM COMPREHENSIVE SITE AUDIT        ');
+console.log('       GHOST-GUNS.SHOP COMPREHENSIVE SITE AUDIT        ');
 console.log('====================================================\n');
 
 let passCount = 0;

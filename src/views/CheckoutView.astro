@@ -434,7 +434,7 @@ const t = useTranslations(lang);
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-neutral-50 border border-dashed border-neutral-400 rounded text-xs mb-6">
         <div>
           <span class="text-[11px] text-neutral-600 font-bold block">{t('checkout.sendToEmail')}</span>
-          <strong class="text-sm font-black text-black">support@ghostguns.com</strong>
+          <strong class="text-sm font-black text-black">support@ghost-guns.shop</strong>
         </div>
         <button
           type="button"
@@ -641,7 +641,7 @@ const t = useTranslations(lang);
   document.getElementById('modal-copy-email-btn')?.addEventListener('click', async (e) => {
     const btn = e.currentTarget as HTMLButtonElement;
     try {
-      await navigator.clipboard.writeText('support@ghostguns.com');
+      await navigator.clipboard.writeText('support@ghost-guns.shop');
       const originalText = btn.textContent;
       btn.textContent = 'COPIED TO CLIPBOARD!';
       btn.classList.add('bg-emerald-700');

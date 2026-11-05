@@ -8,7 +8,7 @@
     "count": 2,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/3d-printing/3d-files/"
+    "permalink": "https://ghost-guns.shop/3d-printing/3d-files/"
   },
   {
     "id": 53,
@@ -19,18 +19,18 @@
     "count": 2,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/3d-printing/"
+    "permalink": "https://ghost-guns.shop/3d-printing/"
   },
   {
     "id": 30,
     "name": "80 Percent Firearms",
     "slug": "80-firearm",
-    "description": "80% firearms, frames, and build components from GhostGuns.com. Browse G80 pistol frames, grip modules, jigs, and accessories for your next ghost gun build.",
+    "description": "80% firearms, frames, and build components from Ghost-Guns.shop. Browse G80 pistol frames, grip modules, jigs, and accessories for your next ghost gun build.",
     "parent": 0,
     "count": 7,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/80-firearm/"
+    "permalink": "https://ghost-guns.shop/80-firearm/"
   },
   {
     "id": 60,
@@ -41,7 +41,7 @@
     "count": 1,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/accessories/"
+    "permalink": "https://ghost-guns.shop/accessories/"
   },
   {
     "id": 18,
@@ -52,7 +52,7 @@
     "count": 11,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/build-kit/"
+    "permalink": "https://ghost-guns.shop/build-kit/"
   },
   {
     "id": 22,
@@ -63,7 +63,7 @@
     "count": 14,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/component/"
+    "permalink": "https://ghost-guns.shop/component/"
   },
   {
     "id": 47,
@@ -74,7 +74,7 @@
     "count": 4,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/component/glock/"
+    "permalink": "https://ghost-guns.shop/component/glock/"
   },
   {
     "id": 42,
@@ -85,7 +85,7 @@
     "count": 3,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/gun-accessories/"
+    "permalink": "https://ghost-guns.shop/gun-accessories/"
   },
   {
     "id": 61,
@@ -96,7 +96,7 @@
     "count": 1,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/accessories/jigs/"
+    "permalink": "https://ghost-guns.shop/accessories/jigs/"
   },
   {
     "id": 48,
@@ -107,7 +107,7 @@
     "count": 5,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/magazines/"
+    "permalink": "https://ghost-guns.shop/magazines/"
   },
   {
     "id": 25,
@@ -118,7 +118,7 @@
     "count": 8,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/most-popular/"
+    "permalink": "https://ghost-guns.shop/most-popular/"
   },
   {
     "id": 38,
@@ -129,7 +129,7 @@
     "count": 2,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/component/rails/"
+    "permalink": "https://ghost-guns.shop/component/rails/"
   },
   {
     "id": 24,
@@ -140,7 +140,7 @@
     "count": 3,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/component/receiver/"
+    "permalink": "https://ghost-guns.shop/component/receiver/"
   },
   {
     "id": 35,
@@ -151,7 +151,7 @@
     "count": 2,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/component/slide/"
+    "permalink": "https://ghost-guns.shop/component/slide/"
   },
   {
     "id": 62,
@@ -162,7 +162,7 @@
     "count": 1,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/software/"
+    "permalink": "https://ghost-guns.shop/software/"
   },
   {
     "id": 15,
@@ -173,7 +173,7 @@
     "count": 4,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/uncategorized/"
+    "permalink": "https://ghost-guns.shop/uncategorized/"
   },
   {
     "id": 70,
@@ -184,6 +184,6 @@
     "count": 10,
     "image": null,
     "review_count": 0,
-    "permalink": "https://ghostguns.com/3d-printers/"
+    "permalink": "https://ghost-guns.shop/3d-printers/"
   }
 ]

@@ -11,7 +11,7 @@ const newCategory = {
   count: 10,
   image: null,
   review_count: 0,
-  permalink: "https://ghostguns.com/3d-printers/"
+  permalink: "https://ghost-guns.shop/3d-printers/"
 };
 
 // 2. Localized Category metadata (8 languages)
@@ -583,7 +583,7 @@ for (const p of printerItems) {
     parent: 0,
     type: "simple",
     variation: "",
-    permalink: `https://ghostguns.com/product/${p.slug}/`,
+    permalink: `https://ghost-guns.shop/product/${p.slug}/`,
     sku: `3D_${p.slug.toUpperCase().replace(/-/g, '_')}`,
     short_description: `<p>${p.shortEn}</p>`,
     description: p.descEn,
@@ -621,13 +621,13 @@ for (const p of printerItems) {
         id: 70,
         name: "3D Printers",
         slug: "3d-printers",
-        link: "https://ghostguns.com/3d-printers/"
+        link: "https://ghost-guns.shop/3d-printers/"
       },
       {
         id: 53,
         name: "3D Printing",
         slug: "3d-printing",
-        link: "https://ghostguns.com/3d-printing/"
+        link: "https://ghost-guns.shop/3d-printing/"
       }
     ],
     tags: [

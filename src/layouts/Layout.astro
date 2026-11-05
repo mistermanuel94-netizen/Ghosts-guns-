@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CartDrawer from '../components/CartDrawer.astro';
 import '../styles/global.css';
-import { getLangFromUrl, type Locale } from '../utils/i18n';
+import { getLangFromUrl, getLocalizedPath, LOCALES, type Locale } from '../utils/i18n';
 
 interface Props {
   title?: string;
@@ -13,15 +13,54 @@ interface Props {
   lang?: Locale;
 }
 
+const SITE_URL = 'https://ghost-guns.shop';
+
 const {
   title = "Ghost Guns | 3D Printed & 80 Percent Ghost Gun Kits",
   description = "Browse our catalog of 3D printed build kits, CoreXY 3D printers, 80 percent firearms, slides, parts and components. All in stock and ready to ship.",
-  canonical = Astro.url.href,
+  canonical,
   image = "/assets/images/og.png",
   lang
 } = Astro.props;
 
 const currentLang = lang || getLangFromUrl(Astro.url);
+const canonicalUrl = canonical
+  ? (canonical.startsWith('http') ? canonical.replace(/^https?:\/\/(www\.)?ghostguns\.com/i, SITE_URL) : new URL(canonical, SITE_URL).href)
+  : new URL(Astro.url.pathname, SITE_URL).href;
+
+const ogImageUrl = image.startsWith('http')
+  ? image
+  : new URL(image, SITE_URL).href;
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      "name": "Ghost Guns",
+      "url": SITE_URL,
+      "logo": `${SITE_URL}/assets/images/logo-black.svg`,
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@ghost-guns.shop",
+        "contactType": "customer service"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      "name": "Ghost Guns",
+      "publisher": { "@id": `${SITE_URL}/#organization` },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${SITE_URL}/shop/?s={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+};
 ---
 
 <!DOCTYPE html>
@@ -31,24 +70,45 @@ const currentLang = lang || getLangFromUrl(Astro.url);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Hreflang Multi-Language Alternates -->
+  {LOCALES.map((loc) => (
+    <link
+      rel="alternate"
+      hreflang={loc}
+      href={new URL(getLocalizedPath(Astro.url.pathname, loc), SITE_URL).href}
+    />
+  ))}
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href={new URL(getLocalizedPath(Astro.url.pathname, 'en'), SITE_URL).href}
+  />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={image} />
-  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:url" content={canonicalUrl} />
   <meta property="og:site_name" content="Ghost Guns" />
+  <meta property="og:locale" content={currentLang} />
 
   <!-- Twitter Meta -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={image} />
+  <meta name="twitter:image" content={ogImageUrl} />
+  <meta name="twitter:domain" content="ghost-guns.shop" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
 
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

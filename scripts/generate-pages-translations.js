@@ -7,7 +7,7 @@ const pagesTranslations = {
       heading: "ABOUT GHOST GUNS",
       subheading: "A REAL COMPANY. REAL INVENTORY. REAL PEOPLE.",
       content: `
-        <p>GhostGuns.com was founded on the fundamental principle that the right to bear arms includes the right to manufacture arms for personal use, a tradition as old as the United States itself.</p>
+        <p>Ghost-Guns.shop was founded on the fundamental principle that the right to bear arms includes the right to manufacture arms for personal use, a tradition as old as the United States itself.</p>
         <p>We are based in Austin, Texas. We maintain a full warehouse of genuine inventory ready to ship promptly and discreetly to law-abiding citizens.</p>
         <p>Our catalog features premium 3D printed firearm components, precision rails, 80% lowers, jigs, drill bits, slide kits, and barrel assemblies designed to work flawlessly right out of the box.</p>
       `
@@ -17,7 +17,7 @@ const pagesTranslations = {
       heading: "ÜBER GHOST GUNS",
       subheading: "EIN ECHTES UNTERNEHMEN. ECHTER LAGERBESTAND. ECHTE MENSCHEN.",
       content: `
-        <p>GhostGuns.com wurde auf dem Grundprinzip gegründet, dass das Recht auf Waffenbesitz auch das Recht einschließt, Waffen für den persönlichen Gebrauch selbst herzustellen.</p>
+        <p>Ghost-Guns.shop wurde auf dem Grundprinzip gegründet, dass das Recht auf Waffenbesitz auch das Recht einschließt, Waffen für den persönlichen Gebrauch selbst herzustellen.</p>
         <p>Wir haben unseren Sitz in Austin, Texas. Wir verfügen über ein voll ausgestattetes Warenlager mit echtem Bestand, der zügig und diskret versendet wird.</p>
         <p>Unser Sortiment umfasst hochwertige 3D-Druck-Komponenten, Präzisionsschienen, 80%-Gehäuse, Schablonen, Bohrersätze, Schlitten und Bausätze, die für maximale Zuverlässigkeit entwickelt wurden.</p>
       `
@@ -27,7 +27,7 @@ const pagesTranslations = {
       heading: "OVER GHOST GUNS",
       subheading: "EEN ECHT BEDRIJF. ECHTE VOORRAAD. ECHTE MENSEN.",
       content: `
-        <p>GhostGuns.com is opgericht vanuit het principe dat het recht op wapenbezit ook het recht omvat om voor eigen gebruik wapens te vervaardigen.</p>
+        <p>Ghost-Guns.shop is opgericht vanuit het principe dat het recht op wapenbezit ook het recht omvat om voor eigen gebruik wapens te vervaardigen.</p>
         <p>Wij zijn gevestigd in Austin, Texas. We beschikken over een fysiek magazijn met voorraad die direct en discreet verzonden kan worden.</p>
         <p>Ons assortiment bevat hoogwaardige 3D-printonderdelen, precisierails, 80% kasten, boormallen, sledebouwpakketten en lopen ontworpen voor optimale betrouwbaarheid.</p>
       `
@@ -37,7 +37,7 @@ const pagesTranslations = {
       heading: "À PROPOS DE GHOST GUNS",
       subheading: "UNE VRAIE ENTREPRISE. DU VRAI STOCK. DE VRAIES PERSONNES.",
       content: `
-        <p>GhostGuns.com a été fondé sur le principe fondamental que le droit de posséder des armes inclut le droit d'en fabriquer pour un usage personnel.</p>
+        <p>Ghost-Guns.shop a été fondé sur le principe fondamental que le droit de posséder des armes inclut le droit d'en fabriquer pour un usage personnel.</p>
         <p>Nous sommes basés à Austin, Texas. Nous disposons d'un entrepôt approvisionné prêt pour des expéditions rapides et discrètes.</p>
         <p>Notre catalogue propose des composants d'armes imprimées en 3D haut de gamme, des rails de précision, des carcasses 80%, des gabarits et des kits de culasse prêts à l'emploi.</p>
       `
@@ -47,7 +47,7 @@ const pagesTranslations = {
       heading: "SOBRE GHOST GUNS",
       subheading: "UNA EMPRESA REAL. INVENTARIO REAL. PERSONAS REALES.",
       content: `
-        <p>GhostGuns.com se fundó bajo el principio fundamental de que el derecho a poseer armas incluye el derecho a fabricarlas para uso personal.</p>
+        <p>Ghost-Guns.shop se fundó bajo el principio fundamental de que el derecho a poseer armas incluye el derecho a fabricarlas para uso personal.</p>
         <p>Tenemos nuestra sede en Austin, Texas. Mantenemos un almacén completo de inventario listo para enviar de forma rápida y discreta.</p>
         <p>Nuestro catálogo incluye componentes de armas impresas en 3D de primera calidad, rieles de precisión, armazones al 80%, guías de taladro y kits de corredera.</p>
       `
@@ -57,7 +57,7 @@ const pagesTranslations = {
       heading: "CHI SIAMO - GHOST GUNS",
       subheading: "UN'AZIENDA REALE. INVENTARIO REALE. PERSONE REALI.",
       content: `
-        <p>GhostGuns.com è stata fondata sul principio fondamentale che il diritto di possedere armi comprende il diritto di fabbricarle per uso personale.</p>
+        <p>Ghost-Guns.shop è stata fondata sul principio fondamentale che il diritto di possedere armi comprende il diritto di fabbricarle per uso personale.</p>
         <p>Abbiamo sede ad Austin, Texas. Gestiamo un inventario completo pronto per spedizioni rapide e discrete.</p>
         <p>Il nostro catalogo offre componenti per armi stampate in 3D di prima qualità, guide di precisione, castelli all'80%, dime di foratura e kit carrello.</p>
       `
@@ -67,7 +67,7 @@ const pagesTranslations = {
       heading: "O GHOST GUNS",
       subheading: "PRAWDZIWA FIRMA. PRAWDZIWY MAGAZYN. PRAWDZIWI LUDZIE.",
       content: `
-        <p>Firma GhostGuns.com została założona na fundamentalnej zasadzie, że prawo do posiadania broni obejmuje prawo do jej wytwarzania na własny użytek.</p>
+        <p>Firma Ghost-Guns.shop została założona na fundamentalnej zasadzie, że prawo do posiadania broni obejmuje prawo do jej wytwarzania na własny użytek.</p>
         <p>Nasza siedziba mieści się w Austin w Teksasie. Posiadamy pełny magazyn towarów gotowych do szybkiej i dyskretnej wysyłki.</p>
         <p>Nasz katalog zawiera najwyższej klasy części do broni z druku 3D, precyzyjne szyny, szkielety 80%, przyrządy wiertarskie i kompletne zestawy zamków.</p>
       `
@@ -77,7 +77,7 @@ const pagesTranslations = {
       heading: "ЗА GHOST GUNS",
       subheading: "ИСТИНСКА КОМПАНИЯ. РЕАЛНА НАЛИЧНОСТ. РЕАЛНИ ХОРА.",
       content: `
-        <p>GhostGuns.com е основана на фундаменталния принцип, че правото на притежание на оръжие включва и правото на неговото изработване за лична употреба.</p>
+        <p>Ghost-Guns.shop е основана на фундаменталния принцип, че правото на притежание на оръжие включва и правото на неговото изработване за лична употреба.</p>
         <p>Базирани сме в Остин, Тексас. Разполагаме с пълен склад и реални наличности, готови за бърза и дискретна доставка.</p>
         <p>Нашият каталог предлага премиум 3D принтирани оръжейни компоненти, прецизни релси, 80% рами, шаблони за пробиване и комплекти за затвори.</p>
       `
@@ -93,7 +93,7 @@ const pagesTranslations = {
       addressLabel: "HEADQUARTERS",
       address: "2320 Donley Dr Suite C, Austin TX 78758",
       emailLabel: "EMAIL SUPPORT",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "PHONE",
       phone: "(855) 754-4678",
       formTitle: "Send Us a Message",
@@ -111,7 +111,7 @@ const pagesTranslations = {
         },
         {
           q: "How do I return an item?",
-          a: "Email support@ghostguns.com for approval and a Return Merchandise Authorization (RMA) number. Items must be in original condition with proof of purchase."
+          a: "Email support@ghost-guns.shop for approval and a Return Merchandise Authorization (RMA) number. Items must be in original condition with proof of purchase."
         },
         {
           q: "How long do refunds take?",
@@ -136,7 +136,7 @@ const pagesTranslations = {
       addressLabel: "HAUPTSITZ",
       address: "2320 Donley Dr Suite C, Austin TX 78758, USA",
       emailLabel: "E-MAIL-SUPPORT",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "TELEFON",
       phone: "(855) 754-4678",
       formTitle: "Schreiben Sie uns eine Nachricht",
@@ -154,7 +154,7 @@ const pagesTranslations = {
         },
         {
           q: "Wie sende ich einen Artikel zurück?",
-          a: "Schreiben Sie an support@ghostguns.com für eine RMA-Rücksendeautorisierung. Artikel müssen sich im Originalzustand befinden."
+          a: "Schreiben Sie an support@ghost-guns.shop für eine RMA-Rücksendeautorisierung. Artikel müssen sich im Originalzustand befinden."
         },
         {
           q: "Wie lange dauert eine Rückerstattung?",
@@ -179,7 +179,7 @@ const pagesTranslations = {
       addressLabel: "HOOFDKANTOOR",
       address: "2320 Donley Dr Suite C, Austin TX 78758, VS",
       emailLabel: "E-MAIL SUPPORT",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "TELEFOON",
       phone: "(855) 754-4678",
       formTitle: "Stuur ons een bericht",
@@ -197,7 +197,7 @@ const pagesTranslations = {
         },
         {
           q: "Hoe stuur ik een artikel retour?",
-          a: "Stuur een e-mail naar support@ghostguns.com voor een RMA-nummer. Artikelen dienen in originele staat te zijn."
+          a: "Stuur een e-mail naar support@ghost-guns.shop voor een RMA-nummer. Artikelen dienen in originele staat te zijn."
         },
         {
           q: "Wanneer ontvang ik mijn terugbetaling?",
@@ -222,7 +222,7 @@ const pagesTranslations = {
       addressLabel: "SIÈGE SOCIAL",
       address: "2320 Donley Dr Suite C, Austin TX 78758, États-Unis",
       emailLabel: "SUPPORT E-MAIL",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "TÉLÉPHONE",
       phone: "(855) 754-4678",
       formTitle: "Envoyez-nous un message",
@@ -240,7 +240,7 @@ const pagesTranslations = {
         },
         {
           q: "Comment retourner un produit ?",
-          a: "Contactez support@ghostguns.com pour obtenir un numéro RMA d'autorisation de retour."
+          a: "Contactez support@ghost-guns.shop pour obtenir un numéro RMA d'autorisation de retour."
         },
         {
           q: "Quel est le délai de remboursement ?",
@@ -265,7 +265,7 @@ const pagesTranslations = {
       addressLabel: "SEDE CENTRAL",
       address: "2320 Donley Dr Suite C, Austin TX 78758, EE. UU.",
       emailLabel: "CORREO DE SOPORTE",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "TELÉFONO",
       phone: "(855) 754-4678",
       formTitle: "Envíanos un mensaje",
@@ -283,7 +283,7 @@ const pagesTranslations = {
         },
         {
           q: "¿Cómo realizo una devolución?",
-          a: "Escribe a support@ghostguns.com para solicitar un número de autorización RMA."
+          a: "Escribe a support@ghost-guns.shop para solicitar un número de autorización RMA."
         },
         {
           q: "¿Cuánto tardan los reembolsos?",
@@ -308,7 +308,7 @@ const pagesTranslations = {
       addressLabel: "SEDE CENTRALE",
       address: "2320 Donley Dr Suite C, Austin TX 78758, USA",
       emailLabel: "SUPPORTO E-MAIL",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "TELEFONO",
       phone: "(855) 754-4678",
       formTitle: "Inviaci un messaggio",
@@ -326,7 +326,7 @@ const pagesTranslations = {
         },
         {
           q: "Come posso restituire un prodotto?",
-          a: "Scrivi a support@ghostguns.com per ricevere l'autorizzazione di reso RMA."
+          a: "Scrivi a support@ghost-guns.shop per ricevere l'autorizzazione di reso RMA."
         },
         {
           q: "Quanto tempo richiedono i rimborsi?",
@@ -351,7 +351,7 @@ const pagesTranslations = {
       addressLabel: "SIEDZIBA",
       address: "2320 Donley Dr Suite C, Austin TX 78758, USA",
       emailLabel: "E-MAIL WSPARCIA",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "TELEFON",
       phone: "(855) 754-4678",
       formTitle: "Wyślij do nas wiadomość",
@@ -369,7 +369,7 @@ const pagesTranslations = {
         },
         {
           q: "Jak dokonać zwrotu przedmiotu?",
-          a: "Skontaktuj się pod adresem support@ghostguns.com, aby uzyskać numer RMA do zwrotu."
+          a: "Skontaktuj się pod adresem support@ghost-guns.shop, aby uzyskać numer RMA do zwrotu."
         },
         {
           q: "Ile trwa procedura zwrotu środków?",
@@ -394,7 +394,7 @@ const pagesTranslations = {
       addressLabel: "ГЛАВЕН ОФИС",
       address: "2320 Donley Dr Suite C, Austin TX 78758, САЩ",
       emailLabel: "ИМЕЙЛ ЗА ВРЪЗКА",
-      email: "support@ghostguns.com",
+      email: "support@ghost-guns.shop",
       phoneLabel: "ТЕЛЕФОН",
       phone: "(855) 754-4678",
       formTitle: "Изпратете ни съобщение",
@@ -412,7 +412,7 @@ const pagesTranslations = {
         },
         {
           q: "Как мога да върна продукт?",
-          a: "Пишете на support@ghostguns.com за получаване на RMA номер за оторизирано връщане."
+          a: "Пишете на support@ghost-guns.shop за получаване на RMA номер за оторизирано връщане."
         },
         {
           q: "Колко време отнема възстановяването на суми?",
@@ -437,12 +437,12 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Buyer Legal Responsibility</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">It is the sole responsibility of the customer to ensure that their purchase and receipt of any products from GhostGuns.com complies with all applicable federal, state, and local laws, statutes, and municipal regulations.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">It is the sole responsibility of the customer to ensure that their purchase and receipt of any products from Ghost-Guns.shop complies with all applicable federal, state, and local laws, statutes, and municipal regulations.</p>
           <p class="text-neutral-700 text-sm leading-relaxed mb-4">You must be at least 21 years of age to purchase firearm frames, receivers, build kits, and completion components. Ghost Guns does not provide legal advice, and our acceptance of an order does not constitute confirmation of local legality.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Restricted Jurisdictions for 80% Receivers & Frames</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Due to state-specific statutory bans and legal restrictions, GhostGuns.com cannot ship unfinished frames, 80% lower receivers, or blank manufacturing jigs to the following locations:</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Due to state-specific statutory bans and legal restrictions, Ghost-Guns.shop cannot ship unfinished frames, 80% lower receivers, or blank manufacturing jigs to the following locations:</p>
           <ul class="list-disc pl-5 text-sm text-neutral-700 space-y-2 mb-4">
             <li><strong>California:</strong> Prohibited under AB 1621 and related legislation.</li>
             <li><strong>New York:</strong> Prohibited under the Jose Webster Untraceable Firearms Act.</li>
@@ -469,7 +469,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Rechtliche Verantwortung des Käufers</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Es liegt in der alleinigen Verantwortung des Kunden sicherzustellen, dass Kauf und Empfang von Produkten auf GhostGuns.com allen geltenden nationalen und regionalen Gesetzen entsprechen.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Es liegt in der alleinigen Verantwortung des Kunden sicherzustellen, dass Kauf und Empfang von Produkten auf Ghost-Guns.shop allen geltenden nationalen und regionalen Gesetzen entsprechen.</p>
           <p class="text-neutral-700 text-sm leading-relaxed mb-4">Sie müssen mindestens 21 Jahre alt sein, um Bausätze, Waffengehäuse und Schablonen zu erwerben. Ghost Guns erteilt keine Rechtsberatung.</p>
         </div>
         <div class="policy-block mb-6">
@@ -494,7 +494,7 @@ const pagesTranslations = {
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Regionale Beperkingen</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Wegens wetgeving verzendt GhostGuns.com geen 80%-kasten naar specifieke rechtsgebieden waar een verbod geldt.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Wegens wetgeving verzendt Ghost-Guns.shop geen 80%-kasten naar specifieke rechtsgebieden waar een verbod geldt.</p>
         </div>
       `
     },
@@ -575,7 +575,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">1. Acceptance of Terms</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">By visiting and purchasing from GhostGuns.com ("Company", "we", "us"), you expressly agree to abide by these Terms and Conditions and our Privacy Policy. If you do not agree to all terms, you must discontinue use immediately.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">By visiting and purchasing from Ghost-Guns.shop ("Company", "we", "us"), you expressly agree to abide by these Terms and Conditions and our Privacy Policy. If you do not agree to all terms, you must discontinue use immediately.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">2. Age Requirement & Eligibility</h2>
@@ -598,7 +598,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">1. Geltungsbereich und Zustimmung</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Durch die Nutzung und den Einkauf auf GhostGuns.com erklären Sie sich mit diesen Allgemeinen Geschäftsbedingungen einverstanden.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Durch die Nutzung und den Einkauf auf Ghost-Guns.shop erklären Sie sich mit diesen Allgemeinen Geschäftsbedingungen einverstanden.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">2. Altersanforderung & Berechtigung</h2>
@@ -647,7 +647,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">1. Aceptación de los Términos</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">El acceso y la compra en GhostGuns.com implican la aceptación plena de estos Términos y Condiciones.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">El acceso y la compra en Ghost-Guns.shop implican la aceptación plena de estos Términos y Condiciones.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">2. Requisito de Edad (21+)</h2>
@@ -677,7 +677,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">1. Postanowienia Ogólne</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Korzystanie z serwisu GhostGuns.com oraz składanie zamówień oznacza pełną akceptację niniejszego Regulaminu.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Korzystanie z serwisu Ghost-Guns.shop oraz składanie zamówień oznacza pełną akceptację niniejszego Regulaminu.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">2. Wymóg Wieku (21+)</h2>
@@ -692,7 +692,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">1. Приемане на Условията</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">С посещението и поръчката от GhostGuns.com се съгласявате безусловно с настоящите Общи Условия.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">С посещението и поръчката от Ghost-Guns.shop се съгласявате безусловно с настоящите Общи Условия.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">2. Изискване за Възраст (21+)</h2>
@@ -839,7 +839,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Return Process</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">If you are not completely satisfied with your purchase, you may request a return within 30 days of receipt. To begin the return process, contact customer support at <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a> for an RMA number.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">If you are not completely satisfied with your purchase, you may request a return within 30 days of receipt. To begin the return process, contact customer support at <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a> for an RMA number.</p>
           <p class="text-neutral-700 text-sm leading-relaxed mb-4">Items must be returned in their original packaging, unused, and with proof of purchase included.</p>
         </div>
         <div class="policy-block mb-6">
@@ -864,7 +864,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Rückgabebelehrung</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Sie können Artikel innerhalb von 30 Tagen nach Erhalt zurücksenden. Bitte kontaktieren Sie hierfür unseren Kundendienst unter <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a>, um eine RMA-Nummer zu erhalten.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Sie können Artikel innerhalb von 30 Tagen nach Erhalt zurücksenden. Bitte kontaktieren Sie hierfür unseren Kundendienst unter <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a>, um eine RMA-Nummer zu erhalten.</p>
           <p class="text-neutral-700 text-sm leading-relaxed mb-4">Die Ware muss unbenutzt, in der Originalverpackung und zusammen mit dem Kaufbeleg retourniert werden.</p>
         </div>
         <div class="policy-block mb-6">
@@ -888,7 +888,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Retourprocedure</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">U kunt producten binnen 30 dagen retourneren. Vraag eerst een RMA-code aan via <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a>.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">U kunt producten binnen 30 dagen retourneren. Vraag eerst een RMA-code aan via <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a>.</p>
           <p class="text-neutral-700 text-sm leading-relaxed mb-4">Artikelen dienen ongebruikt en in de originele verpakking verzonden te worden.</p>
         </div>
         <div class="policy-block mb-6">
@@ -904,7 +904,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Procédure de Retour</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Vous disposez d'un délai de 30 jours pour retourner vos articles. Contactez <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a> pour recevoir une autorisation RMA.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Vous disposez d'un délai de 30 jours pour retourner vos articles. Contactez <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a> pour recevoir une autorisation RMA.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Remboursement</h2>
@@ -919,7 +919,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Proceso de Devolución</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Dispone de 30 días para solicitar una devolución. Escriba a <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a> para obtener un número RMA.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Dispone de 30 días para solicitar una devolución. Escriba a <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a> para obtener un número RMA.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Reembolso</h2>
@@ -934,7 +934,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Procedura di Reso</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">È possibile restituire gli articoli entro 30 giorni richiedendo il codice RMA all'indirizzo <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a>.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">È possibile restituire gli articoli entro 30 giorni richiedendo il codice RMA all'indirizzo <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a>.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Rimborso</h2>
@@ -949,7 +949,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Procedura Zwrotu</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Zwrotu towaru można dokonać w terminie do 30 dni od odbioru, uzyskując uprzednio numer RMA pod adresem <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a>.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Zwrotu towaru można dokonać w terminie do 30 dni od odbioru, uzyskując uprzednio numer RMA pod adresem <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a>.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Zwrot Pieniędzy</h2>
@@ -964,7 +964,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Процедура по Връщане</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Можете да заявите връщане в 30-дневен срок след получаване с RMA номер от <a href="mailto:support@ghostguns.com" class="text-[#9f0712] underline">support@ghostguns.com</a>.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Можете да заявите връщане в 30-дневен срок след получаване с RMA номер от <a href="mailto:support@ghost-guns.shop" class="text-[#9f0712] underline">support@ghost-guns.shop</a>.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Възстановяване на Суми</h2>
@@ -1126,7 +1126,7 @@ const pagesTranslations = {
       content: `
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Urheberrecht und Geistiges Eigentum</h2>
-          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Alle Inhalte, CAD-Dateien und Marken auf GhostGuns.com sind urheberrechtlich geschützt.</p>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-4">Alle Inhalte, CAD-Dateien und Marken auf Ghost-Guns.shop sind urheberrechtlich geschützt.</p>
         </div>
         <div class="policy-block mb-6">
           <h2 class="text-xl font-bold uppercase mb-3 text-black">Verbotene Nutzung</h2>

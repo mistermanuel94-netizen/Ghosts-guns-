@@ -12,7 +12,7 @@ const newProducts = [
     id: 300001,
     name: "FGC-9 Complete Hardware & Rifled Barrel Kit",
     slug: "fgc-9-hardware-barrel-kit",
-    permalink: "https://ghostguns.com/product/fgc-9-hardware-barrel-kit/",
+    permalink: "https://ghost-guns.shop/product/fgc-9-hardware-barrel-kit/",
     sku: "GG-KIT-FGC9-HW",
     prices: {
       price: "34900",
@@ -43,7 +43,7 @@ const newProducts = [
     id: 300002,
     name: "Liberator 3D Printed Pistol Hardware Kit",
     slug: "liberator-3d-printed-pistol-kit",
-    permalink: "https://ghostguns.com/product/liberator-3d-printed-pistol-kit/",
+    permalink: "https://ghost-guns.shop/product/liberator-3d-printed-pistol-kit/",
     sku: "GG-KIT-LIBERATOR",
     prices: {
       price: "3900",
@@ -74,7 +74,7 @@ const newProducts = [
     id: 300003,
     name: "Urutau 9mm Bullpup DIY Build Kit",
     slug: "urutau-9mm-bullpup-build-kit",
-    permalink: "https://ghostguns.com/product/urutau-9mm-bullpup-build-kit/",
+    permalink: "https://ghost-guns.shop/product/urutau-9mm-bullpup-build-kit/",
     sku: "GG-KIT-URUTAU-9MM",
     prices: {
       price: "42900",
@@ -105,7 +105,7 @@ const newProducts = [
     id: 300004,
     name: "Grizzly 2.0 .22 LR 3D Printed Rifle Kit",
     slug: "grizzly-2-0-build-kit",
-    permalink: "https://ghostguns.com/product/grizzly-2-0-build-kit/",
+    permalink: "https://ghost-guns.shop/product/grizzly-2-0-build-kit/",
     sku: "GG-KIT-GRIZZLY2",
     prices: {
       price: "8500",
@@ -136,7 +136,7 @@ const newProducts = [
     id: 300005,
     name: "Shuty AP-9 9mm Semi-Auto DIY Kit",
     slug: "shuty-ap9-build-kit",
-    permalink: "https://ghostguns.com/product/shuty-ap9-build-kit/",
+    permalink: "https://ghost-guns.shop/product/shuty-ap9-build-kit/",
     sku: "GG-KIT-SHUTY-AP9",
     prices: {
       price: "29900",
@@ -167,7 +167,7 @@ const newProducts = [
     id: 300006,
     name: "Solid Concepts 1911 DMLS Metal Build Kit",
     slug: "solid-concepts-1911-build-kit",
-    permalink: "https://ghostguns.com/product/solid-concepts-1911-build-kit/",
+    permalink: "https://ghost-guns.shop/product/solid-concepts-1911-build-kit/",
     sku: "GG-KIT-1911-DMLS",
     prices: {
       price: "79900",
@@ -198,7 +198,7 @@ const newProducts = [
     id: 300007,
     name: "Songbird .22 LR DIY Pistol Hardware Kit",
     slug: "songbird-22-build-kit",
-    permalink: "https://ghostguns.com/product/songbird-22-build-kit/",
+    permalink: "https://ghost-guns.shop/product/songbird-22-build-kit/",
     sku: "GG-KIT-SONGBIRD",
     prices: {
       price: "3200",
@@ -229,7 +229,7 @@ const newProducts = [
     id: 300008,
     name: "Plastikov 3D Printed AKM Receiver Hardware Kit",
     slug: "plastikov-akm-build-kit",
-    permalink: "https://ghostguns.com/product/plastikov-akm-build-kit/",
+    permalink: "https://ghost-guns.shop/product/plastikov-akm-build-kit/",
     sku: "GG-KIT-PLASTIKOV",
     prices: {
       price: "10900",
@@ -260,7 +260,7 @@ const newProducts = [
     id: 300009,
     name: "EZ22 .22 LR Semi-Auto 3D Printed Carbine Kit",
     slug: "ez22-semi-auto-build-kit",
-    permalink: "https://ghostguns.com/product/ez22-semi-auto-build-kit/",
+    permalink: "https://ghost-guns.shop/product/ez22-semi-auto-build-kit/",
     sku: "GG-KIT-EZ22",
     prices: {
       price: "7500",
@@ -291,7 +291,7 @@ const newProducts = [
     id: 300010,
     name: "HD22 Heavy Duty .22 LR Semi-Auto Build Kit",
     slug: "hd22-carbine-build-kit",
-    permalink: "https://ghostguns.com/product/hd22-carbine-build-kit/",
+    permalink: "https://ghost-guns.shop/product/hd22-carbine-build-kit/",
     sku: "GG-KIT-HD22",
     prices: {
       price: "8500",
@@ -322,7 +322,7 @@ const newProducts = [
     id: 300011,
     name: "Menendez Mag-Fed 3D Printed Magazine Spring & Follower 5-Pack",
     slug: "menendez-mag-fed-magazine-pack",
-    permalink: "https://ghostguns.com/product/menendez-mag-fed-magazine-pack/",
+    permalink: "https://ghost-guns.shop/product/menendez-mag-fed-magazine-pack/",
     sku: "GG-MAG-MENENDEZ-5PK",
     prices: {
       price: "3400",
@@ -353,7 +353,7 @@ const newProducts = [
     id: 300012,
     name: "ScARpup Bullpup Conversion Chassis & Hardware Kit",
     slug: "scarpup-bullpup-build-kit",
-    permalink: "https://ghostguns.com/product/scarpup-bullpup-build-kit/",
+    permalink: "https://ghost-guns.shop/product/scarpup-bullpup-build-kit/",
     sku: "GG-KIT-SCARPUP",
     prices: {
       price: "16900",
@@ -384,7 +384,7 @@ const newProducts = [
     id: 300013,
     name: "YC-9 'Yeet Cannon' 9mm DIY Build Kit",
     slug: "yc9-yeet-cannon-build-kit",
-    permalink: "https://ghostguns.com/product/yc9-yeet-cannon-build-kit/",
+    permalink: "https://ghost-guns.shop/product/yc9-yeet-cannon-build-kit/",
     sku: "GG-KIT-YC9",
     prices: {
       price: "18900",
@@ -415,7 +415,7 @@ const newProducts = [
     id: 300014,
     name: "Stingray .22 LR Semi-Auto Tactical Pistol Kit",
     slug: "stingray-22-build-kit",
-    permalink: "https://ghostguns.com/product/stingray-22-build-kit/",
+    permalink: "https://ghost-guns.shop/product/stingray-22-build-kit/",
     sku: "GG-KIT-STINGRAY22",
     prices: {
       price: "9500",
@@ -446,7 +446,7 @@ const newProducts = [
     id: 300015,
     name: "VZ. 61 Skorpion 3D Printed Receiver Hardware Kit",
     slug: "vz61-skorpion-3d-build-kit",
-    permalink: "https://ghostguns.com/product/vz61-skorpion-3d-build-kit/",
+    permalink: "https://ghost-guns.shop/product/vz61-skorpion-3d-build-kit/",
     sku: "GG-KIT-VZ61-SKORP",
     prices: {
       price: "13500",
@@ -477,7 +477,7 @@ const newProducts = [
     id: 300016,
     name: "Glock-Pattern Master Rail & Locking Block Kit (DD17.2/DD19.2/DD26.2)",
     slug: "glock-pattern-master-rail-kit",
-    permalink: "https://ghostguns.com/product/glock-pattern-master-rail-kit/",
+    permalink: "https://ghost-guns.shop/product/glock-pattern-master-rail-kit/",
     sku: "GG-RAIL-MASTER-GLOCK",
     prices: {
       price: "5900",
@@ -509,7 +509,7 @@ const newProducts = [
     id: 300017,
     name: "Hoffman Tactical AR-15 Super Lower Reinforcement Hardware Kit",
     slug: "hoffman-tactical-ar15-reinforcement-kit",
-    permalink: "https://ghostguns.com/product/hoffman-tactical-ar15-reinforcement-kit/",
+    permalink: "https://ghost-guns.shop/product/hoffman-tactical-ar15-reinforcement-kit/",
     sku: "GG-HW-HOFFMAN-AR15",
     prices: {
       price: "3900",
@@ -541,7 +541,7 @@ const newProducts = [
     id: 300018,
     name: "Ruger 10/22 3D Printed Receiver Hardware & V-Block Kit",
     slug: "ruger-1022-printed-receiver-kit",
-    permalink: "https://ghostguns.com/product/ruger-1022-printed-receiver-kit/",
+    permalink: "https://ghost-guns.shop/product/ruger-1022-printed-receiver-kit/",
     sku: "GG-HW-RUGER1022",
     prices: {
       price: "4500",

@@ -46,14 +46,69 @@ const sameSiloProducts = products.filter(p =>
 );
 
 const relatedProducts = (sameSiloProducts.length >= 4 ? sameSiloProducts : products.filter(p => p.id !== product.id)).slice(0, 4);
+
+const SITE_URL = 'https://ghost-guns.shop';
+const productUrl = new URL(getLocalizedPath(`/product/${product.slug}/`, lang), SITE_URL).href;
+const cleanDesc = productShortDesc
+  ? productShortDesc.replace(/<[^>]*>?/gm, '').trim()
+  : `Buy ${productName} online from Ghost Guns.`;
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": productName,
+      "description": cleanDesc,
+      "sku": product.sku || `GG-${product.id}`,
+      "image": images.map((img: string) => img.startsWith('http') ? img : new URL(img, SITE_URL).href),
+      "brand": {
+        "@type": "Brand",
+        "name": "Ghost Guns"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": productUrl,
+        "priceCurrency": "EUR",
+        "price": priceNum.toFixed(2),
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": t('product.home'),
+          "item": new URL(getLocalizedPath('/', lang), SITE_URL).href
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": pillar.defaultTitle,
+          "item": new URL(getLocalizedPath(pillar.path, lang), SITE_URL).href
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": productName,
+          "item": productUrl
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <Layout
   title={`${productName} | Ghost Guns`}
-  description={productShortDesc ? productShortDesc.replace(/<[^>]*>?/gm, '') : `Buy ${productName} online from Ghost Guns.`}
+  description={cleanDesc}
   image={primaryImage}
   lang={lang}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
   <div class="max-w-[1440px] mx-auto bg-white shadow-sm">
     <!-- 1. Hierarchical Silo Breadcrumbs Bar -->
     <div class="border-l border-r border-b border-neutral-300 bg-neutral-950 text-white px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2 text-xs font-mono uppercase">

@@ -35,7 +35,7 @@ const paymentTranslations = {
     orderStatus: "Status: Pending Payment Confirmation",
     receiptNotice: "Proceed with payment and send a copy (Picture or screenshot or pdf) of the payment receipt for confirmation.",
     sendToEmail: "Send payment confirmation / receipt to:",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Print Order Summary",
     continueShopping: "Continue Shopping",
     closeModal: "Close"
@@ -70,7 +70,7 @@ const paymentTranslations = {
     orderStatus: "Status: Wartet auf Zahlungsbestätigung",
     receiptNotice: "Führen Sie die Zahlung durch und senden Sie eine Kopie (Foto, Screenshot oder PDF) des Zahlungsbelegs zur Bestätigung.",
     sendToEmail: "Zahlungsbeleg senden an:",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Bestellübersicht drucken",
     continueShopping: "Weiter einkaufen",
     closeModal: "Schließen"
@@ -105,7 +105,7 @@ const paymentTranslations = {
     orderStatus: "Status: In afwachting van betalingsbevestiging",
     receiptNotice: "Ga door met de betaling en stuur een kopie (foto, screenshot of pdf) van het betalingsbewijs ter bevestiging.",
     sendToEmail: "Stuur betalingsbevestiging naar:",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Besteloverzicht afdrukken",
     continueShopping: "Verder winkelen",
     closeModal: "Sluiten"
@@ -140,7 +140,7 @@ const paymentTranslations = {
     orderStatus: "Statut : En attente de confirmation du paiement",
     receiptNotice: "Procédez au paiement et envoyez une copie (photo, capture d'écran ou PDF) du reçu de paiement pour confirmation.",
     sendToEmail: "Envoyer le reçu de paiement à :",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Imprimer le récapitulatif",
     continueShopping: "Continuer vos achats",
     closeModal: "Fermer"
@@ -175,7 +175,7 @@ const paymentTranslations = {
     orderStatus: "Estado: Pendiente de confirmación del pago",
     receiptNotice: "Proceda con el pago y envíe una copia (foto, captura de pantalla o PDF) del recibo de pago para su confirmación.",
     sendToEmail: "Enviar comprobante de pago a:",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Imprimir resumen",
     continueShopping: "Continuar comprando",
     closeModal: "Cerrar"
@@ -210,7 +210,7 @@ const paymentTranslations = {
     orderStatus: "Stato: In attesa di conferma del pagamento",
     receiptNotice: "Procedere con il pagamento e inviare una copia (foto, screenshot o PDF) della ricevuta di pagamento per conferma.",
     sendToEmail: "Invia ricevuta di pagamento a:",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Stampa riepilogo",
     continueShopping: "Continua gli acquisti",
     closeModal: "Chiudi"
@@ -245,7 +245,7 @@ const paymentTranslations = {
     orderStatus: "Status: Oczekiwanie na potwierdzenie wpłaty",
     receiptNotice: "Dokonaj płatności i prześlij kopię (zdjęcie, zrzut ekranu lub plik PDF) potwierdzenia wpłaty w celu zatwierdzenia.",
     sendToEmail: "Wyślij potwierdzenie wpłaty na:",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Drukuj podsumowanie",
     continueShopping: "Kontynuuj zakupy",
     closeModal: "Zamknij"
@@ -280,7 +280,7 @@ const paymentTranslations = {
     orderStatus: "Статус: Очаква се потвърждение на плащането",
     receiptNotice: "Извършете плащането и изпратете копие (снимка, екранна снимка или PDF) на платежния документ за потвърждение.",
     sendToEmail: "Изпратете платежния документ на:",
-    supportEmail: "support@ghostguns.com",
+    supportEmail: "support@ghost-guns.shop",
     printReceipt: "Принтирай поръчката",
     continueShopping: "Продължи пазаруването",
     closeModal: "Затвори"

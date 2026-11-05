@@ -138,3 +138,4 @@ async function submitIndexNow() {
 if (process.argv.includes('--submit')) {
   submitIndexNow();
 }
+

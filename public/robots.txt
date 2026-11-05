@@ -5,3 +5,4 @@ Disallow: /checkout/
 Disallow: /my-account/
 
 Sitemap: https://ghost-guns.shop/sitemap.xml
+

@@ -1,6 +1,6 @@
-const ADMIN_EMAILS = ['support@ghost-guns.shop', 'ghotgunseu.pro@gmail.com'];
+const ADMIN_EMAILS = ['support@ghost-guns.shop', 'ghostgunseu.pro@gmail.com'];
 const PRIMARY_EMAIL = 'support@ghost-guns.shop';
-const SECONDARY_EMAIL = 'ghotgunseu.pro@gmail.com';
+const SECONDARY_EMAIL = 'ghostgunseu.pro@gmail.com';
 const DEFAULT_RESEND_KEY = atob('cmVfQVZxQ3dkU3FfTnpNRjhMZFB3Z2VSajF0cFJjY3g1Wlli');
 
 const corsHeaders = {

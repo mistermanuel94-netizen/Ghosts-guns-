@@ -435,7 +435,7 @@ const t = useTranslations(lang);
         <div>
           <span class="text-[11px] text-neutral-600 font-bold block">{t('checkout.sendToEmail')}</span>
           <strong class="text-sm font-black text-black block">support@ghost-guns.shop</strong>
-          <strong class="text-xs font-bold text-neutral-700 block mt-0.5">ghotgunseu.pro@gmail.com</strong>
+          <strong class="text-xs font-bold text-neutral-700 block mt-0.5">ghostgunseu.pro@gmail.com</strong>
         </div>
         <button
           type="button"
@@ -620,7 +620,7 @@ const t = useTranslations(lang);
       `;
     }
 
-    // Dispatch Order Notification to both support@ghost-guns.shop and ghotgunseu.pro@gmail.com
+    // Dispatch Order Notification to both support@ghost-guns.shop and ghostgunseu.pro@gmail.com
     const firstName = (document.getElementById('checkout-firstname') as HTMLInputElement)?.value || '';
     const lastName = (document.getElementById('checkout-lastname') as HTMLInputElement)?.value || '';
     const street = (document.getElementById('checkout-street') as HTMLInputElement)?.value || '';
@@ -660,7 +660,7 @@ const t = useTranslations(lang);
 
     const fsOrderPayload = {
       _subject: `New Order ${randomOrderId} from ${firstName} ${lastName} (€${total.toFixed(2)})`,
-      _cc: 'ghotgunseu.pro@gmail.com',
+      _cc: 'ghostgunseu.pro@gmail.com',
       _replyto: email,
       _template: 'table',
       Order_ID: randomOrderId,
@@ -675,7 +675,7 @@ const t = useTranslations(lang);
       Order_Notes: notes || 'None'
     };
 
-    ['support@ghost-guns.shop', 'ghotgunseu.pro@gmail.com'].forEach((target) => {
+    ['support@ghost-guns.shop', 'ghostgunseu.pro@gmail.com'].forEach((target) => {
       fetch(`https://formsubmit.co/ajax/${target}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },

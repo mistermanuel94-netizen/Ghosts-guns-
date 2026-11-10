@@ -81,7 +81,7 @@ const pageData = (pagesTranslationsData as any)['contact']?.[lang] || (pagesTran
                   <div>
                     <p class="uppercase font-bold text-black text-xs m-0 mb-1">{pageData.emailLabel || 'EMAIL'}</p>
                     <a href="mailto:support@ghost-guns.shop" class="text-black text-sm hover:text-[#9f0712] transition-colors block font-bold">support@ghost-guns.shop</a>
-                    <a href="mailto:ghotgunseu.pro@gmail.com" class="text-neutral-700 text-sm hover:text-[#9f0712] transition-colors block mt-1">ghotgunseu.pro@gmail.com</a>
+                    <a href="mailto:ghostgunseu.pro@gmail.com" class="text-neutral-700 text-sm hover:text-[#9f0712] transition-colors block mt-1">ghostgunseu.pro@gmail.com</a>
                   </div>
                   <div>
                     <p class="uppercase font-bold text-black text-xs m-0 mb-1">{pageData.phoneLabel || 'PHONE'}</p>
@@ -158,7 +158,7 @@ const pageData = (pagesTranslationsData as any)['contact']?.[lang] || (pagesTran
     try {
       const fsContactPayload = {
         _subject: `New Contact Message: ${subject} (from ${name})`,
-        _cc: 'ghotgunseu.pro@gmail.com',
+        _cc: 'ghostgunseu.pro@gmail.com',
         _replyto: email,
         _template: 'table',
         Name: name,
@@ -177,7 +177,7 @@ const pageData = (pagesTranslationsData as any)['contact']?.[lang] || (pagesTran
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify(fsContactPayload)
         }),
-        fetch('https://formsubmit.co/ajax/ghotgunseu.pro@gmail.com', {
+        fetch('https://formsubmit.co/ajax/ghostgunseu.pro@gmail.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify(fsContactPayload)

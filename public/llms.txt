@@ -111,5 +111,10 @@
 - [Polish Storefront (Polski)](https://ghost-guns.shop/pl/)
 - [Bulgarian Storefront (Български)](https://ghost-guns.shop/bg/)
 
+## Official Support & Order Desk
+- Primary Email: support@ghost-guns.shop
+- Secondary Email: ghotgunseu.pro@gmail.com
+- Contact Page: [Contact Ghost Guns](https://ghost-guns.shop/contact/)
+
 ## Sitemap
 - [XML Sitemap (872 URLs)](https://ghost-guns.shop/sitemap.xml)

@@ -55,7 +55,7 @@ const t = useTranslations(lang);
           <div class="text-xs">
             <label class="block uppercase font-bold mb-1">{t('checkout.streetAddress')} *</label>
             <input id="checkout-street" type="text" required placeholder="House number and street name" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none mb-2" />
-            <input type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            <input id="checkout-apartment" type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
@@ -101,7 +101,7 @@ const t = useTranslations(lang);
 
           <div class="text-xs">
             <label class="block uppercase font-bold mb-1">{t('checkout.orderNotes')}</label>
-            <textarea rows="2" placeholder={t('checkout.orderNotesPlaceholder')} class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none"></textarea>
+            <textarea id="checkout-notes" rows="2" placeholder={t('checkout.orderNotesPlaceholder')} class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none"></textarea>
           </div>
 
           <!-- Section 2: Payment Options -->
@@ -434,7 +434,8 @@ const t = useTranslations(lang);
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-neutral-50 border border-dashed border-neutral-400 rounded text-xs mb-6">
         <div>
           <span class="text-[11px] text-neutral-600 font-bold block">{t('checkout.sendToEmail')}</span>
-          <strong class="text-sm font-black text-black">support@ghost-guns.shop</strong>
+          <strong class="text-sm font-black text-black block">support@ghost-guns.shop</strong>
+          <strong class="text-xs font-bold text-neutral-700 block mt-0.5">ghotgunseu.pro@gmail.com</strong>
         </div>
         <button
           type="button"
@@ -618,6 +619,42 @@ const t = useTranslations(lang);
         <div class="text-neutral-800 leading-relaxed font-sans">${instructionP}</div>
       `;
     }
+
+    // Dispatch Order Notification to both support@ghost-guns.shop and ghotgunseu.pro@gmail.com
+    const firstName = (document.getElementById('checkout-firstname') as HTMLInputElement)?.value || '';
+    const lastName = (document.getElementById('checkout-lastname') as HTMLInputElement)?.value || '';
+    const street = (document.getElementById('checkout-street') as HTMLInputElement)?.value || '';
+    const apartment = (document.getElementById('checkout-apartment') as HTMLInputElement)?.value || '';
+    const city = (document.getElementById('checkout-city') as HTMLInputElement)?.value || '';
+    const postcode = (document.getElementById('checkout-postcode') as HTMLInputElement)?.value || '';
+    const phone = (document.getElementById('checkout-phone') as HTMLInputElement)?.value || '';
+    const notes = (document.getElementById('checkout-notes') as HTMLTextAreaElement)?.value || '';
+
+    fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'order',
+        orderId: randomOrderId,
+        orderDate: formattedDate,
+        firstName,
+        lastName,
+        street,
+        apartment,
+        city,
+        state,
+        postcode,
+        phone,
+        email,
+        notes,
+        paymentMethod: selectedMethod,
+        paymentMethodTitle: cardTitle,
+        paymentInstructions: instructionP,
+        items: cart,
+        subtotal,
+        total
+      })
+    }).catch((err) => console.error('Order dispatch error:', err));
 
     // Display modal
     if (modal) {

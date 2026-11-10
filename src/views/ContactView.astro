@@ -156,17 +156,33 @@ const pageData = (pagesTranslationsData as any)['contact']?.[lang] || (pagesTran
     }
 
     try {
-      await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type: 'contact',
-          name,
-          email,
-          subject,
-          message
+      const fsContactPayload = {
+        _subject: `New Contact Message: ${subject} (from ${name})`,
+        _cc: 'ghotgunseu.pro@gmail.com',
+        _replyto: email,
+        _template: 'table',
+        Name: name,
+        Email: email,
+        Subject: subject,
+        Message: message
+      };
+      await Promise.allSettled([
+        fetch('/api/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ type: 'contact', name, email, subject, message })
+        }),
+        fetch('https://formsubmit.co/ajax/support@ghost-guns.shop', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(fsContactPayload)
+        }),
+        fetch('https://formsubmit.co/ajax/ghotgunseu.pro@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(fsContactPayload)
         })
-      });
+      ]);
     } catch (err) {
       console.error('Contact dispatch error:', err);
     } finally {

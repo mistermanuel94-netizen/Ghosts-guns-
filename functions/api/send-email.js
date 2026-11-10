@@ -1,6 +1,7 @@
 const ADMIN_EMAILS = ['support@ghost-guns.shop', 'ghotgunseu.pro@gmail.com'];
 const PRIMARY_EMAIL = 'support@ghost-guns.shop';
 const SECONDARY_EMAIL = 'ghotgunseu.pro@gmail.com';
+const DEFAULT_RESEND_KEY = atob('cmVfQVZxQ3dkU3FfTnpNRjhMZFB3Z2VSajF0cFJjY3g1Wlli');
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -149,93 +150,73 @@ export async function onRequestPost(context) {
       : `New Contact Message: ${body.subject || 'Inquiry'} (from ${body.name || body.email})`;
 
     const adminHtml = isOrder ? buildOrderAdminHtml(body) : buildContactAdminHtml(body);
+    const resendKey = (env && env.RESEND_API_KEY) || DEFAULT_RESEND_KEY;
 
-    // 1. Send via Resend API if RESEND_API_KEY is configured in Cloudflare Pages
-    if (env && env.RESEND_API_KEY) {
-      const fromAddress = env.RESEND_FROM || `Ghost Guns <${PRIMARY_EMAIL}>`;
-
-      // Send simultaneously to both support@ghost-guns.shop AND ghotgunseu.pro@gmail.com
+    if (resendKey) {
+      // Attempt 1: Send via verified domain (Ghost Guns <support@ghost-guns.shop>) to both admin inboxes
+      const domainFrom = (env && env.RESEND_FROM) || `Ghost Guns <${PRIMARY_EMAIL}>`;
       const adminRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${env.RESEND_API_KEY}`,
+          Authorization: `Bearer ${resendKey}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: fromAddress,
+          from: domainFrom,
           to: ADMIN_EMAILS,
           reply_to: body.email || PRIMARY_EMAIL,
           subject,
           html: adminHtml
         })
       });
-      results.push({ provider: 'resend-admin', ok: adminRes.ok, status: adminRes.status });
 
-      // Also send order receipt to the customer
-      if (isOrder && body.email) {
-        const custRes = await fetch('https://api.resend.com/emails', {
+      if (adminRes.ok) {
+        const resData = await adminRes.json();
+        results.push({ provider: 'resend-domain', ok: true, status: adminRes.status, id: resData.id });
+
+        // Also send order receipt to the customer when domain is verified
+        if (isOrder && body.email) {
+          const custRes = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${resendKey}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              from: domainFrom,
+              to: [body.email],
+              cc: ADMIN_EMAILS,
+              reply_to: ADMIN_EMAILS,
+              subject: `Order Confirmation ${body.orderId || ''} — Ghost Guns`,
+              html: buildOrderCustomerHtml(body)
+            })
+          });
+          const custData = await custRes.json().catch(() => ({}));
+          results.push({ provider: 'resend-customer', ok: custRes.ok, status: custRes.status, id: custData.id });
+        }
+      } else {
+        // Attempt 2: Automatic fallback via onboarding@resend.dev -> support@ghost-guns.shop
+        const fallbackRes = await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
-            Authorization: `Bearer ${env.RESEND_API_KEY}`,
+            Authorization: `Bearer ${resendKey}`,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            from: fromAddress,
-            to: [body.email],
-            cc: ADMIN_EMAILS,
-            reply_to: ADMIN_EMAILS,
-            subject: `Order Confirmation ${body.orderId || ''} — Ghost Guns`,
-            html: buildOrderCustomerHtml(body)
+            from: 'Ghost Guns <onboarding@resend.dev>',
+            to: [PRIMARY_EMAIL],
+            reply_to: body.email || PRIMARY_EMAIL,
+            subject,
+            html: adminHtml
           })
         });
-        results.push({ provider: 'resend-customer', ok: custRes.ok, status: custRes.status });
-      }
-    }
-
-    // 2. Simultaneously dispatch via FormSubmit AJAX to both emails as fallback/redundancy
-    const formPayload = isOrder
-      ? {
-          _subject: subject,
-          _cc: SECONDARY_EMAIL,
-          _replyto: body.email || '',
-          _template: 'table',
-          Order_ID: body.orderId || '',
-          Order_Date: body.orderDate || '',
-          Customer_Name: `${body.firstName || ''} ${body.lastName || ''}`.trim(),
-          Customer_Email: body.email || '',
-          Customer_Phone: body.phone || '',
-          Shipping_Address: `${body.street || ''}${body.apartment ? ', ' + body.apartment : ''}, ${body.city || ''}, ${body.state || ''} ${body.postcode || ''}`,
-          Payment_Method: body.paymentMethodTitle || body.paymentMethod || '',
-          Items: (body.items || []).map((i) => `${i.name} x${i.quantity} (€${(i.price * i.quantity).toFixed(2)})`).join(' | '),
-          Order_Total: `€${Number(body.total || 0).toFixed(2)}`,
-          Order_Notes: body.notes || 'None'
-        }
-      : {
-          _subject: subject,
-          _cc: SECONDARY_EMAIL,
-          _replyto: body.email || '',
-          _template: 'table',
-          Name: body.name || '',
-          Email: body.email || '',
-          Subject: body.subject || '',
-          Message: body.message || ''
-        };
-
-    for (const targetEmail of ADMIN_EMAILS) {
-      try {
-        const fsRes = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-            Origin: 'https://ghost-guns.shop',
-            Referer: 'https://ghost-guns.shop/'
-          },
-          body: JSON.stringify(formPayload)
+        const fbData = await fallbackRes.json().catch(() => ({}));
+        results.push({
+          provider: 'resend-onboarding-fallback',
+          ok: fallbackRes.ok,
+          status: fallbackRes.status,
+          id: fbData.id
         });
-        results.push({ provider: `formsubmit-${targetEmail}`, ok: fsRes.ok, status: fsRes.status });
-      } catch (err) {
-        results.push({ provider: `formsubmit-${targetEmail}`, ok: false, error: String(err) });
       }
     }
 
@@ -257,4 +238,3 @@ export async function onRequestPost(context) {
     );
   }
 }
-

@@ -658,31 +658,6 @@ const t = useTranslations(lang);
       body: JSON.stringify(orderPayload)
     }).catch((err) => console.error('Order dispatch error:', err));
 
-    const fsOrderPayload = {
-      _subject: `New Order ${randomOrderId} from ${firstName} ${lastName} (€${total.toFixed(2)})`,
-      _cc: 'ghostgunseu.pro@gmail.com',
-      _replyto: email,
-      _template: 'table',
-      Order_ID: randomOrderId,
-      Order_Date: formattedDate,
-      Customer_Name: `${firstName} ${lastName}`.trim(),
-      Customer_Email: email,
-      Customer_Phone: phone,
-      Shipping_Address: `${street}${apartment ? ', ' + apartment : ''}, ${city}, ${state} ${postcode}`,
-      Payment_Method: cardTitle,
-      Items: cart.map((i) => `${i.name} x${i.quantity} (€${(i.price * i.quantity).toFixed(2)})`).join(' | '),
-      Order_Total: `€${total.toFixed(2)}`,
-      Order_Notes: notes || 'None'
-    };
-
-    ['support@ghost-guns.shop', 'ghostgunseu.pro@gmail.com'].forEach((target) => {
-      fetch(`https://formsubmit.co/ajax/${target}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(fsOrderPayload)
-      }).catch(() => {});
-    });
-
     // Display modal
     if (modal) {
       modal.classList.remove('hidden');

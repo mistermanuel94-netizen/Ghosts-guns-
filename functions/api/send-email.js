@@ -37,6 +37,7 @@ function buildOrderAdminHtml(data) {
       <p style="margin:4px 0;font-size:13px;"><strong>Name:</strong> ${data.firstName || ''} ${data.lastName || ''}</p>
       <p style="margin:4px 0;font-size:13px;"><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
       <p style="margin:4px 0;font-size:13px;"><strong>Phone:</strong> ${data.phone || 'N/A'}</p>
+      <p style="margin:4px 0;font-size:13px;"><strong>Country:</strong> ${data.countryName || data.country || 'Global Worldwide'}</p>
       <p style="margin:4px 0;font-size:13px;"><strong>Address:</strong> ${data.street || ''}${data.apartment ? ', ' + data.apartment : ''}</p>
       <p style="margin:4px 0;font-size:13px;"><strong>City / State / Postcode:</strong> ${data.city || ''}, ${data.state || ''} ${data.postcode || ''}</p>
       <p style="margin:4px 0;font-size:13px;"><strong>Payment Method:</strong> <span style="color:#9f0712;font-weight:bold;text-transform:uppercase;">${data.paymentMethodTitle || data.paymentMethod}</span></p>
@@ -84,11 +85,23 @@ function buildOrderCustomerHtml(data) {
       <p style="margin:4px 0 0;font-size:12px;color:#ccc;">Ghost Guns Official Dispatch | https://ghost-guns.shop</p>
     </div>
     <div style="padding:20px;">
-      <p style="font-size:13px;line-height:1.5;">Thank you for your order, <strong>${data.firstName || 'Customer'}</strong>. Your order <strong>${data.orderId}</strong> has been registered in our system.</p>
+      <p style="font-size:13px;line-height:1.5;">Thank you for your order, <strong>${data.firstName || 'Customer'}</strong>. Your order <strong>${data.orderId}</strong> has been registered in our system for global dispatch.</p>
 
-      <div style="background:#fffbeb;border:2px solid #d97706;padding:14px;margin:16px 0;">
+      <!-- Global Worldwide Dispatch & Compliance Notice -->
+      <div style="background:#fffbeb;border:2px solid #b45309;padding:14px;margin:16px 0;">
+        <p style="margin:0 0 6px;font-weight:bold;color:#b45309;text-transform:uppercase;font-size:12px;letter-spacing:0.5px;">🌐 Global Worldwide Dispatch Notice</p>
+        <p style="margin:0;font-size:12px;line-height:1.6;color:#1c1917;">
+          Ghost Guns fulfills orders worldwide in discreet, unmarked packaging. All DIY firearm components, build kits, 3D files, and accessories are non-serialized and require no FFL license under global commercial manufacturing standards.
+        </p>
+      </div>
+
+      <!-- Critical Payment & Inbox Notice -->
+      <div style="background:#fef2f2;border:2px solid #9f0712;padding:14px;margin:16px 0;">
         <p style="margin:0 0 6px;font-weight:bold;color:#9f0712;text-transform:uppercase;font-size:13px;">Payment Method: ${data.paymentMethodTitle || data.paymentMethod}</p>
-        <p style="margin:0;font-size:12px;line-height:1.5;color:#111;">${data.paymentInstructions || 'Please reply to this email or contact our support desk with your order number to finalize your payment and receive tracking.'}</p>
+        <p style="margin:0 0 8px;font-size:12px;line-height:1.5;color:#111;">${data.paymentInstructions || 'Please reply to this email or contact our support desk with your order number to finalize your payment and receive tracking.'}</p>
+        <p style="margin:8px 0 0;font-size:11px;font-weight:bold;color:#9f0712;border-top:1px dashed #fca5a5;padding-top:8px;">
+          ⚠️ CRITICAL: PLEASE CHECK YOUR INBOX AND SPAM FOLDERS REGULARLY FOR PAYMENT DETAILS & TRACKING CONFIRMATION!
+        </p>
       </div>
 
       <h3 style="margin:20px 0 10px;text-transform:uppercase;font-size:14px;border-bottom:1px solid #ccc;padding-bottom:6px;">Order Summary</h3>

@@ -184,7 +184,7 @@ export async function onRequestPost(context) {
       });
 
       if (adminRes.ok) {
-        const resData = await adminRes.json();
+        const resData = await adminRes.json().catch(() => ({}));
         results.push({ provider: 'resend-domain', ok: true, status: adminRes.status, id: resData.id });
 
         // Also send order receipt to the customer when domain is verified
@@ -198,16 +198,22 @@ export async function onRequestPost(context) {
             body: JSON.stringify({
               from: domainFrom,
               to: [body.email],
-              cc: ADMIN_EMAILS,
               reply_to: ADMIN_EMAILS,
               subject: `Order Confirmation ${body.orderId || ''} — Ghost Guns`,
               html: buildOrderCustomerHtml(body)
             })
           });
           const custData = await custRes.json().catch(() => ({}));
-          results.push({ provider: 'resend-customer', ok: custRes.ok, status: custRes.status, id: custData.id });
+          results.push({
+            provider: 'resend-customer',
+            ok: custRes.ok,
+            status: custRes.status,
+            id: custData.id,
+            error: custRes.ok ? undefined : custData
+          });
         }
       } else {
+        const adminErrData = await adminRes.json().catch(() => ({}));
         // Attempt 2: Automatic fallback via onboarding@resend.dev -> support@ghost-guns.shop
         const fallbackRes = await fetch('https://api.resend.com/emails', {
           method: 'POST',
@@ -228,7 +234,9 @@ export async function onRequestPost(context) {
           provider: 'resend-onboarding-fallback',
           ok: fallbackRes.ok,
           status: fallbackRes.status,
-          id: fbData.id
+          id: fbData.id,
+          primaryError: adminErrData,
+          fallbackError: fallbackRes.ok ? undefined : fbData
         });
       }
     }

@@ -168,14 +168,14 @@ const heroBgImage = categorySlug.includes('3d')
     </div>
 
     <!-- 2. Sticky Filter, Live Search & Sort Toolbar -->
-    <div class="sticky top-[52px] lg:top-[94px] z-40 bg-white border-l border-r border-b border-neutral-300 px-4 sm:px-6 py-3.5 shadow-xs">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+    <div class="sticky top-[52px] lg:top-[94px] z-40 bg-white border-l border-r border-b border-neutral-300 px-3 sm:px-6 py-2.5 sm:py-3.5 shadow-xs">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 sm:gap-3">
         <!-- Left: Primary Silo Switcher Chips -->
         <div class="w-full lg:w-auto overflow-hidden">
-          <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar whitespace-nowrap py-0.5 text-xs font-mono">
+          <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar whitespace-nowrap py-1 text-xs font-mono">
             <a
               href={getLocalizedPath('/shop/', lang)}
-              class="px-3 py-1.5 uppercase font-bold text-[11px] shrink-0 border bg-neutral-100 border-neutral-300 hover:border-neutral-950 text-neutral-900 transition-colors"
+              class="px-3 py-2 uppercase font-bold text-[11px] shrink-0 border bg-neutral-100 border-neutral-300 hover:border-neutral-950 text-neutral-900 transition-colors touch-manipulation min-h-[34px] flex items-center"
             >
               {t('categoryHero.allCategories') || 'All Silos'} (76)
             </a>
@@ -184,7 +184,7 @@ const heroBgImage = categorySlug.includes('3d')
               return (
                 <a
                   href={getLocalizedPath(pillar.path, lang)}
-                  class={`px-3 py-1.5 uppercase font-bold text-[11px] shrink-0 transition-colors flex items-center gap-1.5 border ${
+                  class={`px-3 py-2 uppercase font-bold text-[11px] shrink-0 transition-colors flex items-center gap-1.5 border touch-manipulation min-h-[34px] ${
                     isPillarActive
                       ? 'bg-neutral-950 text-white border-neutral-950'
                       : 'bg-white border-neutral-300 hover:border-neutral-950 text-neutral-800'
@@ -201,28 +201,28 @@ const heroBgImage = categorySlug.includes('3d')
         </div>
 
         <!-- Right: Quick Filter Input + Sort Selector -->
-        <div class="flex flex-wrap items-center justify-between lg:justify-end gap-3 shrink-0 border-t lg:border-t-0 pt-2.5 lg:pt-0 border-neutral-200">
+        <div class="flex items-center justify-between lg:justify-end gap-2 sm:gap-3 shrink-0 border-t lg:border-t-0 pt-2 lg:pt-0 border-neutral-200">
           <div class="relative flex-1 sm:flex-initial sm:w-52">
             <input
               type="search"
               id="category-live-filter"
               placeholder="FILTER THIS SILO..."
-              class="w-full h-[34px] px-3 text-xs font-mono uppercase bg-neutral-50 border border-neutral-300 focus:border-neutral-950 focus:bg-white focus:outline-none text-neutral-950"
+              class="w-full h-[38px] px-3 text-xs font-mono uppercase bg-neutral-50 border border-neutral-300 focus:border-neutral-950 focus:bg-white focus:outline-none text-neutral-950"
             />
           </div>
 
-          <span id="category-showing-count" class="text-xs font-mono text-neutral-500 uppercase tracking-tight hidden sm:inline">
+          <span id="category-showing-count" class="text-xs font-mono text-neutral-500 uppercase tracking-tight hidden md:inline">
             {t('catalog.showingAll').replace('{count}', displayProducts.length.toString())}
           </span>
 
-          <div class="flex items-center gap-1.5">
+          <div class="flex items-center gap-1.5 shrink-0">
             <label for="category-sort-select" class="text-xs font-mono text-neutral-600 uppercase font-bold hidden xl:inline">
               {t('catalog.sortLabel')}
             </label>
-            <div class="relative">
+            <div class="relative w-[130px] sm:min-w-[160px]">
               <select
                 id="category-sort-select"
-                class="appearance-none h-[34px] bg-white border border-neutral-300 hover:border-neutral-950 text-neutral-950 font-mono text-xs px-3 pr-8 cursor-pointer uppercase font-bold focus:outline-none focus:border-neutral-950 rounded-none transition-colors"
+                class="w-full appearance-none h-[38px] bg-white border border-neutral-300 hover:border-neutral-950 text-neutral-950 font-mono text-[11px] sm:text-xs pl-2.5 sm:pl-3 pr-7 sm:pr-8 cursor-pointer uppercase font-bold focus:outline-none focus:border-neutral-950 rounded-none transition-colors"
                 aria-label={t('catalog.sortLabel')}
               >
                 <option value="default">{t('catalog.sortDefault')}</option>

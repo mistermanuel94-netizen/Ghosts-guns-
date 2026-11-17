@@ -152,7 +152,7 @@ const isFlagship = popIndex !== -1 && popIndex < 5;
     <div class="flex items-center gap-1.5">
       <button
         type="button"
-        class="quick-add-btn px-3 py-2 bg-neutral-950 hover:bg-[#9f0712] text-white font-mono text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer border-0 flex items-center gap-1.5"
+        class="quick-add-btn px-3 py-2.5 sm:py-2 min-h-[40px] sm:min-h-0 bg-neutral-950 hover:bg-[#9f0712] text-white font-mono text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer border-0 flex items-center justify-center gap-1.5 touch-manipulation"
         data-id={product.id}
         data-name={productName}
         data-slug={product.slug}
@@ -160,10 +160,10 @@ const isFlagship = popIndex !== -1 && popIndex < 5;
         data-image={primaryImage}
         aria-label={`Add ${productName} to cart`}
       >
-        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 sm:w-3.5 sm:h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>
-        <span class="hidden sm:inline">ADD</span>
+        <span class="inline">ADD</span>
       </button>
     </div>
   </div>

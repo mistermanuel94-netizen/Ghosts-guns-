@@ -28,12 +28,12 @@ const total80Count = getCategoryProductCount('80-firearm');
         <!-- Logo & Brand Section -->
         <a href={getLocalizedPath('/', currentLang)} class="flex items-center h-full shrink-0 group">
           <!-- Tactical Logo Box -->
-          <div class="flex items-center justify-center w-[52px] h-full border-r border-neutral-300 bg-neutral-950 group-hover:bg-[#9f0712] transition-colors px-2">
-            <img width="288" height="397" class="h-[28px] w-auto object-contain invert" src="/assets/images/logo-black.svg" alt="Ghost Guns logo" />
+          <div class="flex items-center justify-center w-[44px] sm:w-[52px] h-full border-r border-neutral-300 bg-neutral-950 group-hover:bg-[#9f0712] transition-colors px-1.5 sm:px-2">
+            <img width="288" height="397" class="h-[24px] sm:h-[28px] w-auto object-contain invert" src="/assets/images/logo-black.svg" alt="Ghost Guns logo" />
           </div>
           <!-- Brand Name & Spec Tag -->
-          <div class="flex flex-col justify-center h-full border-r border-neutral-300 px-4 sm:px-6 bg-white group-hover:bg-neutral-50 transition-colors">
-            <span class="text-[17px] sm:text-[19px] font-black text-neutral-950 uppercase leading-none font-heading tracking-tight">
+          <div class="flex flex-col justify-center h-full border-r border-neutral-300 px-2.5 sm:px-6 bg-white group-hover:bg-neutral-50 transition-colors">
+            <span class="text-[15px] sm:text-[19px] font-black text-neutral-950 uppercase leading-none font-heading tracking-tight whitespace-nowrap">
               {t('nav.brand')}
             </span>
             <span class="text-[9px] font-mono uppercase tracking-widest text-[#9f0712] font-bold mt-0.5 hidden sm:block">
@@ -43,22 +43,22 @@ const total80Count = getCategoryProductCount('80-firearm');
         </a>
 
         <!-- Search Bar (Expands to Fill) -->
-        <div class="widget_search flex-1 h-full border-r border-neutral-300 relative">
+        <div class="widget_search flex-1 h-full border-r border-neutral-300 relative min-w-0">
           <form role="search" method="get" class="flex h-full w-full" action={getLocalizedPath('/shop/', currentLang)}>
-            <div class="hidden sm:flex items-center pl-4 text-neutral-400 pointer-events-none">
+            <div class="hidden sm:flex items-center pl-3 sm:pl-4 text-neutral-400 pointer-events-none shrink-0">
               <span class="text-[10px] font-mono uppercase tracking-wider bg-neutral-100 border border-neutral-200 px-1.5 py-0.5 text-neutral-600">CMD://</span>
             </div>
             <input
               type="search"
               id="header-search-input"
-              class="flex-1 h-full px-3 sm:px-4 text-xs font-mono text-neutral-950 placeholder-neutral-400 focus:outline-none focus:bg-neutral-50/80 rounded-none appearance-none bg-white uppercase border-none"
-              placeholder={`${t('nav.searchPlaceholder')} (G19, HARLOT, COREXY, 80% LOWER, PA-CF...)`}
+              class="flex-1 min-w-0 h-full px-2.5 sm:px-4 text-xs font-mono text-neutral-950 placeholder-neutral-400 focus:outline-none focus:bg-neutral-50/80 rounded-none appearance-none bg-white uppercase border-none"
+              placeholder={`${t('nav.searchPlaceholder')}`}
               value=""
               name="s"
             />
             <button
               type="submit"
-              class="search-submit-btn flex items-center justify-center gap-1.5 px-4 sm:px-5 h-full bg-neutral-950 hover:bg-[#9f0712] text-white transition-colors border-0 cursor-pointer shrink-0 font-mono text-[11px] font-bold uppercase tracking-wider"
+              class="search-submit-btn flex items-center justify-center gap-1.5 px-3 sm:px-5 h-full bg-neutral-950 hover:bg-[#9f0712] text-white transition-colors border-0 cursor-pointer shrink-0 font-mono text-[11px] font-bold uppercase tracking-wider"
               aria-label="Search Catalog"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
@@ -97,7 +97,7 @@ const total80Count = getCategoryProductCount('80-firearm');
           <!-- Cart Trigger Button -->
           <button
             id="cart-drawer-trigger"
-            class="ggn-cart-icon cart-contents flex items-center justify-center gap-2 px-4 min-w-[52px] h-full border-r md:border-r-0 border-neutral-300 relative bg-white hover:bg-neutral-950 hover:text-white text-neutral-950 transition-colors border-0 cursor-pointer group"
+            class="ggn-cart-icon cart-contents flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 min-w-[44px] sm:min-w-[52px] h-full border-r md:border-r-0 border-neutral-300 relative bg-white hover:bg-neutral-950 hover:text-white text-neutral-950 transition-colors border-0 cursor-pointer group touch-manipulation"
             title={t('nav.cart')}
             aria-label={t('nav.cart')}
           >
@@ -107,7 +107,7 @@ const total80Count = getCategoryProductCount('80-firearm');
             <span class="hidden sm:inline font-mono text-[11px] font-bold uppercase tracking-wider">{t('nav.cart')}</span>
             <span
               id="header-cart-count"
-              class="ggn-cart-count bg-[#9f0712] text-white font-mono text-[10px] font-bold px-1.5 py-0.5 min-w-[18px] h-[18px] items-center justify-center leading-none"
+              class="ggn-cart-count bg-[#9f0712] text-white font-mono text-[10px] font-bold px-1.5 py-0.5 min-w-[18px] h-[18px] items-center justify-center leading-none rounded-full sm:rounded-none"
               style="display:none;"
             >
               0
@@ -117,7 +117,7 @@ const total80Count = getCategoryProductCount('80-firearm');
           <!-- Mobile Menu Button -->
           <button
             id="mobile-menu-button"
-            class="lg:hidden flex items-center justify-center w-[52px] h-full bg-neutral-950 text-white hover:bg-[#9f0712] transition-colors border-0 cursor-pointer"
+            class="lg:hidden flex items-center justify-center w-[46px] sm:w-[52px] h-full bg-neutral-950 text-white hover:bg-[#9f0712] transition-colors border-0 cursor-pointer touch-manipulation"
             aria-label="Toggle Silo Navigation Menu"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -379,10 +379,10 @@ const total80Count = getCategoryProductCount('80-firearm');
     <div class="p-4 flex flex-col gap-4 font-mono text-xs uppercase">
       <!-- Quick Primary Actions -->
       <div class="grid grid-cols-2 gap-2">
-        <a href={getLocalizedPath('/shop/', currentLang)} class="py-2.5 px-3 bg-[#9f0712] text-white font-bold text-center">
+        <a href={getLocalizedPath('/shop/', currentLang)} class="py-3 px-3 bg-[#9f0712] text-white font-bold text-center touch-manipulation min-h-[44px] flex items-center justify-center">
           {t('nav.shop')} (76)
         </a>
-        <a href={getLocalizedPath('/3d-printers/', currentLang)} class="py-2.5 px-3 bg-white text-neutral-950 font-bold text-center">
+        <a href={getLocalizedPath('/3d-printers/', currentLang)} class="py-3 px-3 bg-white text-neutral-950 font-bold text-center touch-manipulation min-h-[44px] flex items-center justify-center">
           {t('nav.threeDPrinters')}
         </a>
       </div>
@@ -391,15 +391,15 @@ const total80Count = getCategoryProductCount('80-firearm');
       <div class="space-y-3 divide-y divide-neutral-800">
         {SILO_PILLARS.map((pillar) => (
           <div class="pt-3 first:pt-0">
-            <a href={getLocalizedPath(pillar.path, currentLang)} class="flex items-center justify-between font-bold text-white py-1">
-              <span>{pillar.code}: {pillar.defaultTitle}</span>
+            <a href={getLocalizedPath(pillar.path, currentLang)} class="flex items-center justify-between font-bold text-white py-2 min-h-[40px] touch-manipulation">
+              <span class="text-xs">{pillar.code}: {pillar.defaultTitle}</span>
               <span class="text-[#ff3b47]">&rarr;</span>
             </a>
-            <div class="pl-3 mt-1.5 flex flex-col gap-1.5 border-l border-neutral-800">
+            <div class="pl-3 mt-1.5 flex flex-col gap-1 border-l border-neutral-800">
               {pillar.spokes.map((spoke) => (
-                <a href={getLocalizedPath(spoke.path, currentLang)} class="py-1 text-[11px] text-neutral-400 hover:text-white flex items-center justify-between">
+                <a href={getLocalizedPath(spoke.path, currentLang)} class="py-2 text-[12px] text-neutral-300 hover:text-white flex items-center justify-between min-h-[38px] touch-manipulation">
                   <span>— {spoke.defaultTitle}</span>
-                  <span class="text-[9px] text-neutral-600">{spoke.specCode}</span>
+                  <span class="text-[9px] text-neutral-400 bg-neutral-900 px-1 py-0.5">{spoke.specCode}</span>
                 </a>
               ))}
             </div>
@@ -409,10 +409,10 @@ const total80Count = getCategoryProductCount('80-firearm');
 
       <!-- Footer Links in Mobile Drawer -->
       <div class="pt-3 border-t border-neutral-800 grid grid-cols-2 gap-2 text-[11px] text-neutral-300">
-        <a href={getLocalizedPath('/blog/', currentLang)} class="py-2 px-2 bg-neutral-900">/ BUILD GUIDES & BLOG</a>
-        <a href={getLocalizedPath('/about/', currentLang)} class="py-2 px-2 bg-neutral-900">/ {t('footer.aboutLink')}</a>
-        <a href={getLocalizedPath('/contact/', currentLang)} class="py-2 px-2 bg-neutral-900">/ {t('nav.contact')}</a>
-        <a href={getLocalizedPath('/my-account/', currentLang)} class="py-2 px-2 bg-neutral-900">/ {t('nav.myAccount')}</a>
+        <a href={getLocalizedPath('/blog/', currentLang)} class="py-2.5 px-2 bg-neutral-900 min-h-[40px] flex items-center touch-manipulation">/ BUILD GUIDES & BLOG</a>
+        <a href={getLocalizedPath('/about/', currentLang)} class="py-2.5 px-2 bg-neutral-900 min-h-[40px] flex items-center touch-manipulation">/ {t('footer.aboutLink')}</a>
+        <a href={getLocalizedPath('/contact/', currentLang)} class="py-2.5 px-2 bg-neutral-900 min-h-[40px] flex items-center touch-manipulation">/ {t('nav.contact')}</a>
+        <a href={getLocalizedPath('/my-account/', currentLang)} class="py-2.5 px-2 bg-neutral-900 min-h-[40px] flex items-center touch-manipulation">/ {t('nav.myAccount')}</a>
       </div>
     </div>
   </div>

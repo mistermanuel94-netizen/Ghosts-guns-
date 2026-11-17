@@ -94,51 +94,51 @@ const allProducts = products;
     </div>
 
     <!-- 2. Sticky Filter, Search & Sort Toolbar -->
-    <div class="sticky top-[52px] lg:top-[94px] z-40 bg-white border-l border-r border-b border-neutral-300 px-4 sm:px-6 py-3.5 shadow-xs">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+    <div class="sticky top-[52px] lg:top-[94px] z-40 bg-white border-l border-r border-b border-neutral-300 px-3 sm:px-6 py-2.5 sm:py-3.5 shadow-xs">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 sm:gap-3">
         <!-- Left: Silo Filter Chips -->
         <div class="w-full lg:w-auto overflow-hidden">
-          <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar whitespace-nowrap py-0.5 text-xs font-mono">
+          <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar whitespace-nowrap py-1 text-xs font-mono">
             <a
               href={getLocalizedPath('/shop/', lang)}
-              class="px-3 py-1.5 bg-neutral-950 text-white border border-neutral-950 uppercase font-bold text-[11px] shrink-0"
+              class="px-3 py-2 bg-neutral-950 text-white border border-neutral-950 uppercase font-bold text-[11px] shrink-0 touch-manipulation min-h-[34px] flex items-center"
             >
               ALL ({allProducts.length})
             </a>
             <a
               href={getLocalizedPath('/3d-printers/', lang)}
-              class="px-3 py-1.5 bg-white border border-[#9f0712] text-[#9f0712] font-bold hover:bg-[#9f0712] hover:text-white uppercase transition-colors text-[11px] shrink-0 flex items-center gap-1"
+              class="px-3 py-2 bg-white border border-[#9f0712] text-[#9f0712] font-bold hover:bg-[#9f0712] hover:text-white uppercase transition-colors text-[11px] shrink-0 flex items-center gap-1 touch-manipulation min-h-[34px]"
             >
               <span>{t('catalog.filter3DPrinters')}</span>
               <span class="text-[9px] bg-[#9f0712] text-white px-1 py-0.2 font-bold">SILO 01</span>
             </a>
             <a
               href={getLocalizedPath('/build-kit/', lang)}
-              class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0"
+              class="px-3 py-2 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0 touch-manipulation min-h-[34px] flex items-center"
             >
               {t('catalog.filterBuildKits')}
             </a>
             <a
               href={getLocalizedPath('/80-firearm/', lang)}
-              class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0"
+              class="px-3 py-2 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0 touch-manipulation min-h-[34px] flex items-center"
             >
               {t('catalog.filter80Percent')}
             </a>
             <a
               href={getLocalizedPath('/component/', lang)}
-              class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0"
+              class="px-3 py-2 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0 touch-manipulation min-h-[34px] flex items-center"
             >
               {t('catalog.filterParts')}
             </a>
             <a
               href={getLocalizedPath('/3d-printing/', lang)}
-              class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0"
+              class="px-3 py-2 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0 touch-manipulation min-h-[34px] flex items-center"
             >
               {t('catalog.filter3DPrinting')}
             </a>
             <a
               href={getLocalizedPath('/magazines/', lang)}
-              class="px-3 py-1.5 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0"
+              class="px-3 py-2 bg-white border border-neutral-300 hover:border-neutral-950 uppercase text-[11px] text-neutral-900 font-bold shrink-0 touch-manipulation min-h-[34px] flex items-center"
             >
               Magazines
             </a>
@@ -146,28 +146,28 @@ const allProducts = products;
         </div>
 
         <!-- Right: Live Search Filter + Sort Selector -->
-        <div class="flex flex-wrap items-center justify-between lg:justify-end gap-3 shrink-0 pt-2.5 lg:pt-0 border-t lg:border-t-0 border-neutral-200">
+        <div class="flex items-center justify-between lg:justify-end gap-2 sm:gap-3 shrink-0 pt-2 lg:pt-0 border-t lg:border-t-0 border-neutral-200">
           <div class="relative flex-1 sm:flex-initial sm:w-56">
             <input
               type="search"
               id="shop-live-filter"
               placeholder="SEARCH 76 PLATFORMS..."
-              class="w-full h-[36px] px-3 text-xs font-mono uppercase bg-neutral-50 border border-neutral-300 focus:border-neutral-950 focus:bg-white focus:outline-none text-neutral-950"
+              class="w-full h-[38px] px-3 text-xs font-mono uppercase bg-neutral-50 border border-neutral-300 focus:border-neutral-950 focus:bg-white focus:outline-none text-neutral-950"
             />
           </div>
 
-          <p id="shop-item-count" class="text-[11px] sm:text-xs font-mono text-neutral-500 uppercase whitespace-nowrap m-0 hidden sm:block">
+          <p id="shop-item-count" class="text-[11px] sm:text-xs font-mono text-neutral-500 uppercase whitespace-nowrap m-0 hidden md:block">
             {t('catalog.showingAll').replace('{count}', allProducts.length.toString())}
           </p>
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 shrink-0">
             <label for="shop-sort-select" class="hidden xl:inline text-xs font-mono uppercase font-bold text-neutral-600 whitespace-nowrap">
               {t('catalog.sortLabel')}
             </label>
-            <div class="relative min-w-[165px]">
+            <div class="relative w-[130px] sm:min-w-[165px]">
               <select
                 id="shop-sort-select"
-                class="w-full h-[36px] pl-3 pr-8 text-xs font-mono font-bold uppercase bg-white border border-neutral-300 hover:border-neutral-950 focus:outline-none focus:border-neutral-950 rounded-none appearance-none cursor-pointer transition-colors text-neutral-950"
+                class="w-full h-[38px] pl-2.5 sm:pl-3 pr-7 sm:pr-8 text-[11px] sm:text-xs font-mono font-bold uppercase bg-white border border-neutral-300 hover:border-neutral-950 focus:outline-none focus:border-neutral-950 rounded-none appearance-none cursor-pointer transition-colors text-neutral-950"
                 aria-label={t('catalog.sortLabel')}
               >
                 <option value="default">{t('catalog.sortDefault')}</option>

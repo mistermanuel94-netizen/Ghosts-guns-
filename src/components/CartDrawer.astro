@@ -19,8 +19,8 @@ const t = useTranslations(currentLang);
       <span class="font-bold text-black uppercase tracking-wider">{t('cart.yourCart')}</span>
       <span id="drawer-item-count" class="text-xs text-neutral-500">(0)</span>
     </div>
-    <button id="cart-drawer-close" class="p-1 text-black hover:text-neutral-500 bg-transparent border-0 cursor-pointer" aria-label="Close cart">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <button id="cart-drawer-close" class="p-2 min-w-[40px] min-h-[40px] flex items-center justify-center text-black hover:text-neutral-500 bg-transparent border-0 cursor-pointer touch-manipulation" aria-label="Close cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="18" y1="6" x2="6" y2="18"></line>
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
@@ -40,11 +40,11 @@ const t = useTranslations(currentLang);
       <span class="font-bold uppercase">{t('cart.subtotal')}</span>
       <span id="drawer-subtotal" class="font-bold text-base text-black">€0.00</span>
     </div>
-    <div class="flex flex-col gap-2">
-      <a href={getLocalizedPath('/cart/', currentLang)} class="block text-center py-3 bg-black text-white font-bold uppercase text-xs tracking-wider hover:bg-neutral-800 transition-colors">
+    <div class="flex flex-col gap-2.5">
+      <a href={getLocalizedPath('/cart/', currentLang)} class="block text-center py-3.5 px-4 bg-black text-white font-bold uppercase text-xs tracking-wider hover:bg-neutral-800 transition-colors touch-manipulation min-h-[44px] flex items-center justify-center">
         {t('cart.viewCart')}
       </a>
-      <a href={getLocalizedPath('/checkout/', currentLang)} class="block text-center py-3 bg-[#9f0712] text-white font-bold uppercase text-xs tracking-wider hover:bg-[#B90A0E] transition-colors">
+      <a href={getLocalizedPath('/checkout/', currentLang)} class="block text-center py-3.5 px-4 bg-[#9f0712] text-white font-bold uppercase text-xs tracking-wider hover:bg-[#B90A0E] transition-colors touch-manipulation min-h-[44px] flex items-center justify-center">
         {t('cart.checkout')}
       </a>
     </div>
@@ -188,12 +188,12 @@ const t = useTranslations(currentLang);
           <a href="${langPrefix}/product/${item.slug}/" style="display: block; font-size: 12px; font-weight: bold; color: black; text-transform: uppercase; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none;">${item.name}</a>
           <span style="font-size: 12px; color: #666; display: block; margin-top: 2px;">€${item.price.toFixed(2)}</span>
           <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-            <button class="qty-btn" style="border: 1px solid #ccc; padding: 2px 8px; background: white; font-size: 12px; cursor: pointer;" data-index="${index}" data-change="-1">-</button>
-            <span style="font-size: 12px; font-weight: bold;">${item.quantity}</span>
-            <button class="qty-btn" style="border: 1px solid #ccc; padding: 2px 8px; background: white; font-size: 12px; cursor: pointer;" data-index="${index}" data-change="1">+</button>
+            <button class="qty-btn" style="border: 1px solid #ccc; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: white; font-size: 14px; font-weight: bold; cursor: pointer; touch-action: manipulation;" data-index="${index}" data-change="-1">-</button>
+            <span style="font-size: 13px; font-weight: bold; min-width: 20px; text-align: center;">${item.quantity}</span>
+            <button class="qty-btn" style="border: 1px solid #ccc; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: white; font-size: 14px; font-weight: bold; cursor: pointer; touch-action: manipulation;" data-index="${index}" data-change="1">+</button>
           </div>
         </div>
-        <button class="remove-btn" style="color: #999; padding: 4px; background: transparent; border: 0; cursor: pointer; font-size: 14px;" data-index="${index}">✕</button>
+        <button class="remove-btn" style="color: #999; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: transparent; border: 0; cursor: pointer; font-size: 16px; touch-action: manipulation;" data-index="${index}" aria-label="Remove item">✕</button>
       </div>
     `).join('');
 

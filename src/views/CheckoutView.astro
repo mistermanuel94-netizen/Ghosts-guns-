@@ -25,10 +25,10 @@ const t = useTranslations(lang);
     <!-- Global Notice Callout -->
     <div class="border-l border-r border-b border-[#e5e5e5] p-4 bg-amber-50 text-xs font-mono text-amber-950 flex items-start sm:items-center gap-3">
       <div class="p-1.5 bg-amber-500 text-black font-black rounded text-[10px] shrink-0 uppercase tracking-wider">
-        GLOBAL NOTICE
+        {t('checkout.globalNoticeBadge') || 'GLOBAL NOTICE'}
       </div>
       <span class="leading-relaxed">
-        <strong>Worldwide Dispatch & Compliance:</strong> Ghost Guns delivers discreetly worldwide in plain unmarked packaging. All private DIY hardware, kits, 3D files, and accessories are shipped without serialization or FFL requirements in accordance with international commerce standards. By placing an order, customers confirm adherence to local import and private fabrication laws. Review our <a href={getLocalizedPath('/shipping-restrictions/', lang)} class="underline font-bold text-[#9f0712]">Global Shipping & Delivery Policies</a>.
+        <strong>{t('checkout.globalNoticeTitle') || 'Worldwide Dispatch & Compliance:'}</strong> {t('checkout.globalNoticeText') || 'Ghost Guns delivers discreetly worldwide in plain unmarked packaging. All private DIY hardware, kits, 3D files, and accessories are shipped without serialization or FFL requirements in accordance with international commerce standards. By placing an order, customers confirm adherence to local import and private fabrication laws. Review our'} <a href={getLocalizedPath('/shipping-restrictions/', lang)} class="underline font-bold text-[#9f0712]">{t('checkout.globalNoticeLink') || 'Global Shipping & Delivery Policies'}</a>.
       </span>
     </div>
 
@@ -58,13 +58,13 @@ const t = useTranslations(lang);
               {t('checkout.country') || 'Country / Region'} *
             </label>
             <select id="checkout-country" required class="w-full p-3 border border-[#ccc] text-sm bg-white focus:border-black focus:outline-none">
-              <option value="">Select your Country / Worldwide Destination...</option>
-              <optgroup label="North America">
+              <option value="">{t('checkout.countrySelectPlaceholder') || 'Select your Country / Worldwide Destination...'}</option>
+              <optgroup label={t('checkout.groupNorthAmerica') || 'North America'}>
                 <option value="US" selected>United States (Global Dispatch)</option>
                 <option value="CA">Canada</option>
                 <option value="MX">Mexico</option>
               </optgroup>
-              <optgroup label="Europe & European Union">
+              <optgroup label={t('checkout.groupEurope') || 'Europe & European Union'}>
                 <option value="DE">Germany (Deutschland)</option>
                 <option value="FR">France</option>
                 <option value="NL">Netherlands (Nederland)</option>
@@ -78,7 +78,7 @@ const t = useTranslations(lang);
                 <option value="CZ">Czech Republic (Česko)</option>
                 <option value="DK">Denmark (Danmark)</option>
                 <option value="FI">Finland (Suomi)</option>
-                <option value="GR">Greece (Ελλάδα)</option>
+                <option value="GR">Greece (Ελλάда)</option>
                 <option value="HU">Hungary (Magyarország)</option>
                 <option value="IE">Ireland</option>
                 <option value="NO">Norway (Norge)</option>
@@ -86,9 +86,9 @@ const t = useTranslations(lang);
                 <option value="RO">Romania (România)</option>
                 <option value="SE">Sweden (Sverige)</option>
                 <option value="GB">United Kingdom (UK)</option>
-                <option value="EU-OTHER">Other European Country</option>
+                <option value="EU-OTHER">{t('checkout.otherEuropeanCountry') || 'Other European Country'}</option>
               </optgroup>
-              <optgroup label="Asia & Oceania">
+              <optgroup label={t('checkout.groupAsiaOceania') || 'Asia & Oceania'}>
                 <option value="AU">Australia</option>
                 <option value="NZ">New Zealand</option>
                 <option value="JP">Japan</option>
@@ -97,21 +97,21 @@ const t = useTranslations(lang);
                 <option value="AE">United Arab Emirates</option>
                 <option value="IL">Israel</option>
               </optgroup>
-              <optgroup label="Latin America & Rest of World">
+              <optgroup label={t('checkout.groupLatinAmericaWorld') || 'Latin America & Rest of World'}>
                 <option value="BR">Brazil (Brasil)</option>
                 <option value="AR">Argentina</option>
                 <option value="CL">Chile</option>
                 <option value="CO">Colombia</option>
                 <option value="ZA">South Africa</option>
-                <option value="GLOBAL-OTHER">Other International Country</option>
+                <option value="GLOBAL-OTHER">{t('checkout.otherInternationalCountry') || 'Other International Country'}</option>
               </optgroup>
             </select>
           </div>
 
           <div class="text-xs">
             <label class="block uppercase font-bold mb-1">{t('checkout.streetAddress')} *</label>
-            <input id="checkout-street" type="text" required placeholder="House number and street name" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none mb-2" />
-            <input id="checkout-apartment" type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+            <input id="checkout-street" type="text" required placeholder={t('checkout.addressPlaceholder') || 'House number and street name'} class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none mb-2" />
+            <input id="checkout-apartment" type="text" placeholder={t('checkout.apartmentPlaceholder') || 'Apartment, suite, unit, etc. (optional)'} class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
@@ -121,7 +121,7 @@ const t = useTranslations(lang);
             </div>
             <div>
               <label class="block uppercase font-bold mb-1">{t('checkout.stateCounty')} *</label>
-              <input id="checkout-state" type="text" required placeholder="State / Province / Region" class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
+              <input id="checkout-state" type="text" required placeholder={t('checkout.statePlaceholder') || 'State / Province / Region'} class="w-full p-3 border border-[#ccc] text-sm focus:border-black focus:outline-none" />
             </div>
             <div>
               <label class="block uppercase font-bold mb-1">{t('checkout.postcode')} *</label>
@@ -672,6 +672,7 @@ const t = useTranslations(lang);
 
     const orderPayload = {
       type: 'order',
+      lang: document.querySelector('[data-lang]')?.getAttribute('data-lang') || 'en',
       orderId: randomOrderId,
       orderDate: formattedDate,
       firstName,

@@ -59,7 +59,7 @@ function buildOrderAdminHtml(data) {
 
       <div style="margin-top:16px;text-align:right;font-size:14px;">
         <p style="margin:4px 0;"><strong>Subtotal:</strong> €${Number(data.subtotal || 0).toFixed(2)}</p>
-        <p style="margin:4px 0;"><strong>Discreet Shipping:</strong> €12.50</p>
+        <p style="margin:4px 0;"><strong>Shipping (${data.shippingMethod || 'Standard'}):</strong> €${Number(data.shippingFee || 59).toFixed(2)}</p>
         <p style="margin:8px 0;font-size:16px;color:#9f0712;"><strong>Total: €${Number(data.total || 0).toFixed(2)}</strong></p>
       </div>
     </div>
@@ -294,7 +294,7 @@ function buildOrderCustomerHtml(data) {
 
       <div style="margin-top:16px;text-align:right;font-size:14px;">
         <p style="margin:4px 0;"><strong>${i18n.subtotal}</strong> €${Number(data.subtotal || 0).toFixed(2)}</p>
-        <p style="margin:4px 0;"><strong>${i18n.shipping}</strong> €12.50</p>
+        <p style="margin:4px 0;"><strong>${i18n.shipping} (${data.shippingMethod || 'Standard'}):</strong> €${Number(data.shippingFee || 59).toFixed(2)}</p>
         <p style="margin:8px 0;font-size:16px;color:#9f0712;"><strong>${i18n.totalAmount} €${Number(data.total || 0).toFixed(2)}</strong></p>
       </div>
 

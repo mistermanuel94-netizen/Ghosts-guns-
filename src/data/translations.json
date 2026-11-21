@@ -194,7 +194,12 @@
       "otherInternationalCountry": "Other International Country",
       "statePlaceholder": "State / Province / Region",
       "addressPlaceholder": "House number and street name",
-      "apartmentPlaceholder": "Apartment, suite, unit, etc. (optional)"
+      "apartmentPlaceholder": "Apartment, suite, unit, etc. (optional)",
+      "standardShipping": "Standard Discreet Delivery",
+      "standardShippingDesc": "Tracked & insured plain unbranded courier dispatch",
+      "expressShipping": "Express Priority Courier",
+      "expressShippingDesc": "Priority expedited handling with fastest air transit",
+      "shippingMethod": "Shipping Method"
     },
     "footer": {
       "col1Title": "Ghost Guns",
@@ -440,7 +445,12 @@
       "otherInternationalCountry": "Anderes internationales Land",
       "statePlaceholder": "Bundesland / Kanton / Region",
       "addressPlaceholder": "Hausnummer und Straßenname",
-      "apartmentPlaceholder": "Wohnung, Suite, Einheit usw. (optional)"
+      "apartmentPlaceholder": "Wohnung, Suite, Einheit usw. (optional)",
+      "standardShipping": "Standard Diskreter Versand",
+      "standardShippingDesc": "Verfolgter & versicherter Versand in neutraler Verpackung",
+      "expressShipping": "Express Prioritäts-Kurier",
+      "expressShippingDesc": "Prioritäre Express-Bearbeitung mit schnellstem Lufttransport",
+      "shippingMethod": "Versandart"
     },
     "footer": {
       "col1Title": "Ghost Guns",
@@ -686,7 +696,12 @@
       "otherInternationalCountry": "Ander Internationaal Land",
       "statePlaceholder": "Provincie / Regio",
       "addressPlaceholder": "Huisnummer en straatnaam",
-      "apartmentPlaceholder": "Appartement, suite, unit, etc. (optioneel)"
+      "apartmentPlaceholder": "Appartement, suite, unit, etc. (optioneel)",
+      "standardShipping": "Standaard Discrete Verzending",
+      "standardShippingDesc": "Gevolgd & verzekerd in anonieme blanco verpakking",
+      "expressShipping": "Express Spoedkoerier",
+      "expressShippingDesc": "Prioritaire afhandeling met snelste luchttransport",
+      "shippingMethod": "Verzendmethode"
     },
     "footer": {
       "col1Title": "Ghost Guns",
@@ -932,7 +947,12 @@
       "otherInternationalCountry": "Autre pays international",
       "statePlaceholder": "Région / Département / Province",
       "addressPlaceholder": "Numéro et nom de voie",
-      "apartmentPlaceholder": "Bâtiment, appartement, etc. (facultatif)"
+      "apartmentPlaceholder": "Bâtiment, appartement, etc. (facultatif)",
+      "standardShipping": "Livraison Standard Discrète",
+      "standardShippingDesc": "Envoi suivi et assuré en colis neutre sans logo",
+      "expressShipping": "Courrier Express Prioritaire",
+      "expressShippingDesc": "Traitement prioritaire avec transit aérien le plus rapide",
+      "shippingMethod": "Mode de Livraison"
     },
     "footer": {
       "col1Title": "Ghost Guns",
@@ -1178,7 +1198,12 @@
       "otherInternationalCountry": "Otro país internacional",
       "statePlaceholder": "Provincia / Estado / Región",
       "addressPlaceholder": "Número de casa y nombre de la calle",
-      "apartmentPlaceholder": "Apartamento, suite, etc. (opcional)"
+      "apartmentPlaceholder": "Apartamento, suite, etc. (opcional)",
+      "standardShipping": "Envío Estándar Discreto",
+      "standardShippingDesc": "Despacho con seguimiento y asegurado en paquete neutro",
+      "expressShipping": "Mensajería Exprés Prioritaria",
+      "expressShippingDesc": "Tramitación prioritaria con el transporte aéreo más rápido",
+      "shippingMethod": "Método de Envío"
     },
     "footer": {
       "col1Title": "Ghost Guns",
@@ -1424,7 +1449,12 @@
       "otherInternationalCountry": "Altro Paese Internazionale",
       "statePlaceholder": "Provincia / Regione",
       "addressPlaceholder": "Numero civico e nome della via",
-      "apartmentPlaceholder": "Appartamento, interno, scala (facoltativo)"
+      "apartmentPlaceholder": "Appartamento, interno, scala (facoltativo)",
+      "standardShipping": "Spedizione Standard Discreta",
+      "standardShippingDesc": "Spedizione tracciata e assicurata in imballo anonimo",
+      "expressShipping": "Corriere Espresso Prioritario",
+      "expressShippingDesc": "Gestione prioritaria ed evasione con transito aereo rapido",
+      "shippingMethod": "Metodo di Spedizione"
     },
     "footer": {
       "col1Title": "Ghost Guns",
@@ -1670,7 +1700,12 @@
       "otherInternationalCountry": "Inny kraj na świecie",
       "statePlaceholder": "Województwo / Region",
       "addressPlaceholder": "Numer domu i nazwa ulicy",
-      "apartmentPlaceholder": "Mieszkanie, lokal itp. (opcjonalnie)"
+      "apartmentPlaceholder": "Mieszkanie, lokal itp. (opcjonalnie)",
+      "standardShipping": "Standardowa Dyskretna Dostawa",
+      "standardShippingDesc": "Śledzona i ubezpieczona przesyłka w neutralnym opakowaniu",
+      "expressShipping": "Ekspresowy Kurier Priorytetowy",
+      "expressShippingDesc": "Priorytetowa realizacja z najszybszym transportem lotniczym",
+      "shippingMethod": "Sposób Dostawy"
     },
     "footer": {
       "col1Title": "Ghost Guns",
@@ -1916,7 +1951,12 @@
       "otherInternationalCountry": "Друга международна държава",
       "statePlaceholder": "Област / Регион",
       "addressPlaceholder": "Номер и име на улица",
-      "apartmentPlaceholder": "Апартамент, вход, етаж (по избор)"
+      "apartmentPlaceholder": "Апартамент, вход, етаж (по избор)",
+      "standardShipping": "Стандартна Дискретна Доставка",
+      "standardShippingDesc": "Проследявана и застрахована пратка в неутрална опаковка",
+      "expressShipping": "Експресен Приоритетен Куриер",
+      "expressShippingDesc": "Приоритетна обработка с най-бърз въздушен транзит",
+      "shippingMethod": "Метод на Доставка"
     },
     "footer": {
       "col1Title": "Ghost Guns",

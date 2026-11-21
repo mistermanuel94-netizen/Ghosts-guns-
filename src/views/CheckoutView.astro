@@ -359,13 +359,41 @@ const t = useTranslations(lang);
               <span>{t('cart.subtotal')}</span>
               <span id="checkout-subtotal" class="font-bold">€0.00</span>
             </div>
+
+            <!-- Shipping Method Selection (Standard €59 / Express €95) -->
+            <div class="py-3 border-t border-[#e5e5e5] text-xs">
+              <span class="block font-bold uppercase mb-2 text-black">{t('checkout.shippingMethod') || 'Shipping Method'}</span>
+              <div class="flex flex-col gap-2">
+                <label class="shipping-option flex items-start gap-2.5 p-2.5 border-2 border-black bg-white cursor-pointer hover:bg-neutral-50 transition-colors">
+                  <input type="radio" name="shipping_rate" value="59" checked class="mt-0.5 accent-[#9f0712] cursor-pointer" />
+                  <div class="flex-1 min-w-0">
+                    <div class="flex justify-between items-center font-bold text-black">
+                      <span>{t('checkout.standardShipping') || 'Standard Discreet Delivery'}</span>
+                      <span class="text-[#9f0712]">€59.00</span>
+                    </div>
+                    <p class="text-[11px] text-neutral-500 m-0 leading-tight mt-0.5">{t('checkout.standardShippingDesc') || 'Tracked & insured plain unbranded courier dispatch'}</p>
+                  </div>
+                </label>
+                <label class="shipping-option flex items-start gap-2.5 p-2.5 border border-[#ccc] bg-white cursor-pointer hover:bg-neutral-50 transition-colors">
+                  <input type="radio" name="shipping_rate" value="95" class="mt-0.5 accent-[#9f0712] cursor-pointer" />
+                  <div class="flex-1 min-w-0">
+                    <div class="flex justify-between items-center font-bold text-black">
+                      <span>{t('checkout.expressShipping') || 'Express Priority Courier'}</span>
+                      <span class="text-[#9f0712]">€95.00</span>
+                    </div>
+                    <p class="text-[11px] text-neutral-500 m-0 leading-tight mt-0.5">{t('checkout.expressShippingDesc') || 'Priority expedited handling with fastest air transit'}</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
             <div class="flex justify-between items-center py-2 text-xs uppercase border-t border-[#e5e5e5]">
-              <span>Discreet Shipping</span>
-              <span class="font-bold">€12.50</span>
+              <span>{t('checkout.shippingMethod') || 'Shipping'}</span>
+              <span id="checkout-shipping-display" class="font-bold">€59.00</span>
             </div>
             <div class="flex justify-between items-center py-3 text-sm uppercase font-bold text-black border-t border-b border-black">
               <span>{t('cart.total')}</span>
-              <span id="checkout-total" class="text-base font-black text-[#9f0712]">€12.50</span>
+              <span id="checkout-total" class="text-base font-black text-[#9f0712]">€59.00</span>
             </div>
           </div>
 
@@ -518,26 +546,39 @@ const t = useTranslations(lang);
     quantity: number;
   }
 
+  function getSelectedShipping(): { fee: number; title: string } {
+    const selected = document.querySelector<HTMLInputElement>('input[name="shipping_rate"]:checked');
+    const fee = selected?.value === '95' ? 95 : 59;
+    const title = fee === 95 ? 'Express Priority Courier (€95.00)' : 'Standard Discreet Delivery (€59.00)';
+    return { fee, title };
+  }
+
   // Render Checkout Cart Items
   function renderCheckout() {
     try {
       const cart: CartItem[] = JSON.parse(localStorage.getItem('gg_cart') || '[]');
       const listEl = document.getElementById('checkout-items-list');
       const subtotalEl = document.getElementById('checkout-subtotal');
+      const shippingDisplayEl = document.getElementById('checkout-shipping-display');
       const totalEl = document.getElementById('checkout-total');
 
+      const { fee: shippingFee } = getSelectedShipping();
+
       if (!listEl || !subtotalEl || !totalEl) return;
+
+      if (shippingDisplayEl) {
+        shippingDisplayEl.textContent = `€${shippingFee.toFixed(2)}`;
+      }
 
       if (cart.length === 0) {
         listEl.innerHTML = '<div class="py-4 text-neutral-500 font-medium">Your cart is currently empty.</div>';
         subtotalEl.textContent = '€0.00';
-        totalEl.textContent = '€12.50';
+        totalEl.textContent = `€${shippingFee.toFixed(2)}`;
         return;
       }
 
       const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-      const shipping = 12.50;
-      const total = subtotal + shipping;
+      const total = subtotal + shippingFee;
 
       subtotalEl.textContent = `€${subtotal.toFixed(2)}`;
       totalEl.textContent = `€${total.toFixed(2)}`;
@@ -555,6 +596,23 @@ const t = useTranslations(lang);
       console.error(e);
     }
   }
+
+  // Listen for shipping rate switches
+  document.querySelectorAll<HTMLInputElement>('input[name="shipping_rate"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.shipping-option').forEach(opt => {
+        const input = opt.querySelector('input');
+        if (input?.checked) {
+          opt.classList.add('border-2', 'border-black');
+          opt.classList.remove('border', 'border-[#ccc]');
+        } else {
+          opt.classList.remove('border-2', 'border-black');
+          opt.classList.add('border', 'border-[#ccc]');
+        }
+      });
+      renderCheckout();
+    });
+  });
 
   renderCheckout();
 
@@ -622,8 +680,9 @@ const t = useTranslations(lang);
     const selectedRadio = document.querySelector<HTMLInputElement>('input[name="payment"]:checked');
     const selectedMethod = selectedRadio ? selectedRadio.value : 'bank';
 
+    const { fee: shippingFee, title: shippingMethodTitle } = getSelectedShipping();
     const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    const total = subtotal + 12.50;
+    const total = subtotal + shippingFee;
 
     // Generate Order ID & Formatted Date
     const randomOrderId = `#GG-${Math.floor(10000 + Math.random() * 90000)}`;
@@ -690,6 +749,8 @@ const t = useTranslations(lang);
       paymentMethod: selectedMethod,
       paymentMethodTitle: cardTitle,
       paymentInstructions: instructionP,
+      shippingMethod: shippingMethodTitle,
+      shippingFee,
       items: cart,
       subtotal,
       total
